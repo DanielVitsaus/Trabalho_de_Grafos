@@ -1,43 +1,55 @@
 #ifndef VERTICE_H_INCLUDED
 #define VERTICE_H_INCLUDED
 #include "Lista.h"
-
+#include <iostream>
+using namespace std;
 class Vertice;
 class Aresta;
 
 class Aresta: public Item {
 
     private:
-        int id_vert_dst;   // ID do vertice de destino
+        int id_dst;        // ID do vertice de destino
+        float peso;        // Peso da aresta
 
     public:
-        Aresta(int id_vert_dst) { this->id_vert_dst = id_vert_dst; };
-        int pegaIdDestino() { return this->id_vert_dst; };
+        Aresta(int id_vert_dst) { this->id_dst = id_vert_dst; this->peso = 0; };
+        Aresta(int id_vert_dst, float peso) { this->id_dst = id_vert_dst; this->peso = peso; };
+        int pegaIdDestino() { return this->id_dst; };
+        float pegaPeso() { return this->peso; };
 
 };
 
 class Vertice: public Lista, public Item {
 
     private:
-        float peso;
-        int grau;
+        int id;         // ID do Vertice
+        Aresta* encontraAresta(int id);
 
     public:
-        Vertice(int Id) { Item::setaInfo(Id); this->grau = 0; };
-        Vertice(int Id, float peso) { Item::setaInfo(Id); this->peso = peso; this->grau = 0; };
-        int pegaId() { return Item::pegaInfo(); };
-        float pegaPeso() { return this->peso; };
-        void setaPeso(float peso) { this->peso = peso; };
-        int pegaGrau() { return this->grau; };
-        void incGrau() { this->grau++; };
-        void decGrau() { this->grau--; };
+        Vertice(int Id) { this->id=Id; };
+        int pegaId() { return this->id; };
+        int pegaGrau() { return Lista::contaItems(); };
+        void adicionaAresta(int id_destino) { Lista::adicionaItem(new Aresta(id_destino)); };
+        void removeAresta() { Lista::deletaItem(Lista::it); };
+        bool removeAresta(int id);
+        Aresta* primeiraAresta() { return (Aresta*)Lista::inicioLista(); };
+        Aresta* proximaAresta() { return (Aresta*)Lista::caminhaLista(); };
+        Aresta* arestaAnterior() { return (Aresta*)Lista::retornaLista(); };
+        Aresta* ultimaAresta() { return (Aresta*)Lista::fimLista(); };
 
 };
 
 class Grafo: private Lista {
 
     private:
-        Vertice *encontraNo(int id);
+        Vertice* encontraNo(int id);
+        Aresta* encontraAresta(Vertice *v, int id);
+
+        Vertice* primeiroNo() { return (Vertice*)Lista::inicioLista(); };
+        Vertice* proximoNo() { return (Vertice*)Lista::caminhaLista(); };
+        Vertice* noAnterior() { return (Vertice*)Lista::retornaLista(); };
+        Vertice* ultimoNo() { return (Vertice*)Lista::fimLista(); };
 
     public:
         int contaNos() { return Lista::contaItems(); }

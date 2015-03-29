@@ -25,16 +25,16 @@ class Lista {
         Item *pri, *ult, *it;
         int nitems;
 
+
     public:
         Lista() { this->pri = this->ult = 0; this->nitems = 0; } ;
-        ~Lista();
         void adicionaItem(Item *n);
         void deletaItem(Item *n);
-        Item *inicioLista() { it = pri; return this->pri; };
-        Item *fimLista() { it = ult; return this->ult; };
+        Item *inicioLista() { it = pri; return it; };
+        Item *fimLista() { it = ult; return it; };
         Item *noIterator() { return it; }
-        Item *caminhaLista() { if (it!=0) it = it->pegaProx(); return it; }
-        Item *retornaLista() { if (it!=0) it = it->pegaAnt(); return it; }
+        Item *caminhaLista() { if (it) it = it->pegaProx(); return it; }
+        Item *retornaLista() { if (it) it = it->pegaAnt(); return it; }
         int contaItems() { return this->nitems; }
 
 };
