@@ -13,6 +13,8 @@ using namespace std;
 
 */
 
+//daniel é legal
+
 int main()
 {
 
