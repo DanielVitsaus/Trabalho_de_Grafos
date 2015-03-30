@@ -31,22 +31,3 @@
 	"Lista.h"
 	<iostream>
 
-1427667268 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Grafo.cpp
-	"Grafo.h"
-	<iostream>
-
-1427574566 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Grafo.h
-	"Lista.h"
-	<iostream>
-
-1427574554 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Lista.h
-
-1427667094 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Lista.cpp
-	"Lista.h"
-	<iostream>
-
-1427667842 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/main.cpp
-	<iostream>
-	"Lista.h"
-	"Grafo.h"
-
