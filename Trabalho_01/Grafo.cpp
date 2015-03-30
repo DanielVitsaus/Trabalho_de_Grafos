@@ -4,6 +4,21 @@ using namespace std;
 
 /* -------------------------------------------- CLASSE GRAFO ------------------------------------------ */
 
+bool Grafo::noArticulacao(int id)
+{
+    Vertice *da = this->encontraNo(id);
+    Vertice * aux, aux2;
+    aux = da->pegaProx();
+    axu2 = da->pegaAnt();
+
+    //this->removeNo(id);
+    if(this->conexo())
+        return true;
+    else
+        return false;
+
+}
+
 bool Grafo::kRegular()
 {
     int grau1;

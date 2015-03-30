@@ -58,9 +58,9 @@ class Grafo: private Lista {
         /* 1 ok */ void removeNo(int id);
         /* 1 ok */ void removeAresta(int id_no1, int id_no2);
         /* 2 ok */ int grauNo(int id);
-        /* 3 */ bool kRegular();
+        /* 3 ok */ bool kRegular();
         /* 4 */ bool completo();
-        /* 5 */ bool nosSaoAdjacentes(int id1, int id2);
+        /* 5 ok */ bool nosSaoAdjacentes(int id1, int id2);
         /* 6 */ bool conexo();
         /* 7 */ bool mesmaComponenteConexa(int id1, int id2);
         /* 8 */ bool noArticulacao(int id);
