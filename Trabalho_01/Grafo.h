@@ -3,8 +3,6 @@
 #include "Lista.h"
 #include <iostream>
 using namespace std;
-class Vertice;
-class Aresta;
 
 class Aresta: public Item {
 

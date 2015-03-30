@@ -20,11 +20,9 @@ class Item {
 
 class Lista {
 
-
     protected:
         Item *pri, *ult, *it;
         int nitems;
-
 
     public:
         Lista() { this->pri = this->ult = 0; this->nitems = 0; } ;

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1427494422 source:/home/cristiano/Documents/CC/Grafos/Trabalho1/main.cpp
+1427667182 source:/home/cristiano/Documents/CC/Grafos/Trabalho1/main.cpp
 	<iostream>
 	"Lista.h"
 	"Grafo.h"
@@ -10,12 +10,12 @@
 1426708841 /home/cristiano/Documents/CC/Grafos/Trabalho1/Vertice.h
 	"Lista.h"
 
-1427494435 /home/cristiano/Documents/CC/Grafos/Trabalho1/Lista.h
+1427574555 /home/cristiano/Documents/CC/Grafos/Trabalho1/Lista.h
 
 1426702388 source:/home/cristiano/Documents/CC/Grafos/Trabalho1/Aresta.cpp
 	"Aresta.h"
 
-1427494323 source:/home/cristiano/Documents/CC/Grafos/Trabalho1/Lista.cpp
+1427667094 source:/home/cristiano/Documents/CC/Grafos/Trabalho1/Lista.cpp
 	"Lista.h"
 	<iostream>
 
@@ -23,11 +23,30 @@
 	"Lista.h"
 	"Vertice.h"
 
-1427493761 source:/home/cristiano/Documents/CC/Grafos/Trabalho1/Grafo.cpp
+1427667269 source:/home/cristiano/Documents/CC/Grafos/Trabalho1/Grafo.cpp
 	"Grafo.h"
 	<iostream>
 
-1427474414 /home/cristiano/Documents/CC/Grafos/Trabalho1/Grafo.h
+1427574566 /home/cristiano/Documents/CC/Grafos/Trabalho1/Grafo.h
 	"Lista.h"
 	<iostream>
+
+1427667268 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Grafo.cpp
+	"Grafo.h"
+	<iostream>
+
+1427574566 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Grafo.h
+	"Lista.h"
+	<iostream>
+
+1427574554 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Lista.h
+
+1427667094 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1427667842 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/main.cpp
+	<iostream>
+	"Lista.h"
+	"Grafo.h"
 

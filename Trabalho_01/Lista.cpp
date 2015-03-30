@@ -11,6 +11,7 @@ void Lista::adicionaItem(Item *n) {
         n->setaProx(0);
         this->ult = n;
     }
+
     // Segundo item
     else if (this->nitems==1) {
         n->setaAnt(this->pri);
@@ -18,6 +19,7 @@ void Lista::adicionaItem(Item *n) {
         this->pri->setaProx(n);
         this->ult = n;
     }
+
     // Qualquer outro item
     else {
         this->ult->setaProx(n);
@@ -26,47 +28,53 @@ void Lista::adicionaItem(Item *n) {
     }
 
     this->nitems++;  // Contador de items
-
 }
 
 void Lista::deletaItem(Item *n) {
 
-    if (n==0) return;
+    // Condições de saída imediata
+    if (!n) return;
+    if (!this->nitems) return;
 
-    // Vai deletar o ultimo item
-    if (this->nitems==1) this->pri = this->ult = 0;
+    // Tem apenas 1 elemento
+    if (this->nitems==1) {
+        this->pri = this->ult = 0;
+    }
 
-    // Vai deletar o penultimo item
+    // Tem apenas 2 elementos
     else if (this->nitems==2) {
-        if (n==this->pri) {
+        if (n==this->pri) {            // É o primeiro da lista
             this->pri = this->ult;
             this->pri->setaAnt(0);
             this->pri->setaProx(0);
         }
-        else {
+        else {                         // É o ultimo da lista
             this->ult = this->pri;
             this->ult->setaAnt(0);
             this->ult->setaProx(0);
         }
     }
 
-    // Vai deletar qualquer outro item
-    else if (n==this->it) {
-        if (n->pegaProx()) it = n->pegaProx();
-        else if (n->pegaAnt()) it = n->pegaAnt();
-        else it = pri;
+    // Para qualquer outra quantidade de elementos
+    else {
+        Item *a = n->pegaAnt();  // Anterior a N
+        Item *p = n->pegaProx(); // Sucessor de N
+        if (a) a->setaProx( p );
+        if (p) p->setaAnt( a );
+        if (n==this->ult) this->ult = n->pegaAnt();
+        if (n==this->pri) this->pri = n->pegaProx();
     }
 
-    Item *a = n->pegaAnt();  // Anterior a N
-    Item *p = n->pegaProx(); // Sucesso de N
-
-    if (a) a->setaProx( p );
-    if (p) p->setaAnt( a );
+    // Relocar o iterator caso estejamos deletando o ponteiro para o qual ele aponta
+    if (n==this->it) {
+        if (n->pegaAnt()) this->it = n->pegaAnt();
+            else if (n->pegaProx()) this->it = n->pegaProx();
+                else this->it=0;
+    }
 
     this->nitems--; // Contador de items
 
-    delete n;
-
+    //delete n;
 
 }
 
