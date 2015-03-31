@@ -7,9 +7,8 @@ using namespace std;
 bool Grafo::noArticulacao(int id)
 {
     Vertice *da = this->encontraNo(id);
-    Vertice * aux, aux2;
-    aux = da->pegaProx();
-    axu2 = da->pegaAnt();
+    Item *aux = da->pegaProx();
+    Item *axu2 = da->pegaAnt();
 
     //this->removeNo(id);
     if(this->conexo())
