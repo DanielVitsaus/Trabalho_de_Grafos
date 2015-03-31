@@ -52,22 +52,47 @@ int main()
     g1 = new Grafo();
 
     // Cria 5 mil nós
-    for (i=0;i<5000;i++) {
+    for (i=0;i<10;i++) {
         g1->adicionaNo(i);
-        //cout << "CRIEI NO " << i;
+        cout << "CRIEI NO " << i;
         if (i>0) {
             g1->adicionaAresta(i, i-1);
-            //cout << ", COM ARESTA " << i << " - " << i-1 << endl;
+            cout << ", COM ARESTA " << i << " - " << i-1 << endl;
         } else cout << endl;
     }
+    g1->adicionaAresta(9, 0);
 
     // Percorre deletando todos os nós...
+
+    bool te,te2;
+    te = g1->kRegular();
+    te2 = g1->nosSaoAdjacentes(1 , 0);
+
+    if (te)
+    {
+        cout << "\né k-regular" << endl;
+    }
+    else
+    {
+        cout << "não é k-regular" << endl;
+    }
+
+    if (te2)
+    {
+        cout << "\nsão ad" << endl;
+    }
+    else
+    {
+        cout << "\nnão é ad\n" << endl;
+    }
+
+    cout << g1->contaNos();
+
     i=0;
     for (i=0;i<5000;i++) {
         g1->removeNo(i);
-    };
+    }
 
-    cout << g1->contaNos();
     delete g1;
 
     return 0;

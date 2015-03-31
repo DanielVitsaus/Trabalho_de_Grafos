@@ -4,6 +4,57 @@ using namespace std;
 
 /* -------------------------------------------- CLASSE GRAFO ------------------------------------------ */
 
+bool Grafo::noArticulacao(int id)
+{
+    Vertice *da = this->encontraNo(id);
+    Vertice * aux, aux2;
+    aux = da->pegaProx();
+    axu2 = da->pegaAnt();
+
+    //this->removeNo(id);
+    if(this->conexo())
+        return true;
+    else
+        return false;
+
+}
+
+bool Grafo::kRegular()
+{
+    int grau1;
+    Vertice *v = this->primeiroNo();
+    int grau = grauNo(v->pegaId());
+
+    while(v)
+    {
+        grau1 = grauNo(v->pegaId());
+        if(grau1!=grau)
+        {
+            return false;
+        }
+        v=this->proximoNo();
+    }
+    return true;
+}
+
+bool Grafo::nosSaoAdjacentes(int id1, int id2)
+{
+    Vertice *v1 = this->encontraNo(id1);
+    Aresta *a;
+    a = v1->primeiraAresta();
+    while (a)
+    {
+        if (a->pegaIdDestino()==id2)
+        {
+            return true;
+        }
+        a = v1->proximaAresta();
+
+    }
+    return false;
+
+}
+
 // Encontra um Vertice com a id dada
 Vertice* Grafo::encontraNo(int id) {
 
