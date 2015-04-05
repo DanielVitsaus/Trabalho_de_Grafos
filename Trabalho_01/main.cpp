@@ -60,21 +60,47 @@ int main()
             cout << ", COM ARESTA " << i << " - " << i-1 << endl;
         } else cout << endl;
     }
-    g1->adicionaAresta(9 , 0);
+    //g1->adicionaAresta(9 , 0);
+    /*
+    g1->adicionaAresta(0 , 2);
+    g1->adicionaAresta(0 , 3);
+    g1->adicionaAresta(1 , 3);
+*/
 /////////////////////////////////////////////////////////////////////////////////
 
     g1->adicionaNo(10);
     g1->adicionaNo(11);
     g1->adicionaNo(12);
     g1->adicionaNo(13);
+    //g1->adicionaNo(14);
 
-    g1->adicionaAresta(9, 13);
+    g1->adicionaAresta(12, 13);
     g1->adicionaAresta(10, 11);
     g1->adicionaAresta(10, 12);
     g1->adicionaAresta(13, 11);
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+    if(g1->conexo())
+    {
+        cout << "\n eh conexo\n" << endl;
+    }
+    else
+        cout << "\nnao eh conexo" << endl;
+
+/////////////////////////////////////////////////////////////////////////////////
+
+    if (g1->mesmaComponenteConexa(11,13))
+    {
+        cout << "\n Mesma componente!! \n" << endl;
+    }
+    else
+    {
+        cout << "\n Não esta na mesma componente!! \n" << endl;
+    }
 
 ////////////////////////////////////////////////////////////////////////////
+    /* ok
     if (g1->completo())
     {
         cout << "\n eh completo \n" << endl;
@@ -83,8 +109,9 @@ int main()
     {
         cout << "\n nao eh completo \n "<< endl;
     }
-
+    */
 ////////////////////////////////////////////////////////////////////////////
+    /* ok
     if (g1->arestaPonte(9, 13))
     {
         cout << "\n A aresta eh ponte \n" << endl;
@@ -93,22 +120,17 @@ int main()
     {
         cout << "\n nao eh ponte \n "<< endl;
     }
-
+    */
 ////////////////////////////////////////////////////////////////////////////
-    if (g1->noArticulacao(9))
+    /*ok
+    if (g1->noArticulacao(12))
         cout << "\n O no eh articulação\n" << endl;
     else
         cout << "\n O no nao eh articulação\n" << endl;
-/////////////////////////////////////////////////////////////////////////////////////////////
+        */
 
-    if(g1->conexo())
-    {
-        cout << "\neh conexo\n" << endl;
-    }
-    else
-        cout << "nao eh conexo" << endl;
 ////////////////////////////////////////////////////////////////////////
-
+    /* ok
     bool te,te2;
     te = g1->kRegular();
     te2 = g1->nosSaoAdjacentes(1 , 0);
@@ -130,6 +152,7 @@ int main()
     {
         cout << "\n não é ad\n" << endl;
     }
+    */
 //////////////////////////////////////////////////////////////////////////////////
     cout << g1->contaNos() << endl;
 
