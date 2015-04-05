@@ -5,8 +5,75 @@ using namespace std;
 
 ///* -------------------------------------------- CLASSE GRAFO ------------------------------------------ *///
 
-/// Busca em Profundidade
-int Grafo::buscaEmProf(Vertice *v ,int contaVisi)
+/// Retorna os ids de uma componente Conexa
+vector<int> Grafo::buscaMesmaCompConexo(Vertice *v, vector<int> c)
+{
+    v->setaVisitado(true);
+    c.push_back(v->pegaId());
+    Aresta *aux  = v->primeiraAresta();
+    for(int i = 0; i < v->contaItems(); i++ )
+    {
+        Vertice *ve  = this->encontraNo(aux->pegaIdDestino());
+
+        if (ve->foiVisitado() == false)
+        {
+           c = buscaMesmaCompConexo(ve,c);
+        }
+       aux  = v->proximaAresta();
+    }
+    return c;
+}
+
+/// Verifica se dois vertices estao em uma mesmo conponente conexa
+bool Grafo::mesmaComponenteConexa(int id1, int id2)
+{
+    bool comp = false, idV1 = false, idV2 = false;
+    vector<int> compVisitado; /// armazena os ids de uma componente conexa
+    Vertice* v;
+    if (this->conexo())
+    {
+        return true;
+    }
+    else
+    {
+        for (v = this->primeiroNo(); v != NULL; v = this->proximoNo()) /// percorre os vertices
+        {
+            if (v->foiVisitado() == false)/// pega o primeiro vertice nao visitado
+            {
+                compVisitado = buscaMesmaCompConexo(v,compVisitado);
+                for(int t = 0 ; t < (int)compVisitado.size(); t++)
+                {
+                    if (id1 == compVisitado[t])
+                    {
+                        idV1 = true;
+                    }
+                    if (id2 == compVisitado[t])
+                    {
+                        idV2 = true;
+                    }
+                }
+                compVisitado.clear();
+                if( (idV1 && idV2 ) )
+                {
+                    comp = true;
+                    break;
+                }
+                idV1 = false;
+                idV2 = false;
+            }
+
+        }
+    }
+    for (v = this->primeiroNo(); v != NULL; v = this->proximoNo())/// seta todos os vertices como nao visitado
+    {
+        v->setaVisitado(false);
+    }
+
+    return comp;
+}
+
+/// Busca em Profundidade para verificar se o Grafo é conexo
+int Grafo::buscaEmProfConexo(Vertice *v ,int contaVisi)
 {
     v->setaVisitado(true);
     Aresta *aux  = v->primeiraAresta();
@@ -16,7 +83,7 @@ int Grafo::buscaEmProf(Vertice *v ,int contaVisi)
 
         if (ve->foiVisitado() == false)
         {
-           contaVisi = buscaEmProf(ve,contaVisi+1) ;
+           contaVisi = buscaEmProfConexo(ve,contaVisi+1) ;
         }
        aux  = v->proximaAresta();
     }
@@ -35,7 +102,7 @@ bool Grafo::conexo()
     }
     else
     {
-        quantVisitados = this->buscaEmProf(v,1); /// quantidade de vertice visitados
+        quantVisitados = this->buscaEmProfConexo(v,1); /// quantidade de vertice visitados
         for (v = this->primeiroNo(); v != NULL; v = this->proximoNo())
         {
             v->setaVisitado(false);
@@ -67,19 +134,36 @@ bool Grafo::completo(){
     return true;
 }
 
+///Vetifica se a aresta existe
+bool Grafo::encontraAresta(Vertice *v, int id)
+{
+    return v->existeAresta(id);
+}
+
 /// verifica se a aresta é ponte
-bool Grafo::arestaPonte(int id1, int id2){
+bool Grafo::arestaPonte(int id1, int id2)
+{
+    Vertice * v1 = this->encontraNo(id1);
+    Vertice * v2 = this->encontraNo(id1);
 
-    this->removeAresta(id1, id2);
+    if ( this->encontraAresta(v1,id2) || this->encontraAresta(v2,id1)) /// verifica se as arestas exitem
+    {
+        this->removeAresta(id1, id2);
 
-    if(this->conexo()){
-        this->adicionaAresta(id1, id2); ///readiciona a aresta eliminada antes de informar se a aresta é ponte ou não
+        if(this->conexo())
+        {
+            this->adicionaAresta(id1, id2); ///readiciona a aresta eliminada antes de informar se a aresta é ponte ou não
+            return false;
+        }
+        else
+        {
+            this->adicionaAresta(id1, id2);
+            return true;
+        }
+    }
+    else
         return false;
-    }
-    else{
-        this->adicionaAresta(id1, id2);
-        return true;
-    }
+
 }
 
 ///verifica se o no eh de articulacao
@@ -91,8 +175,6 @@ bool Grafo::noArticulacao(int id)
     {
         are.push_back(i->pegaIdDestino());/// add as arestas
     }
-    //Vertice * ant = (Vertice*)re->pegaAnt();
-    //ant->setaProx(re->pegaProx());
 
     this->removeNo(id);
 
@@ -104,6 +186,7 @@ bool Grafo::noArticulacao(int id)
         {
             this->adicionaAresta(id, are[i]);
         }
+        are.clear();
         return false;
     }
     else
@@ -114,6 +197,7 @@ bool Grafo::noArticulacao(int id)
         {
             this->adicionaAresta(id, are[i]);
         }
+        are.clear();
         return true;
     }
 }
@@ -201,21 +285,13 @@ void Grafo::removeNo(int id) {
     Vertice *v = this->encontraNo(id);
     if (!v) return;
 
-    //cout << "REMOVENDO NO " << id << " DE GRAU " << v->pegaGrau() << endl;
-
     Vertice *v2 = this->primeiroNo();
 
     /// Percorre todos os vertices...
     while (v2) {
         /// O Vertice tem alguma Aresta para o Vertice a ser deletado? Remove Aresta, e pula para o proximo Vertice !
         if (v2->removeAresta(id)) {
-            //cout << "REMOVI " << id << " em " << v2->pegaId() << endl;
             v->removeAresta(v2->pegaId());
-            //cout  << "REMOVI " << v2->pegaId() << " em " << id << endl;
-            //cout << id << " AGORA POSSUI " << v->pegaGrau() << " ARESTAS." << endl;
-            //break;
-
-            ///  comentei o break pq estava dando problemas   ///
         }
         /// Senão, pula para o proximo Vertice
         v2 = this->proximoNo();
@@ -231,7 +307,7 @@ void Grafo::removeAresta(int id_no1, int id_no2) {
     Vertice *v1 = this->encontraNo(id_no1);
     Vertice *v2 = this->encontraNo(id_no2);
 
-    if (!(v1&&v2)) return;
+    if (!(v1&&v2)) return ;
 
     v1->removeAresta(id_no2);
     v2->removeAresta(id_no1);
@@ -250,6 +326,16 @@ int Grafo::grauNo(int id) {
 }
 
 ///* ---------------------------------------- CLASSE VERTICE --------------------------------------- *///
+
+bool Vertice::existeAresta(int id)
+{
+    Aresta *a = this->encontraAresta(id);
+    if (a)
+        return true;
+    else
+        return false;
+
+}
 
 /// Encontra uma Aresta para id no Vertice v
 Aresta* Vertice::encontraAresta(int id) {
@@ -273,7 +359,8 @@ bool Vertice::removeAresta(int id) {
         delete a;
         return true;
     }
-    else return false;
+    else
+        return false;
 
 };
 
