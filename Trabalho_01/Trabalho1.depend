@@ -50,3 +50,23 @@
 	"Lista.h"
 	"Grafo.h"
 
+1428199103 source:/home/danielandre/Trabalho de Grafos-BK/Trabalho_01-v0.3-Gisele-31-03-2015/Grafo.cpp
+	"Grafo.h"
+	<iostream>
+	<vector>
+
+1428196877 /home/danielandre/Trabalho de Grafos-BK/Trabalho_01-v0.3-Gisele-31-03-2015/Grafo.h
+	"Lista.h"
+	<iostream>
+
+1427752864 /home/danielandre/Trabalho de Grafos-BK/Trabalho_01-v0.3-Gisele-31-03-2015/Lista.h
+
+1428196727 source:/home/danielandre/Trabalho de Grafos-BK/Trabalho_01-v0.3-Gisele-31-03-2015/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1428199175 source:/home/danielandre/Trabalho de Grafos-BK/Trabalho_01-v0.3-Gisele-31-03-2015/main.cpp
+	<iostream>
+	"Lista.h"
+	"Grafo.h"
+

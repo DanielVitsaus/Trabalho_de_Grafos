@@ -22,10 +22,13 @@ class Vertice: public Lista, public Item {
 
     private:
         int id;         // ID do Vertice
+        bool visitado;  // verifica se o vertuce foi visitado
         Aresta* encontraAresta(int id);
 
     public:
-        Vertice(int Id) { this->id=Id; };
+        Vertice(int Id) { this->id=Id; this->visitado = false; };
+        bool foiVisitado() { return this->visitado; };
+        void setaVisitado(bool vi) { this->visitado = vi; };
         int pegaId() { return this->id; };
         int pegaGrau() { return Lista::contaItems(); };
         void adicionaAresta(int id_destino) { Lista::adicionaItem(new Aresta(id_destino)); };
@@ -51,20 +54,23 @@ class Grafo: private Lista {
 
     public:
         int contaNos() { return Lista::contaItems(); }
+        int buscaEmProf(Vertice *v ,int contaVisi);
 
-        // Funções exigidas na especificação do trabalho
+        /// Funções exigidas na especificação do trabalho
         /* 1 ok */ Vertice* adicionaNo(int id);
         /* 1 ok */ void adicionaAresta(int id_origem, int id_destino);
         /* 1 ok */ void removeNo(int id);
         /* 1 ok */ void removeAresta(int id_no1, int id_no2);
         /* 2 ok */ int grauNo(int id);
         /* 3 ok */ bool kRegular();
-        /* 4 */ bool completo();
+        /* 4 ok */ bool completo();
         /* 5 ok */ bool nosSaoAdjacentes(int id1, int id2);
-        /* 6 */ bool conexo();
+        /* 6 ok */ bool conexo();
         /* 7 */ bool mesmaComponenteConexa(int id1, int id2);
-        /* 8 */ bool noArticulacao(int id);
-        /* 9 */ bool arestaPonte(int id1, int id2);
+        /* 8 ok */ bool noArticulacao(int id);
+        /* 9 ok */ bool arestaPonte(int id1, int id2);
+
+        /// Fala a leitura e gravação de arquivos  e a função 7
 
 };
 

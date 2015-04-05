@@ -21,7 +21,7 @@ int main()
     */
 
     //Lista *l1 = new Lista();
-    Item *i1;
+    //Item *i1;
     Grafo *g1;
     int i;
 /*
@@ -60,9 +60,54 @@ int main()
             cout << ", COM ARESTA " << i << " - " << i-1 << endl;
         } else cout << endl;
     }
-    g1->adicionaAresta(9, 0);
+    g1->adicionaAresta(9 , 0);
+/////////////////////////////////////////////////////////////////////////////////
 
-    // Percorre deletando todos os nós...
+    g1->adicionaNo(10);
+    g1->adicionaNo(11);
+    g1->adicionaNo(12);
+    g1->adicionaNo(13);
+
+    g1->adicionaAresta(9, 13);
+    g1->adicionaAresta(10, 11);
+    g1->adicionaAresta(10, 12);
+    g1->adicionaAresta(13, 11);
+
+
+////////////////////////////////////////////////////////////////////////////
+    if (g1->completo())
+    {
+        cout << "\n eh completo \n" << endl;
+    }
+    else
+    {
+        cout << "\n nao eh completo \n "<< endl;
+    }
+
+////////////////////////////////////////////////////////////////////////////
+    if (g1->arestaPonte(9, 13))
+    {
+        cout << "\n A aresta eh ponte \n" << endl;
+    }
+    else
+    {
+        cout << "\n nao eh ponte \n "<< endl;
+    }
+
+////////////////////////////////////////////////////////////////////////////
+    if (g1->noArticulacao(9))
+        cout << "\n O no eh articulação\n" << endl;
+    else
+        cout << "\n O no nao eh articulação\n" << endl;
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+    if(g1->conexo())
+    {
+        cout << "\neh conexo\n" << endl;
+    }
+    else
+        cout << "nao eh conexo" << endl;
+////////////////////////////////////////////////////////////////////////
 
     bool te,te2;
     te = g1->kRegular();
@@ -79,17 +124,18 @@ int main()
 
     if (te2)
     {
-        cout << "\nsão ad" << endl;
+        cout << "\n são ad \n" << endl;
     }
     else
     {
-        cout << "\nnão é ad\n" << endl;
+        cout << "\n não é ad\n" << endl;
     }
+//////////////////////////////////////////////////////////////////////////////////
+    cout << g1->contaNos() << endl;
 
-    cout << g1->contaNos();
-
+//////////////////////////////////////////////////////////////////////////////////
     i=0;
-    for (i=0;i<5000;i++) {
+    for (i=0;i<10;i++) {
         g1->removeNo(i);
     }
 
