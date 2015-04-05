@@ -2,6 +2,8 @@
 #define VERTICE_H_INCLUDED
 #include "Lista.h"
 #include <iostream>
+#include <vector>
+
 using namespace std;
 
 class Aresta: public Item {
@@ -34,6 +36,7 @@ class Vertice: public Lista, public Item {
         void adicionaAresta(int id_destino) { Lista::adicionaItem(new Aresta(id_destino)); };
         void removeAresta() { Lista::deletaItem(Lista::it); };
         bool removeAresta(int id);
+        bool existeAresta(int id);
         Aresta* primeiraAresta() { return (Aresta*)Lista::inicioLista(); };
         Aresta* proximaAresta() { return (Aresta*)Lista::caminhaLista(); };
         Aresta* arestaAnterior() { return (Aresta*)Lista::retornaLista(); };
@@ -45,7 +48,9 @@ class Grafo: private Lista {
 
     private:
         Vertice* encontraNo(int id);
-        Aresta* encontraAresta(Vertice *v, int id);
+        bool encontraAresta(Vertice *v, int id);
+        int buscaEmProfConexo(Vertice *v ,int contaVisi);
+        vector<int> buscaMesmaCompConexo(Vertice *v, vector<int> c);
 
         Vertice* primeiroNo() { return (Vertice*)Lista::inicioLista(); };
         Vertice* proximoNo() { return (Vertice*)Lista::caminhaLista(); };
@@ -54,7 +59,6 @@ class Grafo: private Lista {
 
     public:
         int contaNos() { return Lista::contaItems(); }
-        int buscaEmProf(Vertice *v ,int contaVisi);
 
         /// Funções exigidas na especificação do trabalho
         /* 1 ok */ Vertice* adicionaNo(int id);
@@ -66,11 +70,11 @@ class Grafo: private Lista {
         /* 4 ok */ bool completo();
         /* 5 ok */ bool nosSaoAdjacentes(int id1, int id2);
         /* 6 ok */ bool conexo();
-        /* 7 */ bool mesmaComponenteConexa(int id1, int id2);
+        /* 7 ok */ bool mesmaComponenteConexa(int id1, int id2);
         /* 8 ok */ bool noArticulacao(int id);
         /* 9 ok */ bool arestaPonte(int id1, int id2);
 
-        /// Fala a leitura e gravação de arquivos  e a função 7
+        /// Falta a leitura e gravação de arquivos
 
 };
 
