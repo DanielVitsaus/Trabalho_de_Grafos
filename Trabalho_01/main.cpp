@@ -52,7 +52,21 @@ int main()
     */
 
     g1 = ar->lerArquivo();
-    ar->gravaArquivo();
+    int nAresta = 0, nGrauTotal = 0;
+    double mediaGrau = 0.0;
+    Vertice *v = g1->primeiroNo();
+
+    for(v = g1->primeiroNo(); v != NULL; v = g1->proximoNo())
+    {
+        nGrauTotal += v->pegaGrau();
+        cout << v->pegaGrau() << " | " << v->pegaId() << endl;
+        nAresta += v->contaItems();
+    }
+    mediaGrau = (double)( nGrauTotal/ g1->contaNos());
+
+    cout << "\n" << mediaGrau << " | " << nGrauTotal << " | " << nAresta << endl;
+
+    ar->gravaArquivo(g1->contaNos(), nAresta, mediaGrau );
 
     // Cria 5 mil nós
     /*
