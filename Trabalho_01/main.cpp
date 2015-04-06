@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Lista.h"
 #include "Grafo.h"
+#include "Arquivo.h"
 
 using namespace std;
 
@@ -22,6 +23,7 @@ int main()
 
     //Lista *l1 = new Lista();
     //Item *i1;
+    Arquivo *ar = new Arquivo();
     Grafo *g1;
     int i;
 /*
@@ -49,9 +51,11 @@ int main()
 
     */
 
-    g1 = new Grafo();
+    g1 = ar->lerArquivo();
+    ar->gravaArquivo();
 
     // Cria 5 mil nós
+    /*
     for (i=0;i<10;i++) {
         g1->adicionaNo(i);
         cout << "CRIEI NO " << i;
@@ -60,6 +64,7 @@ int main()
             cout << ", COM ARESTA " << i << " - " << i-1 << endl;
         } else cout << endl;
     }
+    */
     //g1->adicionaAresta(9 , 0);
     /*
     g1->adicionaAresta(0 , 2);
@@ -67,7 +72,7 @@ int main()
     g1->adicionaAresta(1 , 3);
 */
 /////////////////////////////////////////////////////////////////////////////////
-
+/*
     g1->adicionaNo(10);
     g1->adicionaNo(11);
     g1->adicionaNo(12);
@@ -78,7 +83,7 @@ int main()
     g1->adicionaAresta(10, 11);
     g1->adicionaAresta(10, 12);
     g1->adicionaAresta(13, 11);
-
+*/
 /////////////////////////////////////////////////////////////////////////////////////////////
 
     if(g1->conexo())
@@ -158,7 +163,7 @@ int main()
 
 //////////////////////////////////////////////////////////////////////////////////
     i=0;
-    for (i=0;i<10;i++) {
+    for (i=0;i<g1->contaNos();i++) {
         g1->removeNo(i);
     }
 
