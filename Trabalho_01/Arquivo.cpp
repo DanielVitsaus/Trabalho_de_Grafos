@@ -37,6 +37,7 @@ Grafo* Arquivo::lerArquivo()
             valor[j] = buff[i];
             j++;
         }
+        valor[j] = '\0';
         j = 0;
         m2 = atoi(valor);
         for(int i = 0; i < 16; i++)
@@ -51,7 +52,9 @@ Grafo* Arquivo::lerArquivo()
     return grafo;
 }
 
-void Arquivo::gravaArquivo()
+void Arquivo::gravaArquivo(int nVertice, int nAresta, float grauMedio)
 {
-    this->arquivoGravacao << "Daniel" << endl;
+    this->arquivoGravacao << "Número de Vértice -> " << nVertice << endl;
+    this->arquivoGravacao << "Número de Arestas -> " << nAresta << endl;
+    this->arquivoGravacao << "Grau Médio do Grafo -> " << grauMedio << endl;
 }

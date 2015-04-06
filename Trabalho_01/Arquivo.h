@@ -17,9 +17,9 @@ class Arquivo
         ofstream arquivoGravacao;
 
     public:
-        Arquivo() { this->arquivoLeitura.open("Teste.txt",ios::in); this->arquivoGravacao.open("grafos_Gerado.txt", ios::app); };
+        Arquivo() { this->arquivoLeitura.open("Teste.txt",ios::in); this->arquivoGravacao.open("grafos_Info.txt", ios::trunc); };
         Grafo* lerArquivo();
-        void gravaArquivo();
+        void gravaArquivo(int nVertice, int nAresta, float grauMedio);
 
 };
 
