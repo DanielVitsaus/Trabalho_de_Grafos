@@ -5,6 +5,23 @@ using namespace std;
 
 ///* -------------------------------------------- CLASSE GRAFO ------------------------------------------ *///
 
+vector< vector<int> > Grafo::quantCompConexo()
+{
+    Vertice* v;
+    vector< vector<int> > quantConexo;
+    vector<int> compVisitado;
+
+    for (v = this->primeiroNo(); v != NULL; v = this->proximoNo()) /// percorre os vertices
+    {
+        if (v->foiVisitado() == false)/// pega o primeiro vertice nao visitado
+        {
+             quantConexo.push_back( buscaMesmaCompConexo(v,compVisitado) );
+             compVisitado.clear();
+        }
+    }
+    return quantConexo;
+}
+
 /// Retorna os ids de uma componente Conexa
 vector<int> Grafo::buscaMesmaCompConexo(Vertice *v, vector<int> c)
 {
