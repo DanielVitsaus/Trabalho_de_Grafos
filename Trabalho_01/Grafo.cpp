@@ -5,6 +5,28 @@ using namespace std;
 
 ///* -------------------------------------------- CLASSE GRAFO ------------------------------------------ *///
 
+/// Retorna a quantidade de componentes conexa e as componentes
+vector< vector<int> > Grafo::quantCompConexo()
+{
+    Vertice* v;
+    vector< vector<int> > quantConexo;
+    vector<int> compVisitado;
+
+    for (v = this->primeiroNo(); v != NULL; v = this->proximoNo()) /// percorre os vertices
+    {
+        if (v->foiVisitado() == false)/// pega o primeiro vertice nao visitado
+        {
+             quantConexo.push_back( buscaMesmaCompConexo(v,compVisitado) );
+             compVisitado.clear();
+        }
+    }
+    for (v = this->primeiroNo(); v != NULL; v = this->proximoNo())/// seta todos os vertices como nao visitado
+    {
+        v->setaVisitado(false);
+    }
+    return quantConexo;
+}
+
 /// Retorna os ids de uma componente Conexa
 vector<int> Grafo::buscaMesmaCompConexo(Vertice *v, vector<int> c)
 {
@@ -30,7 +52,14 @@ bool Grafo::mesmaComponenteConexa(int id1, int id2)
     bool comp = false, idV1 = false, idV2 = false;
     vector<int> compVisitado; /// armazena os ids de uma componente conexa
     Vertice* v;
-    if (this->conexo())
+    Vertice* v1 = this->encontraNo(id1);
+    Vertice* v2 = this->encontraNo(id2);
+
+    if(! (v1 && v2) )
+    {
+        return false;
+    }
+    else if (this->conexo())
     {
         return true;
     }
@@ -170,6 +199,10 @@ bool Grafo::arestaPonte(int id1, int id2)
 bool Grafo::noArticulacao(int id)
 {
     Vertice *re = this->encontraNo(id);
+    if (!re)
+    {
+        return false;
+    }
     vector<int> are; ///vector para armazenar as arestas do no que vai ser removido
     for (Aresta *i = re->primeiraAresta() ; i != NULL ; i = re->proximaAresta())
     {

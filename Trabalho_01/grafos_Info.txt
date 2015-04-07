@@ -1,0 +1,3 @@
+Número de Vértice -> 1000
+Número de Arestas -> 0
+Grau Médio do Grafo -> 507.27

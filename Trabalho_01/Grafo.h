@@ -52,13 +52,14 @@ class Grafo: private Lista {
         int buscaEmProfConexo(Vertice *v ,int contaVisi);
         vector<int> buscaMesmaCompConexo(Vertice *v, vector<int> c);
 
+
+    public:
+        int contaNos() { return Lista::contaItems(); }
+
         Vertice* primeiroNo() { return (Vertice*)Lista::inicioLista(); };
         Vertice* proximoNo() { return (Vertice*)Lista::caminhaLista(); };
         Vertice* noAnterior() { return (Vertice*)Lista::retornaLista(); };
         Vertice* ultimoNo() { return (Vertice*)Lista::fimLista(); };
-
-    public:
-        int contaNos() { return Lista::contaItems(); }
 
         /// Funções exigidas na especificação do trabalho
         /* 1 ok */ Vertice* adicionaNo(int id);
@@ -73,6 +74,7 @@ class Grafo: private Lista {
         /* 7 ok */ bool mesmaComponenteConexa(int id1, int id2);
         /* 8 ok */ bool noArticulacao(int id);
         /* 9 ok */ bool arestaPonte(int id1, int id2);
+        /* 10 */ vector< vector<int> > quantCompConexo();
 
         /// Falta a leitura e gravação de arquivos
 
