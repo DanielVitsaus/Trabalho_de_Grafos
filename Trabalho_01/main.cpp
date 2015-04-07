@@ -21,38 +21,36 @@ int main()
             --------       TESTE DAS FUNÇÕES DE LISTA   ----------
     */
 
-    //Lista *l1 = new Lista();
-    //Item *i1;
     Arquivo *ar = new Arquivo();
-    Grafo *g1;
+    Grafo *g1 = new Grafo();
+    vector< vector<int> > quantConxo;
     int i;
-/*
-    // Adiciona 5 milhões de items na lista
-    for (i=0; i<50000; i++) {
-        i1 = new Item();
-        i1->setaInfo(i);
-        l1->adicionaItem(i1);
-        //cout << i+1 << endl;  // Contagem
-    }
-    cout << "." << endl;
-
-    // Percorre lista de tras pra frente deletando items
-    l1->fimLista();
-    do {
-        //cout << l1->noIterator()->pegaInfo() << endl; // Contagem regressiva
-        l1->deletaItem(l1->noIterator());
-    } while (l1->contaItems());
-
-    delete l1; */
 
 
-    /*
-                -----  TESTE DAS FUNÇÕES DE GRAFO -----
+               /// -----  TESTE DAS FUNÇÕES DE GRAFO -----
 
-    */
+
 
     g1 = ar->lerArquivo();
-    ar->gravaArquivo();
+    int nAresta = 0, nGrauTotal = 0;
+    float mediaGrau = 0.0;
+    Vertice *v = g1->primeiroNo();
+    for(v = g1->primeiroNo(); v != NULL; v = g1->proximoNo())
+    {
+        nGrauTotal += v->pegaGrau();
+       //cout << v->pegaGrau() << " | " << v->pegaId() << endl;
+        //nAresta += v->contaItems();
+    }
+    mediaGrau =  ( (float)nGrauTotal ) / ( (float)g1->contaNos() ) ;
+
+    quantConxo = g1->quantCompConexo();
+   /// for (int i = 0; i < )
+
+    cout << "\n quantidade de componentes conexas -> " << quantConxo.size() << endl;
+
+    cout << "\n" << mediaGrau << " | " << nGrauTotal << " | " << nAresta << endl;
+
+    ar->gravaArquivo(g1->contaNos(), nAresta, mediaGrau );
 
     // Cria 5 mil nós
     /*
@@ -64,8 +62,8 @@ int main()
             cout << ", COM ARESTA " << i << " - " << i-1 << endl;
         } else cout << endl;
     }
-    */
-    //g1->adicionaAresta(9 , 0);
+*/
+    //g1->adicionaAresta(1 , 3);
     /*
     g1->adicionaAresta(0 , 2);
     g1->adicionaAresta(0 , 3);
@@ -79,7 +77,7 @@ int main()
     g1->adicionaNo(13);
     //g1->adicionaNo(14);
 
-    g1->adicionaAresta(12, 13);
+    g1->adicionaAresta(9, 13);
     g1->adicionaAresta(10, 11);
     g1->adicionaAresta(10, 12);
     g1->adicionaAresta(13, 11);
@@ -94,8 +92,8 @@ int main()
         cout << "\nnao eh conexo" << endl;
 
 /////////////////////////////////////////////////////////////////////////////////
-
-    if (g1->mesmaComponenteConexa(11,13))
+/* OK
+    if (g1->mesmaComponenteConexa(8,10))
     {
         cout << "\n Mesma componente!! \n" << endl;
     }
@@ -103,9 +101,9 @@ int main()
     {
         cout << "\n Não esta na mesma componente!! \n" << endl;
     }
-
+*/
 ////////////////////////////////////////////////////////////////////////////
-    /* ok
+/* OK
     if (g1->completo())
     {
         cout << "\n eh completo \n" << endl;
@@ -114,10 +112,10 @@ int main()
     {
         cout << "\n nao eh completo \n "<< endl;
     }
-    */
+*/
 ////////////////////////////////////////////////////////////////////////////
-    /* ok
-    if (g1->arestaPonte(9, 13))
+/*  OK
+    if (g1->arestaPonte(5, 6))
     {
         cout << "\n A aresta eh ponte \n" << endl;
     }
@@ -125,20 +123,20 @@ int main()
     {
         cout << "\n nao eh ponte \n "<< endl;
     }
-    */
+*/
 ////////////////////////////////////////////////////////////////////////////
-    /*ok
-    if (g1->noArticulacao(12))
+/* OK
+    if (g1->noArticulacao(6))
         cout << "\n O no eh articulação\n" << endl;
     else
         cout << "\n O no nao eh articulação\n" << endl;
-        */
 
+*/
 ////////////////////////////////////////////////////////////////////////
-    /* ok
+/* OK
     bool te,te2;
     te = g1->kRegular();
-    te2 = g1->nosSaoAdjacentes(1 , 0);
+    te2 = g1->nosSaoAdjacentes(1 , 2);
 
     if (te)
     {
