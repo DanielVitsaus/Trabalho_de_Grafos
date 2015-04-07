@@ -5,7 +5,6 @@ using namespace std;
 
 ///* -------------------------------------------- CLASSE GRAFO ------------------------------------------ *///
 
-/// Retorna a quantidade de componentes conexa e as componentes
 vector< vector<int> > Grafo::quantCompConexo()
 {
     Vertice* v;
