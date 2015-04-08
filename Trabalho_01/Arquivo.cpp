@@ -18,6 +18,7 @@ Grafo* Arquivo::lerArquivo(char *ar)
     int m1 = 0, m2 = 0, j = 0;
     char valor[16];
     char buff[16];
+    int cont = 2;
 
     if (!this->arquivoLeitura.is_open())
     {
@@ -51,9 +52,12 @@ Grafo* Arquivo::lerArquivo(char *ar)
         grafo->adicionaAresta(m1,m2);
         //cout << m1 << " | " << m2 << endl;
         this->arquivoLeitura.getline(buff,16);
+        cont++;
     }
+
     this->arquivoLeitura.close();
     cout << "O arquivo " << ar << " foi lido com sucesso! " << endl;
+    cout << cont << endl;
     return grafo;
 }
 

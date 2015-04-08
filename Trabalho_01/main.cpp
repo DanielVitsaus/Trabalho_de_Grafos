@@ -34,7 +34,8 @@ int main()
             cout << "Digite o nome do arquivo como no exemplo:\n\n **** EX: nome_do_arquivo.txt ****\n" << endl;
             cin >> arquivo;
             g1 = ler_grava->lerArquivo(arquivo);
-            printf("\e[H\e[2J");
+            //printf("\e[H\e[2J");
+            //cout << g1->contaNos() << endl;
         }
 
         cout << "Escolha uma das opções:" << endl;
@@ -165,10 +166,10 @@ int main()
                         for(int i = 0; i < (int)quantConxo.size(); i++)
                         {
                             if (maior <= (int)quantConxo[i].size())
-                                maior = quantConxo[i].size();
+                                maior = (int)quantConxo[i].size();
 
                             if (menor > (int)quantConxo[i].size())
-                                menor = quantConxo[0].size();
+                                menor = (int)quantConxo[i].size();
                         }
                         cout << " A maior componente conexa tem " << maior << " nós !!" << endl;
                         cout << " A menor componente conexa tem " << menor << " nós !!\n" << endl;
