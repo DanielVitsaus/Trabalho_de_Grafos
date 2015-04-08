@@ -57,7 +57,11 @@ Grafo* Arquivo::lerArquivo(char *ar)
 
     this->arquivoLeitura.close();
     cout << "O arquivo " << ar << " foi lido com sucesso! \n" << endl;
+<<<<<<< HEAD
     //cout << cont << endl;
+=======
+    cout << cont << endl;
+>>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
     return grafo;
 }
 
@@ -85,7 +89,10 @@ void Arquivo::gravaArquivo(Grafo *g, char* nomArquivo,int nVertice, int nAresta,
         {
             v->setaVisitado(true);
             grauV = v->pegaGrau();
+<<<<<<< HEAD
             n_grau_x++;
+=======
+>>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
             for(k = g2->primeiroNo(); k != NULL; k = g2->proximoNo())
             {
                 grauK = k->pegaGrau();
@@ -96,8 +103,12 @@ void Arquivo::gravaArquivo(Grafo *g, char* nomArquivo,int nVertice, int nAresta,
                 }
             }
             k = g2->primeiroNo();
+<<<<<<< HEAD
             this->arquivoGravacao << "\nQuantidade de vertice com grau " << v->pegaGrau() << " -> " <<  n_grau_x << endl;
             this->arquivoGravacao << "   Frequência relativa de grau " << v->pegaGrau() << " -> " << ( ((float)n_grau_x ) / ( (float)quatVertice ) )<< endl;
+=======
+            this->arquivoGravacao << "Frequência relativa de grau " << v->pegaGrau() << " -> " << ( ((float)n_grau_x ) / ( (float)quatVertice ) )<< endl;
+>>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
             n_grau_x = 0;
         }
     }
