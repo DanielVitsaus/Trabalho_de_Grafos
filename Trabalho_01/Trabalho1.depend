@@ -91,27 +91,16 @@
 	<cstdlib>
 	"Grafo.h"
 
-<<<<<<< HEAD
 1428493930 source:/home/danielcandido/git/Trabalho_de_Grafos/Trabalho_01/Arquivo.cpp
-=======
-1428328608 source:/home/danielcandido/git/Trabalho_de_Grafos/Trabalho_01/Arquivo.cpp
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
 	"Arquivo.h"
 	"Grafo.h"
 	<iostream>
 	<fstream>
 	<vector>
-<<<<<<< HEAD
 	<string.h>
 	<cstdlib>
 
 1428487581 /home/danielcandido/git/Trabalho_de_Grafos/Trabalho_01/Arquivo.h
-=======
-	<string>
-	<cstdlib>
-
-1428323920 /home/danielcandido/git/Trabalho_de_Grafos/Trabalho_01/Arquivo.h
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
 	<iostream>
 	<fstream>
 	<vector>
@@ -119,29 +108,18 @@
 	<cstdlib>
 	"Grafo.h"
 
-<<<<<<< HEAD
 1428487581 /home/danielcandido/git/Trabalho_de_Grafos/Trabalho_01/Grafo.h
-=======
-1428327521 /home/danielcandido/git/Trabalho_de_Grafos/Trabalho_01/Grafo.h
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
 	"Lista.h"
 	<iostream>
 	<vector>
 
-<<<<<<< HEAD
 1428487581 /home/danielcandido/git/Trabalho_de_Grafos/Trabalho_01/Lista.h
 
 1428487581 source:/home/danielcandido/git/Trabalho_de_Grafos/Trabalho_01/Grafo.cpp
-=======
-1427752864 /home/danielcandido/git/Trabalho_de_Grafos/Trabalho_01/Lista.h
-
-1428327878 source:/home/danielcandido/git/Trabalho_de_Grafos/Trabalho_01/Grafo.cpp
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
 	"Grafo.h"
 	<iostream>
 	<vector>
 
-<<<<<<< HEAD
 1428487581 source:/home/danielcandido/git/Trabalho_de_Grafos/Trabalho_01/Lista.cpp
 	"Lista.h"
 	<iostream>
@@ -149,14 +127,6 @@
 1428494006 source:/home/danielcandido/git/Trabalho_de_Grafos/Trabalho_01/main.cpp
 	<iostream>
 	<string.h>
-=======
-1428196726 source:/home/danielcandido/git/Trabalho_de_Grafos/Trabalho_01/Lista.cpp
-	"Lista.h"
-	<iostream>
-
-1428328608 source:/home/danielcandido/git/Trabalho_de_Grafos/Trabalho_01/main.cpp
-	<iostream>
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
 	"Lista.h"
 	"Grafo.h"
 	"Arquivo.h"

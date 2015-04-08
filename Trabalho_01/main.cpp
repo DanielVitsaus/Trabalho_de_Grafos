@@ -20,16 +20,10 @@ int main()
     Arquivo *ler_grava = new Arquivo();
     Grafo *g1 = new Grafo();
     vector< vector<int> > quantConxo;
-<<<<<<< HEAD
     Vertice *v;
     char arquivo[Tex_Arquivo] = " ";
     char r;
     int op = -1, id = 0, nAresta = 0, nGrauTotal = 0;
-=======
-    char arquivo[Tex_Arquivo] = " ";
-    char r;
-    int op = -1, id = 0;
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
 
     cout << "    ******  TRABALHO DE GRAFOS ******" << endl;
 
@@ -48,7 +42,6 @@ int main()
         cout << "Escolha uma das opções:" << endl;
         cout <<  "  1 -> Trocar arquivo:" << endl;
         cout <<  "  2 -> Quantas nos tem o Grafo:" << endl;
-<<<<<<< HEAD
         cout <<  "  3 -> Quantas arestas tem o Grafo:" << endl;
         cout <<  "  4 -> Adiciona/Remove vertice:" << endl;
         cout <<  "  5 -> Adiciona/Remove aresta:" << endl;
@@ -63,21 +56,6 @@ int main()
         cout <<  "  14 ->Verificar quantas componentes conexa tem o grafos," <<endl;
         cout <<  "       qual é o tamanha da mior e menor compomente:" << endl;
         cout <<  "  15 ->Gerar informações sobre o grafo:" << endl;
-=======
-        cout <<  "  3 -> Adiciona/Remove vertice:" << endl;
-        cout <<  "  4 -> Adiciona/Remove aresta:" << endl;
-        cout <<  "  5 -> Grau do nó:" << endl;
-        cout <<  "  6 -> Verificar se é K-Regular:" << endl;
-        cout <<  "  7 -> Verificar se é completo:" << endl;
-        cout <<  "  8 -> Verificar se dois nós são adjacentes:" << endl;
-        cout <<  "  9 -> Verificar se o grafo é conexo:" << endl;
-        cout <<  "  10 -> Verifica se dois nós estão em uma mesma componente conexa:" << endl;
-        cout <<  "  11 -> Verifica se um dado nó é de articulação:" << endl;
-        cout <<  "  12 -> Verifica se uma dada aresta é ponte:" << endl;
-        cout <<  "  13 ->Verificar quantas componentes conexa tem o grafos," <<endl;
-        cout <<  "       qual é o tamanha da mior e menor compomente:" << endl;
-        cout <<  "  14 ->Gerar informações sobre o grafo:" << endl;
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
         cout <<  "  o para sair:" << endl;
         cin >> op;
 
@@ -106,7 +84,6 @@ int main()
             break;
 
             case 3:
-<<<<<<< HEAD
                     nAresta = 0;
                     nGrauTotal = 0;
                     for(v = g1->primeiroNo(); v != NULL; v = g1->proximoNo())
@@ -117,8 +94,6 @@ int main()
             break;
 
             case 4:
-=======
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
                     cout << "Digite 'r' para Remover e 'a' para Adicionar nos !!\n" << endl;
                     cin >> r;
                     int ad;
@@ -138,11 +113,7 @@ int main()
                     }
             break;
 
-<<<<<<< HEAD
             case 5:
-=======
-            case 4:
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
                     cout << "Digite 'r' para Remover e 'a' para Adicionar aresta !!\n" << endl;
                     cin >> r;
                     int adAr1,adAr2;
@@ -166,11 +137,7 @@ int main()
                     }
             break;
 
-<<<<<<< HEAD
             case 6:
-=======
-            case 5:
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
                     cout << "Digite o ID do nó:" << endl;
                     cin >> id;
                     if (g1->grauNo(id) != -1)
@@ -179,33 +146,21 @@ int main()
                         cout << " Não exite um no com o ID -> " << id << "\n"<< endl;
             break;
 
-<<<<<<< HEAD
             case 7:
-=======
-            case 6:
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
                     if (g1->kRegular())
                         cout << " O grafo é K-Regular!!\n" << endl;
                     else
                         cout << " O grafo não é K-Regular!!\n" << endl;
             break;
 
-<<<<<<< HEAD
             case 8:
-=======
-            case 7:
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
                     if (g1->completo())
                         cout << " O Grafo é completo \n" << endl;
                     else
                         cout << " O grafo no é completo \n "<< endl;
             break;
 
-<<<<<<< HEAD
             case 9:
-=======
-            case 8:
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
                     cout << "Digite o ID do primeiro nó:" << endl;
                     int no1;
                     cin >> no1;
@@ -218,22 +173,14 @@ int main()
                         cout << " Os nos não são adjacentes!!\n" << endl;
             break;
 
-<<<<<<< HEAD
             case 10:
-=======
-            case 9:
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
                     if(g1->conexo())
                         cout << " O grafo é conexo\n" << endl;
                     else
                         cout << " O grafo não é conexo!!\n" << endl;
             break;
 
-<<<<<<< HEAD
             case 11:
-=======
-            case 10:
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
                     cout << "Digite o ID do primeiro nó:" << endl;
                     int n1;
                     cin >> n1;
@@ -246,11 +193,7 @@ int main()
                         cout << " Os nos não estão na mesma componente!!\n" << endl;
             break;
 
-<<<<<<< HEAD
             case 12:
-=======
-            case 11:
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
                     cout << "Digite o ID do nó:" << endl;
                     int no;
                     cin >> no;
@@ -260,11 +203,7 @@ int main()
                         cout << " O no não é articulação!!\n" << endl;
             break;
 
-<<<<<<< HEAD
             case 13:
-=======
-            case 12:
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
                     cout << "Digite a primeira extremidade da aresta:" << endl;
                     int a1;
                     cin >> a1;
@@ -277,11 +216,7 @@ int main()
                        cout << "\n A aresta nao é ponte !!\n "<< endl;
             break;
 
-<<<<<<< HEAD
             case 14:
-=======
-            case 13:
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
                     quantConxo = g1->quantCompConexo();
                     int maior, menor;
                     maior = quantConxo[0].size();
@@ -303,19 +238,10 @@ int main()
                         cout << " A menor componente conexa tem " << menor << " nós !!\n" << endl;
                     }
             break;
-<<<<<<< HEAD
             case 15:
                     nAresta = 0;
                     nGrauTotal = 0;
                     float mediaGrau ;
-=======
-            case 14:
-                    int nAresta , nGrauTotal;
-                    nAresta = 0;
-                    nGrauTotal = 0;
-                    float mediaGrau ;
-                    Vertice *v ;
->>>>>>> 1ab9863be51344994ef1d0d4efecc94af1d14957
                     v = g1->primeiroNo();
                     for(v = g1->primeiroNo(); v != NULL; v = g1->proximoNo())
                     {
