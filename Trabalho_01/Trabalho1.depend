@@ -31,12 +31,12 @@
 	"Lista.h"
 	<iostream>
 
-1428352418 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Grafo.cpp
+1428452829 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Grafo.cpp
 	"Grafo.h"
 	<iostream>
 	<vector>
 
-1428347682 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Grafo.h
+1428439085 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Grafo.h
 	"Lista.h"
 	<iostream>
 	<vector>
@@ -47,8 +47,9 @@
 	"Lista.h"
 	<iostream>
 
-1428356785 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/main.cpp
+1428454367 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/main.cpp
 	<iostream>
+	<string.h>
 	"Lista.h"
 	"Grafo.h"
 	"Arquivo.h"
@@ -73,16 +74,16 @@
 	"Lista.h"
 	"Grafo.h"
 
-1428357175 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Arquivo.cpp
+1428455173 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Arquivo.cpp
 	"Arquivo.h"
 	"Grafo.h"
 	<iostream>
 	<fstream>
 	<vector>
-	<string>
+	<string.h>
 	<cstdlib>
 
-1428356805 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Arquivo.h
+1428447476 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_01/Arquivo.h
 	<iostream>
 	<fstream>
 	<vector>

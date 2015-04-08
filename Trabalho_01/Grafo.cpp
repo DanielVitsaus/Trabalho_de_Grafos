@@ -5,6 +5,7 @@ using namespace std;
 
 ///* -------------------------------------------- CLASSE GRAFO ------------------------------------------ *///
 
+///Retorna a quantidade de componentes conexas
 vector< vector<int> > Grafo::quantCompConexo()
 {
     Vertice* v;
@@ -352,8 +353,7 @@ int Grafo::grauNo(int id) {
     Vertice *v = this->encontraNo(id);
 
     if (v) return v->pegaGrau();
-    else return 0;
-
+    else return -1;
 
 }
 

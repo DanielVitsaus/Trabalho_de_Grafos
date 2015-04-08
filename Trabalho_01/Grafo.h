@@ -74,7 +74,7 @@ class Grafo: private Lista {
         /* 7 ok */ bool mesmaComponenteConexa(int id1, int id2);
         /* 8 ok */ bool noArticulacao(int id);
         /* 9 ok */ bool arestaPonte(int id1, int id2);
-        /* 10 */ vector< vector<int> > quantCompConexo();
+        /* 10 OK*/ vector< vector<int> > quantCompConexo();
 
         /// Falta a leitura e gravação de arquivos
 
