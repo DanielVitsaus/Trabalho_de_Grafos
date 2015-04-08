@@ -23,6 +23,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Arquivo.cpp" />
+		<Unit filename="Arquivo.h" />
 		<Unit filename="Grafo.cpp" />
 		<Unit filename="Grafo.h" />
 		<Unit filename="Lista.cpp" />
@@ -31,6 +33,7 @@
 		<Extensions>
 			<code_completion />
 			<debugger />
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
