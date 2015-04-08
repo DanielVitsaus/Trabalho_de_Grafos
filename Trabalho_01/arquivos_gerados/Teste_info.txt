@@ -1,0 +1,8 @@
+Número de Vértice -> 22
+Número de Arestas -> 21
+Grau Médio do Grafo -> 1.90909
+Frequência relativa de grau 3 -> 0.318182
+Frequência relativa de grau 1 -> 0.318182
+Frequência relativa de grau 2 -> 0.318182
+Frequência relativa de grau 0 -> 0.0454545
+

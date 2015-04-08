@@ -56,7 +56,7 @@ Grafo* Arquivo::lerArquivo(char *ar)
     }
 
     this->arquivoLeitura.close();
-    cout << "O arquivo " << ar << " foi lido com sucesso! " << endl;
+    cout << "O arquivo " << ar << " foi lido com sucesso! \n" << endl;
     cout << cont << endl;
     return grafo;
 }
