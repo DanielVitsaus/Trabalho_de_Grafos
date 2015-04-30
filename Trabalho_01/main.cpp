@@ -233,10 +233,13 @@ int main()
 
                             if (menor > (int)quantConxo[i].size())
                                 menor = (int)quantConxo[i].size();
+
+                            quantConxo[i].clear();
                         }
                         cout << " A maior componente conexa tem " << maior << " nós !!" << endl;
                         cout << " A menor componente conexa tem " << menor << " nós !!\n" << endl;
                     }
+                    quantConxo.clear();
             break;
             case 15:
                     nAresta = 0;
