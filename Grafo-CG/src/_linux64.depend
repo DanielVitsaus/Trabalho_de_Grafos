@@ -1,0 +1,406 @@
+# depslib dependency file v1.0
+1409787732 source:/media/rodrigo/Data/Rodrigo/Dropbox/Projects/Disciplinas/CG/CG/src/01_quad.cpp
+	<stdio.h>
+	<GL/glut.h>
+
+1368290960 /media/rodrigo/Data/Rodrigo/Dropbox/Projects/Disciplinas/CG/CG/include/GL/glut.h
+	"freeglut_std.h"
+
+1368290960 /media/rodrigo/Data/Rodrigo/Dropbox/Projects/Disciplinas/CG/CG/include/GL/freeglut_std.h
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1428514930 source:/home/danielandre/Downloads/CG/src/01_quad.cpp
+	<stdio.h>
+	<GL/glut.h>
+
+1368290960 /home/danielandre/Downloads/CG/include/GL/glut.h
+	"freeglut_std.h"
+
+1368290960 /home/danielandre/Downloads/CG/include/GL/freeglut_std.h
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1428514930 source:/home/danielandre/Área de Trabalho/CG/src/01_quad.cpp
+	<stdio.h>
+	<GL/glut.h>
+
+1368290960 /home/danielandre/Área de Trabalho/CG/include/GL/glut.h
+	"freeglut_std.h"
+
+1368290960 /home/danielandre/Área de Trabalho/CG/include/GL/freeglut_std.h
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1430358575 source:/home/danielandre/Área de Trabalho/luiz/CG/src/01_quad.cpp
+	<stdio.h>
+	<stdlib.h>
+	<GL/glut.h>
+	<ctype.h>
+	<time.h>
+	<math.h>
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"Arquivo.h"
+	"Ponto.h"
+
+1368290960 /home/danielandre/Área de Trabalho/luiz/CG/include/GL/glut.h
+	"freeglut_std.h"
+
+1368290960 /home/danielandre/Área de Trabalho/luiz/CG/include/GL/freeglut_std.h
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1380239600 source:/home/danielandre/Área de Trabalho/luiz/CG/src/gluiExample.cpp
+	<string.h>
+	<GL/glui.h>
+
+1152222178 /home/danielandre/Área de Trabalho/luiz/CG/include/GL/glui.h
+	<GL/freeglut.h>
+	<GL/openglut.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<cstdlib>
+	<cstdio>
+	<cstring>
+	<string>
+	<vector>
+
+1368290960 /home/danielandre/Área de Trabalho/luiz/CG/include/GL/freeglut.h
+	"freeglut_std.h"
+	"freeglut_ext.h"
+
+1368290960 /home/danielandre/Área de Trabalho/luiz/CG/include/GL/freeglut_ext.h
+	<stdarg.h>
+
+1427752864 /home/danielandre/Área de Trabalho/luiz/CG/src/Lista.h
+
+1428753695 /home/danielandre/Área de Trabalho/luiz/CG/src/Grafo.h
+	"Lista.h"
+	"Ponto.h"
+	<iostream>
+	<vector>
+
+1428447476 /home/danielandre/Área de Trabalho/luiz/CG/src/Arquivo.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1428697899 source:/home/danielandre/Área de Trabalho/luiz/CG/src/Arquivo.cpp
+	"Arquivo.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+	<stdio.h>
+	<GL/glut.h>
+
+1428957013 source:/home/danielandre/Área de Trabalho/luiz/CG/src/Grafo.cpp
+	"Grafo.h"
+	"Ponto.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<math.h>
+
+1428196726 source:/home/danielandre/Área de Trabalho/luiz/CG/src/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1428590422 source:/home/danielcandido/Área de Trabalho/luiz/CG/src/01_quad.cpp
+	<stdio.h>
+	<stdlib.h>
+	<GL/glut.h>
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"Arquivo.h"
+
+1368290960 /home/danielcandido/Área de Trabalho/luiz/CG/include/GL/glut.h
+	"freeglut_std.h"
+
+1368290960 /home/danielcandido/Área de Trabalho/luiz/CG/include/GL/freeglut_std.h
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1427752864 /home/danielcandido/Área de Trabalho/luiz/CG/src/Lista.h
+
+1428587225 /home/danielcandido/Área de Trabalho/luiz/CG/src/Grafo.h
+	"Lista.h"
+	"Ponto.h"
+	<iostream>
+	<vector>
+
+1428447476 /home/danielcandido/Área de Trabalho/luiz/CG/src/Arquivo.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1428587148 source:/home/danielcandido/Área de Trabalho/luiz/CG/src/Arquivo.cpp
+	"Arquivo.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+	<stdio.h>
+	<GL/glut.h>
+
+1428589809 source:/home/danielcandido/Área de Trabalho/luiz/CG/src/Grafo.cpp
+	"Grafo.h"
+	"Ponto.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+
+1428196726 source:/home/danielcandido/Área de Trabalho/luiz/CG/src/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1428587464 /home/danielcandido/Área de Trabalho/luiz/CG/src/Ponto.h
+	<stdio.h>
+	<GL/glut.h>
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+
+1428587605 source:/home/danielcandido/Área de Trabalho/luiz/CG/src/Ponto.cpp
+	<stdio.h>
+	<GL/glut.h>
+	"Ponto.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+
+1428587148 source:/media/danielandre/MULTIBOOT/luiz/luiz/CG/src/Arquivo.cpp
+	"Arquivo.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+	<stdio.h>
+	<GL/glut.h>
+
+1428447476 /media/danielandre/MULTIBOOT/luiz/luiz/CG/src/Arquivo.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1428587224 /media/danielandre/MULTIBOOT/luiz/luiz/CG/src/Grafo.h
+	"Lista.h"
+	"Ponto.h"
+	<iostream>
+	<vector>
+
+1427752864 /media/danielandre/MULTIBOOT/luiz/luiz/CG/src/Lista.h
+
+1428587464 /media/danielandre/MULTIBOOT/luiz/luiz/CG/src/Ponto.h
+	<stdio.h>
+	<GL/glut.h>
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+
+1368290960 /media/danielandre/MULTIBOOT/luiz/luiz/CG/include/GL/glut.h
+	"freeglut_std.h"
+
+1368290960 /media/danielandre/MULTIBOOT/luiz/luiz/CG/include/GL/freeglut_std.h
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1428590510 source:/media/danielandre/MULTIBOOT/luiz/luiz/CG/src/Grafo.cpp
+	"Grafo.h"
+	"Ponto.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+
+1428196726 source:/media/danielandre/MULTIBOOT/luiz/luiz/CG/src/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1428587604 source:/media/danielandre/MULTIBOOT/luiz/luiz/CG/src/Ponto.cpp
+	<stdio.h>
+	<GL/glut.h>
+	"Ponto.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+
+1430358575 source:/home/danielandre/Área de Trabalho/luiz/luiz/CG/src/01_quad.cpp
+	<stdio.h>
+	<stdlib.h>
+	<GL/glut.h>
+	<ctype.h>
+	<time.h>
+	<math.h>
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"Arquivo.h"
+	"Ponto.h"
+
+1368290960 /home/danielandre/Área de Trabalho/luiz/luiz/CG/include/GL/glut.h
+	"freeglut_std.h"
+
+1368290960 /home/danielandre/Área de Trabalho/luiz/luiz/CG/include/GL/freeglut_std.h
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1427752864 /home/danielandre/Área de Trabalho/luiz/luiz/CG/src/Lista.h
+
+1428753695 /home/danielandre/Área de Trabalho/luiz/luiz/CG/src/Grafo.h
+	"Lista.h"
+	"Ponto.h"
+	<iostream>
+	<vector>
+
+1428755533 /home/danielandre/Área de Trabalho/luiz/luiz/CG/src/Ponto.h
+	<stdio.h>
+	<GL/glut.h>
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+
+1428447476 /home/danielandre/Área de Trabalho/luiz/luiz/CG/src/Arquivo.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1428697899 source:/home/danielandre/Área de Trabalho/luiz/luiz/CG/src/Arquivo.cpp
+	"Arquivo.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+	<stdio.h>
+	<GL/glut.h>
+
+1428957013 source:/home/danielandre/Área de Trabalho/luiz/luiz/CG/src/Grafo.cpp
+	"Grafo.h"
+	"Ponto.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<math.h>
+
+1428196726 source:/home/danielandre/Área de Trabalho/luiz/luiz/CG/src/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1428755548 source:/home/danielandre/Área de Trabalho/luiz/luiz/CG/src/Ponto.cpp
+	<stdio.h>
+	<GL/glut.h>
+	"Ponto.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+
+1429921263 source:/home/danielandre/Área de Trabalho/luiz/luiz/CG/src/View.cpp
+	<stdio.h>
+	<stdlib.h>
+	<GL/glut.h>
+	<ctype.h>
+	<time.h>
+	<math.h>
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"Arquivo.h"
+	"Ponto.h"
+
+1428755533 /home/danielandre/Área de Trabalho/luiz/CG/src/Ponto.h
+	<stdio.h>
+	<GL/glut.h>
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+
+1428755548 source:/home/danielandre/Área de Trabalho/luiz/CG/src/Ponto.cpp
+	<stdio.h>
+	<GL/glut.h>
+	"Ponto.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+
+1429921263 source:/home/danielandre/Área de Trabalho/luiz/CG/src/View.cpp
+	<stdio.h>
+	<stdlib.h>
+	<GL/glut.h>
+	<ctype.h>
+	<time.h>
+	<math.h>
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"Arquivo.h"
+	"Ponto.h"
+
