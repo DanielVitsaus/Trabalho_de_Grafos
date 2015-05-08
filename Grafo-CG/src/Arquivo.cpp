@@ -17,8 +17,8 @@ Grafo* Arquivo::lerArquivo(char *ar)
     char diretorio[100] = "instancias//";
     strcat(diretorio,ar);
     this->arquivoLeitura.open(diretorio,ios::in);
-    int m1 = 0, m2 = 0, j = 0;
-    char valor[16];
+    int m1 = 0, m2 = 0;//, j = 0;
+    //char valor[16];
     char buff[16];
     int cont = 2;
 
@@ -35,6 +35,8 @@ Grafo* Arquivo::lerArquivo(char *ar)
     this->arquivoLeitura.getline(buff,16);
     while(! this->arquivoLeitura.eof())
     {
+        sscanf(buff,"%d %d", &m1,&m2);
+        /*
         for(int i = 0; buff[i] != '\0' ; i++ )
         {
             if(buff[i] == ' ')
@@ -53,6 +55,7 @@ Grafo* Arquivo::lerArquivo(char *ar)
         {
             valor[i] = '\0';
         }
+        */
         grafo->adicionaAresta(m1,m2);
         //cout << m1 << " | " << m2 << endl;
         this->arquivoLeitura.getline(buff,16);

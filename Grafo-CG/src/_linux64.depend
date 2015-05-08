@@ -404,3 +404,100 @@
 	"Arquivo.h"
 	"Ponto.h"
 
+1430360407 source:/home/danielandre/git/Trabalho_de_Grafos/Grafo-CG/src/01_quad.cpp
+	<stdio.h>
+	<stdlib.h>
+	<GL/glut.h>
+	<ctype.h>
+	<time.h>
+	<math.h>
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"Arquivo.h"
+	"Ponto.h"
+
+1430360407 /home/danielandre/git/Trabalho_de_Grafos/Grafo-CG/include/GL/glut.h
+	"freeglut_std.h"
+
+1430360407 /home/danielandre/git/Trabalho_de_Grafos/Grafo-CG/include/GL/freeglut_std.h
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1430360407 /home/danielandre/git/Trabalho_de_Grafos/Grafo-CG/src/Lista.h
+
+1430360407 /home/danielandre/git/Trabalho_de_Grafos/Grafo-CG/src/Grafo.h
+	"Lista.h"
+	"Ponto.h"
+	<iostream>
+	<vector>
+
+1430360407 /home/danielandre/git/Trabalho_de_Grafos/Grafo-CG/src/Ponto.h
+	<stdio.h>
+	<GL/glut.h>
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+
+1430360407 /home/danielandre/git/Trabalho_de_Grafos/Grafo-CG/src/Arquivo.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1430952879 source:/home/danielandre/git/Trabalho_de_Grafos/Grafo-CG/src/Arquivo.cpp
+	"Arquivo.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+	<stdio.h>
+	<GL/glut.h>
+
+1430360407 source:/home/danielandre/git/Trabalho_de_Grafos/Grafo-CG/src/Grafo.cpp
+	"Grafo.h"
+	"Ponto.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<math.h>
+
+1430360407 source:/home/danielandre/git/Trabalho_de_Grafos/Grafo-CG/src/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1430360407 source:/home/danielandre/git/Trabalho_de_Grafos/Grafo-CG/src/Ponto.cpp
+	<stdio.h>
+	<GL/glut.h>
+	"Ponto.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+
+1430360407 source:/home/danielandre/git/Trabalho_de_Grafos/Grafo-CG/src/View.cpp
+	<stdio.h>
+	<stdlib.h>
+	<GL/glut.h>
+	<ctype.h>
+	<time.h>
+	<math.h>
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"Arquivo.h"
+	"Ponto.h"
+
