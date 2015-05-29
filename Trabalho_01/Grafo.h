@@ -29,6 +29,7 @@ class Vertice: public Lista, public Item {
 
     public:
         Vertice(int Id) { this->id=Id; this->visitado = false; };
+        ~Vertice();
         bool foiVisitado() { return this->visitado; };
         void setaVisitado(bool vi) { this->visitado = vi; };
         int pegaId() { return this->id; };
@@ -54,6 +55,8 @@ class Grafo: private Lista {
 
 
     public:
+        ~Grafo();
+
         int contaNos() { return Lista::contaItems(); }
 
         Vertice* primeiroNo() { return (Vertice*)Lista::inicioLista(); };

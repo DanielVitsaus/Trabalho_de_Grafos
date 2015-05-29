@@ -5,6 +5,22 @@ using namespace std;
 
 ///* -------------------------------------------- CLASSE GRAFO ------------------------------------------ *///
 
+Grafo::~Grafo() {
+
+    Item *i;
+    Vertice *v;
+    //int j = 0;
+
+    this->inicioLista();
+    do {
+        i = this->noIterator();
+        v = (Vertice*)i;
+        this->deletaItem(i);
+        delete v;
+    } while (this->noIterator());
+
+}
+
 ///Retorna a quantidade de componentes conexas
 vector< vector<int> > Grafo::quantCompConexo()
 {
@@ -358,6 +374,19 @@ int Grafo::grauNo(int id) {
 }
 
 ///* ---------------------------------------- CLASSE VERTICE --------------------------------------- *///
+
+Vertice::~Vertice() {
+
+    Item *i;
+
+    this->inicioLista();
+    do {
+        i = this->noIterator();
+        this->deletaItem(i);
+        delete i;
+    } while (this->noIterator());
+
+}
 
 bool Vertice::existeAresta(int id)
 {
