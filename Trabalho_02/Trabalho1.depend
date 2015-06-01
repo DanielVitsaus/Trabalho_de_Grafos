@@ -373,6 +373,7 @@
 	"Grafo.h"
 	"Arquivo.h"
 
+<<<<<<< HEAD
 1433168384 source:/home/anacarolina/Área de Trabalho/Trabalho_de_Grafos-master/Trabalho_02/Arquivo.cpp
 	"Arquivo.h"
 	"Grafo.h"
@@ -457,3 +458,5 @@
 	"Grafo.h"
 	"Arquivo.h"
 
+=======
+>>>>>>> 89ad2ae1c50692eea444a8e328a15a92f3721c20

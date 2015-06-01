@@ -283,6 +283,7 @@ int main()
                     break;
             case 16:
                     quantConxo = g1->quantCompForteConexos();
+<<<<<<< HEAD
                     ler_grava->gravaArquivo(arquivo, quantConxo);
                     break;
 
@@ -292,6 +293,15 @@ int main()
                     cin >> v1;
                     g1->fechoTransitivoDireto(v1);
                     break;
+=======
+                    //char arquivo2[Tex_Arquivo] = "";
+                    //strncpy ( arquivo, arquivo, strlen(arquivo) - 4);
+                    //strcat(arquivo,"_CompForteCone");
+                    //strcat(arquivo2,arquivo2);
+                    ler_grava->gravaArquivo(arquivo, quantConxo);
+
+            break;
+>>>>>>> 89ad2ae1c50692eea444a8e328a15a92f3721c20
 
             case 18:
                      cout << "Digite o vértice a partir do qual deseja encontrar o fecho transitivo indireto::" << endl;
