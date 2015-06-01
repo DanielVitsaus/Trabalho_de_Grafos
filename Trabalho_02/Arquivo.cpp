@@ -1,3 +1,5 @@
+
+
 #include "Arquivo.h"
 #include "Grafo.h"
 #include <iostream>
@@ -15,13 +17,11 @@ using namespace std;
  * \return Grafo *gd
  *
  */
-
 Grafo* Arquivo::lerArquivo(char *ar, Grafo *gd)
 {
     char diretorio[100] = "instancias//";
     strcat(diretorio,ar);
     this->arquivoLeitura.open(diretorio,ios::in);
-    //Grafo * grafo = new Grafo();
     int m1 = 0, m2 = 0;
     char buff[16];
     int cont = 2;
@@ -102,10 +102,7 @@ void Arquivo::gravaArquivo(Grafo *g, char* nomArquivo,int nVertice, int nAresta,
             n_grau_x = 0;
         }
     }
-    for (k = g->primeiroNo(); k != NULL; k = g->proximoNo())/// seta todos os vertices como nao visitado
-    {
-        k->setaVisitado(false);
-    }
+    g->setNaoVisitado(g);
     this->arquivoGravacao << endl;
     cout << "Arquivo " << nomeArquivo << " gerado !!"<<"\n" << endl;
     this->arquivoGravacao.close();

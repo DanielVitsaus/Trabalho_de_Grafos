@@ -114,13 +114,52 @@ $(document).ready(function(){initNavTree('class_arquivo.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae077b8657d225e9b5ec732ef4fcac4f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae077b8657d225e9b5ec732ef4fcac4f4"></a>
-<a class="el" href="class_grafo.html">Grafo</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>lerArquivo</b> (char *ar, <a class="el" href="class_grafo.html">Grafo</a> *gd)</td></tr>
+<tr class="memitem:ae077b8657d225e9b5ec732ef4fcac4f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_grafo.html">Grafo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arquivo.html#ae077b8657d225e9b5ec732ef4fcac4f4">lerArquivo</a> (char *ar, <a class="el" href="class_grafo.html">Grafo</a> *gd)</td></tr>
+<tr class="memdesc:ae077b8657d225e9b5ec732ef4fcac4f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funçao que le e adiciona o vertice em um grafo G.  <a href="#ae077b8657d225e9b5ec732ef4fcac4f4">More...</a><br /></td></tr>
 <tr class="separator:ae077b8657d225e9b5ec732ef4fcac4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ad97cf5bcb0e0ac4192aa35c5e2c357"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arquivo.html#a6ad97cf5bcb0e0ac4192aa35c5e2c357">gravaArquivo</a> (char *nomArquivo, vector&lt; vector&lt; int &gt; &gt;comForteConexo)</td></tr>
+<tr class="memdesc:a6ad97cf5bcb0e0ac4192aa35c5e2c357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcao que gera um arquivo com as componetes fortemente conexa do grafo passando o nome do arquivo e um vector com as componentes.  <a href="#a6ad97cf5bcb0e0ac4192aa35c5e2c357">More...</a><br /></td></tr>
+<tr class="separator:a6ad97cf5bcb0e0ac4192aa35c5e2c357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a793a1e9d97ba2beaca0219182f872638"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arquivo.html#a793a1e9d97ba2beaca0219182f872638">gravaArquivo</a> (<a class="el" href="class_grafo.html">Grafo</a> *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)</td></tr>
+<tr class="memdesc:a793a1e9d97ba2beaca0219182f872638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcao que gera um aquirvo com as informacoes do grafo G como frequencia de cada vertice, quantos vertice, quantas arestas e o grau medio de cada vertice.  <a href="#a793a1e9d97ba2beaca0219182f872638">More...</a><br /></td></tr>
 <tr class="separator:a793a1e9d97ba2beaca0219182f872638"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a6ad97cf5bcb0e0ac4192aa35c5e2c357"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Arquivo::gravaArquivo </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>nomArquivo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; vector&lt; int &gt; &gt;&#160;</td>
+          <td class="paramname"><em>comForteConexo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcao que gera um arquivo com as componetes fortemente conexa do grafo passando o nome do arquivo e um vector com as componentes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char*</td><td>nomArquivo </td></tr>
+    <tr><td class="paramname">vector&lt;</td><td>vector&lt;int&gt; &gt; comForteConexo </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a793a1e9d97ba2beaca0219182f872638"></a>
 <div class="memitem">
 <div class="memproto">
@@ -162,7 +201,54 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>seta todos os vertices como nao visitado </p>
+
+<p>Funcao que gera um aquirvo com as informacoes do grafo G como frequencia de cada vertice, quantos vertice, quantas arestas e o grau medio de cada vertice. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="class_grafo.html">Grafo</a></td><td>*g </td></tr>
+    <tr><td class="paramname">char*</td><td>nomArquivo </td></tr>
+    <tr><td class="paramname">int</td><td>nVertice </td></tr>
+    <tr><td class="paramname">int</td><td>nAresta </td></tr>
+    <tr><td class="paramname">float</td><td>grauMedio </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae077b8657d225e9b5ec732ef4fcac4f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_grafo.html">Grafo</a> * Arquivo::lerArquivo </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>ar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_grafo.html">Grafo</a> *&#160;</td>
+          <td class="paramname"><em>gd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funçao que le e adiciona o vertice em um grafo G. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>*ar -&gt; nome do arquivo para a leitura </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_grafo.html">Grafo</a></td><td>*gd -&gt; grafo a ser adicionados os vertices </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_grafo.html">Grafo</a> *gd </dd></dl>
 
 </div>
 </div>
@@ -176,7 +262,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_arquivo.html">Arquivo</a></li>
-    <li class="footer">Generated on Sun May 31 2015 18:38:55 for Trabalho1 by
+    <li class="footer">Generated on Mon Jun 1 2015 17:56:11 for Trabalho1 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

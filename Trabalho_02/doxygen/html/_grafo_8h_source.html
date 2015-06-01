@@ -157,52 +157,57 @@ $(document).ready(function(){initNavTree('_grafo_8h_source.html','');});
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="class_vertice.html">Vertice</a>* encontraNo(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">bool</span> encontraAresta(<a class="code" href="class_vertice.html">Vertice</a> *v, <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">int</span> buscaEmProfConexo(<a class="code" href="class_vertice.html">Vertice</a> *v ,<span class="keywordtype">int</span> contaVisi);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        vector&lt;int&gt; buscaMesmaCompConexo(<a class="code" href="class_vertice.html">Vertice</a> *v, vector&lt;int&gt; c);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        vector&lt;int&gt; buscaCompForteConexas(<a class="code" href="class_grafo.html">Grafo</a> *g,<a class="code" href="class_vertice.html">Vertice</a> *v, vector&lt;int&gt; compForteConexas, <span class="keywordtype">int</span> *partida, <span class="keywordtype">int</span> freqNos[]);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">bool</span> direcionado;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">int</span> quantNos;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="class_grafo.html">Grafo</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="class_grafo.html">Grafo</a>(<span class="keywordtype">bool</span> dir);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        ~<a class="code" href="class_grafo.html">Grafo</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">int</span> contaNos() { <span class="keywordflow">return</span> Lista::contaItems(); }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">void</span> imprimeGrafo(<a class="code" href="class_grafo.html">Grafo</a>* g);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="class_grafo.html">Grafo</a> * setNaoVisitado(<a class="code" href="class_grafo.html">Grafo</a> *g);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        vector&lt;int&gt; ordenaFreBusca(<span class="keywordtype">int</span> freqNos[]);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="class_grafo.html">Grafo</a>* geraGrafoTransposto();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="class_vertice.html">Vertice</a>* primeiroNo() { <span class="keywordflow">return</span> (<a class="code" href="class_vertice.html">Vertice</a>*)Lista::inicioLista(); };</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="class_vertice.html">Vertice</a>* proximoNo() { <span class="keywordflow">return</span> (<a class="code" href="class_vertice.html">Vertice</a>*)Lista::caminhaLista(); };</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="class_vertice.html">Vertice</a>* noAnterior() { <span class="keywordflow">return</span> (<a class="code" href="class_vertice.html">Vertice</a>*)Lista::retornaLista(); };</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="class_vertice.html">Vertice</a>* ultimoNo() { <span class="keywordflow">return</span> (<a class="code" href="class_vertice.html">Vertice</a>*)Lista::fimLista(); };</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="class_vertice.html">Vertice</a>* adicionaNo(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> adicionaAresta(<span class="keywordtype">int</span> id_origem, <span class="keywordtype">int</span> id_destino);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">void</span> adicionaAresta(<span class="keywordtype">int</span> id_origem, <span class="keywordtype">int</span> id_destino, <span class="keywordtype">float</span> peso);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> removeNo(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">void</span> removeAresta(<span class="keywordtype">int</span> id_no1, <span class="keywordtype">int</span> id_no2);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">int</span> grauNo(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">bool</span> kRegular();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">bool</span> completo();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">bool</span> nosSaoAdjacentes(<span class="keywordtype">int</span> id1, <span class="keywordtype">int</span> id2);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">bool</span> conexo();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">bool</span> mesmaComponenteConexa(<span class="keywordtype">int</span> id1, <span class="keywordtype">int</span> id2);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">bool</span> noArticulacao(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">bool</span> arestaPonte(<span class="keywordtype">int</span> id1, <span class="keywordtype">int</span> id2);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        vector&lt; vector&lt;int&gt; &gt; quantCompConexo();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        vector&lt; vector&lt;int&gt; &gt; quantCompForteConexos();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="class_vertice.html">Vertice</a>* encontraNo(<a class="code" href="class_grafo.html">Grafo</a>*g,<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">bool</span> encontraAresta(<a class="code" href="class_vertice.html">Vertice</a> *v, <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">int</span> buscaEmProfConexo(<a class="code" href="class_vertice.html">Vertice</a> *v ,<span class="keywordtype">int</span> contaVisi);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        vector&lt;int&gt; buscaMesmaCompConexo(<a class="code" href="class_vertice.html">Vertice</a> *v, vector&lt;int&gt; c);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        vector&lt;int&gt; buscaCompForteConexas(<a class="code" href="class_grafo.html">Grafo</a> *g,<a class="code" href="class_vertice.html">Vertice</a> *v, vector&lt;int&gt; compForteConexas);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">bool</span> direcionado;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> imprimirFecho(vector&lt;int&gt; c);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">int</span> quantNos;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="class_grafo.html">Grafo</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="class_grafo.html">Grafo</a>(<span class="keywordtype">bool</span> dir);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        ~<a class="code" href="class_grafo.html">Grafo</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">int</span> contaNos() { <span class="keywordflow">return</span> Lista::contaItems(); }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">void</span> imprimeGrafo(<a class="code" href="class_grafo.html">Grafo</a>* g);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="class_grafo.html">Grafo</a> * setNaoVisitado(<a class="code" href="class_grafo.html">Grafo</a> *g);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        vector&lt;int&gt; ordenaFreBusca(vector&lt;int&gt; ordemC,vector&lt;int&gt;freqNos);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="class_grafo.html">Grafo</a>* geraGrafoTransposto();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        vector&lt;int&gt; buscaFreqNoConexas(<a class="code" href="class_vertice.html">Vertice</a> *v, <span class="keywordtype">int</span> *calFre, vector&lt;int&gt; freqNos);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="class_vertice.html">Vertice</a>* primeiroNo() { <span class="keywordflow">return</span> (<a class="code" href="class_vertice.html">Vertice</a>*)Lista::inicioLista(); };</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="class_vertice.html">Vertice</a>* proximoNo() { <span class="keywordflow">return</span> (<a class="code" href="class_vertice.html">Vertice</a>*)Lista::caminhaLista(); };</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="class_vertice.html">Vertice</a>* noAnterior() { <span class="keywordflow">return</span> (<a class="code" href="class_vertice.html">Vertice</a>*)Lista::retornaLista(); };</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="class_vertice.html">Vertice</a>* ultimoNo() { <span class="keywordflow">return</span> (<a class="code" href="class_vertice.html">Vertice</a>*)Lista::fimLista(); };</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="class_vertice.html">Vertice</a>* adicionaNo(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">void</span> adicionaAresta(<span class="keywordtype">int</span> id_origem, <span class="keywordtype">int</span> id_destino);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">void</span> adicionaAresta(<span class="keywordtype">int</span> id_origem, <span class="keywordtype">int</span> id_destino, <span class="keywordtype">float</span> peso);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">void</span> removeNo(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">void</span> removeAresta(<span class="keywordtype">int</span> id_no1, <span class="keywordtype">int</span> id_no2);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">int</span> grauNo(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">bool</span> kRegular();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">bool</span> completo();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">bool</span> nosSaoAdjacentes(<span class="keywordtype">int</span> id1, <span class="keywordtype">int</span> id2);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">bool</span> conexo();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">bool</span> mesmaComponenteConexa(<span class="keywordtype">int</span> id1, <span class="keywordtype">int</span> id2);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">bool</span> noArticulacao(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">bool</span> arestaPonte(<span class="keywordtype">int</span> id1, <span class="keywordtype">int</span> id2);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        vector&lt; vector&lt;int&gt; &gt; quantCompConexo();</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        vector&lt; vector&lt;int&gt; &gt; quantCompForteConexos();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">void</span> fechoTransitivoDireto(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">void</span> fechoTransitivoIndireto(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_lista_html_a32622b53bc0720338439beecd0e7972f"><div class="ttname"><a href="class_lista.html#a32622b53bc0720338439beecd0e7972f">Lista::deletaItem</a></div><div class="ttdeci">void deletaItem(Item *n)</div><div class="ttdef"><b>Definition:</b> Lista.cpp:33</div></div>
 <div class="ttc" id="class_vertice_html"><div class="ttname"><a href="class_vertice.html">Vertice</a></div><div class="ttdef"><b>Definition:</b> Grafo.h:23</div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
@@ -217,7 +222,7 @@ $(document).ready(function(){initNavTree('_grafo_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Grafo.h</b></li>
-    <li class="footer">Generated on Sun May 31 2015 18:38:55 for Trabalho1 by
+    <li class="footer">Generated on Mon Jun 1 2015 17:56:11 for Trabalho1 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

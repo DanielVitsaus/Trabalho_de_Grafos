@@ -77,11 +77,12 @@ int main()
         cout <<  "  11 -> Verifica se dois nós estão em uma mesma componente conexa:" << endl;
         cout <<  "  12 -> Verifica se um dado nó é de articulação:" << endl;
         cout <<  "  13 -> Verifica se uma dada aresta é ponte:" << endl;
-        cout <<  "  14 ->Verificar quantas componentes conexa tem o grafos," <<endl;
-        cout <<  "       qual é o tamanha da mior e menor compomente:" << endl;
-        cout <<  "  15 ->Gerar informações sobre o grafo:" << endl;
-        cout <<  "  17 ->Fecho Transitivo Direto:" << endl;
-        cout <<  "  18 ->Fecho Transitivo Indireto:" << endl;
+        cout <<  "  14 -> Verificar quantas componentes conexa tem o grafos," <<endl;
+        cout <<  "        qual é o tamanha da mior e menor compomente:" << endl;
+        cout <<  "  15 -> Gerar informações sobre o grafo:" << endl;
+        cout <<  "  16 -> Gerar um arquivo com as todas as componemtes fortemete conexas:" << endl;
+        cout <<  "  17 -> Fecho Transitivo Direto:" << endl;
+        cout <<  "  18 -> Fecho Transitivo Indireto:" << endl;
         cout <<  "  o para sair:" << endl;
         cin >> op;
 
@@ -283,7 +284,6 @@ int main()
                     break;
             case 16:
                     quantConxo = g1->quantCompForteConexos();
-<<<<<<< HEAD
                     ler_grava->gravaArquivo(arquivo, quantConxo);
                     break;
 
@@ -293,16 +293,8 @@ int main()
                     cin >> v1;
                     g1->fechoTransitivoDireto(v1);
                     break;
-=======
-                    //char arquivo2[Tex_Arquivo] = "";
-                    //strncpy ( arquivo, arquivo, strlen(arquivo) - 4);
-                    //strcat(arquivo,"_CompForteCone");
-                    //strcat(arquivo2,arquivo2);
-                    ler_grava->gravaArquivo(arquivo, quantConxo);
 
             break;
->>>>>>> 89ad2ae1c50692eea444a8e328a15a92f3721c20
-
             case 18:
                      cout << "Digite o vértice a partir do qual deseja encontrar o fecho transitivo indireto::" << endl;
                     int v2;

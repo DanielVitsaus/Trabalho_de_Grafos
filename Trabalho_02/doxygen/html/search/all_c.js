@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setnaovisitado',['setNaoVisitado',['../class_grafo.html#a4cee5922bd84c2652ad31383a61f487b',1,'Grafo']]]
+  ['ordenafrebusca',['ordenaFreBusca',['../class_grafo.html#a61f6a9940df187006f5c445c6d6f1aec',1,'Grafo']]]
 ];

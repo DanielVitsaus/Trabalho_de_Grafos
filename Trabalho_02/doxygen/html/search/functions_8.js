@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ordenafrebusca',['ordenaFreBusca',['../class_grafo.html#ad3b51ba504cf3ca3bb0144139d079de7',1,'Grafo']]]
+  ['kregular',['kRegular',['../class_grafo.html#a83f1864df323f1a1e8b1289feed08488',1,'Grafo']]]
 ];

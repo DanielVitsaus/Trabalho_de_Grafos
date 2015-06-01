@@ -16,7 +16,6 @@ using namespace std;
  * \param  int id
  *
  */
-
 void Grafo::fechoTransitivoIndireto(int id)
 {
     Grafo *transposto;
@@ -34,7 +33,6 @@ void Grafo::fechoTransitivoIndireto(int id)
  * \param int id
  *
  */
-
 void Grafo::fechoTransitivoDireto(int id)
 {
     vector<int> fechoTransitivoDir;
@@ -53,7 +51,6 @@ void Grafo::fechoTransitivoDireto(int id)
 void Grafo::imprimirFecho(vector<int> fecho)
 {
     int i=0;
-    cout<<"Resultado fecho:"<<endl;
     while(i < (int)fecho.size() )
     {
         cout<<fecho[i]<< " " ;
@@ -192,7 +189,6 @@ vector<int> Grafo::buscaCompForteConexas(Grafo* g ,Vertice *v, vector<int> compF
 {
     v->setaVisitado(true);
     compForteConexas.push_back(v->pegaId());
-     cout<<" daniel 1"<<endl;
     Vertice *w = NULL;
     Aresta *aux = NULL;
     for(aux = v->primeiraAresta(); aux != NULL; aux = v->proximaAresta() )
@@ -275,10 +271,8 @@ vector< vector<int> > Grafo::quantCompConexo()
     vector< vector<int> > quantConexo;
     vector<int> compVisitado;
 
-    /**< percorre os vertices */
     for (v = this->primeiroNo(); v != NULL; v = this->proximoNo())
     {
-        /**< pega o primeiro vertice nao visitado */
         if (v->foiVisitado() == false)
         {
              quantConexo.push_back( buscaMesmaCompConexo(v,compVisitado) );
@@ -324,7 +318,7 @@ vector<int> Grafo::buscaMesmaCompConexo(Vertice *v, vector<int> c)
 bool Grafo::mesmaComponenteConexa(int id1, int id2)
 {
     bool comp = false, idV1 = false, idV2 = false;
-    vector<int> compVisitado; /// armazena os ids de uma componente conexa
+    vector<int> compVisitado;
     Vertice* v;
     Vertice* v1 = this->encontraNo(id1);
     Vertice* v2 = this->encontraNo(id2);
@@ -339,9 +333,9 @@ bool Grafo::mesmaComponenteConexa(int id1, int id2)
     }
     else
     {
-        for (v = this->primeiroNo(); v != NULL; v = this->proximoNo()) /// percorre os vertices
+        for (v = this->primeiroNo(); v != NULL; v = this->proximoNo())
         {
-            if (v->foiVisitado() == false)/// pega o primeiro vertice nao visitado
+            if (v->foiVisitado() == false)
             {
                 compVisitado = buscaMesmaCompConexo(v,compVisitado);
                 for(int t = 0 ; t < (int)compVisitado.size(); t++)
@@ -375,7 +369,6 @@ bool Grafo::mesmaComponenteConexa(int id1, int id2)
  * \param Vertice *v
  * \param int contaVisi
  * \return int contaVisi
- *
  */
 int Grafo::buscaEmProfConexo(Vertice *v ,int contaVisi)
 {
@@ -693,18 +686,14 @@ void Grafo::removeNo(int id)
     delete v;
 }
 
-double m[1000][1000];
 /** \brief Remove uma aresta entre dois vertices
  *
- * \param
- * \param
- * \return
+ * \param int id_no1
+ * \param int id_no2
  *
  */
-
-void Grafo::removeAresta(int id_no1, int id_no2) {
-
-    ///  Encontra os Vertices com as id's dadas, no grafo
+void Grafo::removeAresta(int id_no1, int id_no2)
+{
     Vertice *v1 = this->encontraNo(id_no1);
     Vertice *v2 = this->encontraNo(id_no2);
 
@@ -752,9 +741,10 @@ void Grafo::imprimeGrafo(Grafo* g)
 }
 
 
-///* ---------------------------------------- CLASSE VERTICE --------------------------------------- *///
-
-Vertice::~Vertice() {
+/** \brief Destrutor
+ *
+ */
+ Vertice::~Vertice() {
 
     Item *i;
 
@@ -767,6 +757,11 @@ Vertice::~Vertice() {
 
 }
 
+/** \brief Verifica se a aresta com id esxite
+ *
+ * \param int id
+ * \return bool
+ */
 bool Vertice::existeAresta(int id)
 {
     Aresta *a = this->encontraAresta(id);
@@ -777,7 +772,12 @@ bool Vertice::existeAresta(int id)
 
 }
 
-/// Encontra uma Aresta para id no Vertice v
+/** \brief Encontra uma Aresta para id no Vertice v
+ *
+ * \param int id
+ * \return Aresta*
+ */
+
 Aresta* Vertice::encontraAresta(int id) {
 
     Aresta *a = this->primeiraAresta();
@@ -790,7 +790,12 @@ Aresta* Vertice::encontraAresta(int id) {
     return 0;
 }
 
-/// Remove aresta do Vertice se encontra-la
+/** \brief Remove aresta do Vertice se encontra-la
+ *
+ * \param int id
+ * \return bool
+ *
+ */
 bool Vertice::removeAresta(int id) {
 
     Aresta *a = this->encontraAresta(id);
@@ -804,7 +809,5 @@ bool Vertice::removeAresta(int id) {
         return false;
 
 };
-
-///* ---------------------------------------- CLASSE ARESTA ---------------------------------------- *///
 
 

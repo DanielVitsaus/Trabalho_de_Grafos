@@ -119,14 +119,14 @@ $(document).ready(function(){initNavTree('class_grafo.html','');});
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab810bbe26a98e9af6661ccddff66b03b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab810bbe26a98e9af6661ccddff66b03b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#ab810bbe26a98e9af6661ccddff66b03b">Grafo</a> ()</td></tr>
-<tr class="memdesc:ab810bbe26a98e9af6661ccddff66b03b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construto para grafo nao direcionado. <br /></td></tr>
+<tr class="memdesc:ab810bbe26a98e9af6661ccddff66b03b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor para grafo nao direcionado. <br /></td></tr>
 <tr class="separator:ab810bbe26a98e9af6661ccddff66b03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac389a7c921f396ed4ed0f296a90a649e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#ac389a7c921f396ed4ed0f296a90a649e">Grafo</a> (bool dir)</td></tr>
 <tr class="memdesc:ac389a7c921f396ed4ed0f296a90a649e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construto para grafo direcionado (digrafo) \ parametor dir que define se o grafo é direcionado.  <a href="#ac389a7c921f396ed4ed0f296a90a649e">More...</a><br /></td></tr>
 <tr class="separator:ac389a7c921f396ed4ed0f296a90a649e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16f3fbba0de2667dfba3b657cb7e95ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16f3fbba0de2667dfba3b657cb7e95ff"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a16f3fbba0de2667dfba3b657cb7e95ff">~Grafo</a> ()</td></tr>
-<tr class="memdesc:a16f3fbba0de2667dfba3b657cb7e95ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutos. <br /></td></tr>
+<tr class="memdesc:a16f3fbba0de2667dfba3b657cb7e95ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor. <br /></td></tr>
 <tr class="separator:a16f3fbba0de2667dfba3b657cb7e95ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29874190411584284934433db5bf5f99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29874190411584284934433db5bf5f99"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>contaNos</b> ()</td></tr>
@@ -137,12 +137,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>contaNos</b> ()</td></
 <tr class="memitem:a4cee5922bd84c2652ad31383a61f487b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_grafo.html">Grafo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a4cee5922bd84c2652ad31383a61f487b">setNaoVisitado</a> (<a class="el" href="class_grafo.html">Grafo</a> *g)</td></tr>
 <tr class="memdesc:a4cee5922bd84c2652ad31383a61f487b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seta todos os vertice do <a class="el" href="class_grafo.html">Grafo</a> com nao visitao.  <a href="#a4cee5922bd84c2652ad31383a61f487b">More...</a><br /></td></tr>
 <tr class="separator:a4cee5922bd84c2652ad31383a61f487b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3b51ba504cf3ca3bb0144139d079de7"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#ad3b51ba504cf3ca3bb0144139d079de7">ordenaFreBusca</a> (int freqNos[])</td></tr>
-<tr class="memdesc:ad3b51ba504cf3ca3bb0144139d079de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordena e frequencia resultante da busca em profundidade de forma decrescente.  <a href="#ad3b51ba504cf3ca3bb0144139d079de7">More...</a><br /></td></tr>
-<tr class="separator:ad3b51ba504cf3ca3bb0144139d079de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61f6a9940df187006f5c445c6d6f1aec"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a61f6a9940df187006f5c445c6d6f1aec">ordenaFreBusca</a> (vector&lt; int &gt; ordemC, vector&lt; int &gt;freqNos)</td></tr>
+<tr class="memdesc:a61f6a9940df187006f5c445c6d6f1aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordena e frequencia resultante da busca em profundidade de forma decrescente.  <a href="#a61f6a9940df187006f5c445c6d6f1aec">More...</a><br /></td></tr>
+<tr class="separator:a61f6a9940df187006f5c445c6d6f1aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a363d5b79f8ab7aaa27dea38387e9ffb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_grafo.html">Grafo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a363d5b79f8ab7aaa27dea38387e9ffb6">geraGrafoTransposto</a> ()</td></tr>
 <tr class="memdesc:a363d5b79f8ab7aaa27dea38387e9ffb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que gera um gafos transposto invertendo das aresta de um grafo direcionado G retornando G'.  <a href="#a363d5b79f8ab7aaa27dea38387e9ffb6">More...</a><br /></td></tr>
 <tr class="separator:a363d5b79f8ab7aaa27dea38387e9ffb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd84b6964f6c1fb550a86e9d5b85fd4a"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#acd84b6964f6c1fb550a86e9d5b85fd4a">buscaFreqNoConexas</a> (<a class="el" href="class_vertice.html">Vertice</a> *v, int *calFre, vector&lt; int &gt; freqNos)</td></tr>
+<tr class="memdesc:acd84b6964f6c1fb550a86e9d5b85fd4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna um vector com a ordem de cada vertice na volta da recursao de uma busca em profundidade.  <a href="#acd84b6964f6c1fb550a86e9d5b85fd4a">More...</a><br /></td></tr>
+<tr class="separator:acd84b6964f6c1fb550a86e9d5b85fd4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6442a6688c71ad58946108cf5328213"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6442a6688c71ad58946108cf5328213"></a>
 <a class="el" href="class_vertice.html">Vertice</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>primeiroNo</b> ()</td></tr>
 <tr class="separator:aa6442a6688c71ad58946108cf5328213"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,16 +176,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>contaNos</b> ()</td></
 <tr class="memitem:a41ffeb7e79cf0d0c10297953f647c42d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a41ffeb7e79cf0d0c10297953f647c42d">grauNo</a> (int id)</td></tr>
 <tr class="memdesc:a41ffeb7e79cf0d0c10297953f647c42d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o grau do vertice (no) passando como parametro o id no vertice(no)  <a href="#a41ffeb7e79cf0d0c10297953f647c42d">More...</a><br /></td></tr>
 <tr class="separator:a41ffeb7e79cf0d0c10297953f647c42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83f1864df323f1a1e8b1289feed08488"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83f1864df323f1a1e8b1289feed08488"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a83f1864df323f1a1e8b1289feed08488">kRegular</a> ()</td></tr>
-<tr class="memdesc:a83f1864df323f1a1e8b1289feed08488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se o grafo é K-Regular. <br /></td></tr>
+<tr class="memitem:a83f1864df323f1a1e8b1289feed08488"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a83f1864df323f1a1e8b1289feed08488">kRegular</a> ()</td></tr>
+<tr class="memdesc:a83f1864df323f1a1e8b1289feed08488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se o grafo é K-Regular.  <a href="#a83f1864df323f1a1e8b1289feed08488">More...</a><br /></td></tr>
 <tr class="separator:a83f1864df323f1a1e8b1289feed08488"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47f39f75d015f8c35bfa71d7a3da1bfa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a47f39f75d015f8c35bfa71d7a3da1bfa">completo</a> ()</td></tr>
-<tr class="memdesc:a47f39f75d015f8c35bfa71d7a3da1bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">verifica se o grafo eh completo  <a href="#a47f39f75d015f8c35bfa71d7a3da1bfa">More...</a><br /></td></tr>
+<tr class="memdesc:a47f39f75d015f8c35bfa71d7a3da1bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se o grafo eh completo.  <a href="#a47f39f75d015f8c35bfa71d7a3da1bfa">More...</a><br /></td></tr>
 <tr class="separator:a47f39f75d015f8c35bfa71d7a3da1bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a184ed3a4401ad77ff33a47da71d15e24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a184ed3a4401ad77ff33a47da71d15e24"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a184ed3a4401ad77ff33a47da71d15e24">nosSaoAdjacentes</a> (int id1, int id2)</td></tr>
-<tr class="memdesc:a184ed3a4401ad77ff33a47da71d15e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se o nos soa adjacentes. <br /></td></tr>
+<tr class="memitem:a184ed3a4401ad77ff33a47da71d15e24"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a184ed3a4401ad77ff33a47da71d15e24">nosSaoAdjacentes</a> (int id1, int id2)</td></tr>
+<tr class="memdesc:a184ed3a4401ad77ff33a47da71d15e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se o nos sao adjacentes.  <a href="#a184ed3a4401ad77ff33a47da71d15e24">More...</a><br /></td></tr>
 <tr class="separator:a184ed3a4401ad77ff33a47da71d15e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50fe04d01b2d34b777d8df0b827bedab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a50fe04d01b2d34b777d8df0b827bedab">conexo</a> ()</td></tr>
 <tr class="memdesc:a50fe04d01b2d34b777d8df0b827bedab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se o grafo eh conexo.  <a href="#a50fe04d01b2d34b777d8df0b827bedab">More...</a><br /></td></tr>
@@ -200,8 +201,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a42f883ece5986fcf8cbc4a8c793844f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a quantidade de componentes conexas do grafo em uma matrix de vector.  <a href="#a42f883ece5986fcf8cbc4a8c793844f5">More...</a><br /></td></tr>
 <tr class="separator:a42f883ece5986fcf8cbc4a8c793844f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab64d335140e23a281f9600b764b6ed80"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#ab64d335140e23a281f9600b764b6ed80">quantCompForteConexos</a> ()</td></tr>
-<tr class="memdesc:ab64d335140e23a281f9600b764b6ed80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcao que retona as componentes fortemente conexas crianto um array com as ordem dos vertice no retorno de uma busca em profundidade. Ao encontrar esse numeracao, e criado um grafo transposto( grafo G com as aresta invertidas). Depois e realizada uma busca em profundidade no grafo G' e as componete conexa de G' sao as componentes fortemente conexas de G.  <a href="#ab64d335140e23a281f9600b764b6ed80">More...</a><br /></td></tr>
+<tr class="memdesc:ab64d335140e23a281f9600b764b6ed80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcao que retona as componentes fortemente conexas criando um array com as ordem dos vertice no retorno de uma busca em profundidade. Ao encontrar esse numeracao, e criado um grafo transposto( grafo G com as aresta invertidas). Depois e realizada uma busca em profundidade no grafo G' e as componete conexa de G' sao as componentes fortemente conexas de G.  <a href="#ab64d335140e23a281f9600b764b6ed80">More...</a><br /></td></tr>
 <tr class="separator:ab64d335140e23a281f9600b764b6ed80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5db00b08590804c1885d383ce67d1d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#aa5db00b08590804c1885d383ce67d1d2">fechoTransitivoDireto</a> (int id)</td></tr>
+<tr class="memdesc:aa5db00b08590804c1885d383ce67d1d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A função gera o fecho transitivo direto dado um id de um vértice.  <a href="#aa5db00b08590804c1885d383ce67d1d2">More...</a><br /></td></tr>
+<tr class="separator:aa5db00b08590804c1885d383ce67d1d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a568fd7e7ef01a0bb6e85b44999f519cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a568fd7e7ef01a0bb6e85b44999f519cd">fechoTransitivoIndireto</a> (int id)</td></tr>
+<tr class="memdesc:a568fd7e7ef01a0bb6e85b44999f519cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A função gera o fecho transitivo indireto dado um id de um vertice.  <a href="#a568fd7e7ef01a0bb6e85b44999f519cd">More...</a><br /></td></tr>
+<tr class="separator:a568fd7e7ef01a0bb6e85b44999f519cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -260,7 +267,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>quantNos</b></td></tr>
 </div><div class="memdoc">
 
 <p>Adiciona uma aresta em id_origem, apontando (quando pertinente) para id_destino. </p>
-<p>Procura nós destino e origem, se não existirem, cria! </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>id_origem </td></tr>
+    <tr><td class="paramname">int</td><td>id_destino </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -295,7 +308,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>quantNos</b></td></tr>
 </div><div class="memdoc">
 
 <p>Adiciona uma aresta com PESO, em id_origem apontando (quando pertinente) para id_destino. </p>
-<p>Procura nós destino e origem, se não existirem, cria! </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>id_origem </td></tr>
+    <tr><td class="paramname">int</td><td>id_destino </td></tr>
+    <tr><td class="paramname">float</td><td>peso </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -314,8 +334,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>quantNos</b></td></tr>
 </div><div class="memdoc">
 
 <p>Adiciona um <a class="el" href="class_vertice.html">Vertice</a> com a id dada caso não exista, caso exista retorna ponteiro para o <a class="el" href="class_vertice.html">Vertice</a>. </p>
-<p>Tenta encontrar <a class="el" href="class_vertice.html">Vertice</a> com essa id</p>
-<p>Se não encontrou, cria... </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_vertice.html">Vertice</a> *v </dd></dl>
 
 </div>
 </div>
@@ -344,8 +369,57 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>quantNos</b></td></tr>
 </div><div class="memdoc">
 
 <p>verifica se a aresta é ponte </p>
-<p>verifica se as arestas exitem</p>
-<p>readiciona a aresta eliminada antes de informar se a aresta é ponte ou não </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>id1 </td></tr>
+    <tr><td class="paramname">int</td><td>id2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acd84b6964f6c1fb550a86e9d5b85fd4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; int &gt; Grafo::buscaFreqNoConexas </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vertice.html">Vertice</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>calFre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>freqNos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna um vector com a ordem de cada vertice na volta da recursao de uma busca em profundidade. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="class_vertice.html">Vertice</a></td><td>*v </td></tr>
+    <tr><td class="paramname">int</td><td>*calFre </td></tr>
+    <tr><td class="paramname">vector&lt;int&gt;</td><td>freqNos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector&lt;int&gt; freqNos </dd></dl>
 
 </div>
 </div>
@@ -362,8 +436,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>quantNos</b></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>verifica se o grafo eh completo </p>
-<p>armazena a quantidade de nós existentes </p>
+<p>Verifica se o grafo eh completo. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -381,8 +455,57 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>quantNos</b></td></tr>
 </div><div class="memdoc">
 
 <p>Verifica se o grafo eh conexo. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 <p>quantidade de vertice no grafo</p>
 <p>quantidade de vertice visitados </p>
+
+</div>
+</div>
+<a class="anchor" id="aa5db00b08590804c1885d383ce67d1d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grafo::fechoTransitivoDireto </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A função gera o fecho transitivo direto dado um id de um vértice. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a568fd7e7ef01a0bb6e85b44999f519cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grafo::fechoTransitivoIndireto </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A função gera o fecho transitivo indireto dado um id de um vertice. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>id </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -453,6 +576,24 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>quantNos</b></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a83f1864df323f1a1e8b1289feed08488"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Grafo::kRegular </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se o grafo é K-Regular. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="af095a9c01a8762f358a2c7fced700975"></a>
 <div class="memitem">
 <div class="memproto">
@@ -478,10 +619,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>quantNos</b></td></tr>
 </div><div class="memdoc">
 
 <p>Verifica se dois vertices estao em uma mesmo conponente conexa. </p>
-<p>armazena os ids de uma componente conexa</p>
-<p>percorre os vertices</p>
-<p>pega o primeiro vertice nao visitado</p>
-<p>seta todos os vertices como nao visitado </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>id1 </td></tr>
+    <tr><td class="paramname">int</td><td>id2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -500,23 +645,72 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>quantNos</b></td></tr>
 </div><div class="memdoc">
 
 <p>verifica se o no eh de articulacao </p>
-<p>vector para armazenar as arestas do no que vai ser removido</p>
-<p>add as arestas</p>
-<p>adiciona novamente o vertice e as arestas</p>
-<p>adiciona novamente o vertice e as arestas </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ad3b51ba504cf3ca3bb0144139d079de7"></a>
+<a class="anchor" id="a184ed3a4401ad77ff33a47da71d15e24"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Grafo::nosSaoAdjacentes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se o nos sao adjacentes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>id1 </td></tr>
+    <tr><td class="paramname">int</td><td>id2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a61f6a9940df187006f5c445c6d6f1aec"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">vector&lt; int &gt; Grafo::ordenaFreBusca </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>freqNos</em>[]</td><td>)</td>
+          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>ordemC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>freqNos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -546,9 +740,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>quantNos</b></td></tr>
 </div><div class="memdoc">
 
 <p>Retorna a quantidade de componentes conexas do grafo em uma matrix de vector. </p>
-<dl class="section return"><dt>Returns</dt><dd>vector &lt; vector&lt;int&gt; &gt;&lt; </dd></dl>
-<p>&lt; percorre os vertices</p>
-<p>&lt; pega o primeiro vertice nao visitado </p>
+<dl class="section return"><dt>Returns</dt><dd>vector &lt; vector&lt;int&gt; &gt; </dd></dl>
 
 </div>
 </div>
@@ -565,7 +757,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>quantNos</b></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Funcao que retona as componentes fortemente conexas crianto um array com as ordem dos vertice no retorno de uma busca em profundidade. Ao encontrar esse numeracao, e criado um grafo transposto( grafo G com as aresta invertidas). Depois e realizada uma busca em profundidade no grafo G' e as componete conexa de G' sao as componentes fortemente conexas de G. </p>
+<p>Funcao que retona as componentes fortemente conexas criando um array com as ordem dos vertice no retorno de uma busca em profundidade. Ao encontrar esse numeracao, e criado um grafo transposto( grafo G com as aresta invertidas). Depois e realizada uma busca em profundidade no grafo G' e as componete conexa de G' sao as componentes fortemente conexas de G. </p>
 <dl class="section return"><dt>Returns</dt><dd>vector&lt; vector&lt;int&gt; &gt; quantForteConexo </dd></dl>
 
 </div>
@@ -595,7 +787,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>quantNos</b></td></tr>
 </div><div class="memdoc">
 
 <p>Remove uma aresta entre dois vertices. </p>
-<p>Encontra os Vertices com as id's dadas, no grafo </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>id_no1 </td></tr>
+    <tr><td class="paramname">int</td><td>id_no2 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -614,10 +812,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>quantNos</b></td></tr>
 </div><div class="memdoc">
 
 <p>Procura o <a class="el" href="class_vertice.html">Vertice</a> que possui a id dada, e deleta caso encontre. </p>
-<p>encontra nó com vertice id, se não encontrar retorna</p>
-<p>Percorre todos os vertices...</p>
-<p>O <a class="el" href="class_vertice.html">Vertice</a> tem alguma <a class="el" href="class_aresta.html">Aresta</a> para o <a class="el" href="class_vertice.html">Vertice</a> a ser deletado? Remove <a class="el" href="class_aresta.html">Aresta</a>, e pula para o proximo <a class="el" href="class_vertice.html">Vertice</a> !</p>
-<p>Senão, pula para o proximo <a class="el" href="class_vertice.html">Vertice</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>id </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -656,7 +856,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>quantNos</b></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_grafo.html">Grafo</a></li>
-    <li class="footer">Generated on Sun May 31 2015 18:38:55 for Trabalho1 by
+    <li class="footer">Generated on Mon Jun 1 2015 17:56:11 for Trabalho1 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['geragrafotransposto',['geraGrafoTransposto',['../class_grafo.html#a363d5b79f8ab7aaa27dea38387e9ffb6',1,'Grafo']]],
-  ['grafo',['Grafo',['../class_grafo.html',1,'Grafo'],['../class_grafo.html#ab810bbe26a98e9af6661ccddff66b03b',1,'Grafo::Grafo()'],['../class_grafo.html#ac389a7c921f396ed4ed0f296a90a649e',1,'Grafo::Grafo(bool dir)']]],
-  ['grauno',['grauNo',['../class_grafo.html#a41ffeb7e79cf0d0c10297953f647c42d',1,'Grafo']]],
-  ['gravaarquivo',['gravaArquivo',['../class_arquivo.html#a793a1e9d97ba2beaca0219182f872638',1,'Arquivo']]]
+  ['deletaitem',['deletaItem',['../class_lista.html#a32622b53bc0720338439beecd0e7972f',1,'Lista']]]
 ];

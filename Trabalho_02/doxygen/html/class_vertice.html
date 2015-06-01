@@ -120,6 +120,7 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Vertice</b> (int Id)</td></tr>
 <tr class="separator:a230fd673ca5c794ff5d4fb53dd98ca7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae231694dc3ff35959b5b20b879b4678a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vertice.html#ae231694dc3ff35959b5b20b879b4678a">~Vertice</a> ()</td></tr>
+<tr class="memdesc:ae231694dc3ff35959b5b20b879b4678a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor.  <a href="#ae231694dc3ff35959b5b20b879b4678a">More...</a><br /></td></tr>
 <tr class="separator:ae231694dc3ff35959b5b20b879b4678a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0003425b8eb7ec6c3d5cd915a88afbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0003425b8eb7ec6c3d5cd915a88afbc"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>foiVisitado</b> ()</td></tr>
@@ -142,12 +143,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>adicionaAresta</b> (i
 <tr class="memitem:a4024393ae653b1cc889780ae1801a152"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4024393ae653b1cc889780ae1801a152"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>removeAresta</b> ()</td></tr>
 <tr class="separator:a4024393ae653b1cc889780ae1801a152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a440a8735f0d7296bd9108951558bc30b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a440a8735f0d7296bd9108951558bc30b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vertice.html#a440a8735f0d7296bd9108951558bc30b">removeAresta</a> (int id)</td></tr>
-<tr class="memdesc:a440a8735f0d7296bd9108951558bc30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove aresta do <a class="el" href="class_vertice.html">Vertice</a> se encontra-la. <br /></td></tr>
+<tr class="memitem:a440a8735f0d7296bd9108951558bc30b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vertice.html#a440a8735f0d7296bd9108951558bc30b">removeAresta</a> (int id)</td></tr>
+<tr class="memdesc:a440a8735f0d7296bd9108951558bc30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove aresta do <a class="el" href="class_vertice.html">Vertice</a> se encontra-la.  <a href="#a440a8735f0d7296bd9108951558bc30b">More...</a><br /></td></tr>
 <tr class="separator:a440a8735f0d7296bd9108951558bc30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ec71f04fba51e1f7aab78fbe6fed820"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ec71f04fba51e1f7aab78fbe6fed820"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>existeAresta</b> (int id)</td></tr>
+<tr class="memitem:a6ec71f04fba51e1f7aab78fbe6fed820"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vertice.html#a6ec71f04fba51e1f7aab78fbe6fed820">existeAresta</a> (int id)</td></tr>
+<tr class="memdesc:a6ec71f04fba51e1f7aab78fbe6fed820"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se a aresta com id esxite.  <a href="#a6ec71f04fba51e1f7aab78fbe6fed820">More...</a><br /></td></tr>
 <tr class="separator:a6ec71f04fba51e1f7aab78fbe6fed820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c2ca06ce42e54a04097e47c619d85c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c2ca06ce42e54a04097e47c619d85c5"></a>
 <a class="el" href="class_aresta.html">Aresta</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>primeiraAresta</b> ()</td></tr>
@@ -243,9 +243,59 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<ul>
-<li>-------------------------------------&mdash; CLASSE VERTICE ------------------------------------&mdash; */// </li>
-</ul>
+
+<p>Destrutor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a6ec71f04fba51e1f7aab78fbe6fed820"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Vertice::existeAresta </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se a aresta com id esxite. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a440a8735f0d7296bd9108951558bc30b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Vertice::removeAresta </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove aresta do <a class="el" href="class_vertice.html">Vertice</a> se encontra-la. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -259,7 +309,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_vertice.html">Vertice</a></li>
-    <li class="footer">Generated on Sun May 31 2015 18:38:55 for Trabalho1 by
+    <li class="footer">Generated on Mon Jun 1 2015 17:56:11 for Trabalho1 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
