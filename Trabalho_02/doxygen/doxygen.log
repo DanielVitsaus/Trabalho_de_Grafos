@@ -1,0 +1,15 @@
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Grafo.cpp:162: warning: argument 'bool' of command @param is not found in the argument list of Grafo::Grafo(bool dir)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Grafo.cpp:162: warning: The following parameters of Grafo::Grafo(bool dir) are not documented:
+  parameter 'dir'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Grafo.cpp:549: warning: argument 'int' of command @param is not found in the argument list of Grafo::grauNo(int id)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Grafo.cpp:549: warning: The following parameters of Grafo::grauNo(int id) are not documented:
+  parameter 'id'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Grafo.cpp:563: warning: argument 'Grafo' of command @param is not found in the argument list of Grafo::imprimeGrafo(Grafo *g)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Grafo.cpp:563: warning: The following parameters of Grafo::imprimeGrafo(Grafo *g) are not documented:
+  parameter 'g'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Grafo.cpp:14: warning: argument 'int' of command @param is not found in the argument list of Grafo::ordenaFreBusca(int freqNos[])
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Grafo.cpp:14: warning: The following parameters of Grafo::ordenaFreBusca(int freqNos[]) are not documented:
+  parameter 'freqNos'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Grafo.cpp:41: warning: argument 'Grafo' of command @param is not found in the argument list of Grafo::setNaoVisitado(Grafo *g)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Grafo.cpp:41: warning: The following parameters of Grafo::setNaoVisitado(Grafo *g) are not documented:
+  parameter 'g'

@@ -1,26 +1,242 @@
+/**
+ *
+ * Grafo.cpp
+ *
+ */
+
 #include "Grafo.h"
 #include <iostream>
 #include <vector>
+#include <stdio.h>
+#include <stdlib.h>
 using namespace std;
 
-///* -------------------------------------------- CLASSE GRAFO ------------------------------------------ *///
 
-///Retorna a quantidade de componentes conexas
+
+/** \brief Ordena e frequencia resultante da busca em profundidade de forma decrescente
+ *
+ * \param int freqNos[]
+ * \return vector<int> ordemC
+ */
+vector<int> Grafo::ordenaFreBusca(vector<int> ordemC, vector<int>freqNos)
+{
+    int maior = 0 , indice = 0;
+    for(int l = 1; l < this->quantNos +1; l++)
+    {
+        maior = freqNos[l];
+        for(int r = 0; r < this->quantNos ; r++)
+        {
+            if (maior <= freqNos[r])
+            {
+                indice = r;
+                maior  = freqNos[r];
+            }
+        }
+        freqNos[indice] = 0;
+        ordemC.push_back(indice);
+    }
+
+    for(int h = 0; h < this->contaNos(); h++)
+        cout << ordemC[h] << " ";
+    cout << "\n" << endl;
+
+    return ordemC;
+}
+
+/** \brief Seta todos os vertice do Grafo com nao visitao
+ *
+ * \param Grafo *g
+ * \return Grafo *g
+ */
+ Grafo * Grafo::setNaoVisitado(Grafo *g)
+ {
+    Vertice* v;
+    for (v = g->primeiroNo(); v != NULL; v = g->proximoNo())
+    {
+        v->setaVisitado(false);
+    }
+    delete(v);
+    return g;
+ }
+
+/** @brief Função que gera um gafos transposto invertendo das aresta de um grafo direcionado G
+ *   retornando G'
+ * @return Grafo* gt
+ *
+ */
+Grafo* Grafo::geraGrafoTransposto()
+{
+    Vertice* v;
+    Grafo* gt = new Grafo(true);
+    Aresta *aux;
+    for (v = this->primeiroNo(); v != NULL; v = this->proximoNo())
+    {
+        for(aux  = v->primeiraAresta(); aux != NULL; aux = v->proximaAresta() )
+        {
+            gt->adicionaAresta(aux->pegaIdDestino(),v->pegaId());
+        }
+    }
+    gt->quantNos = this->quantNos;
+    return gt;
+}
+
+/** \brief Funcao que retona as componentes fortemente conexas crianto um array com as ordem dos vertice no retorno
+ *   de uma busca em profundidade. Ao encontrar esse numeracao, e criado um grafo transposto( grafo G com as aresta invertidas).
+ *   Depois e realizada uma busca em profundidade no grafo G' e as componete conexa de G' sao as componentes fortemente conexas de G
+ *
+ * \return vector< vector<int> > quantForteConexo
+ *
+ */
+ vector< vector<int> > Grafo::quantCompForteConexos()
+ {
+    Grafo* gt;
+    Vertice* v;
+    Vertice* k;
+    vector< vector<int> > quantForteConexo;
+    vector<int> compForteVisitado;
+    vector<int> ordemC;
+    vector<int> freqNos;
+    int p = 0;
+
+    for(int y = 0; y < this->quantNos+1; y++)
+    {
+        freqNos.push_back(0);
+    }
+
+    gt = this->geraGrafoTransposto();
+
+    for (v = this->primeiroNo(); v != NULL; v = this->proximoNo())
+    {
+        if (v->foiVisitado() == false)
+        {
+             freqNos = buscaFreqNoConexas(v, &p, freqNos);
+        }
+    }
+
+    this->setNaoVisitado(this);
+
+    ordemC = this->ordenaFreBusca(ordemC,freqNos);
+
+    for(int i = 0; i < gt->contaNos(); i++)
+    {
+        k = gt->encontraNo(ordemC[i]);
+        if (k != NULL && k->foiVisitado() == false)
+        {
+             quantForteConexo.push_back( buscaCompForteConexas(gt,k,compForteVisitado) );
+             compForteVisitado.clear();
+        }
+    }
+    freqNos.clear();
+    ordemC.clear();
+    compForteVisitado.clear();
+    gt->~Grafo();
+    return quantForteConexo;
+}
+
+
+/** \brief Busca em profundidade das componete fortemente conexas
+ *
+ * \param Grafo *g -> Grafo aonde a busaca vai ser realizada
+ * \param Vertice *v -> vertice inicial
+ * \param vector<int> compForteConexas -> para armazenar os ID das componentes fortemente conexas
+ * \param int calFre -> calcula a numeraçao para atribuir ao vertice
+ * \param int freqNos[] -> array para guarda as numeração dos vertice na busca em profundidade
+ * \return vector<int> compForteConexas
+ *
+ */
+vector<int> Grafo::buscaCompForteConexas(Grafo* g ,Vertice *v, vector<int> compForteConexas)
+{
+    v->setaVisitado(true);
+    compForteConexas.push_back(v->pegaId());
+    Vertice *w = NULL;
+    Aresta *aux = NULL;
+    for(aux = v->primeiraAresta(); aux != NULL; aux = v->proximaAresta() )
+    {
+        w  = g->encontraNo(g,aux->pegaIdDestino());
+        if (w->foiVisitado() == false)
+        {
+            compForteConexas = buscaCompForteConexas(g,w,compForteConexas);
+        }
+    }
+
+    return compForteConexas;
+}
+
+
+vector<int> Grafo::buscaFreqNoConexas(Vertice *v, int *calFre, vector<int> freqNos)
+{
+    v->setaVisitado(true);
+    Aresta *aux = NULL;
+    for(aux = v->primeiraAresta(); aux != NULL; aux = v->proximaAresta() )
+    {
+        Vertice *w  = this->encontraNo(aux->pegaIdDestino());
+        if (w->foiVisitado() == false)
+        {
+            freqNos = buscaFreqNoConexas(w, calFre, freqNos);
+        }
+    }
+    *calFre += 1;
+    freqNos[v->pegaId()] = *calFre;
+
+    return freqNos;
+}
+
+
+/** \brief Construto para grafo nao direcionado
+ */
+Grafo::Grafo() {
+    this->direcionado = false;
+}
+
+/** \brief Construto para grafo direcionado (digrafo)
+*    \ parametor dir que define se o grafo é direcionado
+*
+* \param bool dir
+*
+*/
+Grafo::Grafo(bool dir) {
+    this->direcionado = dir;
+}
+
+/** \brief  Destrutos  */
+Grafo::~Grafo() {
+
+    Item *i;
+    Vertice *v;
+
+    this->inicioLista();
+    do {
+        i = this->noIterator();
+        v = (Vertice*)i;
+        this->deletaItem(i);
+        delete v;
+    } while (this->noIterator());
+
+}
+
+/** \brief Retorna a quantidade de componentes conexas do grafo em uma matrix de vector
+ *
+ * \return vector < vector<int> >
+ */
+/**<  */
 vector< vector<int> > Grafo::quantCompConexo()
 {
     Vertice* v;
     vector< vector<int> > quantConexo;
     vector<int> compVisitado;
 
-    for (v = this->primeiroNo(); v != NULL; v = this->proximoNo()) /// percorre os vertices
+    /**< percorre os vertices */
+    for (v = this->primeiroNo(); v != NULL; v = this->proximoNo())
     {
-        if (v->foiVisitado() == false)/// pega o primeiro vertice nao visitado
+        /**< pega o primeiro vertice nao visitado */
+        if (v->foiVisitado() == false)
         {
              quantConexo.push_back( buscaMesmaCompConexo(v,compVisitado) );
              compVisitado.clear();
         }
     }
-    for (v = this->primeiroNo(); v != NULL; v = this->proximoNo())/// seta todos os vertices como nao visitado
+    /**< seta todos os vertices como nao visitado */
+    for (v = this->primeiroNo(); v != NULL; v = this->proximoNo())
     {
         v->setaVisitado(false);
     }
@@ -278,12 +494,39 @@ Vertice* Grafo::encontraNo(int id) {
 
         Vertice *v = this->primeiroNo();
 
-        while (v) {
-            if (v->pegaId()==id) return v;
-            else v = this->proximoNo();
+        while (v)
+        {
+            if (v->pegaId()==id)
+            {
+                //cout << "Passou 7\n" << endl;
+                return v;
+            }
+            else
+            {
+                v = this->proximoNo();
+            }
         }
-
         return 0;
+}
+
+Vertice* Grafo::encontraNo(Grafo*g,int id)
+{
+
+        Vertice *v = g->primeiroNo();
+
+        while (v)
+        {
+            if (v->pegaId()==id)
+            {
+                //cout << "Passou 7\n" << endl;
+                return v;
+            }
+            else
+            {
+                v = g->proximoNo();
+            }
+        }
+        return NULL;
 }
 
 /// Adiciona um Vertice com a id dada caso não exista, caso exista retorna ponteiro para o Vertice
@@ -299,7 +542,7 @@ Vertice* Grafo::adicionaNo(int id) {
     return v;
 }
 
-/// Adiciona uma aresta em id_origem, apontando para id_destino
+/// Adiciona uma aresta em id_origem, apontando (quando pertinente) para id_destino
 void Grafo::adicionaAresta(int id_origem, int id_destino) {
 
     /// Procura nós destino e origem, se não existirem, cria!
@@ -307,7 +550,19 @@ void Grafo::adicionaAresta(int id_origem, int id_destino) {
     Vertice *vo = this->adicionaNo(id_origem);
 
     vo->adicionaAresta(id_destino);
-    vd->adicionaAresta(id_origem);
+    if (!this->direcionado) vd->adicionaAresta(id_origem);
+
+}
+
+/// Adiciona uma aresta com PESO, em id_origem apontando (quando pertinente) para id_destino
+void Grafo::adicionaAresta(int id_origem, int id_destino, float peso) {
+
+    /// Procura nós destino e origem, se não existirem, cria!
+    Vertice *vd = this->adicionaNo(id_destino);
+    Vertice *vo = this->adicionaNo(id_origem);
+
+    vo->adicionaAresta(id_destino, peso);
+    if (!this->direcionado) vd->adicionaAresta(id_origem, peso);
 
 }
 
@@ -347,7 +602,11 @@ void Grafo::removeAresta(int id_no1, int id_no2) {
 
 }
 
-/// Grau de um nó
+/** \brief  Retorna o grau do vertice (no) passando como parametro o id no vertice(no)
+ *
+ * \param int id
+ * \return int grau
+ */
 int Grafo::grauNo(int id) {
 
     Vertice *v = this->encontraNo(id);
@@ -357,7 +616,43 @@ int Grafo::grauNo(int id) {
 
 }
 
+/** \brief Imprime cada vertice (no) com os nos adjacentes
+ *
+ * \param Grafo* g
+ */
+void Grafo::imprimeGrafo(Grafo* g)
+{
+    Vertice *v;
+    Aresta *a;
+
+    for (v = g->primeiroNo() ; v != NULL; v = g->proximoNo())
+    {
+        cout << v->pegaId() << " -> ";
+        for (a = v->primeiraAresta() ; a != NULL; a = v->proximaAresta())
+        {
+            cout << a->pegaIdDestino() << " ";
+        }
+        cout << endl;
+    }
+    delete(v);
+    delete(a);
+}
+
+
 ///* ---------------------------------------- CLASSE VERTICE --------------------------------------- *///
+
+Vertice::~Vertice() {
+
+    Item *i;
+
+    this->inicioLista();
+    do {
+        i = this->noIterator();
+        this->deletaItem(i);
+        delete i;
+    } while (this->noIterator());
+
+}
 
 bool Vertice::existeAresta(int id)
 {
@@ -386,6 +681,7 @@ Aresta* Vertice::encontraAresta(int id) {
 bool Vertice::removeAresta(int id) {
 
     Aresta *a = this->encontraAresta(id);
+
     if (a) {
         Lista::deletaItem(a);
         delete a;

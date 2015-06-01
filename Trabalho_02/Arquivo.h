@@ -17,7 +17,7 @@ class Arquivo
         ofstream arquivoGravacao;
 
     public:
-        Grafo* lerArquivo(char *ar);
+        Grafo* lerArquivo(char *ar,Grafo *gd);
         void gravaArquivo(Grafo *g, char* nomArquivo,int nVertice, int nAresta, float grauMedio);
 
 };

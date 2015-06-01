@@ -9,14 +9,13 @@
 using namespace std;
 
 
-Grafo* Arquivo::lerArquivo(char *ar)
+Grafo* Arquivo::lerArquivo(char *ar, Grafo *gd)
 {
     char diretorio[100] = "instancias//";
     strcat(diretorio,ar);
     this->arquivoLeitura.open(diretorio,ios::in);
-    Grafo * grafo = new Grafo();
-    int m1 = 0, m2 = 0, j = 0;
-    char valor[16];
+    //Grafo * grafo = new Grafo();
+    int m1 = 0, m2 = 0;
     char buff[16];
     int cont = 2;
 
@@ -27,38 +26,22 @@ Grafo* Arquivo::lerArquivo(char *ar)
     }
 
     cout << "Lendo o arquivo " << ar << " ... " << endl;
-    this->arquivoLeitura.getline(buff,16);
-    this->arquivoLeitura.getline(buff,16);
+
+    this->arquivoLeitura.getline(buff,16); // Le quantidade de nos
+    sscanf(buff, "%d", &gd->quantNos);
+    this->arquivoLeitura.getline(buff,16); // Le primeira linha
+    // Processa as arestas criando os nos que não existem
     while(! this->arquivoLeitura.eof())
     {
-        for(int i = 0; buff[i] != '\0' ; i++ )
-        {
-            if(buff[i] == ' ')
-            {
-                m1 = atoi(valor);
-                j = 0;
-                i++;
-            }
-            valor[j] = buff[i];
-            j++;
-        }
-        valor[j] = '\0';
-        j = 0;
-        m2 = atoi(valor);
-        for(int i = 0; i < 16; i++)
-        {
-            valor[i] = '\0';
-        }
-        grafo->adicionaAresta(m1,m2);
-        //cout << m1 << " | " << m2 << endl;
+        sscanf(buff, "%d %d", &m1, &m2); // Realiza leitura das arestas no formato: "(int) (int)"
+        gd->adicionaAresta(m1,m2);    // ... e adiciona aresta no grafo.
         this->arquivoLeitura.getline(buff,16);
         cont++;
     }
 
     this->arquivoLeitura.close();
-    cout << "O arquivo " << ar << " foi lido com sucesso! \n" << endl;
-    //cout << cont << endl;
-    return grafo;
+    cout << "O arquivo " << ar << " foi lido com sucesso! "<<  cont <<" linhas processadas.\n" << endl;
+    return gd;
 }
 
 void Arquivo::gravaArquivo(Grafo *g, char* nomArquivo,int nVertice, int nAresta, float grauMedio)
@@ -69,6 +52,7 @@ void Arquivo::gravaArquivo(Grafo *g, char* nomArquivo,int nVertice, int nAresta,
     char nomeArquivo[100];
     char diretorio[100] = "arquivos_gerados//";
     int quatVertice = g->contaNos();
+
     strncpy ( nomeArquivo, nomArquivo, strlen(nomArquivo) - 4);
     strcat(nomeArquivo,"_info.txt");
     strcat(diretorio,nomeArquivo);
@@ -108,4 +92,6 @@ void Arquivo::gravaArquivo(Grafo *g, char* nomArquivo,int nVertice, int nAresta,
     this->arquivoGravacao << endl;
     cout << "Arquivo " << nomeArquivo << " gerado !!"<<"\n" << endl;
     this->arquivoGravacao.close();
+    delete(g2);
+    delete(k);
 }

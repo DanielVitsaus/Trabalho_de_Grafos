@@ -1,3 +1,27 @@
+/*******************************************************************************************************************************
+ *  Menu:
+ *
+ * 1 -> Trocar arquivo:" << endl;
+ * 2 -> Quantas nos tem o Grafo:" << endl;
+ * 3 -> Quantas arestas tem o Grafo:" << endl;
+ * 4 -> Adiciona/Remove vertice:" << endl;
+ * 5 -> Adiciona/Remove aresta:" << endl;
+ * 6 -> Grau do nó:" << endl;
+ * 7 -> Verificar se é K-Regular:" << endl;
+ * 8 -> Verificar se é completo:" << endl;
+ * 9 -> Verificar se dois nós são adjacentes:" << endl;
+ * 10 -> Verificar se o grafo é conexo:" << endl;
+ * 11 -> Verifica se dois nós estão em uma mesma componente conexa:" << endl;
+ * 12 -> Verifica se um dado nó é de articulação:" << endl;
+ * 13 -> Verifica se uma dada aresta é ponte:" << endl;
+ * 14 ->Verificar quantas componentes conexa tem o grafos, qual é o tamanha da mior e menor compomente:" << endl;
+ * 15 ->Gerar informações sobre o grafo:" << endl;
+ * 0 para sair:" << endl;
+ ************************************************************************************************************************************
+ */
+
+
+
 #include <iostream>
 #include <string.h>
 #include "Lista.h"
@@ -7,6 +31,7 @@
 #define Tex_Arquivo 100
 
 using namespace std;
+
 
 /**
 *    Listas são compostas de Items.
@@ -18,9 +43,9 @@ using namespace std;
 int main()
 {
     Arquivo *ler_grava = new Arquivo();
-    Grafo *g1 = new Grafo();
-    vector< vector<int> > quantConxo;
-    Vertice *v;
+    Grafo *g1 = NULL;
+    vector < vector<int> > quantConxo;
+    Vertice *v;//*v2;
     char arquivo[Tex_Arquivo] = " ";
     char r;
     int op = -1, id = 0, nAresta = 0, nGrauTotal = 0;
@@ -34,9 +59,8 @@ int main()
             cout << " **** ANTES DE ACESSAR AS OPÇÕES **** " << endl;
             cout << "Digite o nome do arquivo como no exemplo:\n\n **** EX: nome_do_arquivo.txt ****\n" << endl;
             cin >> arquivo;
-            g1 = ler_grava->lerArquivo(arquivo);
-            //printf("\e[H\e[2J");
-            //cout << g1->contaNos() << endl;
+            g1 = new Grafo(true);
+            g1 = ler_grava->lerArquivo(arquivo,g1);
         }
 
         cout << "Escolha uma das opções:" << endl;
@@ -69,19 +93,17 @@ int main()
                     if (r == 's' || r == 'S')
                     {
                         cout << "Removendo Grafo anterior ..." << endl;
-                        for (int i = 0; i < g1->contaNos(); i++) {
-                                g1->removeNo(i);
-                        }
+                        delete g1;
                         cout << "Grafo anterior removido!!\n" << endl;
                         cout << "Digite o nome do arquivo como no exemplo:\n ** EX: nome_do_arquivo.txt **\n" << endl;
                         cin >> arquivo;
-                        g1 = ler_grava->lerArquivo(arquivo);
+                        g1 = ler_grava->lerArquivo(arquivo,g1);
                     }
-            break;
+                    break;
 
             case 2:
                 cout << "O grafo tem -> " << g1->contaNos() << " vertices !!\n" << endl;
-            break;
+                break;
 
             case 3:
                     nAresta = 0;
@@ -91,7 +113,7 @@ int main()
                         nAresta += v->contaItems();
                     }
                     cout << "O grafo tem -> " << (nAresta/2) << " arestas !!\n" << endl;
-            break;
+                    break;
 
             case 4:
                     cout << "Digite 'r' para Remover e 'a' para Adicionar nos !!\n" << endl;
@@ -111,7 +133,7 @@ int main()
                         g1->adicionaNo(ad);
                         cout << "No de ID -> "<<ad<< " adicionado!!\n" << endl;
                     }
-            break;
+                    break;
 
             case 5:
                     cout << "Digite 'r' para Remover e 'a' para Adicionar aresta !!\n" << endl;
@@ -135,7 +157,7 @@ int main()
                         g1->adicionaAresta(adAr1,adAr2);
                         cout << "Aresta -> "<<adAr1 << " - " << adAr2 << " foi adicionada!!\n" << endl;
                     }
-            break;
+                    break;
 
             case 6:
                     cout << "Digite o ID do nó:" << endl;
@@ -144,21 +166,21 @@ int main()
                         cout << " O nó de ID -> " << id << " tem grau " << g1->grauNo(id) << "\n"<< endl;
                     else
                         cout << " Não exite um no com o ID -> " << id << "\n"<< endl;
-            break;
+                    break;
 
             case 7:
                     if (g1->kRegular())
                         cout << " O grafo é K-Regular!!\n" << endl;
                     else
                         cout << " O grafo não é K-Regular!!\n" << endl;
-            break;
+                    break;
 
             case 8:
                     if (g1->completo())
                         cout << " O Grafo é completo \n" << endl;
                     else
                         cout << " O grafo no é completo \n "<< endl;
-            break;
+                    break;
 
             case 9:
                     cout << "Digite o ID do primeiro nó:" << endl;
@@ -171,14 +193,14 @@ int main()
                         cout << " Os nos são adkacentes!!\n" << endl;
                     else
                         cout << " Os nos não são adjacentes!!\n" << endl;
-            break;
+                    break;
 
             case 10:
                     if(g1->conexo())
                         cout << " O grafo é conexo\n" << endl;
                     else
                         cout << " O grafo não é conexo!!\n" << endl;
-            break;
+                    break;
 
             case 11:
                     cout << "Digite o ID do primeiro nó:" << endl;
@@ -191,7 +213,7 @@ int main()
                         cout << " Os nos estão na mesma componente!!\n" << endl;
                     else
                         cout << " Os nos não estão na mesma componente!!\n" << endl;
-            break;
+                    break;
 
             case 12:
                     cout << "Digite o ID do nó:" << endl;
@@ -201,7 +223,7 @@ int main()
                         cout << " O no é articulação!!\n" << endl;
                     else
                         cout << " O no não é articulação!!\n" << endl;
-            break;
+                    break;
 
             case 13:
                     cout << "Digite a primeira extremidade da aresta:" << endl;
@@ -214,7 +236,7 @@ int main()
                        cout << "\n A aresta é ponte !!\n" << endl;
                    else
                        cout << "\n A aresta nao é ponte !!\n "<< endl;
-            break;
+                    break;
 
             case 14:
                     quantConxo = g1->quantCompConexo();
@@ -240,7 +262,9 @@ int main()
                         cout << " A menor componente conexa tem " << menor << " nós !!\n" << endl;
                     }
                     quantConxo.clear();
-            break;
+                    break;
+
+
             case 15:
                     nAresta = 0;
                     nGrauTotal = 0;
@@ -254,19 +278,35 @@ int main()
                     mediaGrau =  ( (float)nGrauTotal ) / ( (float)g1->contaNos() ) ;
 
                     ler_grava->gravaArquivo(g1, arquivo, g1->contaNos(), (nAresta/2), mediaGrau );
+                    break;
+            case 16:
+
+                    quantConxo = g1->quantCompForteConexos();
+
+                    if (quantConxo.size() > 0)
+                    {
+                        for (int l = 0; l < (int)quantConxo.size(); l++ )
+                        {
+                            for(int i = 0; i < (int)quantConxo[l].size(); i++)
+                            {
+                                cout << quantConxo[l][i] << " " ;
+                            }
+                            cout <<  endl;
+                        }
+                    }
+                    cout << "\n" << endl;
+
             break;
+
             case 0:
                 cout << "Removendo Grafo ..." << endl;
-                for (int i = 0; i < g1->contaNos(); i++)
-                {
-                    g1->removeNo(i);
-                }
-                cout << "Grafo removido!!" << endl;
                 delete g1;
+                delete ler_grava;
+                cout << "Grafo removido!!" << endl;
                 exit(EXIT_SUCCESS);
-            break;
+
             default:
-            break;
+                break;
         }
 
     }
