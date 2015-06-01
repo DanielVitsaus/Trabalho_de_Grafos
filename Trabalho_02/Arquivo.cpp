@@ -8,6 +8,13 @@
 
 using namespace std;
 
+/** \brief Funçao que le e adiciona o vertice em um grafo G
+ *
+ * \param char *ar -> nome do arquivo para a leitura
+ * \param Grafo *gd -> grafo a ser adicionados os vertices
+ * \return Grafo *gd
+ *
+ */
 
 Grafo* Arquivo::lerArquivo(char *ar, Grafo *gd)
 {
@@ -44,6 +51,16 @@ Grafo* Arquivo::lerArquivo(char *ar, Grafo *gd)
     return gd;
 }
 
+/** \brief Funcao que gera um aquirvo com as informacoes do grafo G como frequencia de cada vertice, quantos vertice,
+ *         quantas arestas e o grau medio de cada vertice.
+ *
+ * \param Grafo *g
+ * \param char* nomArquivo
+ * \param int nVertice
+ * \param int nAresta
+ * \param float grauMedio
+ *
+ */
 void Arquivo::gravaArquivo(Grafo *g, char* nomArquivo,int nVertice, int nAresta, float grauMedio)
 {
     Grafo *g2 = g;
@@ -92,6 +109,38 @@ void Arquivo::gravaArquivo(Grafo *g, char* nomArquivo,int nVertice, int nAresta,
     this->arquivoGravacao << endl;
     cout << "Arquivo " << nomeArquivo << " gerado !!"<<"\n" << endl;
     this->arquivoGravacao.close();
-    delete(g2);
     delete(k);
+}
+
+/** \brief Funcao que gera um arquivo com as componetes fortemente conexa do grafo passando o nome do arquivo e um vector com as componentes
+ *
+ * \param char* nomArquivo
+ * \param vector< vector<int> > comForteConexo
+ *
+ */
+void Arquivo::gravaArquivo(char* nomArquivo, vector< vector<int> > comForteConexo)
+{
+    char nomeArquivo[100];
+    char diretorio[100] = "arquivos_gerados//";
+
+    strncpy ( nomeArquivo, nomArquivo, strlen(nomArquivo) - 4);
+    strcat(nomeArquivo,"_info.txt");
+    strcat(diretorio,nomeArquivo);
+    cout << "Gerando arquivo " << nomeArquivo << endl;
+
+    this->arquivoGravacao.open(diretorio, ios::trunc);
+
+    this->arquivoGravacao << "Componentes Fortemente Conexas " <<  endl;
+    for(int i = 0; i < (int)comForteConexo.size(); i++)
+    {
+        for (int j = 0; j < (int)comForteConexo[i].size(); j++)
+        {
+             this->arquivoGravacao << comForteConexo[i][j] << " ";
+        }
+        this->arquivoGravacao << endl;
+    }
+
+    cout << "Arquivo " << nomeArquivo << " gerado !!"<<"\n" << endl;
+    this->arquivoGravacao.close();
+
 }

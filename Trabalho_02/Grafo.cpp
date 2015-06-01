@@ -36,10 +36,6 @@ vector<int> Grafo::ordenaFreBusca(vector<int> ordemC, vector<int>freqNos)
         ordemC.push_back(indice);
     }
 
-    for(int h = 0; h < this->contaNos(); h++)
-        cout << ordemC[h] << " ";
-    cout << "\n" << endl;
-
     return ordemC;
 }
 

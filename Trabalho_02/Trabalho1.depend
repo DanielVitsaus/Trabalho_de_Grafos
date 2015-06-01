@@ -331,3 +331,45 @@
 	"Grafo.h"
 	"Arquivo.h"
 
+1433166157 source:/home/danielcandido/git/Trabalho_de_Grafos/Trabalho_02/Arquivo.cpp
+	"Arquivo.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+
+1433162874 /home/danielcandido/git/Trabalho_de_Grafos/Trabalho_02/Arquivo.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1433159102 /home/danielcandido/git/Trabalho_de_Grafos/Trabalho_02/Grafo.h
+	"Lista.h"
+	<iostream>
+	<vector>
+
+1433159102 /home/danielcandido/git/Trabalho_de_Grafos/Trabalho_02/Lista.h
+
+1433159351 source:/home/danielcandido/git/Trabalho_de_Grafos/Trabalho_02/Grafo.cpp
+	"Grafo.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+
+1433159102 source:/home/danielcandido/git/Trabalho_de_Grafos/Trabalho_02/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1433166545 source:/home/danielcandido/git/Trabalho_de_Grafos/Trabalho_02/main.cpp
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"Arquivo.h"
+

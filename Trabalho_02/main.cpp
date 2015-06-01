@@ -280,21 +280,12 @@ int main()
                     ler_grava->gravaArquivo(g1, arquivo, g1->contaNos(), (nAresta/2), mediaGrau );
                     break;
             case 16:
-
                     quantConxo = g1->quantCompForteConexos();
-
-                    if (quantConxo.size() > 0)
-                    {
-                        for (int l = 0; l < (int)quantConxo.size(); l++ )
-                        {
-                            for(int i = 0; i < (int)quantConxo[l].size(); i++)
-                            {
-                                cout << quantConxo[l][i] << " " ;
-                            }
-                            cout <<  endl;
-                        }
-                    }
-                    cout << "\n" << endl;
+                    //char arquivo2[Tex_Arquivo] = "";
+                    //strncpy ( arquivo, arquivo, strlen(arquivo) - 4);
+                    //strcat(arquivo,"_CompForteCone");
+                    //strcat(arquivo2,arquivo2);
+                    ler_grava->gravaArquivo(arquivo, quantConxo);
 
             break;
 
