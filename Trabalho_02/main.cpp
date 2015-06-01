@@ -80,6 +80,8 @@ int main()
         cout <<  "  14 ->Verificar quantas componentes conexa tem o grafos," <<endl;
         cout <<  "       qual é o tamanha da mior e menor compomente:" << endl;
         cout <<  "  15 ->Gerar informações sobre o grafo:" << endl;
+        cout <<  "  17 ->Fecho Transitivo Direto:" << endl;
+        cout <<  "  18 ->Fecho Transitivo Indireto:" << endl;
         cout <<  "  o para sair:" << endl;
         cin >> op;
 
@@ -280,24 +282,23 @@ int main()
                     ler_grava->gravaArquivo(g1, arquivo, g1->contaNos(), (nAresta/2), mediaGrau );
                     break;
             case 16:
-
                     quantConxo = g1->quantCompForteConexos();
+                    ler_grava->gravaArquivo(arquivo, quantConxo);
+                    break;
 
-                    if (quantConxo.size() > 0)
-                    {
-                        for (int l = 0; l < (int)quantConxo.size(); l++ )
-                        {
-                            for(int i = 0; i < (int)quantConxo[l].size(); i++)
-                            {
-                                cout << quantConxo[l][i] << " " ;
-                            }
-                            cout <<  endl;
-                        }
-                    }
-                    cout << "\n" << endl;
+            case 17:
+                     cout << "Digite o vértice a partir do qual deseja encontrar o fecho transitivo direto::" << endl;
+                    int v1;
+                    cin >> v1;
+                    g1->fechoTransitivoDireto(v1);
+                    break;
 
-            break;
-
+            case 18:
+                     cout << "Digite o vértice a partir do qual deseja encontrar o fecho transitivo indireto::" << endl;
+                    int v2;
+                    cin >> v2;
+                    g1->fechoTransitivoIndireto(v2);
+                    break;
             case 0:
                 cout << "Removendo Grafo ..." << endl;
                 delete g1;

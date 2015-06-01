@@ -18,6 +18,7 @@ class Arquivo
 
     public:
         Grafo* lerArquivo(char *ar,Grafo *gd);
+        void gravaArquivo(char* nomArquivo, vector< vector<int> >comForteConexo);
         void gravaArquivo(Grafo *g, char* nomArquivo,int nVertice, int nAresta, float grauMedio);
 
 };

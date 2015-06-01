@@ -56,6 +56,7 @@ class Grafo: private Lista {
         vector<int> buscaMesmaCompConexo(Vertice *v, vector<int> c);
         vector<int> buscaCompForteConexas(Grafo *g,Vertice *v, vector<int> compForteConexas);
         bool direcionado;
+        void imprimirFecho(vector<int> c);
 
     public:
         int quantNos;
@@ -92,6 +93,8 @@ class Grafo: private Lista {
         vector< vector<int> > quantCompConexo();
 
         vector< vector<int> > quantCompForteConexos();
+        void fechoTransitivoDireto(int id);
+        void fechoTransitivoIndireto(int id);
 
 
 };

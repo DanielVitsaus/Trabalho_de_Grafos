@@ -11,7 +11,55 @@
 #include <stdlib.h>
 using namespace std;
 
+/** \brief A função gera o fecho transitivo indireto dado um id de um vertice.
+ *
+ * \param  int id
+ *
+ */
 
+void Grafo::fechoTransitivoIndireto(int id)
+{
+    Grafo *transposto;
+    transposto = this->geraGrafoTransposto();
+    Vertice *v = transposto->encontraNo(id);
+    vector<int> fechoTransitivoIndir;
+
+    fechoTransitivoIndir = buscaCompForteConexas(transposto,v,fechoTransitivoIndir);
+    transposto->~Grafo();
+    imprimirFecho(fechoTransitivoIndir);
+}
+
+/** \brief A função gera o fecho transitivo direto dado um id de um vértice
+ *
+ * \param int id
+ *
+ */
+
+void Grafo::fechoTransitivoDireto(int id)
+{
+    vector<int> fechoTransitivoDir;
+    Vertice *v = encontraNo(id);
+
+    fechoTransitivoDir = buscaMesmaCompConexo(v, fechoTransitivoDir);
+    imprimirFecho(fechoTransitivoDir);
+}
+
+/** \brief A função imprime o fecho transitivo direto ou indireto
+ *
+ * \param vector fecho
+ *
+ */
+
+void Grafo::imprimirFecho(vector<int> fecho)
+{
+    int i=0;
+    cout<<"Resultado fecho:"<<endl;
+    while(i < (int)fecho.size() )
+    {
+        cout<<fecho[i]<< " " ;
+        i++;
+    }
+}
 
 /** \brief Ordena e frequencia resultante da busca em profundidade de forma decrescente
  *
@@ -35,10 +83,6 @@ vector<int> Grafo::ordenaFreBusca(vector<int> ordemC, vector<int>freqNos)
         freqNos[indice] = 0;
         ordemC.push_back(indice);
     }
-
-    for(int h = 0; h < this->contaNos(); h++)
-        cout << ordemC[h] << " ";
-    cout << "\n" << endl;
 
     return ordemC;
 }
@@ -80,7 +124,7 @@ Grafo* Grafo::geraGrafoTransposto()
     return gt;
 }
 
-/** \brief Funcao que retona as componentes fortemente conexas crianto um array com as ordem dos vertice no retorno
+/** \brief Funcao que retona as componentes fortemente conexas criando um array com as ordem dos vertice no retorno
  *   de uma busca em profundidade. Ao encontrar esse numeracao, e criado um grafo transposto( grafo G com as aresta invertidas).
  *   Depois e realizada uma busca em profundidade no grafo G' e as componete conexa de G' sao as componentes fortemente conexas de G
  *
@@ -134,7 +178,7 @@ Grafo* Grafo::geraGrafoTransposto()
 }
 
 
-/** \brief Busca em profundidade das componete fortemente conexas
+/** \brief Busca em profundidade das componete fortemente conexas em um grafo transposto
  *
  * \param Grafo *g -> Grafo aonde a busaca vai ser realizada
  * \param Vertice *v -> vertice inicial
@@ -148,6 +192,7 @@ vector<int> Grafo::buscaCompForteConexas(Grafo* g ,Vertice *v, vector<int> compF
 {
     v->setaVisitado(true);
     compForteConexas.push_back(v->pegaId());
+     cout<<" daniel 1"<<endl;
     Vertice *w = NULL;
     Aresta *aux = NULL;
     for(aux = v->primeiraAresta(); aux != NULL; aux = v->proximaAresta() )
@@ -162,7 +207,13 @@ vector<int> Grafo::buscaCompForteConexas(Grafo* g ,Vertice *v, vector<int> compF
     return compForteConexas;
 }
 
-
+/** \brief Retorna um vector com a ordem de cada vertice na volta da recursao de uma busca em profundidade
+ *
+ * \param Vertice *v
+ * \param int *calFre
+ * \param vector<int> freqNos
+ * \return vector<int> freqNos
+ */
 vector<int> Grafo::buscaFreqNoConexas(Vertice *v, int *calFre, vector<int> freqNos)
 {
     v->setaVisitado(true);
@@ -182,7 +233,7 @@ vector<int> Grafo::buscaFreqNoConexas(Vertice *v, int *calFre, vector<int> freqN
 }
 
 
-/** \brief Construto para grafo nao direcionado
+/** \brief Construtor para grafo nao direcionado
  */
 Grafo::Grafo() {
     this->direcionado = false;
@@ -198,7 +249,7 @@ Grafo::Grafo(bool dir) {
     this->direcionado = dir;
 }
 
-/** \brief  Destrutos  */
+/** \brief  Destrutor  */
 Grafo::~Grafo() {
 
     Item *i;
@@ -218,7 +269,6 @@ Grafo::~Grafo() {
  *
  * \return vector < vector<int> >
  */
-/**<  */
 vector< vector<int> > Grafo::quantCompConexo()
 {
     Vertice* v;
@@ -235,15 +285,17 @@ vector< vector<int> > Grafo::quantCompConexo()
              compVisitado.clear();
         }
     }
-    /**< seta todos os vertices como nao visitado */
-    for (v = this->primeiroNo(); v != NULL; v = this->proximoNo())
-    {
-        v->setaVisitado(false);
-    }
+    this->setNaoVisitado(this);
     return quantConexo;
 }
 
-/// Retorna os ids de uma componente Conexa
+ /** \brief Retorna os ids de uma componente Conexa
+  *
+  * \param Vertice *v
+  * \param vector<int> c
+  * \return c
+  *
+  */
 vector<int> Grafo::buscaMesmaCompConexo(Vertice *v, vector<int> c)
 {
     v->setaVisitado(true);
@@ -262,7 +314,13 @@ vector<int> Grafo::buscaMesmaCompConexo(Vertice *v, vector<int> c)
     return c;
 }
 
-/// Verifica se dois vertices estao em uma mesmo conponente conexa
+/** \brief Verifica se dois vertices estao em uma mesmo conponente conexa
+ *
+ * \param int id1
+ * \param int id2
+ * \return bool
+ *
+ */
 bool Grafo::mesmaComponenteConexa(int id1, int id2)
 {
     bool comp = false, idV1 = false, idV2 = false;
@@ -309,15 +367,16 @@ bool Grafo::mesmaComponenteConexa(int id1, int id2)
 
         }
     }
-    for (v = this->primeiroNo(); v != NULL; v = this->proximoNo())/// seta todos os vertices como nao visitado
-    {
-        v->setaVisitado(false);
-    }
-
+    this->setNaoVisitado(this);
     return comp;
 }
-
-/// Busca em Profundidade para verificar se o Grafo é conexo
+/** \brief Busca em Profundidade para verificar se o Grafo é conexo
+ *
+ * \param Vertice *v
+ * \param int contaVisi
+ * \return int contaVisi
+ *
+ */
 int Grafo::buscaEmProfConexo(Vertice *v ,int contaVisi)
 {
     v->setaVisitado(true);
@@ -335,7 +394,10 @@ int Grafo::buscaEmProfConexo(Vertice *v ,int contaVisi)
     return contaVisi;
 }
 
-/// Verifica se o grafo eh conexo
+ /** \brief Verifica se o grafo eh conexo
+  *
+  * \return bool
+  */
 bool Grafo::conexo()
 {
     int quantVisitados = 0 ,quantVertice = 0;
@@ -360,10 +422,13 @@ bool Grafo::conexo()
    return false;
 }
 
-/// verifica se o grafo eh completo
+/** \brief Verifica se o grafo eh completo
+ *
+ * \return bool
+ */
 bool Grafo::completo(){
     int aux;
-    int numVertices = this->contaNos(); ///armazena a quantidade de nós existentes
+    int numVertices = this->contaNos();
     int grauCompleto =  numVertices - 1;
     Vertice *v = this->primeiroNo();
 
@@ -379,25 +444,35 @@ bool Grafo::completo(){
     return true;
 }
 
-///Vetifica se a aresta existe
+/** \brief Vetifica se a aresta existe
+ *
+ * \param Vertice *v
+ * \param int id
+ * \return bool
+ */
 bool Grafo::encontraAresta(Vertice *v, int id)
 {
     return v->existeAresta(id);
 }
 
-/// verifica se a aresta é ponte
+/** \brief verifica se a aresta é ponte
+ *
+ * \param int id1
+ * \param int id2
+ * \return bool
+ */
 bool Grafo::arestaPonte(int id1, int id2)
 {
     Vertice * v1 = this->encontraNo(id1);
     Vertice * v2 = this->encontraNo(id1);
 
-    if ( this->encontraAresta(v1,id2) || this->encontraAresta(v2,id1)) /// verifica se as arestas exitem
+    if ( this->encontraAresta(v1,id2) || this->encontraAresta(v2,id1))
     {
         this->removeAresta(id1, id2);
 
         if(this->conexo())
         {
-            this->adicionaAresta(id1, id2); ///readiciona a aresta eliminada antes de informar se a aresta é ponte ou não
+            this->adicionaAresta(id1, id2);
             return false;
         }
         else
@@ -411,7 +486,11 @@ bool Grafo::arestaPonte(int id1, int id2)
 
 }
 
-///verifica se o no eh de articulacao
+/** \brief verifica se o no eh de articulacao
+ *
+ * \param int id
+ * \return bool
+ */
 bool Grafo::noArticulacao(int id)
 {
     Vertice *re = this->encontraNo(id);
@@ -419,17 +498,16 @@ bool Grafo::noArticulacao(int id)
     {
         return false;
     }
-    vector<int> are; ///vector para armazenar as arestas do no que vai ser removido
+    vector<int> are;
     for (Aresta *i = re->primeiraAresta() ; i != NULL ; i = re->proximaAresta())
     {
-        are.push_back(i->pegaIdDestino());/// add as arestas
+        are.push_back(i->pegaIdDestino());
     }
 
     this->removeNo(id);
 
     if(this->conexo())
     {
-        ///adiciona novamente o vertice e as arestas
         this->adicionaNo(re->pegaId());
         for (int i = 0; i < (int)are.size(); i++)
         {
@@ -440,7 +518,6 @@ bool Grafo::noArticulacao(int id)
     }
     else
     {
-        ///adiciona novamente o vertice e as arestas
         this->adicionaNo(id);
         for (int i = 0; i < (int)are.size(); i++)
         {
@@ -451,7 +528,11 @@ bool Grafo::noArticulacao(int id)
     }
 }
 
-///Verifica se o grafo é K-Regular
+/** \brief Verifica se o grafo é K-Regular
+ *
+ * \return bool
+ */
+
 bool Grafo::kRegular()
 {
     int grau1;
@@ -470,7 +551,12 @@ bool Grafo::kRegular()
     return true;
 }
 
-///Verifica se o nos soa adjacentes
+/** \brief Verifica se o nos sao adjacentes
+ *
+ * \param int id1
+ * \param int id2
+ * \return bool
+ */
 bool Grafo::nosSaoAdjacentes(int id1, int id2)
 {
     Vertice *v1 = this->encontraNo(id1);
@@ -489,63 +575,79 @@ bool Grafo::nosSaoAdjacentes(int id1, int id2)
 
 }
 
-/// Encontra um Vertice com a id dada
+/** \brief Encontra um Vertice com a id e retona o vertice v se encontra. Caso nao encontre, retorna NULL
+ *
+ * \param int id
+ * \return Vertice *v
+ *
+ */
 Vertice* Grafo::encontraNo(int id) {
 
-        Vertice *v = this->primeiroNo();
+    Vertice *v = this->primeiroNo();
 
-        while (v)
+    while (v)
+    {
+        if (v->pegaId()==id)
         {
-            if (v->pegaId()==id)
-            {
-                //cout << "Passou 7\n" << endl;
-                return v;
-            }
-            else
-            {
-                v = this->proximoNo();
-            }
+            return v;
         }
-        return 0;
+        else
+        {
+            v = this->proximoNo();
+        }
+    }
+    return NULL;
 }
 
+/** \brief Encontra um Vertice com a id e retona o vertice v se encontra. Caso nao encontre, retorna NULL
+ *
+ * \param Grafo *g
+ * \param int id
+ * \return Vertice *v
+ *
+ */
 Vertice* Grafo::encontraNo(Grafo*g,int id)
 {
+    Vertice *v = g->primeiroNo();
 
-        Vertice *v = g->primeiroNo();
-
-        while (v)
+    while (v)
+    {
+        if (v->pegaId()==id)
         {
-            if (v->pegaId()==id)
-            {
-                //cout << "Passou 7\n" << endl;
-                return v;
-            }
-            else
-            {
-                v = g->proximoNo();
-            }
+            return v;
         }
-        return NULL;
+        else
+        {
+            v = g->proximoNo();
+        }
+    }
+    return NULL;
 }
 
-/// Adiciona um Vertice com a id dada caso não exista, caso exista retorna ponteiro para o Vertice
+/** \brief Adiciona um Vertice com a id dada caso não exista, caso exista retorna ponteiro para o Vertice
+ *
+ * \param int id
+ * \return Vertice *v
+ */
 Vertice* Grafo::adicionaNo(int id) {
 
-    Vertice *v = this->encontraNo(id); /// Tenta encontrar Vertice com essa id
+    Vertice *v = this->encontraNo(id);
 
-    if (!v) {  /// Se não encontrou, cria...
+    if (!v)
+    {
         v = new Vertice(id);
         this->adicionaItem(v);
     }
-
     return v;
 }
 
-/// Adiciona uma aresta em id_origem, apontando (quando pertinente) para id_destino
-void Grafo::adicionaAresta(int id_origem, int id_destino) {
-
-    /// Procura nós destino e origem, se não existirem, cria!
+/** \brief Adiciona uma aresta em id_origem, apontando (quando pertinente) para id_destino
+ *
+ * \param int id_origem
+ * \param int id_destino
+ */
+void Grafo::adicionaAresta(int id_origem, int id_destino)
+{
     Vertice *vd = this->adicionaNo(id_destino);
     Vertice *vo = this->adicionaNo(id_origem);
 
@@ -554,10 +656,14 @@ void Grafo::adicionaAresta(int id_origem, int id_destino) {
 
 }
 
-/// Adiciona uma aresta com PESO, em id_origem apontando (quando pertinente) para id_destino
-void Grafo::adicionaAresta(int id_origem, int id_destino, float peso) {
-
-    /// Procura nós destino e origem, se não existirem, cria!
+/** \brief Adiciona uma aresta com PESO, em id_origem apontando (quando pertinente) para id_destino
+ *
+ * \param int id_origem
+ * \param int id_destino
+ * \param float peso
+ */
+void Grafo::adicionaAresta(int id_origem, int id_destino, float peso)
+{
     Vertice *vd = this->adicionaNo(id_destino);
     Vertice *vo = this->adicionaNo(id_origem);
 
@@ -566,29 +672,36 @@ void Grafo::adicionaAresta(int id_origem, int id_destino, float peso) {
 
 }
 
-/// Procura o Vertice que possui a id dada, e deleta caso encontre
-void Grafo::removeNo(int id) {
-
-    /// encontra nó com vertice id, se não encontrar retorna
+/** \brief Procura o Vertice que possui a id dada, e deleta caso encontre
+ *
+ * \param int id
+ */
+void Grafo::removeNo(int id)
+{
     Vertice *v = this->encontraNo(id);
     if (!v) return;
 
     Vertice *v2 = this->primeiroNo();
 
-    /// Percorre todos os vertices...
     while (v2) {
-        /// O Vertice tem alguma Aresta para o Vertice a ser deletado? Remove Aresta, e pula para o proximo Vertice !
         if (v2->removeAresta(id)) {
             v->removeAresta(v2->pegaId());
         }
-        /// Senão, pula para o proximo Vertice
         v2 = this->proximoNo();
     }
     Lista::deletaItem(v);
     delete v;
 }
 
-/// Remove uma aresta entre dois vertices
+double m[1000][1000];
+/** \brief Remove uma aresta entre dois vertices
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
+
 void Grafo::removeAresta(int id_no1, int id_no2) {
 
     ///  Encontra os Vertices com as id's dadas, no grafo
