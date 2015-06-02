@@ -43,6 +43,7 @@ class Vertice: public Lista, public Item {
         Aresta* proximaAresta() { return (Aresta*)Lista::caminhaLista(); };
         Aresta* arestaAnterior() { return (Aresta*)Lista::retornaLista(); };
         Aresta* ultimaAresta() { return (Aresta*)Lista::fimLista(); };
+        float pegaPesoAresta(int id);
 
 };
 
@@ -57,6 +58,8 @@ class Grafo: private Lista {
         vector<int> buscaCompForteConexas(Grafo *g,Vertice *v, vector<int> compForteConexas);
         bool direcionado;
         void imprimirFecho(vector<int> c);
+        vector<int> buscaKruskal(Vertice *v, vector<int> caminho, float *valor, float *maiorPeso);
+        Vertice* menorPesoA(Vertice* v, float *va, float *maiorPeso);
 
     public:
         int quantNos;
@@ -95,7 +98,8 @@ class Grafo: private Lista {
         vector< vector<int> > quantCompForteConexos();
         void fechoTransitivoDireto(int id);
         void fechoTransitivoIndireto(int id);
-
+        Grafo* Prim();
+        Grafo* Kruskal(Vertice *v);
 
 };
 

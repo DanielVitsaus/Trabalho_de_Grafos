@@ -22,7 +22,7 @@ Grafo* Arquivo::lerArquivo(char *ar, Grafo *gd)
     char diretorio[100] = "instancias//";
     strcat(diretorio,ar);
     this->arquivoLeitura.open(diretorio,ios::in);
-    int m1 = 0, m2 = 0;
+    int m1 = 0, m2 = 0, m3 = 0;
     char buff[16];
     int cont = 2;
 
@@ -40,8 +40,17 @@ Grafo* Arquivo::lerArquivo(char *ar, Grafo *gd)
     // Processa as arestas criando os nos que não existem
     while(! this->arquivoLeitura.eof())
     {
-        sscanf(buff, "%d %d", &m1, &m2); // Realiza leitura das arestas no formato: "(int) (int)"
-        gd->adicionaAresta(m1,m2);    // ... e adiciona aresta no grafo.
+        sscanf(buff, "%d %d %d", &m1, &m2, &m3); // Realiza leitura das arestas no formato: "(int) (int)"
+        if (m3 > 0)
+        {
+            gd->adicionaAresta(m1,m2,m3);
+            cout << m3 << " " ;
+        }
+        else
+        {
+            gd->adicionaAresta(m1,m2);
+        }
+            // ... e adiciona aresta no grafo.
         this->arquivoLeitura.getline(buff,16);
         cont++;
     }

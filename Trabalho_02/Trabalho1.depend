@@ -289,7 +289,7 @@
 	<string.h>
 	<cstdlib>
 
-1433104924 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Arquivo.cpp
+1433201317 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Arquivo.cpp
 	"Arquivo.h"
 	"Grafo.h"
 	<iostream>
@@ -298,7 +298,7 @@
 	<string.h>
 	<cstdlib>
 
-1433008330 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Arquivo.h
+1433168384 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Arquivo.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -306,25 +306,26 @@
 	<cstdlib>
 	"Grafo.h"
 
-1433127271 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Grafo.h
+1433211607 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Grafo.h
 	"Lista.h"
 	<iostream>
 	<vector>
 
-1433095044 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Lista.h
+1433168384 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Lista.h
 
-1433156048 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Grafo.cpp
+1433214360 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Grafo.cpp
 	"Grafo.h"
 	<iostream>
 	<vector>
 	<stdio.h>
 	<stdlib.h>
+	<limits>
 
-1433094750 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Lista.cpp
+1433168384 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/Lista.cpp
 	"Lista.h"
 	<iostream>
 
-1433109345 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/main.cpp
+1433213657 source:/home/danielandre/git/Trabalho_de_Grafos/Trabalho_02/main.cpp
 	<iostream>
 	<string.h>
 	"Lista.h"
@@ -373,7 +374,8 @@
 	"Grafo.h"
 	"Arquivo.h"
 
-<<<<<<< HEAD
+1433166545 D
+
 1433168384 source:/home/anacarolina/Área de Trabalho/Trabalho_de_Grafos-master/Trabalho_02/Arquivo.cpp
 	"Arquivo.h"
 	"Grafo.h"
@@ -458,5 +460,7 @@
 	"Grafo.h"
 	"Arquivo.h"
 
-=======
->>>>>>> 89ad2ae1c50692eea444a8e328a15a92f3721c20
+1433185606 "
+
+1433185606 d2ae1c50692eea444a8e328a15a92f3721c20
+

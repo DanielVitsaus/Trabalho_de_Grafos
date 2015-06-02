@@ -44,6 +44,8 @@ int main()
 {
     Arquivo *ler_grava = new Arquivo();
     Grafo *g1 = NULL;
+    Grafo *prim = NULL;
+    Grafo *krus = NULL;
     vector < vector<int> > quantConxo;
     Vertice *v;//*v2;
     char arquivo[Tex_Arquivo] = " ";
@@ -59,7 +61,7 @@ int main()
             cout << " **** ANTES DE ACESSAR AS OPÇÕES **** " << endl;
             cout << "Digite o nome do arquivo como no exemplo:\n\n **** EX: nome_do_arquivo.txt ****\n" << endl;
             cin >> arquivo;
-            g1 = new Grafo(true);
+            g1 = new Grafo();
             g1 = ler_grava->lerArquivo(arquivo,g1);
         }
 
@@ -83,6 +85,8 @@ int main()
         cout <<  "  16 -> Gerar um arquivo com as todas as componemtes fortemete conexas:" << endl;
         cout <<  "  17 -> Fecho Transitivo Direto:" << endl;
         cout <<  "  18 -> Fecho Transitivo Indireto:" << endl;
+        cout <<  "  19 -> Funcao Prim:" << endl;
+        cout <<  "  20 -> Funcao Kruskal:" << endl;
         cout <<  "  o para sair:" << endl;
         cin >> op;
 
@@ -267,7 +271,6 @@ int main()
                     quantConxo.clear();
                     break;
 
-
             case 15:
                     nAresta = 0;
                     nGrauTotal = 0;
@@ -282,6 +285,7 @@ int main()
 
                     ler_grava->gravaArquivo(g1, arquivo, g1->contaNos(), (nAresta/2), mediaGrau );
                     break;
+
             case 16:
                     quantConxo = g1->quantCompForteConexos();
                     ler_grava->gravaArquivo(arquivo, quantConxo);
@@ -294,12 +298,29 @@ int main()
                     g1->fechoTransitivoDireto(v1);
                     break;
 
-            break;
             case 18:
                      cout << "Digite o vértice a partir do qual deseja encontrar o fecho transitivo indireto::" << endl;
                     int v2;
                     cin >> v2;
                     g1->fechoTransitivoIndireto(v2);
+                    break;
+
+            case 19:
+                    prim = g1->Prim();
+                    for (Vertice *v = prim->primeiroNo(); v != NULL; v = prim->proximoNo())
+                    {
+                        cout << v->pegaId() << " -> ";
+                        for(Aresta *a = v->primeiraAresta(); a != NULL; a = v->proximaAresta())
+                        {
+                            cout << a->pegaIdDestino() << " ";
+                        }
+                        cout << endl;
+                    }
+                    break;
+
+            case 20:
+                    krus = g1->Kruskal(g1->primeiroNo());
+                    krus->imprimeGrafo(krus);
                     break;
             case 0:
                 cout << "Removendo Grafo ..." << endl;
