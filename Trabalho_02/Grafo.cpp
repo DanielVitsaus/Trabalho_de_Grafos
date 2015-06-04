@@ -10,62 +10,70 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits>
+#include <algorithm>
 
 using namespace std;
 
-Grafo* Grafo::Kruskal(Vertice *v)
+/** \brief Funcao qeu verifica se existe um ciclo
+ *
+ * \param Grafo *g
+ * \param int orin
+ * \param int dest
+ * \return bool
+ *
+ */
+bool Grafo::existeCamonho(Grafo *g,int orin,int dest)
 {
-    Vertice* ve;
-    Grafo* ar = new Grafo();
-    vector<int> ca;
-    float var;
-    float maiorP;//tempVar;
-    cout << "passo 1" <<endl;
-    ca = buscaKruskal(v, ca, &var, &maiorP);
-    cout << "passo 4" <<endl;
-    //ca.push_back(0);
-    for (int i = 0; i < (int)ca.size(); i++)
+    Vertice *ori = g->encontraNo(orin);
+    Vertice *de = g->encontraNo(dest);
+    ori->setaVisitado(true);
+    de->setaVisitado(true);
+
+    Aresta *aux  = ori->primeiraAresta();
+    for(int i = 0; i < ori->contaItems(); i++ )
     {
-        ve = this->encontraNo(ca[i]);
-        for(Aresta* a = ve->primeiraAresta(); a != NULL; a = ve->proximaAresta())
-         {
-            for(int j = 0; j < (int)ca.size(); j++)
-            {
-                if (a->pegaIdDestino() == ca[j])
-                {
-                    ar->adicionaAresta(ve->pegaId(),ca[j]);
-                    ca.erase(ca.begin()+j);
-                }
-            }
-
-         }
-         //ca.erase(ca.begin()+i);
-    }
-    this->imprimeGrafo(ar);
-
-    return ar;
-}
-
-vector<int> Grafo::buscaKruskal(Vertice *v, vector<int> caminho, float *valor, float *maiorPeso)
-{
-    v->setaVisitado(true);
-    caminho.push_back(v->pegaId());
-    Vertice *ve = menorPesoA(v, valor, maiorPeso);
-    Aresta *aux  = v->primeiraAresta();
-    for(int i = 0; i < v->contaItems(); i++ )
-    {
+        Vertice *ve  = this->encontraNo(aux->pegaIdDestino());
         if (ve->foiVisitado() == false )
         {
-           caminho = buscaKruskal(ve,caminho, valor, maiorPeso);
+            if (g->nosSaoAdjacentes(aux->pegaIdDestino(), dest) )
+            {
+                return true;
+            }
+            existeCamonho(g,aux->pegaIdDestino(),dest);
         }
-        else
+
+       aux = ori->proximaAresta();
+    }
+}
+
+/** \brief Funcao kruskal que em contra um arvore geradora minima recebendo como parametro um vector comtendo as arestas
+ *   ordemadas de froma crcente em relacao ao peso.
+ *
+ * \param vector<Aresta*> are
+ * \return Grafo* ar;
+ *
+ */
+Grafo* Grafo::Kruskal(vector<Aresta*> are)
+{
+    Grafo* ar = new Grafo();
+
+    for (int i = 1; i < (int)are.size(); i++)
+    {
+        ar->adicionaNo(are[i]->pegaIdDestino());
+        ar->adicionaNo(are[i]->pegaIdOrigem());
+
+        if (ar->nosSaoAdjacentes(are[i]->pegaIdOrigem(),are[i]->pegaIdDestino()) == false )
         {
-            aux  = v->proximaAresta();
-            if (aux != NULL)
-                ve  = this->encontraNo(aux->pegaIdDestino());
+            if(ar->existeCamonho(ar,are[i]->pegaIdOrigem(),are[i]->pegaIdDestino()) == false)
+            {
+                ar->adicionaAresta(are[i]->pegaIdOrigem(), are[i]->pegaIdDestino());
+                are.erase(are.begin()+i);
+                i -= 1;
+                ar = ar->setNaoVisitado(ar);
+            }
         }
     }
-    return caminho;
+    return ar;
 }
 
 Vertice* Grafo::menorPesoA(Vertice* v, float *va, float *maiorPeso)
@@ -82,7 +90,7 @@ Vertice* Grafo::menorPesoA(Vertice* v, float *va, float *maiorPeso)
             varl = a->pegaPeso();
             ve = this->encontraNo(a->pegaIdDestino());
         }
-        if(*maiorPeso <= a->pegaPeso())
+        if(*maiorPeso < a->pegaPeso())
         {
             *maiorPeso = a->pegaPeso();
         }
@@ -131,7 +139,7 @@ Vertice* Grafo::menorPesoA(Vertice* v, float *va, float *maiorPeso)
         menor = big;
         imenor = -1;
         i = 0;
-        while (i<=nnos)
+        while (i<nnos)
         {
             if (CHAVE[i]<menor)
             {
@@ -141,21 +149,27 @@ Vertice* Grafo::menorPesoA(Vertice* v, float *va, float *maiorPeso)
             i++;
         }
         v = Q[imenor];
+        //cout << "- Novo loop, ID/imenor " << v->pegaId() << " - " << imenor << endl;
+
+        // --- ADICIONA ARESTA A SOLUÃÃO ---
+        // Se o PAI Ã© nÃ£o nulo, adiciona aresta
+        if (PAI[imenor]!=-1)
+        {
+            //cout << "Adicionei aresta ";
+            res->adicionaAresta( PAI[imenor], v->pegaId(), v->pegaPesoAresta(PAI[imenor]) );
+            //cout << v->pegaId() << " - ";
+            //cout << PAI[imenor] << endl;
+        }
 
         // Remove Q[imenor]
         PAI.erase(PAI.begin()+imenor);
         CHAVE.erase(CHAVE.begin()+imenor);
         Q.erase(Q.begin()+imenor);
 
-        // --- ADICIONA ARESTA A SOLUÇÃO ---
-        // Se o PAI é não nulo, adiciona aresta
-        if (PAI[imenor]!=-1)
-        {
-            res->adicionaAresta( PAI[imenor], Q[imenor]->pegaId(), v->pegaPesoAresta(PAI[imenor]) );
-        }
-
         // --- ATUALIZA ADJACENTES ---
         // Pega os ID's dos adjacentes
+        //cout << "Atualiza ADJ... ";
+        ADJ.clear();
         for (v->primeiraAresta(); v->noIterator()!=NULL; v->proximaAresta())
         {
             a = (Aresta*)v->noIterator();
@@ -164,14 +178,18 @@ Vertice* Grafo::menorPesoA(Vertice* v, float *va, float *maiorPeso)
 
         // Atualiza KEY e PARENT dos ajacentes
         i = 0;
+        //cout << "Percorrendo Q " << endl;
 
         // Percorre Q... O(n)
-        while (i<=nnos)
+        nnos--;
+        while (i<nnos)
         {
-            // Para cada Q, percorre lista de ajdacentes do nó em questão
+            //cout << " [" << i << " ] - ";
+            v2 = Q[i];
+            //cout << v2->pegaId() << endl;
+            // Para cada Q, percorre lista de ajdacentes do nÃ³ em questÃ£o
             for (std::vector<Aresta*>::iterator it = ADJ.begin(); it!=ADJ.end(); ++it)
             {
-                v2 = Q[i];
                 a = *it;
                 // Se Q[i] for ajacentes, atualiza
                 if (v2->pegaId() == a->pegaIdDestino())
@@ -180,6 +198,7 @@ Vertice* Grafo::menorPesoA(Vertice* v, float *va, float *maiorPeso)
                     CHAVE[i] = a->pegaPeso();
                 }
             }
+            i++;
         }
     }
     return res;
@@ -726,6 +745,9 @@ bool Grafo::kRegular()
 bool Grafo::nosSaoAdjacentes(int id1, int id2)
 {
     Vertice *v1 = this->encontraNo(id1);
+
+    if(!v1){ return false;}
+
     Aresta *a;
     a = v1->primeiraAresta();
     while (a)
@@ -818,6 +840,7 @@ void Grafo::adicionaAresta(int id_origem, int id_destino)
     Vertice *vo = this->adicionaNo(id_origem);
 
     vo->adicionaAresta(id_destino);
+
     if (!this->direcionado) vd->adicionaAresta(id_origem);
 
 }
@@ -994,6 +1017,11 @@ bool Vertice::removeAresta(int id) {
     else
         return false;
 
+}
+
+bool Aresta::ordenaArestaPeso(const Aresta* a1, const Aresta* a2)
+{
+    return (a1->peso < a2->peso);
 };
 
 

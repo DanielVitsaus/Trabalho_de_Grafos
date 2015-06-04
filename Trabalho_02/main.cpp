@@ -27,6 +27,7 @@
 #include "Lista.h"
 #include "Grafo.h"
 #include "Arquivo.h"
+#include <algorithm>
 
 #define Tex_Arquivo 100
 
@@ -45,12 +46,16 @@ int main()
     Arquivo *ler_grava = new Arquivo();
     Grafo *g1 = NULL;
     Grafo *prim = NULL;
-    Grafo *krus = NULL;
+    Grafo *krusk = NULL;
     vector < vector<int> > quantConxo;
     Vertice *v;//*v2;
     char arquivo[Tex_Arquivo] = " ";
     char r;
     int op = -1, id = 0, nAresta = 0, nGrauTotal = 0;
+
+
+    vector<Aresta*> vetAr;
+    Aresta* ar;
 
     cout << "    ******  TRABALHO DE GRAFOS ******" << endl;
 
@@ -319,8 +324,23 @@ int main()
                     break;
 
             case 20:
-                    krus = g1->Kruskal(g1->primeiroNo());
-                    krus->imprimeGrafo(krus);
+
+                    for(Vertice* i = g1->primeiroNo(); i != NULL; i = g1->proximoNo())
+                    {
+                        for(Aresta* a = i->primeiraAresta(); a != NULL; a =  i->proximaAresta())
+                        {
+                            ar = new Aresta(i->pegaId(),a->pegaIdDestino(), a->pegaPeso());
+                            vetAr.push_back(ar);
+                        }
+                    }
+
+                    sort(vetAr.begin(), vetAr.end(), Aresta::ordenaArestaPeso);
+
+                    krusk = g1->Kruskal(vetAr);
+                    krusk->imprimeGrafo(krusk);
+
+                    cout << "\n"<< endl;
+
                     break;
             case 0:
                 cout << "Removendo Grafo ..." << endl;

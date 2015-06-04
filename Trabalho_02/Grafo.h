@@ -9,14 +9,18 @@ using namespace std;
 class Aresta: public Item {
 
     private:
+        int id_ori;        // ID do vertice de destino
         int id_dst;        // ID do vertice de destino
-        float peso;        // Peso da aresta
 
     public:
+        float peso;
         Aresta(int id_vert_dst) { this->id_dst = id_vert_dst; this->peso = 0; };
         Aresta(int id_vert_dst, float peso) { this->id_dst = id_vert_dst; this->peso = peso; };
+        Aresta(int id_vert_ori, int id_vert_dst, float peso) { this->id_ori = id_vert_ori; this->id_dst = id_vert_dst; this->peso = peso; };
         int pegaIdDestino() { return this->id_dst; };
+        int pegaIdOrigem() { return this->id_ori; };
         float pegaPeso() { return this->peso; };
+        static bool ordenaArestaPeso(const Aresta* a1, const Aresta* a2);
 
 };
 
@@ -58,8 +62,8 @@ class Grafo: private Lista {
         vector<int> buscaCompForteConexas(Grafo *g,Vertice *v, vector<int> compForteConexas);
         bool direcionado;
         void imprimirFecho(vector<int> c);
-        vector<int> buscaKruskal(Vertice *v, vector<int> caminho, float *valor, float *maiorPeso);
         Vertice* menorPesoA(Vertice* v, float *va, float *maiorPeso);
+
 
     public:
         int quantNos;
@@ -73,6 +77,9 @@ class Grafo: private Lista {
         vector<int> ordenaFreBusca(vector<int> ordemC,vector<int>freqNos);
         Grafo* geraGrafoTransposto();
         vector<int> buscaFreqNoConexas(Vertice *v, int *calFre, vector<int> freqNos);
+        bool existeCamonho(Grafo *g,int orin,int dest);
+
+        static bool ordenaAresta(const Aresta* a1, const Aresta* a2);
 
         Vertice* primeiroNo() { return (Vertice*)Lista::inicioLista(); };
         Vertice* proximoNo() { return (Vertice*)Lista::caminhaLista(); };
@@ -99,7 +106,8 @@ class Grafo: private Lista {
         void fechoTransitivoDireto(int id);
         void fechoTransitivoIndireto(int id);
         Grafo* Prim();
-        Grafo* Kruskal(Vertice *v);
+        Grafo* Kruskal(vector<Aresta*> are);
+
 
 };
 
