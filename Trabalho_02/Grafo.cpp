@@ -123,12 +123,15 @@ bool Grafo::ehADJ(int v, int subset[])
         int v1 = buscar(subset, verGafo[i]->pegaIdOrigem());// busca o subconjunto do vertice de origem da aresta i
         int v2 = buscar(subset, verGafo[i]->pegaIdDestino());//busca o subconjunto do vertice de destino da aresta i
 
-        if((v1 != v2) &&  (this->ehADJ(v2,subsetV))  ) //
+        if((v1 != v2) &&  (!this->ehADJ(v2,subsetV))  ) //
         {
             // se forem diferentes é porque NÃO forma ciclo, insere no vetor
             ar->adicionaAresta(verGafo[i]->pegaIdOrigem(), verGafo[i]->pegaIdDestino(),verGafo[i]->pegaPeso());
-            subsetV[verGafo[i]->pegaIdDestino()] = verGafo[i]->pegaIdDestino();//Adiciona um vertice no subconjunto de vertice da AGM
+            subsetV[verGafo[i]->pegaIdOrigem()] = verGafo[i]->pegaIdOrigem();//Adiciona um vertice no subconjunto de vertice da AGM
             unir(subset, v1, v2); // faz a união do subconjunto buscado acima
+            verGafo.erase(verGafo.begin()+i);
+            size_arestas = verGafo.size();
+            i = 0;
         }
     }
     return ar;
