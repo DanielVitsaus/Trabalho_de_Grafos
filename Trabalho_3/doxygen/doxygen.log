@@ -1,0 +1,16 @@
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:197: warning: argument 'vector' of command @param is not found in the argument list of Grafo::CustoTotal(vector< int > *ids)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:197: warning: argument 'int' of command @param is not found in the argument list of Grafo::CustoTotal(vector< int > *ids)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:197: warning: The following parameters of Grafo::CustoTotal(vector< int > *ids) are not documented:
+  parameter 'ids'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:13: warning: argument 'int' of command @param is not found in the argument list of Grafo::GRASP(int idbase, int iter, double maxpct)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:13: warning: argument 'int' of command @param is not found in the argument list of Grafo::GRASP(int idbase, int iter, double maxpct)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:13: warning: argument 'double' of command @param is not found in the argument list of Grafo::GRASP(int idbase, int iter, double maxpct)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:13: warning: The following parameters of Grafo::GRASP(int idbase, int iter, double maxpct) are not documented:
+  parameter 'idbase'
+  parameter 'iter'
+  parameter 'maxpct'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:46: warning: argument 'int' of command @param is not found in the argument list of Grafo::Guloso(int idbase, double pct)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:46: warning: argument 'double' of command @param is not found in the argument list of Grafo::Guloso(int idbase, double pct)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:46: warning: The following parameters of Grafo::Guloso(int idbase, double pct) are not documented:
+  parameter 'idbase'
+  parameter 'pct'
