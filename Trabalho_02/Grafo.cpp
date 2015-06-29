@@ -75,6 +75,7 @@ Grafo* Grafo::Kruskal(vector<Aresta*> are)
             unir(subset, v1, v2); // faz a união
         }
     }
+    free(subset);
     return ar;
 }
 
@@ -100,18 +101,18 @@ bool Grafo::ehADJ(int v, int subset[])
  {
      Grafo* ar = new Grafo();
      srand (time(NULL));
-     int tamV, indiceRandom;
+     int tamV, indiceRandom , tamAloca;
      tamV = (int)verGafo.size();
      indiceRandom = rand() % tamV; //indice aleatorio para o vetor de aresta
-
+    tamAloca = this->quantNos+10;
     // aloca memória para criar um subconjunto que eh usado para verificar ciclo
-    int * subset = new int[ this->quantNos ];
+    int * subset = new int[ tamAloca ];
     // aloca memória para criar um subconjunto que armazena os vertice da AGM
-    int * subsetV = new int[ this->quantNos ];
+    int * subsetV = new int[ tamAloca ];
 
     // inicializa todos os subconjuntos como conjuntos de um único elemento
-    memset(subset, -1, sizeof(int) * this->quantNos);
-    memset(subsetV, -1, sizeof(int) * this->quantNos);
+    memset(subset, -1, sizeof(int) * tamAloca);
+    memset(subsetV, -1, sizeof(int) * tamAloca);
 
     //Adiciona e escolhe um vertice arbitrariamente e adciona no subconjunto de vertice da AGM
     subsetV[verGafo[indiceRandom]->pegaIdOrigem()] = verGafo[indiceRandom]->pegaIdOrigem();
@@ -134,9 +135,11 @@ bool Grafo::ehADJ(int v, int subset[])
             i = 0;
         }
     }
+    free(subset);
+    free(subsetV);
     return ar;
-
  }
+
 
 /** \brief A função gera o fecho transitivo indireto dado um id de um vertice.
  *
