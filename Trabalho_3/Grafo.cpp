@@ -10,14 +10,12 @@ using namespace std;
 ///* -------------------------------------------- CLASSE GRAFO ------------------------------------------ *///
 //#define DEBUG
 
- /** \brief Solução gulosa randomizada reativa
-  *
-  * \param int idbase
-  * \param int iter
-  * \param double maxpct
-  * \return vector<int>* melhor
-  *
-  */
+/** \brief Solução gulosa randomizada reativa
+ * \param int idbase
+ * \param int iter
+ * \param double maxpct
+ * \return vector<int> *melhor
+ */
 vector<int>* Grafo::GRASP(int idbase, int iter, double maxpct) {
 
     vector <int> *solucao, *melhor = NULL;
@@ -44,13 +42,10 @@ vector<int>* Grafo::GRASP(int idbase, int iter, double maxpct) {
 }
 
 /** \brief Solução gulosa (e randomizada, para pct>0) para o problema
- *
  * \param int idbase
  * \param double pct
- * \return vector<int>* resposta
- *
+ * \return vector<int> *resposta
  */
-
 vector<int>* Grafo::Guloso(int idbase, double pct) {
 
     vector <int> *resposta = new vector <int>;
@@ -183,21 +178,18 @@ vector<int>* Grafo::Guloso(int idbase, double pct) {
     return resposta;
 }
 
-/** \brief Verifica se todos os nos foram visitados
- *
- * \return bool
+/** \brief Verifica se todos os nós foram visitados
+  * \return bool
  */
-
 bool Grafo::visitouTodosNos() {
     for (Vertice *v=this->primeiroNo(); v; v=this->proximoNo())
         if (v->foiVisitado()==false) return false;
     return true;
 }
 
-/** \brief Calcula custo total de uma sequencia de nos
- *
+/** \brief Calcula custo total de uma sequência de nós
  * \param vector<int> *ids
- * \return double
+ * \return double soma
  */
 double Grafo::CustoTotal(vector<int> *ids) {
 
@@ -233,7 +225,10 @@ Grafo::~Grafo() {
 
 }
 
-/// verifica se o grafo eh completo
+/** \brief Verifica se o grafo é completo
+ *
+ * \return bool
+ */
 bool Grafo::completo(){
     int aux;
     int numVertices = this->contaNos(); ///armazena a quantidade de nós existentes
@@ -253,14 +248,22 @@ bool Grafo::completo(){
     return true;
 }
 
-///Vetifica se a aresta existe
+/** \brief Verifica se a aresta existe
+ *
+ * \param Vertice *v
+ * \param int id
+ * \return bool
+ */
 bool Grafo::encontraAresta(Vertice *v, int id)
 {
     return v->existeAresta(id);
 }
 
-
-/// Encontra um Vertice com a id dada
+/** \brief Encontra no grafo, o vértice correspondente ao id informado
+ *
+ * \param int id
+ * \return Vertice *v
+ */
 Vertice* Grafo::encontraNo(int id) {
 
         Vertice *v = this->primeiroNo();
@@ -273,7 +276,11 @@ Vertice* Grafo::encontraNo(int id) {
         return v;
 }
 
-/// Adiciona um Vertice com a id dada caso não exista, caso exista retorna ponteiro para o Vertice
+/** \brief Adiciona ao grafo, um vértice com o id informado. Caso já exista algum vértice com este id, a função retorna o ponteiro p/ o vértice existente
+ *
+ * \param int id
+ * \return Vertice *v
+ */
 Vertice* Grafo::adicionaNo(int id) {
 
     Vertice *v = this->encontraNo(id); /// Tenta encontrar Vertice com essa id
@@ -286,7 +293,13 @@ Vertice* Grafo::adicionaNo(int id) {
     return v;
 }
 
-/// Adiciona um Vertice com a id dada caso não exista, caso exista retorna ponteiro para o Vertice
+/** \brief Adiciona um Vertice com a id dada caso não exista, caso exista retorna ponteiro para o Vertice
+ *
+ * \param int x
+ * \param int y
+ * \param int t
+ * \return Vertice *v
+ */
 Vertice* Grafo::adicionaNo(int x, int y, int t) {
 
     Vertice *v = this->encontraNo(coordToId(x,y)); /// Tenta encontrar Vertice com essa id
@@ -300,7 +313,11 @@ Vertice* Grafo::adicionaNo(int x, int y, int t) {
     return v;
 }
 
-/// Adiciona uma aresta em id_origem, apontando para id_destino
+/** \brief Adiciona uma aresta entre os ids informados
+ *
+ * \param int id_origem
+ * \param int id_destino
+ */
 void Grafo::adicionaAresta(int id_origem, int id_destino) {
 
     /// Procura nós destino e origem, se não existirem, cria!
@@ -323,7 +340,11 @@ void Grafo::adicionaAresta(int id_origem, int id_destino) {
 
 }
 
-/// Procura o Vertice que possui a id dada, e deleta caso encontre
+/** \brief Remove o vértice correspondente ao id fornecido, caso exista no grafo.
+ *
+ * \param int id
+ * \return bool
+ */
 void Grafo::removeNo(int id) {
 
     /// encontra nó com vertice id, se não encontrar retorna
@@ -345,7 +366,12 @@ void Grafo::removeNo(int id) {
     delete v;
 }
 
-/// Remove uma aresta entre dois vertices
+/** \brief Remove a aresta existente entre os ids fornecidos, caso essa aresta exista no grafo
+ *
+ * \param int id_no1
+ * \param int id_no2
+ * \return bool
+ */
 void Grafo::removeAresta(int id_no1, int id_no2) {
 
     ///  Encontra os Vertices com as id's dadas, no grafo
@@ -359,7 +385,11 @@ void Grafo::removeAresta(int id_no1, int id_no2) {
 
 }
 
-/// Grau de um nó
+/** \brief Informa o grau do vértice correspondente ao id informado
+ *
+ * \param int id
+ * \return int -> -1 caso o id informado não pertença ao grafo
+ */
 int Grafo::grauNo(int id) {
 
     Vertice *v = this->encontraNo(id);
@@ -385,6 +415,11 @@ Vertice::~Vertice() {
 
 }
 
+/** \brief Verifica se existe aresta
+ *
+ * \param int id
+ * \return bool
+ */
 bool Vertice::existeAresta(int id)
 {
     Aresta *a = this->encontraAresta(id);
@@ -395,7 +430,11 @@ bool Vertice::existeAresta(int id)
 
 }
 
-/// Encontra uma Aresta para id no Vertice v
+/** \brief Encontra uma aresta associada ao vértice correspondente ao id informado
+ *
+ * \param int id
+ * \return 0
+ */
 Aresta* Vertice::encontraAresta(int id) {
 
     Aresta *a = this->primeiraAresta();
@@ -408,7 +447,11 @@ Aresta* Vertice::encontraAresta(int id) {
     return 0;
 }
 
-/// Remove aresta do Vertice se encontra-la
+/** \brief Remove a aresta do vértice, se encontrá-la
+ *
+ * \param int id
+ * \return bool
+ */
 bool Vertice::removeAresta(int id) {
 
     Aresta *a = this->encontraAresta(id);

@@ -1,6 +1,35 @@
-/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:197: warning: argument 'vector' of command @param is not found in the argument list of Grafo::CustoTotal(vector< int > *ids)
-/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:197: warning: argument 'int' of command @param is not found in the argument list of Grafo::CustoTotal(vector< int > *ids)
-/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:197: warning: The following parameters of Grafo::CustoTotal(vector< int > *ids) are not documented:
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Arquivo.cpp:49: warning: argument 'Grafo' of command @param is not found in the argument list of Arquivo::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Arquivo.cpp:49: warning: argument 'char' of command @param is not found in the argument list of Arquivo::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Arquivo.cpp:49: warning: argument 'int' of command @param is not found in the argument list of Arquivo::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Arquivo.cpp:49: warning: argument 'int' of command @param is not found in the argument list of Arquivo::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Arquivo.cpp:49: warning: argument 'float' of command @param is not found in the argument list of Arquivo::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Arquivo.cpp:49: warning: The following parameters of Arquivo::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio) are not documented:
+  parameter 'g'
+  parameter 'nomArquivo'
+  parameter 'nVertice'
+  parameter 'nAresta'
+  parameter 'grauMedio'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Arquivo.cpp:11: warning: argument 'char' of command @param is not found in the argument list of Arquivo::lerArquivo(char *ar)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Arquivo.cpp:11: warning: The following parameters of Arquivo::lerArquivo(char *ar) are not documented:
+  parameter 'ar'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:316: warning: argument 'int' of command @param is not found in the argument list of Grafo::adicionaAresta(int id_origem, int id_destino)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:316: warning: argument 'int' of command @param is not found in the argument list of Grafo::adicionaAresta(int id_origem, int id_destino)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:316: warning: The following parameters of Grafo::adicionaAresta(int id_origem, int id_destino) are not documented:
+  parameter 'id_origem'
+  parameter 'id_destino'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:279: warning: argument 'int' of command @param is not found in the argument list of Grafo::adicionaNo(int id)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:279: warning: The following parameters of Grafo::adicionaNo(int id) are not documented:
+  parameter 'id'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:296: warning: argument 'int' of command @param is not found in the argument list of Grafo::adicionaNo(int x, int y, int t)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:296: warning: argument 'int' of command @param is not found in the argument list of Grafo::adicionaNo(int x, int y, int t)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:296: warning: argument 'int' of command @param is not found in the argument list of Grafo::adicionaNo(int x, int y, int t)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:296: warning: The following parameters of Grafo::adicionaNo(int x, int y, int t) are not documented:
+  parameter 'x'
+  parameter 'y'
+  parameter 't'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:190: warning: argument 'vector' of command @param is not found in the argument list of Grafo::CustoTotal(vector< int > *ids)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:190: warning: argument 'int' of command @param is not found in the argument list of Grafo::CustoTotal(vector< int > *ids)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:190: warning: The following parameters of Grafo::CustoTotal(vector< int > *ids) are not documented:
   parameter 'ids'
 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:13: warning: argument 'int' of command @param is not found in the argument list of Grafo::GRASP(int idbase, int iter, double maxpct)
 /home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:13: warning: argument 'int' of command @param is not found in the argument list of Grafo::GRASP(int idbase, int iter, double maxpct)
@@ -9,8 +38,39 @@
   parameter 'idbase'
   parameter 'iter'
   parameter 'maxpct'
-/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:46: warning: argument 'int' of command @param is not found in the argument list of Grafo::Guloso(int idbase, double pct)
-/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:46: warning: argument 'double' of command @param is not found in the argument list of Grafo::Guloso(int idbase, double pct)
-/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:46: warning: The following parameters of Grafo::Guloso(int idbase, double pct) are not documented:
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:388: warning: argument 'int' of command @param is not found in the argument list of Grafo::grauNo(int id)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:388: warning: The following parameters of Grafo::grauNo(int id) are not documented:
+  parameter 'id'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:44: warning: argument 'int' of command @param is not found in the argument list of Grafo::Guloso(int idbase, double pct)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:44: warning: argument 'double' of command @param is not found in the argument list of Grafo::Guloso(int idbase, double pct)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:44: warning: The following parameters of Grafo::Guloso(int idbase, double pct) are not documented:
   parameter 'idbase'
   parameter 'pct'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:369: warning: argument 'int' of command @param is not found in the argument list of Grafo::removeAresta(int id_no1, int id_no2)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:369: warning: argument 'int' of command @param is not found in the argument list of Grafo::removeAresta(int id_no1, int id_no2)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:369: warning: The following parameters of Grafo::removeAresta(int id_no1, int id_no2) are not documented:
+  parameter 'id_no1'
+  parameter 'id_no2'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:343: warning: argument 'int' of command @param is not found in the argument list of Grafo::removeNo(int id)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:343: warning: The following parameters of Grafo::removeNo(int id) are not documented:
+  parameter 'id'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Lista.cpp:5: warning: argument 'Item' of command @param is not found in the argument list of Lista::adicionaItem(Item *n)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Lista.cpp:5: warning: The following parameters of Lista::adicionaItem(Item *n) are not documented:
+  parameter 'n'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Lista.cpp:37: warning: argument 'Item' of command @param is not found in the argument list of Lista::deletaItem(Item *n)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Lista.cpp:37: warning: The following parameters of Lista::deletaItem(Item *n) are not documented:
+  parameter 'n'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/rnd.cpp:8: warning: argument 'unsigned' of command @param is not found in the argument list of Rnd::meurand(unsigned int minimo, unsigned int maximo)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/rnd.cpp:8: warning: argument 'unsigned' of command @param is not found in the argument list of Rnd::meurand(unsigned int minimo, unsigned int maximo)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/rnd.cpp:8: warning: The following parameters of Rnd::meurand(unsigned int minimo, unsigned int maximo) are not documented:
+  parameter 'minimo'
+  parameter 'maximo'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:433: warning: argument 'int' of command @param is not found in the argument list of Vertice::encontraAresta(int id)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:433: warning: The following parameters of Vertice::encontraAresta(int id) are not documented:
+  parameter 'id'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:418: warning: argument 'int' of command @param is not found in the argument list of Vertice::existeAresta(int id)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:418: warning: The following parameters of Vertice::existeAresta(int id) are not documented:
+  parameter 'id'
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:450: warning: argument 'int' of command @param is not found in the argument list of Vertice::removeAresta(int id)
+/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/Grafo.cpp:450: warning: The following parameters of Vertice::removeAresta(int id) are not documented:
+  parameter 'id'

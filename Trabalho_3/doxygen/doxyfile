@@ -98,13 +98,13 @@ WARN_LOGFILE            = "/home/danielandre/git/Trabalho_de_Grafos/Trabalho_3/d
 INPUT                  = \
 	"../Grafo.h" \
 	"../Lista.cpp" \
-	"../Arquivo.cpp" \
-	"../main.cpp" \
-	"../Grafo.cpp" \
-	"../Lista.h" \
 	"../Arquivo.h" \
+	"../Arquivo.cpp" \
 	"../rnd.h" \
-	"../rnd.cpp" 
+	"../rnd.cpp" \
+	"../Lista.h" \
+	"../Grafo.cpp" \
+	"../main.cpp" 
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          =
 RECURSIVE              = NO

@@ -114,10 +114,11 @@ $(document).ready(function(){initNavTree('class_arquivo.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a82ec33c171d0956af1407d26ef192dda"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82ec33c171d0956af1407d26ef192dda"></a>
-<a class="el" href="class_grafo.html">Grafo</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>lerArquivo</b> (char *ar)</td></tr>
+<tr class="memitem:a82ec33c171d0956af1407d26ef192dda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_grafo.html">Grafo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arquivo.html#a82ec33c171d0956af1407d26ef192dda">lerArquivo</a> (char *ar)</td></tr>
+<tr class="memdesc:a82ec33c171d0956af1407d26ef192dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza a leitura do arquivo txt.  <a href="#a82ec33c171d0956af1407d26ef192dda">More...</a><br /></td></tr>
 <tr class="separator:a82ec33c171d0956af1407d26ef192dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a793a1e9d97ba2beaca0219182f872638"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_arquivo.html#a793a1e9d97ba2beaca0219182f872638">gravaArquivo</a> (<a class="el" href="class_grafo.html">Grafo</a> *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)</td></tr>
+<tr class="memdesc:a793a1e9d97ba2beaca0219182f872638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grava informações em um arquivo txt.  <a href="#a793a1e9d97ba2beaca0219182f872638">More...</a><br /></td></tr>
 <tr class="separator:a793a1e9d97ba2beaca0219182f872638"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -162,7 +163,44 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Grava informações em um arquivo txt. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="class_grafo.html">Grafo</a></td><td>*g </td></tr>
+    <tr><td class="paramname">char</td><td>*nomArquivo </td></tr>
+    <tr><td class="paramname">int</td><td>nVertice </td></tr>
+    <tr><td class="paramname">int</td><td>nAresta </td></tr>
+    <tr><td class="paramname">float</td><td>grauMedio </td></tr>
+  </table>
+  </dd>
+</dl>
 <p>seta todos os vertices como nao visitado </p>
+
+</div>
+</div>
+<a class="anchor" id="a82ec33c171d0956af1407d26ef192dda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_grafo.html">Grafo</a> * Arquivo::lerArquivo </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>ar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realiza a leitura do arquivo txt. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>*ar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_grafo.html">Grafo</a> *grafo </dd></dl>
 
 </div>
 </div>
@@ -176,7 +214,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_arquivo.html">Arquivo</a></li>
-    <li class="footer">Generated on Mon Jun 29 2015 11:14:41 for Trabalho3 by
+    <li class="footer">Generated on Mon Jun 29 2015 11:45:04 for Trabalho3 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

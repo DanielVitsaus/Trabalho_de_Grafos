@@ -114,10 +114,47 @@ $(document).ready(function(){initNavTree('class_rnd.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a52d14e3af03364f9daa19e4e92e1d37e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52d14e3af03364f9daa19e4e92e1d37e"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>meurand</b> (unsigned int minimo, unsigned int maximo)</td></tr>
+<tr class="memitem:a52d14e3af03364f9daa19e4e92e1d37e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rnd.html#a52d14e3af03364f9daa19e4e92e1d37e">meurand</a> (unsigned int minimo, unsigned int maximo)</td></tr>
+<tr class="memdesc:a52d14e3af03364f9daa19e4e92e1d37e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gera um valor aleatório entre os valores de mínimo e máximo.  <a href="#a52d14e3af03364f9daa19e4e92e1d37e">More...</a><br /></td></tr>
 <tr class="separator:a52d14e3af03364f9daa19e4e92e1d37e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a52d14e3af03364f9daa19e4e92e1d37e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Rnd::meurand </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>minimo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>maximo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gera um valor aleatório entre os valores de mínimo e máximo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int minimo </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int maximo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>unsigned int minimo + (rand()%((maximo-minimo)+1)) </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="rnd_8h_source.html">rnd.h</a></li>
 <li>rnd.cpp</li>
@@ -128,7 +165,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>meurand</b> (
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_rnd.html">Rnd</a></li>
-    <li class="footer">Generated on Mon Jun 29 2015 11:14:41 for Trabalho3 by
+    <li class="footer">Generated on Mon Jun 29 2015 11:45:04 for Trabalho3 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -2,6 +2,10 @@
 #include <iostream>
 using namespace std;
 
+/** \brief Adiciona um item à lista
+ *
+ * \param Item *n
+ */
 void Lista::adicionaItem(Item *n) {
 
     /// Primeiro item
@@ -30,6 +34,10 @@ void Lista::adicionaItem(Item *n) {
     this->nitems++;  /// Contador de items
 }
 
+/** \brief Deleta um item da lista
+ *
+ * \param Item *n
+ */
 void Lista::deletaItem(Item *n) {
 
     /// Condições de saída imediata

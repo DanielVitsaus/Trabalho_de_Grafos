@@ -8,7 +8,11 @@
 
 using namespace std;
 
-
+/** \brief Realiza a leitura do arquivo txt
+ *
+ * \param char *ar
+ * \return Grafo *grafo
+ */
 Grafo* Arquivo::lerArquivo(char *ar)
 {
     char diretorio[100] = "instancias//";
@@ -42,6 +46,14 @@ Grafo* Arquivo::lerArquivo(char *ar)
     return grafo;
 }
 
+/** \brief Grava informações em um arquivo txt
+ *
+ * \param Grafo *g
+ * \param char *nomArquivo
+ * \param int nVertice
+ * \param int nAresta
+ * \param float grauMedio
+ */
 void Arquivo::gravaArquivo(Grafo *g, char* nomArquivo,int nVertice, int nAresta, float grauMedio)
 {
     Grafo *g2 = g;

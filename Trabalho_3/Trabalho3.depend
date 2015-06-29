@@ -52,3 +52,56 @@
 	<cstdlib>
 	"rnd.h"
 
+1435389532 source:/home/gisele/Documentos/Grafos 2015/Trabalho 3/Arquivo.cpp
+	"Arquivo.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+
+1433214812 /home/gisele/Documentos/Grafos 2015/Trabalho 3/Arquivo.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1435561152 /home/gisele/Documentos/Grafos 2015/Trabalho 3/Grafo.h
+	"Lista.h"
+	<iostream>
+	<vector>
+
+1433214812 /home/gisele/Documentos/Grafos 2015/Trabalho 3/Lista.h
+
+1435566710 source:/home/gisele/Documentos/Grafos 2015/Trabalho 3/Grafo.cpp
+	"Grafo.h"
+	<iostream>
+	<vector>
+	<math.h>
+	<algorithm>
+	<limits>
+	"rnd.h"
+
+1435392136 /home/gisele/Documentos/Grafos 2015/Trabalho 3/rnd.h
+
+1434064582 source:/home/gisele/Documentos/Grafos 2015/Trabalho 3/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1435566568 source:/home/gisele/Documentos/Grafos 2015/Trabalho 3/main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<time.h>
+	"rnd.h"
+	"Grafo.h"
+	"Arquivo.h"
+
+1435392170 source:/home/gisele/Documentos/Grafos 2015/Trabalho 3/rnd.cpp
+	<cstdlib>
+	"rnd.h"
+
