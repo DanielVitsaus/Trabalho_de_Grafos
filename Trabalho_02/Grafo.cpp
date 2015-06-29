@@ -11,43 +11,41 @@
 #include <stdlib.h>
 #include <limits>
 #include <algorithm>
+#include <string.h>
 
 using namespace std;
 
-/** \brief Funcao qeu verifica se existe um ciclo
+/** \brief função que busca o subconjunto de um elemento "i"
  *
- * \param Grafo *g
- * \param int orin
- * \param int dest
- * \return bool
+ * \param int subset[]
+ * \param int i
+ * \return int i
  *
  */
-bool Grafo::existeCamonho(Grafo *g,int orin,int dest)
+int Grafo::buscar(int subset[], int i)
 {
-    Vertice *ori = g->encontraNo(orin);
-    Vertice *de = g->encontraNo(dest);
-    ori->setaVisitado(true);
-    de->setaVisitado(true);
+	if(subset[i] == -1)
+		return i;
+	return buscar(subset, subset[i]);
+}
 
-    Aresta *aux  = ori->primeiraAresta();
-    for(int i = 0; i < ori->contaItems(); i++ )
-    {
-        Vertice *ve  = this->encontraNo(aux->pegaIdDestino());
-        if (ve->foiVisitado() == false )
-        {
-            if (g->nosSaoAdjacentes(aux->pegaIdDestino(), dest) )
-            {
-                return true;
-            }
-            existeCamonho(g,aux->pegaIdDestino(),dest);
-        }
-
-       aux = ori->proximaAresta();
-    }
+/** \brief função para unir dois subconjuntos em um único subconjunto
+ *
+ * \param int subset[] subconjunto resuntante
+ * \param int v1 subconjunto 1
+ * \param int v2 subconjunto 2
+ * \return
+ *
+ */
+void Grafo::unir(int subset[], int v1, int v2)
+{
+    int v1_set = buscar(subset, v1);
+    int v2_set = buscar(subset, v2);
+    subset[v1_set] = v2_set;
 }
 
 /** \brief Funcao kruskal que em contra um arvore geradora minima recebendo como parametro um vector comtendo as arestas
- *   ordemadas de froma crcente em relacao ao peso.
+ *   ordemadas de forma crecente em relacao ao peso.
  *
  * \param vector<Aresta*> are
  * \return Grafo* ar;
@@ -57,152 +55,85 @@ Grafo* Grafo::Kruskal(vector<Aresta*> are)
 {
     Grafo* ar = new Grafo();
 
-    for (int i = 1; i < (int)are.size(); i++)
-    {
-        ar->adicionaNo(are[i]->pegaIdDestino());
-        ar->adicionaNo(are[i]->pegaIdOrigem());
+    int size_arestas = are.size();
 
-        if (ar->nosSaoAdjacentes(are[i]->pegaIdOrigem(),are[i]->pegaIdDestino()) == false )
+    // aloca memória para criar "V" subconjuntos
+    int * subset = new int[ this->quantNos ];
+
+    // inicializa todos os subconjuntos como conjuntos de um único elemento
+    memset(subset, -1, sizeof(int) * this->quantNos);
+
+    for(int i = 0; i < size_arestas; i++)
+    {
+        int v1 = buscar(subset, are[i]->pegaIdOrigem());
+        int v2 = buscar(subset, are[i]->pegaIdDestino());
+
+        if(v1 != v2)
         {
-            if(ar->existeCamonho(ar,are[i]->pegaIdOrigem(),are[i]->pegaIdDestino()) == false)
-            {
-                ar->adicionaAresta(are[i]->pegaIdOrigem(), are[i]->pegaIdDestino());
-                are.erase(are.begin()+i);
-                i -= 1;
-                ar = ar->setNaoVisitado(ar);
-            }
+            // se forem diferentes é porque NÃO forma ciclo, insere no vetor
+            ar->adicionaAresta(are[i]->pegaIdOrigem(), are[i]->pegaIdDestino(),are[i]->pegaPeso());
+            unir(subset, v1, v2); // faz a união
         }
     }
     return ar;
 }
 
-Vertice* Grafo::menorPesoA(Vertice* v, float *va, float *maiorPeso)
+/** \brief Funcoa eu verifica se o vertice v esta no subconjunto de vertice da AGM
+ *
+ * \param int v -> vertice v
+ * \param int subset[] -> subconjunto de vertice da AGM
+ * \return bool
+ *
+ */
+bool Grafo::ehADJ(int v, int subset[])
 {
-    Vertice* ve;
-    Aresta* a = v->primeiraAresta();
-    ve = this->encontraNo(a->pegaIdDestino());
-    float varl = a->pegaPeso();
-    *maiorPeso = a->pegaPeso();
-    for (int i = 0; i < v->contaItems(); i++)
-    {
-        if (varl > a->pegaPeso())
-        {
-            varl = a->pegaPeso();
-            ve = this->encontraNo(a->pegaIdDestino());
-        }
-        if(*maiorPeso < a->pegaPeso())
-        {
-            *maiorPeso = a->pegaPeso();
-        }
-    }
-    *va += varl;
-    return ve;
-}
+    if (subset[v] == v)
+        return true;
 
-/** \brief Funcao PRim para encontrar a arvore gerado minima
+    return false;
+}
+/** \brief Funcao Prim para encontrar a arvore gerado minima
  *
  * \return Grafo* g
  */
- Grafo* Grafo::Prim()
+ Grafo* Grafo::Prim(vector<Aresta*> verGafo)
  {
-    #define big std::numeric_limits<float>::infinity();
-    int i, imenor, menor;
-    Vertice *v, *v2;
-    Aresta *a;
+     Grafo* ar = new Grafo();
+     srand (time(NULL));
+     int tamV, indiceRandom;
+     tamV = (int)verGafo.size();
+     indiceRandom = rand() % tamV; //indice aleatorio para o vetor de aresta
 
-    // Algoritmo voltado para grafos nao direcionados
-    if (this->direcionado) return NULL;
+    // aloca memória para criar um subconjunto que eh usado para verificar ciclo
+    int * subset = new int[ this->quantNos ];
+    // aloca memória para criar um subconjunto que armazena os vertice da AGM
+    int * subsetV = new int[ this->quantNos ];
 
-    Grafo* res = new Grafo();
-    int nnos = this->contaNos();
-    vector <float> CHAVE (nnos);
-    vector <int> PAI (nnos);
-    vector <Vertice*> Q (nnos);
-    vector <Aresta*> ADJ;
+    // inicializa todos os subconjuntos como conjuntos de um único elemento
+    memset(subset, -1, sizeof(int) * this->quantNos);
+    memset(subsetV, -1, sizeof(int) * this->quantNos);
 
-    // Inicializa vetores
-    for (this->primeiroNo(),i=0; this->noIterator(); this->proximoNo(),i++)
+    //Adiciona e escolhe um vertice arbitrariamente e adciona no subconjunto de vertice da AGM
+    subsetV[verGafo[indiceRandom]->pegaIdOrigem()] = verGafo[indiceRandom]->pegaIdOrigem();
+    //verGafo.erase(verGafo.begin() + indiceRandom);
+    int size_arestas = verGafo.size();
+
+    for(int i = 0; i < size_arestas; i++)
     {
-        v = (Vertice*)this->noIterator();
-        v->setaVisitado(false);
-        Q[i] = v;
-        PAI[i] = -1;
-        CHAVE[i] = big;
-    }
+        int v1 = buscar(subset, verGafo[i]->pegaIdOrigem());// busca o subconjunto do vertice de origem da aresta i
+        int v2 = buscar(subset, verGafo[i]->pegaIdDestino());//busca o subconjunto do vertice de destino da aresta i
 
-    // Inicializa Prim
-    CHAVE[0] = 0;
-
-    while (!Q.empty())
-    {
-        // -- ENCONTRA MENOR VALOR DE CHAVE EM Q ---
-        menor = big;
-        imenor = -1;
-        i = 0;
-        while (i<nnos)
+        if((v1 != v2) &&  (this->ehADJ(v2,subsetV))  ) //
         {
-            if (CHAVE[i]<menor)
-            {
-                menor = CHAVE[i];
-                imenor = i;
-            }
-            i++;
-        }
-        v = Q[imenor];
-        //cout << "- Novo loop, ID/imenor " << v->pegaId() << " - " << imenor << endl;
-
-        // --- ADICIONA ARESTA A SOLUÃÃO ---
-        // Se o PAI Ã© nÃ£o nulo, adiciona aresta
-        if (PAI[imenor]!=-1)
-        {
-            //cout << "Adicionei aresta ";
-            res->adicionaAresta( PAI[imenor], v->pegaId(), v->pegaPesoAresta(PAI[imenor]) );
-            //cout << v->pegaId() << " - ";
-            //cout << PAI[imenor] << endl;
-        }
-
-        // Remove Q[imenor]
-        PAI.erase(PAI.begin()+imenor);
-        CHAVE.erase(CHAVE.begin()+imenor);
-        Q.erase(Q.begin()+imenor);
-
-        // --- ATUALIZA ADJACENTES ---
-        // Pega os ID's dos adjacentes
-        //cout << "Atualiza ADJ... ";
-        ADJ.clear();
-        for (v->primeiraAresta(); v->noIterator()!=NULL; v->proximaAresta())
-        {
-            a = (Aresta*)v->noIterator();
-            ADJ.push_back(a);
-        }
-
-        // Atualiza KEY e PARENT dos ajacentes
-        i = 0;
-        //cout << "Percorrendo Q " << endl;
-
-        // Percorre Q... O(n)
-        nnos--;
-        while (i<nnos)
-        {
-            //cout << " [" << i << " ] - ";
-            v2 = Q[i];
-            //cout << v2->pegaId() << endl;
-            // Para cada Q, percorre lista de ajdacentes do nÃ³ em questÃ£o
-            for (std::vector<Aresta*>::iterator it = ADJ.begin(); it!=ADJ.end(); ++it)
-            {
-                a = *it;
-                // Se Q[i] for ajacentes, atualiza
-                if (v2->pegaId() == a->pegaIdDestino())
-                {
-                    PAI[i] = imenor;
-                    CHAVE[i] = a->pegaPeso();
-                }
-            }
-            i++;
+            // se forem diferentes é porque NÃO forma ciclo, insere no vetor
+            ar->adicionaAresta(verGafo[i]->pegaIdOrigem(), verGafo[i]->pegaIdDestino(),verGafo[i]->pegaPeso());
+            subsetV[verGafo[i]->pegaIdDestino()] = verGafo[i]->pegaIdDestino();//Adiciona um vertice no subconjunto de vertice da AGM
+            unir(subset, v1, v2); // faz a união do subconjunto buscado acima
         }
     }
-    return res;
-}
+    return ar;
+
+ }
 
 /** \brief A função gera o fecho transitivo indireto dado um id de um vertice.
  *

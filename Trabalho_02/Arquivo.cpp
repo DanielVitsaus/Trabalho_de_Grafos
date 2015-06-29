@@ -38,17 +38,17 @@ Grafo* Arquivo::lerArquivo(char *ar, Grafo *gd)
     sscanf(buff, "%d", &gd->quantNos);
     this->arquivoLeitura.getline(buff,16); // Le primeira linha
     // Processa as arestas criando os nos que não existem
+    srand ( time(NULL) + 1 );
     while(! this->arquivoLeitura.eof())
     {
         sscanf(buff, "%d %d %d", &m1, &m2, &m3); // Realiza leitura das arestas no formato: "(int) (int)"
         if (m3 > 0)
         {
             gd->adicionaAresta(m1,m2,m3);
-            cout << m3 << " " ;
         }
         else
         {
-            gd->adicionaAresta(m1,m2);
+            gd->adicionaAresta(m1,m2,(rand()%1000)+1);
         }
             // ... e adiciona aresta no grafo.
         this->arquivoLeitura.getline(buff,16);

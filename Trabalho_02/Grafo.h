@@ -28,7 +28,7 @@ class Vertice: public Lista, public Item {
 
     private:
         int id;         // ID do Vertice
-        bool visitado;  // verifica se o vertuce foi visitado
+        bool visitado;  // verifica se o vertice foi visitado
         Aresta* encontraAresta(int id);
 
     public:
@@ -78,6 +78,9 @@ class Grafo: private Lista {
         Grafo* geraGrafoTransposto();
         vector<int> buscaFreqNoConexas(Vertice *v, int *calFre, vector<int> freqNos);
         bool existeCamonho(Grafo *g,int orin,int dest);
+        void unir(int subset[], int v1, int v2);
+        int buscar(int subset[], int i);
+        bool ehADJ(int v, int subset[]);
 
         static bool ordenaAresta(const Aresta* a1, const Aresta* a2);
 
@@ -105,7 +108,7 @@ class Grafo: private Lista {
         vector< vector<int> > quantCompForteConexos();
         void fechoTransitivoDireto(int id);
         void fechoTransitivoIndireto(int id);
-        Grafo* Prim();
+        Grafo* Prim(vector<Aresta*> verGafo);
         Grafo* Kruskal(vector<Aresta*> are);
 
 

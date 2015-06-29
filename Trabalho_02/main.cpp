@@ -44,10 +44,9 @@ using namespace std;
 int main()
 {
     Arquivo *ler_grava = new Arquivo();
-    Grafo *g1 = NULL;
-    Grafo *prim = NULL;
-    Grafo *krusk = NULL;
+    Grafo *g1 = new Grafo();
     vector < vector<int> > quantConxo;
+    vector<int> vert;
     Vertice *v;//*v2;
     char arquivo[Tex_Arquivo] = " ";
     char r;
@@ -66,7 +65,7 @@ int main()
             cout << " **** ANTES DE ACESSAR AS OPÇÕES **** " << endl;
             cout << "Digite o nome do arquivo como no exemplo:\n\n **** EX: nome_do_arquivo.txt ****\n" << endl;
             cin >> arquivo;
-            g1 = new Grafo();
+            //g1 = new Grafo();
             g1 = ler_grava->lerArquivo(arquivo,g1);
         }
 
@@ -311,20 +310,29 @@ int main()
                     break;
 
             case 19:
-                    prim = g1->Prim();
-                    for (Vertice *v = prim->primeiroNo(); v != NULL; v = prim->proximoNo())
+                    Grafo *prim;
+                     for(Vertice* i = g1->primeiroNo(); i != NULL; i = g1->proximoNo())
                     {
-                        cout << v->pegaId() << " -> ";
-                        for(Aresta *a = v->primeiraAresta(); a != NULL; a = v->proximaAresta())
+                        for(Aresta* a = i->primeiraAresta(); a != NULL; a =  i->proximaAresta())
                         {
-                            cout << a->pegaIdDestino() << " ";
+                            ar = new Aresta(i->pegaId(),a->pegaIdDestino(), a->pegaPeso());
+                            vetAr.push_back(ar);
                         }
-                        cout << endl;
                     }
+
+                    sort(vetAr.begin(), vetAr.end(), Aresta::ordenaArestaPeso);
+
+                    prim = g1->Prim(vetAr);
+                    prim->imprimeGrafo(prim);
+                    vetAr.clear();
+                    delete prim;
+
+                    cout << "\n"<< endl;
+
                     break;
 
             case 20:
-
+                    Grafo *krusk;
                     for(Vertice* i = g1->primeiroNo(); i != NULL; i = g1->proximoNo())
                     {
                         for(Aresta* a = i->primeiraAresta(); a != NULL; a =  i->proximaAresta())
@@ -338,6 +346,8 @@ int main()
 
                     krusk = g1->Kruskal(vetAr);
                     krusk->imprimeGrafo(krusk);
+                    vetAr.clear();
+                    delete krusk;
 
                     cout << "\n"<< endl;
 

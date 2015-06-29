@@ -9,6 +9,7 @@ var class_vertice =
     [ "foiVisitado", "class_vertice.html#aa0003425b8eb7ec6c3d5cd915a88afbc", null ],
     [ "pegaGrau", "class_vertice.html#a926f0ba5d1a1b202df2e91712fa3f3d0", null ],
     [ "pegaId", "class_vertice.html#abc05ac8e91788aa9fdd903bbbc6e37af", null ],
+    [ "pegaPesoAresta", "class_vertice.html#a4581200c3fb68557fd46cd8a7a32924c", null ],
     [ "primeiraAresta", "class_vertice.html#a2c2ca06ce42e54a04097e47c619d85c5", null ],
     [ "proximaAresta", "class_vertice.html#a89d7b87a3a89a747cc6676ad0ec0d1c1", null ],
     [ "removeAresta", "class_vertice.html#a4024393ae653b1cc889780ae1801a152", null ],

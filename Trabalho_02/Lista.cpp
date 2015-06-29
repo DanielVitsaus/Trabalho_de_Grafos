@@ -9,7 +9,7 @@ void Lista::adicionaItem(Item *n) {
         this->pri = n;
         n->setaAnt(0);
         n->setaProx(0);
-        //this->ult = n;
+        this->ult = n;
     }
 
     /// Segundo item
@@ -77,6 +77,5 @@ void Lista::deletaItem(Item *n) {
     //delete n;
 
 }
-
 
 
