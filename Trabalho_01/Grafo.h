@@ -67,8 +67,8 @@ class Grafo: private Lista {
         /// Funções exigidas na especificação do trabalho
         /* 1 ok */ Vertice* adicionaNo(int id);
         /* 1 ok */ void adicionaAresta(int id_origem, int id_destino);
-        /* 1 ok */ void removeNo(int id);
-        /* 1 ok */ void removeAresta(int id_no1, int id_no2);
+        /* 1 ok */ bool removeNo(int id);
+        /* 1 ok */ bool removeAresta(int id_no1, int id_no2);
         /* 2 ok */ int grauNo(int id);
         /* 3 ok */ bool kRegular();
         /* 4 ok */ bool completo();

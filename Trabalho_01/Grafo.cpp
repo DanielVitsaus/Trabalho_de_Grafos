@@ -328,11 +328,11 @@ void Grafo::adicionaAresta(int id_origem, int id_destino) {
 }
 
 /// Procura o Vertice que possui a id dada, e deleta caso encontre
-void Grafo::removeNo(int id) {
+bool Grafo::removeNo(int id) {
 
     /// encontra nó com vertice id, se não encontrar retorna
     Vertice *v = this->encontraNo(id);
-    if (!v) return;
+    if (!v) return false;
 
     Vertice *v2 = this->primeiroNo();
 
@@ -347,19 +347,20 @@ void Grafo::removeNo(int id) {
     }
     Lista::deletaItem(v);
     delete v;
+
+    return true;
 }
 
 /// Remove uma aresta entre dois vertices
-void Grafo::removeAresta(int id_no1, int id_no2) {
+bool Grafo::removeAresta(int id_no1, int id_no2) {
 
     ///  Encontra os Vertices com as id's dadas, no grafo
     Vertice *v1 = this->encontraNo(id_no1);
     Vertice *v2 = this->encontraNo(id_no2);
 
-    if (!(v1&&v2)) return ;
+    if (!(v1&&v2)) return false;
 
-    v1->removeAresta(id_no2);
-    v2->removeAresta(id_no1);
+    return v1->removeAresta(id_no2)|v2->removeAresta(id_no1);
 
 }
 

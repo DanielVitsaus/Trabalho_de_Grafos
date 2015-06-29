@@ -209,7 +209,7 @@
 	"Grafo.h"
 	"Arquivo.h"
 
-1430767644 source:/home/cristiano/Documents/CC/Grafos/Trabalho_de_Grafos-master/Trabalho_01/Arquivo.cpp
+1433214812 source:/home/cristiano/Documents/CC/Grafos/Trabalho_de_Grafos-master/Trabalho_01/Arquivo.cpp
 	"Arquivo.h"
 	"Grafo.h"
 	<iostream>
@@ -218,7 +218,7 @@
 	<string.h>
 	<cstdlib>
 
-1430360318 /home/cristiano/Documents/CC/Grafos/Trabalho_de_Grafos-master/Trabalho_01/Arquivo.h
+1433214812 /home/cristiano/Documents/CC/Grafos/Trabalho_de_Grafos-master/Trabalho_01/Arquivo.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -226,23 +226,23 @@
 	<cstdlib>
 	"Grafo.h"
 
-1430768623 /home/cristiano/Documents/CC/Grafos/Trabalho_de_Grafos-master/Trabalho_01/Grafo.h
+1435374988 /home/cristiano/Documents/CC/Grafos/Trabalho_de_Grafos-master/Trabalho_01/Grafo.h
 	"Lista.h"
 	<iostream>
 	<vector>
 
-1430360318 /home/cristiano/Documents/CC/Grafos/Trabalho_de_Grafos-master/Trabalho_01/Lista.h
+1433214812 /home/cristiano/Documents/CC/Grafos/Trabalho_de_Grafos-master/Trabalho_01/Lista.h
 
-1430773873 source:/home/cristiano/Documents/CC/Grafos/Trabalho_de_Grafos-master/Trabalho_01/Grafo.cpp
+1435374980 source:/home/cristiano/Documents/CC/Grafos/Trabalho_de_Grafos-master/Trabalho_01/Grafo.cpp
 	"Grafo.h"
 	<iostream>
 	<vector>
 
-1430360318 source:/home/cristiano/Documents/CC/Grafos/Trabalho_de_Grafos-master/Trabalho_01/Lista.cpp
+1433214812 source:/home/cristiano/Documents/CC/Grafos/Trabalho_de_Grafos-master/Trabalho_01/Lista.cpp
 	"Lista.h"
 	<iostream>
 
-1430936452 source:/home/cristiano/Documents/CC/Grafos/Trabalho_de_Grafos-master/Trabalho_01/main.cpp
+1435375018 source:/home/cristiano/Documents/CC/Grafos/Trabalho_de_Grafos-master/Trabalho_01/main.cpp
 	<iostream>
 	<string.h>
 	"Lista.h"
@@ -314,6 +314,46 @@
 	<iostream>
 
 1431125756 source:/home/danielandre/Downloads/Trabalho1/Trabalho_01/main.cpp
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"Arquivo.h"
+
+1433214812 source:/home/danielandre/Área de Trabalho/Trabalho_01/Arquivo.cpp
+	"Arquivo.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+
+1433214812 /home/danielandre/Área de Trabalho/Trabalho_01/Arquivo.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1435374988 /home/danielandre/Área de Trabalho/Trabalho_01/Grafo.h
+	"Lista.h"
+	<iostream>
+	<vector>
+
+1433214812 /home/danielandre/Área de Trabalho/Trabalho_01/Lista.h
+
+1435374980 source:/home/danielandre/Área de Trabalho/Trabalho_01/Grafo.cpp
+	"Grafo.h"
+	<iostream>
+	<vector>
+
+1433214812 source:/home/danielandre/Área de Trabalho/Trabalho_01/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1435375018 source:/home/danielandre/Área de Trabalho/Trabalho_01/main.cpp
 	<iostream>
 	<string.h>
 	"Lista.h"

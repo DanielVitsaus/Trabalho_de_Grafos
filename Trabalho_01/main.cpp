@@ -99,15 +99,15 @@ int main()
                     {
                         cout << "Digite o ID do no!" << endl;
                         cin >> ad;
-                        g1->removeNo(ad);
-                        cout << "No de ID -> "<<ad<< " removido!!\n" << endl;
+                        if (g1->removeNo(ad)) cout << "No de ID -> "<<ad<< " removido!!\n" << endl;
+                        else cout << "No inexistente !" << endl;
                     }
                     else if(r == 'a' || r == 'A')
                     {
                         cout << "Digite o ID do no!" << endl;
                         cin >> ad;
                         g1->adicionaNo(ad);
-                        cout << "No de ID -> "<<ad<< " adicionado!!\n" << endl;
+                        cout << "No de ID -> "<<ad<< " adicionado/encontrado !!\n" << endl;
                     }
                     break;
 
@@ -121,8 +121,8 @@ int main()
                         cin >> adAr1;
                         cout << "Digite a segunda extremidade da aresta:" << endl;
                         cin >> adAr2;
-                        g1->removeAresta(adAr1,adAr2);
-                        cout << "Aresta -> "<<adAr1 <<" - " << adAr2 << " foi removida!!\n" << endl;
+                        if (g1->removeAresta(adAr1,adAr2)) cout << "Aresta -> "<<adAr1 <<" - " << adAr2 << " foi removida!!\n" << endl;
+                        else cout << "Aresta inexiste. " << endl;
                     }
                     else if(r == 'a' || r == 'A')
                     {
@@ -131,7 +131,7 @@ int main()
                         cout << "Digite a segunda extremidade da aresta:" << endl;
                         cin >> adAr2;
                         g1->adicionaAresta(adAr1,adAr2);
-                        cout << "Aresta -> "<<adAr1 << " - " << adAr2 << " foi adicionada!!\n" << endl;
+                        cout << "Aresta -> "<<adAr1 << " - " << adAr2 << " foi adicionada/encontrada !!\n" << endl;
                     }
                     break;
 
