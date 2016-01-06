@@ -300,7 +300,7 @@ Vertice* Grafo::adicionaNo(int id) {
  * \param int t
  * \return Vertice *v
  */
-Vertice* Grafo::adicionaNo(int x, int y, int t) {
+Vertice* Grafo::adicionaNo(int x, int y, int t int i) {
 
     Vertice *v = this->encontraNo(coordToId(x,y)); /// Tenta encontrar Vertice com essa id
 

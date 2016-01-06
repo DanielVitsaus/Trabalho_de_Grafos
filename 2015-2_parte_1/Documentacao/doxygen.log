@@ -1,0 +1,127 @@
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:67: warning: argument 'int' of command @param is not found in the argument list of Grafo::adicionaAresta(int id_origem, int id_destino)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:67: warning: argument 'int' of command @param is not found in the argument list of Grafo::adicionaAresta(int id_origem, int id_destino)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:67: warning: The following parameters of Grafo::adicionaAresta(int id_origem, int id_destino) are not documented:
+  parameter 'id_origem'
+  parameter 'id_destino'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:84: warning: argument 'int' of command @param is not found in the argument list of Grafo::adicionaAresta(int id_origem, int id_destino, float peso)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:84: warning: argument 'int' of command @param is not found in the argument list of Grafo::adicionaAresta(int id_origem, int id_destino, float peso)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:84: warning: argument 'float' of command @param is not found in the argument list of Grafo::adicionaAresta(int id_origem, int id_destino, float peso)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:84: warning: The following parameters of Grafo::adicionaAresta(int id_origem, int id_destino, float peso) are not documented:
+  parameter 'id_origem'
+  parameter 'id_destino'
+  parameter 'peso'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1045: warning: argument 'int' of command @param is not found in the argument list of Grafo::arestaPonte(int id1, int id2)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1045: warning: argument 'int' of command @param is not found in the argument list of Grafo::arestaPonte(int id1, int id2)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1045: warning: The following parameters of Grafo::arestaPonte(int id1, int id2) are not documented:
+  parameter 'id1'
+  parameter 'id2'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:853: warning: argument 'Vertice' of command @param is not found in the argument list of Grafo::buscaFreqNoConexas(Vertice *v, int *calFre, vector< int > freqNos)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:853: warning: argument 'int' of command @param is not found in the argument list of Grafo::buscaFreqNoConexas(Vertice *v, int *calFre, vector< int > freqNos)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:853: warning: argument 'vector' of command @param is not found in the argument list of Grafo::buscaFreqNoConexas(Vertice *v, int *calFre, vector< int > freqNos)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:853: warning: argument 'int' of command @param is not found in the argument list of Grafo::buscaFreqNoConexas(Vertice *v, int *calFre, vector< int > freqNos)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:853: warning: The following parameters of Grafo::buscaFreqNoConexas(Vertice *v, int *calFre, vector< int > freqNos) are not documented:
+  parameter 'v'
+  parameter 'calFre'
+  parameter 'freqNos'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:475: warning: argument 'int' of command @param is not found in the argument list of Grafo::buscar(int subset[], int i)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:475: warning: argument 'int' of command @param is not found in the argument list of Grafo::buscar(int subset[], int i)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:475: warning: The following parameters of Grafo::buscar(int subset[], int i) are not documented:
+  parameter 'subset'
+  parameter 'i'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:539: warning: argument 'int' of command @param is not found in the argument list of Grafo::ehADJ(int v, int subset[])
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:539: warning: argument 'int' of command @param is not found in the argument list of Grafo::ehADJ(int v, int subset[])
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:539: warning: The following parameters of Grafo::ehADJ(int v, int subset[]) are not documented:
+  parameter 'v'
+  parameter 'subset'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:353: warning: argument 'Vertice' of command @param is not found in the argument list of Grafo::ehBipartido(Vertice *v, bool mudaPart)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:353: warning: argument 'bool' of command @param is not found in the argument list of Grafo::ehBipartido(Vertice *v, bool mudaPart)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:353: warning: The following parameters of Grafo::ehBipartido(Vertice *v, bool mudaPart) are not documented:
+  parameter 'v'
+  parameter 'mudaPart'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:683: warning: argument 'int' of command @param is not found in the argument list of Grafo::fechoTransitivoDireto(int id)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:683: warning: The following parameters of Grafo::fechoTransitivoDireto(int id) are not documented:
+  parameter 'id'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:666: warning: argument 'int' of command @param is not found in the argument list of Grafo::fechoTransitivoIndireto(int id)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:666: warning: The following parameters of Grafo::fechoTransitivoIndireto(int id) are not documented:
+  parameter 'id'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:139: warning: argument 'int' of command @param is not found in the argument list of Grafo::grauNo(int id)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:139: warning: The following parameters of Grafo::grauNo(int id) are not documented:
+  parameter 'id'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1194: warning: argument 'Grafo' of command @param is not found in the argument list of Grafo::imprimeGrafo(Grafo *g)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1194: warning: The following parameters of Grafo::imprimeGrafo(Grafo *g) are not documented:
+  parameter 'g'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:504: warning: argument 'vector' of command @param is not found in the argument list of Grafo::Kruskal(vector< Aresta * > are)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:504: warning: argument 'Aresta' of command @param is not found in the argument list of Grafo::Kruskal(vector< Aresta * > are)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:504: warning: The following parameters of Grafo::Kruskal(vector< Aresta * > are) are not documented:
+  parameter 'are'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:926: warning: argument 'int' of command @param is not found in the argument list of Grafo::mesmaComponenteConexa(int id1, int id2)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:926: warning: argument 'int' of command @param is not found in the argument list of Grafo::mesmaComponenteConexa(int id1, int id2)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:926: warning: The following parameters of Grafo::mesmaComponenteConexa(int id1, int id2) are not documented:
+  parameter 'id1'
+  parameter 'id2'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1076: warning: argument 'int' of command @param is not found in the argument list of Grafo::noArticulacao(int id)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1076: warning: The following parameters of Grafo::noArticulacao(int id) are not documented:
+  parameter 'id'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1118: warning: argument 'int' of command @param is not found in the argument list of Grafo::nosSaoAdjacentes(int id1, int id2)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1118: warning: argument 'int' of command @param is not found in the argument list of Grafo::nosSaoAdjacentes(int id1, int id2)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1118: warning: The following parameters of Grafo::nosSaoAdjacentes(int id1, int id2) are not documented:
+  parameter 'id1'
+  parameter 'id2'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:712: warning: argument 'int' of command @param is not found in the argument list of Grafo::ordenaFreBusca(vector< int > ordemC, vector< int > freqNos)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:712: warning: The following parameters of Grafo::ordenaFreBusca(vector< int > ordemC, vector< int > freqNos) are not documented:
+  parameter 'ordemC'
+  parameter 'freqNos'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:121: warning: argument 'int' of command @param is not found in the argument list of Grafo::removeAresta(int id_no1, int id_no2)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:121: warning: argument 'int' of command @param is not found in the argument list of Grafo::removeAresta(int id_no1, int id_no2)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:121: warning: The following parameters of Grafo::removeAresta(int id_no1, int id_no2) are not documented:
+  parameter 'id_no1'
+  parameter 'id_no2'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:100: warning: argument 'int' of command @param is not found in the argument list of Grafo::removeNo(int id)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:100: warning: The following parameters of Grafo::removeNo(int id) are not documented:
+  parameter 'id'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:738: warning: argument 'Grafo' of command @param is not found in the argument list of Grafo::setNaoVisitado(Grafo *g)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:738: warning: The following parameters of Grafo::setNaoVisitado(Grafo *g) are not documented:
+  parameter 'g'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:489: warning: argument 'int' of command @param is not found in the argument list of Grafo::unir(int subset[], int v1, int v2)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:489: warning: argument 'int' of command @param is not found in the argument list of Grafo::unir(int subset[], int v1, int v2)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:489: warning: argument 'int' of command @param is not found in the argument list of Grafo::unir(int subset[], int v1, int v2)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:489: warning: The following parameters of Grafo::unir(int subset[], int v1, int v2) are not documented:
+  parameter 'subset'
+  parameter 'v1'
+  parameter 'v2'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:400: warning: argument 'int' of command @param is not found in the argument list of Grafo::vizinhacaAberta(int id)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:400: warning: The following parameters of Grafo::vizinhacaAberta(int id) are not documented:
+  parameter 'id'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:437: warning: argument 'int' of command @param is not found in the argument list of Grafo::vizinhacaFechada(int id)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:437: warning: The following parameters of Grafo::vizinhacaFechada(int id) are not documented:
+  parameter 'id'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.cpp:119: warning: argument 'char' of command @param is not found in the argument list of LeituraGravacao::gravaArquivo(char *nomArquivo, vector< vector< int > > comForteConexo)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.cpp:119: warning: argument 'vector' of command @param is not found in the argument list of LeituraGravacao::gravaArquivo(char *nomArquivo, vector< vector< int > > comForteConexo)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.cpp:119: warning: The following parameters of LeituraGravacao::gravaArquivo(char *nomArquivo, vector< vector< int > > comForteConexo) are not documented:
+  parameter 'nomArquivo'
+  parameter 'comForteConexo'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.cpp:61: warning: argument 'Grafo' of command @param is not found in the argument list of LeituraGravacao::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.cpp:61: warning: argument 'char' of command @param is not found in the argument list of LeituraGravacao::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.cpp:61: warning: argument 'int' of command @param is not found in the argument list of LeituraGravacao::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.cpp:61: warning: argument 'int' of command @param is not found in the argument list of LeituraGravacao::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.cpp:61: warning: argument 'float' of command @param is not found in the argument list of LeituraGravacao::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.cpp:61: warning: The following parameters of LeituraGravacao::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio) are not documented:
+  parameter 'g'
+  parameter 'nomArquivo'
+  parameter 'nVertice'
+  parameter 'nAresta'
+  parameter 'grauMedio'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.cpp:11: warning: argument 'char' of command @param is not found in the argument list of LeituraGravacao::lerArquivo(char *ar, Grafo *gd)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.cpp:11: warning: argument 'Grafo' of command @param is not found in the argument list of LeituraGravacao::lerArquivo(char *ar, Grafo *gd)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.cpp:11: warning: The following parameters of LeituraGravacao::lerArquivo(char *ar, Grafo *gd) are not documented:
+  parameter 'ar'
+  parameter 'gd'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1232: warning: argument 'int' of command @param is not found in the argument list of Vertice::existeAresta(int id)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1232: warning: The following parameters of Vertice::existeAresta(int id) are not documented:
+  parameter 'id'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1264: warning: argument 'int' of command @param is not found in the argument list of Vertice::pegaPesoAresta(int id)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1264: warning: The following parameters of Vertice::pegaPesoAresta(int id) are not documented:
+  parameter 'id'
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1279: warning: argument 'int' of command @param is not found in the argument list of Vertice::removeAresta(int id)
+/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp:1279: warning: The following parameters of Vertice::removeAresta(int id) are not documented:
+  parameter 'id'

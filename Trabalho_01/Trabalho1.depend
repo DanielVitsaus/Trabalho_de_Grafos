@@ -360,3 +360,43 @@
 	"Grafo.h"
 	"Arquivo.h"
 
+1433214812 source:/home/danielub/git/Trabalho_de_Grafos/Trabalho_01/Arquivo.cpp
+	"Arquivo.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+
+1433214812 /home/danielub/git/Trabalho_de_Grafos/Trabalho_01/Arquivo.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1435374988 /home/danielub/git/Trabalho_de_Grafos/Trabalho_01/Grafo.h
+	"Lista.h"
+	<iostream>
+	<vector>
+
+1433214812 /home/danielub/git/Trabalho_de_Grafos/Trabalho_01/Lista.h
+
+1435374980 source:/home/danielub/git/Trabalho_de_Grafos/Trabalho_01/Grafo.cpp
+	"Grafo.h"
+	<iostream>
+	<vector>
+
+1433214812 source:/home/danielub/git/Trabalho_de_Grafos/Trabalho_01/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1435375018 source:/home/danielub/git/Trabalho_de_Grafos/Trabalho_01/main.cpp
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"Arquivo.h"
+

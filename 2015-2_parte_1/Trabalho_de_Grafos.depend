@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1452022040 source:/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp
+	"Grafo.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<limits>
+	<algorithm>
+	<string.h>
+	<list>
+	<queue>
+
+1452018961 /home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.h
+	"Lista.h"
+	<iostream>
+	<vector>
+
+1451737760 /home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Lista.h
+
+1452020808 source:/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.cpp
+	"LeituraGravacao.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+
+1451680322 /home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1451780654 source:/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1452019725 source:/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/main.cpp
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"LeituraGravacao.h"
+	<algorithm>
+

@@ -15,6 +15,17 @@
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
+				<Linker>
+					<Add library="../lib/libfreeglut.a" />
+					<Add library="../lib/libglew32.a" />
+					<Add library="../lib/libglew32.dll.a" />
+					<Add library="../lib/libglui32.a" />
+					<Add library="../lib/libglui_linux.a" />
+					<Add library="../lib/libpng.a" />
+					<Add library="../lib/libpng12_linux32.a" />
+					<Add library="../lib/libpng12_linux64.a" />
+					<Add library="../lib/libz.a" />
+				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
@@ -24,15 +35,25 @@
 			<Add directory="../include" />
 			<Add directory="../bin" />
 			<Add directory="/usr/lib/nvidia-304-updates" />
+			<Add directory="../lib" />
 		</Compiler>
 		<Linker>
 			<Add library="pthread" />
-			<Add library="glut" />
 			<Add library="GL" />
+			<Add library="glut" />
 			<Add library="GLU" />
 			<Add library="../lib/libglui_linux.a" />
 			<Add library="../lib/libpng12_linux64.a" />
 			<Add library="z" />
+			<Add library="../lib/libfreeglut.a" />
+			<Add library="../lib/libglew32.a" />
+			<Add library="../lib/libglew32.dll.a" />
+			<Add library="../lib/libglui32.a" />
+			<Add library="../lib/libglui_linux.a" />
+			<Add library="../lib/libpng.a" />
+			<Add library="../lib/libpng12_linux32.a" />
+			<Add library="../lib/libpng12_linux64.a" />
+			<Add library="../lib/libz.a" />
 		</Linker>
 		<Unit filename="01_quad.cpp" />
 		<Unit filename="Arquivo.cpp" />

@@ -97,48 +97,114 @@ bool Grafo::ehADJ(int v, int subset[])
  *
  * \return Grafo* g
  */
- Grafo* Grafo::Prim(vector<Aresta*> verGafo)
+ Grafo* Grafo::Prim(vector<int> verGafo)
  {
-     Grafo* ar = new Grafo();
      srand (time(NULL));
-     int tamV, indiceRandom , tamAloca;
-     tamV = (int)verGafo.size();
-     indiceRandom = rand() % tamV; //indice aleatorio para o vetor de aresta
-    tamAloca = this->quantNos+10;
-    // aloca memória para criar um subconjunto que eh usado para verificar ciclo
-    int * subset = new int[ tamAloca ];
-    // aloca memória para criar um subconjunto que armazena os vertice da AGM
-    int * subsetV = new int[ tamAloca ];
+     Grafo* ar = new Grafo();
+     int tamV, indiceRandom, dest;
+     tamV = this->quantNos;
+     Vertice* v;
+     Aresta* a;
+     Aresta* are;
+     vector<int> vertGM;
+     vector<Aresta*> arestaGM;
+     vector<Aresta*> arestaP;
+     indiceRandom = rand() % tamV;
+      //dest = retornaIndice(verGafo, a->pegaIdDestino());
+     v = this->encontraNo(verGafo[indiceRandom]);
+     cout << "Foiiiii 111\n"<< endl;
+     vertGM.push_back(verGafo[0]);
+     verGafo.erase(verGafo.begin() + indiceRandom);
 
-    // inicializa todos os subconjuntos como conjuntos de um único elemento
-    memset(subset, -1, sizeof(int) * tamAloca);
-    memset(subsetV, -1, sizeof(int) * tamAloca);
+     for (Aresta*  ares1 = v->primeiraAresta(); ares1 != NULL; ares1 = v->proximaAresta())
+     {
+         are = new Aresta(v->pegaId(),ares1->pegaIdDestino(), ares1->pegaPeso());
+         arestaP.push_back(are);
+     }
+     cout << "Foiiiii 2222\n"<< endl;
+     int k = 1;
+     bool sai = false;
+     while (!verGafo.empty())
+     {
+         if (arestaP.size()>1)
+         {
+             sort(arestaP.begin(), arestaP.end(), Aresta::ordenaArestaPeso);
+         }
+        //if (!arestaP.empty())
+       // {
+            a = arestaP[0];
 
-    //Adiciona e escolhe um vertice arbitrariamente e adciona no subconjunto de vertice da AGM
-    subsetV[verGafo[indiceRandom]->pegaIdOrigem()] = verGafo[indiceRandom]->pegaIdOrigem();
-    //verGafo.erase(verGafo.begin() + indiceRandom);
-    int size_arestas = verGafo.size();
+            arestaGM.push_back(a);
 
-    for(int i = 0; i < size_arestas; i++)
-    {
-        int v1 = buscar(subset, verGafo[i]->pegaIdOrigem());// busca o subconjunto do vertice de origem da aresta i
-        int v2 = buscar(subset, verGafo[i]->pegaIdDestino());//busca o subconjunto do vertice de destino da aresta i
+            arestaP.erase(arestaP.begin());
+        //}
+        dest = retornaIndice(verGafo, a->pegaIdDestino());
 
-        if((v1 != v2) &&  (!this->ehADJ(v2,subsetV))  ) //
+        //cout << dest <<"\n"<< endl;
+
+        v = this->encontraNo(verGafo[dest]);
+
+        cout << dest <<"\n"<< endl;
+
+        vertGM.push_back(verGafo[dest]);
+
+        verGafo.erase(verGafo.begin()+dest);
+
+        //cout << dest <<"\n"<< endl;
+        cout << dest <<"\n"<< endl;
+        for (Aresta* ares = v->primeiraAresta(); ares != NULL; ares = v->proximaAresta())
         {
-            // se forem diferentes é porque NÃO forma ciclo, insere no vetor
-            ar->adicionaAresta(verGafo[i]->pegaIdOrigem(), verGafo[i]->pegaIdDestino(),verGafo[i]->pegaPeso());
-            subsetV[verGafo[i]->pegaIdOrigem()] = verGafo[i]->pegaIdOrigem();//Adiciona um vertice no subconjunto de vertice da AGM
-            unir(subset, v1, v2); // faz a união do subconjunto buscado acima
-            verGafo.erase(verGafo.begin()+i);
-            size_arestas = verGafo.size();
-            i = 0;
+            if (!tanaLista(ares->pegaIdDestino(),vertGM))
+            {
+                cout << "Foiiiii 3333\n"<< endl;
+                are = new Aresta(v->pegaId(),ares->pegaIdDestino(), ares->pegaPeso());
+                arestaP.push_back(are);
+            }
         }
-    }
-    free(subset);
-    free(subsetV);
+
+        cout << "Foiiiii 4444\n"<< endl;
+        if(k == (int)verGafo.size()-1)
+        {
+            sai = true;
+        }
+
+     }
+    cout << "Foiiiii 5555\n"<< endl;
+
+     for (int i = 0; i< (int)arestaGM.size(); i++)
+     {
+         ar->adicionaAresta(arestaGM[i]->pegaIdOrigem(), arestaGM[i]->pegaIdDestino(), arestaGM[i]->pegaPeso());
+     }
+     cout << "Foiiiii 6666\n"<< endl;
+
     return ar;
  }
+
+int Grafo::retornaIndice(vector<int> verGafo, int id)
+{
+    int i = 0;
+    for(i = 0; i < (int) verGafo.size(); i++)
+    {
+        if (verGafo[i] == id)
+        {
+            return i;
+        }
+    }
+    //return false;
+}
+
+bool Grafo::tanaLista(int id, vector<int> v)
+{
+    for (int i = 0; i < (int)v.size(); i++)
+    {
+        if (id == v[i])
+	{
+	    return true;
+	}
+    }
+
+    return false;
+}
 
 
 /** \brief A função gera o fecho transitivo indireto dado um id de um vertice.
@@ -830,7 +896,7 @@ void Grafo::removeAresta(int id_no1, int id_no2)
     Vertice *v1 = this->encontraNo(id_no1);
     Vertice *v2 = this->encontraNo(id_no2);
 
-    if (!(v1&&v2)) return ;
+    if (!(v1 &&  v2)) return ;
 
     v1->removeAresta(id_no2);
     v2->removeAresta(id_no1);

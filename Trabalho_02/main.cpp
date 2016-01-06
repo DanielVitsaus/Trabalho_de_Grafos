@@ -46,7 +46,7 @@ int main()
     Arquivo *ler_grava = new Arquivo();
     Grafo *g1 = new Grafo();
     vector < vector<int> > quantConxo;
-    vector<int> vert;
+    vector<int> vetVer;
     Vertice *v;//*v2;
     char arquivo[Tex_Arquivo] = " ";
     char r;
@@ -311,20 +311,16 @@ int main()
 
             case 19:
                     Grafo *prim;
-                     for(Vertice* i = g1->primeiroNo(); i != NULL; i = g1->proximoNo())
+                    for(Vertice* i = g1->primeiroNo(); i != NULL; i = g1->proximoNo())
                     {
-                        for(Aresta* a = i->primeiraAresta(); a != NULL; a =  i->proximaAresta())
-                        {
-                            ar = new Aresta(i->pegaId(),a->pegaIdDestino(), a->pegaPeso());
-                            vetAr.push_back(ar);
-                        }
+                        vetVer.push_back(i->pegaId());
                     }
 
-                    sort(vetAr.begin(), vetAr.end(), Aresta::ordenaArestaPeso);
+                    //sort(vetAr.begin(), vetAr.end(), Aresta::ordenaArestaPeso);
 
-                    prim = g1->Prim(vetAr);
+                    prim = g1->Prim(vetVer);
                     prim->imprimeGrafo(prim);
-                    vetAr.clear();
+                    vetVer.clear();
                     delete prim;
 
                     cout << "\n"<< endl;

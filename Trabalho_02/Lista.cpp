@@ -64,6 +64,23 @@ void Lista::deletaItem(Item *n) {
         if (n==this->ult) this->ult = n->pegaAnt();
         if (n==this->pri) this->pri = n->pegaProx();
     }
+    /*
+    /// Para qualquer outra quantidade de elementos
+    else {
+        if (n==this->pri) {
+            this->pri = n->pegaProx();
+        } else if (n==this->ult) {
+            this->ult = n->pegaAnt();
+        }else {
+            Item *a = n->pegaAnt();  /// Anterior a N
+            Item *p = n->pegaProx(); /// Sucessor de N
+            if (a) a->setaProx( p );
+            if (p) p->setaAnt( a );
+        }
+
+
+    }
+    */
 
     /// Relocar o iterator caso estejamos deletando o ponteiro para o qual ele aponta
     if (n==this->it) {

@@ -117,7 +117,7 @@ bool Grafo::mesmaComponenteConexa(int id1, int id2)
     return comp;
 }
 
-/// Busca em Profundidade para verificar se o Grafo Ã© conexo
+/// Busca em Profundidade para verificar se o Grafo é conexo
 int Grafo::buscaEmProfConexo(Vertice *v ,int contaVisi)
 {
     v->setaVisitado(true);
@@ -163,7 +163,7 @@ bool Grafo::conexo()
 /// verifica se o grafo eh completo
 bool Grafo::completo(){
     int aux;
-    int numVertices = this->contaNos(); ///armazena a quantidade de nÃ³s existentes
+    int numVertices = this->contaNos(); ///armazena a quantidade de nós existentes
     int grauCompleto =  numVertices - 1;
     Vertice *v = this->primeiroNo();
 
@@ -185,7 +185,7 @@ bool Grafo::encontraAresta(Vertice *v, int id)
     return v->existeAresta(id);
 }
 
-/// verifica se a aresta Ã© ponte
+/// verifica se a aresta é ponte
 bool Grafo::arestaPonte(int id1, int id2)
 {
     Vertice * v1 = this->encontraNo(id1);
@@ -197,7 +197,7 @@ bool Grafo::arestaPonte(int id1, int id2)
 
         if(this->conexo())
         {
-            this->adicionaAresta(id1, id2); ///readiciona a aresta eliminada antes de informar se a aresta Ã© ponte ou nÃ£o
+            this->adicionaAresta(id1, id2); ///readiciona a aresta eliminada antes de informar se a aresta é ponte ou não
             return false;
         }
         else
@@ -251,7 +251,7 @@ bool Grafo::noArticulacao(int id)
     }
 }
 
-///Verifica se o grafo Ã© K-Regular
+///Verifica se o grafo é K-Regular
 bool Grafo::kRegular()
 {
     int grau1;
@@ -302,12 +302,12 @@ Vertice* Grafo::encontraNo(int id) {
         return 0;
 }
 
-/// Adiciona um Vertice com a id dada caso nÃ£o exista, caso exista retorna ponteiro para o Vertice
+/// Adiciona um Vertice com a id dada caso não exista, caso exista retorna ponteiro para o Vertice
 Vertice* Grafo::adicionaNo(int id) {
 
     Vertice *v = this->encontraNo(id); /// Tenta encontrar Vertice com essa id
 
-    if (!v) {  /// Se nÃ£o encontrou, cria...
+    if (!v) {  /// Se não encontrou, cria...
         v = new Vertice(id);
         this->adicionaItem(v);
     }
@@ -318,7 +318,7 @@ Vertice* Grafo::adicionaNo(int id) {
 /// Adiciona uma aresta em id_origem, apontando para id_destino
 void Grafo::adicionaAresta(int id_origem, int id_destino) {
 
-    /// Procura nÃ³s destino e origem, se nÃ£o existirem, cria!
+    /// Procura nós destino e origem, se não existirem, cria!
     Vertice *vd = this->adicionaNo(id_destino);
     Vertice *vo = this->adicionaNo(id_origem);
 
@@ -330,7 +330,7 @@ void Grafo::adicionaAresta(int id_origem, int id_destino) {
 /// Procura o Vertice que possui a id dada, e deleta caso encontre
 bool Grafo::removeNo(int id) {
 
-    /// encontra nÃ³ com vertice id, se nÃ£o encontrar retorna
+    /// encontra nó com vertice id, se não encontrar retorna
     Vertice *v = this->encontraNo(id);
     if (!v) return false;
 
@@ -342,7 +342,7 @@ bool Grafo::removeNo(int id) {
         if (v2->removeAresta(id)) {
             v->removeAresta(v2->pegaId());
         }
-        /// SenÃ£o, pula para o proximo Vertice
+        /// Senão, pula para o proximo Vertice
         v2 = this->proximoNo();
     }
     Lista::deletaItem(v);
@@ -364,7 +364,7 @@ bool Grafo::removeAresta(int id_no1, int id_no2) {
 
 }
 
-/// Grau de um nÃ³
+/// Grau de um nó
 int Grafo::grauNo(int id) {
 
     Vertice *v = this->encontraNo(id);

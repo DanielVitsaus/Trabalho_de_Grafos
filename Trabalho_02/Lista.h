@@ -4,8 +4,9 @@
 class Item {
 
     protected:
-        Item *ant, *prox;
-        int info;
+        Item *ant; ///< Item anterior
+        Item *prox; ///< Proximo item
+        int info; ///< Representecao do vertice
 
     public:
         Item() { this->ant = this->prox = 0; } ;
@@ -31,9 +32,9 @@ class Lista {
         Item *inicioLista() { it = pri; return it; };
         Item *fimLista() { it = ult; return it; };
         Item *noIterator() { return it; }
-        Item *caminhaLista() { if (it) it = it->pegaProx(); return it; }
-        Item *retornaLista() { if (it) it = it->pegaAnt(); return it; }
-        int contaItems() { return this->nitems; }
+        Item *caminhaLista() { if (it) it = it->pegaProx(); return it; } // Retorna o proximo no
+        Item *retornaLista() { if (it) it = it->pegaAnt(); return it; } // Retorna o no anterior
+        int contaItems() { return this->nitems; } // Retorna a quantidades de nos
 
 };
 

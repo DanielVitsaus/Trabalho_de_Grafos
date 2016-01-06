@@ -9,7 +9,7 @@ using namespace std;
 class Aresta: public Item {
 
     private:
-        int id_ori;        // ID do vertice de destino
+        int id_ori;        // ID do vertice de origem
         int id_dst;        // ID do vertice de destino
 
     public:
@@ -81,6 +81,8 @@ class Grafo: private Lista {
         void unir(int subset[], int v1, int v2);
         int buscar(int subset[], int i);
         bool ehADJ(int v, int subset[]);
+        int retornaIndice(vector<int> verGafo, int id);
+        bool tanaLista(int id, vector<int> v);
 
         static bool ordenaAresta(const Aresta* a1, const Aresta* a2);
 
@@ -108,7 +110,7 @@ class Grafo: private Lista {
         vector< vector<int> > quantCompForteConexos();
         void fechoTransitivoDireto(int id);
         void fechoTransitivoIndireto(int id);
-        Grafo* Prim(vector<Aresta*> verGafo);
+        Grafo* Prim(vector<int> verGafo);
         Grafo* Kruskal(vector<Aresta*> are);
 
 
