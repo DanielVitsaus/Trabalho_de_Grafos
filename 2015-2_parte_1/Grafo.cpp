@@ -14,6 +14,7 @@
 #include <string.h>
 #include <list>
 #include <queue>
+#include <functional>
 
 #define INFINITO 999999
 
@@ -392,30 +393,34 @@ bool Grafo::ehBipartido(Vertice* v, bool mudaPart){
    return eh_bipartido;
 }
 
+
+
 /** \brief Retorna um subgrafo com o menor caminho entre dois vertice(no) utilizando o Dijkstra.
  *
  * \return Grafo
  */
-float Grafo::menorCaminho(int id_origem, int id_destino){
+pair<Grafo*, float> Grafo::menorCaminho(int id_origem, int id_destino){
 
         // vetor de distâncias
 		float dist[this->contaNos()+1];
-        vector< pair<int, int> > distancia;// = new vector< pair<int, int> >(this->contaNos());
+		float caminho[this->contaNos()+1];
+		Grafo * g = new Grafo();
+		int id_caminho = id_destino;
+        pair<Grafo*, float> info;
 
-		// fila de prioridades de pair (distancia, vértice)
-		priority_queue < pair<int, int>,vector< pair<int, int> >, greater< pair<int, int> > > filaPrioridade;
+		// fila de prioridades de pair (distancia, vértice) greater< pair<int,int> >
+		priority_queue < pair<int, int>,vector< pair<int, int > >, greater< pair<int,int > > > filaPrioridade;
 
 		// inicia o vetor de distâncias e visitados
 		for(int i = 0; i <= this->contaNos(); i++)
 		{
 			dist[i] = INFINITO;
-			distancia.push_back(make_pair(INFINITO, i));
+			caminho[i] = -1;
 		}
 
 		// a distância de orig para orig é 0
 		dist[id_origem] = 0;
-		distancia[id_origem].first = 0;
-        distancia[id_origem].second = id_origem;
+		caminho[id_origem] = 0;
 
 		// insere na fila
 		filaPrioridade.push(make_pair(dist[id_origem], id_origem));
@@ -431,9 +436,7 @@ float Grafo::menorCaminho(int id_origem, int id_destino){
 			{
 				// marca como visitado
 				u->setaVisitado(true);
-
 				// percorre os vértices "v" adjacentes de "u"
-				//for(it = adj[u].begin(); it != adj[u].end(); it++)
 				for(Aresta *a = u->primeiraAresta(); a != NULL; a = u->proximaAresta())
 				{
 					// obtém o vértice adjacente e o custo da aresta
@@ -445,21 +448,32 @@ float Grafo::menorCaminho(int id_origem, int id_destino){
 					{
 						// atualiza a distância de "v" e insere na fila
 						dist[v] = dist[u->pegaId()] + custo_aresta;
+						caminho[v] = u->pegaId();
 						filaPrioridade.push(make_pair(dist[v], v));
-						distancia[v].first = dist[v];
-						distancia[v].second = v;
 					}
 				}
 			}
 		}
+
         cout << endl;
-		for (int i = 0; i <= (int)distancia.size(); i++)
+        Aresta *ac;
+        Vertice *vc = this->encontraNo(caminho[id_caminho]);
+        while(id_caminho != id_origem)
         {
-            cout << distancia[i].first << " " << distancia[i].second << endl;
+            ac = vc->encontraAresta(id_caminho);
+            g->adicionaAresta(vc->pegaId(), ac->pegaIdDestino(), ac->pegaPeso() );
+
+            id_caminho = vc->pegaId();
+            vc = this->encontraNo(caminho[id_caminho]);
         }
+
+       g->imprimeGrafo(g);
         cout << endl;
 		// retorna a distância mínima até o destino
-		return dist[id_destino];
+		//return dist[id_destino];
+		info.first = g;
+		info.second = dist[id_destino];
+		return info;
 }
 
 /** \brief Retorna um subgrafo induzido com os vertices adjacentes ao vertice(no) informado.

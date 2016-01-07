@@ -30,7 +30,7 @@ class Vertice: public Lista, public Item {
         int id;         ///< ID do Vertice.
         bool visitado;  ///< verifica se o vertice foi visitado.
         int particao; ///< verificar em qual particao o vertice pertence.
-        Aresta* encontraAresta(int id);
+
 
     public:
         Vertice(int Id) { this->id=Id; this->visitado = false; particao = 0; };
@@ -50,6 +50,7 @@ class Vertice: public Lista, public Item {
         Aresta* proximaAresta() { return (Aresta*)Lista::caminhaLista(); };
         Aresta* arestaAnterior() { return (Aresta*)Lista::retornaLista(); };
         Aresta* ultimaAresta() { return (Aresta*)Lista::fimLista(); };
+        Aresta* encontraAresta(int id);
         float pegaPesoAresta(int id);
 
 };
@@ -112,7 +113,7 @@ class Grafo: private Lista {
         bool ehBipartido(Vertice* v, bool mudaPart); //OK
         Grafo* vizinhacaAberta(int id); //OK
         Grafo* vizinhacaFechada(int id); //OK
-        float menorCaminho(int id_origem, int id_destino);
+        pair<Grafo*, float> menorCaminho(int id_origem, int id_destino);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

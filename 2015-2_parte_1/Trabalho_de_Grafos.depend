@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1452022040 source:/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp
+1452191256 source:/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp
 	"Grafo.h"
 	<iostream>
 	<vector>
@@ -10,8 +10,9 @@
 	<string.h>
 	<list>
 	<queue>
+	<functional>
 
-1452018961 /home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.h
+1452191249 /home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.h
 	"Lista.h"
 	<iostream>
 	<vector>
@@ -39,7 +40,7 @@
 	"Lista.h"
 	<iostream>
 
-1452019725 source:/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/main.cpp
+1452191272 source:/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/main.cpp
 	<iostream>
 	<string.h>
 	"Lista.h"

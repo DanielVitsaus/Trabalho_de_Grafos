@@ -377,7 +377,7 @@ int main()
 
 
             case 16:
-                    cout << g1->menorCaminho(2,6) << endl;
+                    cout << g1->menorCaminho(2,7).second << endl;
                     //quantConxo = g1->quantCompForteConexos();
                     //ler_grava->gravaArquivo(arquivo, quantConxo);
                     break;
