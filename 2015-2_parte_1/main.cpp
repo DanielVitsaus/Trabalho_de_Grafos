@@ -21,7 +21,8 @@ int main()
     char direcionado;
     char arquivo[Tex_Arquivo] = " ";
     char r;
-    int op = -1, id = 0, nAresta = 0;//nGrauTotal = 0;
+    int op = -1, id = 0, id2 = 0 , nAresta = 0;//nGrauTotal = 0;
+    pair<Grafo*, float> dijkstra;
 //    int **mat;
 
 
@@ -383,11 +384,24 @@ int main()
 
 
             case 16:
-                    cout << g1->menorCaminho(2,7).second << endl;
-                    //quantConxo = g1->quantCompForteConexos();
-                    //ler_grava->gravaArquivo(arquivo, quantConxo);
+                    id = 0;
+                    id2 = 0;
+                    if (g1->conexo()){
+                        cout << "Digite o iD dos vertices para encontra o menor caminha entre eles!" << endl;
+                        cout << "Vertive 1 -> ";
+                        cin >> id;
+                        cout << "Vertice 2 -> ";
+                        cin >> id2;
+                        dijkstra = g1->menorCaminho(id,id2);
+                        cout << "O valor do menor caminha entre os vertices -> "<< dijkstra.second << "\n" << endl;
+                        cout << "Caminha entre os vertices:" << endl;
+                        g1->imprimeGrafo(dijkstra.first);
+                        cout << endl;
+                    }
+                    else{
+                        cout << "\nO grafo informado não é conexo!\n" << endl;
+                    }
                     break;
-
 
             case 17:
                     cout << "Digite o ID do vértice" << endl;
@@ -432,41 +446,50 @@ int main()
                     break;
 
             case 20:
-                    Grafo *krusk;
-                    for(Vertice* i = g1->primeiroNo(); i != NULL; i = g1->proximoNo())
-                    {
-                        for(Aresta* a = i->primeiraAresta(); a != NULL; a =  i->proximaAresta())
+                    if (g1->conexo()){
+                        Grafo *krusk;
+                        for(Vertice* i = g1->primeiroNo(); i != NULL; i = g1->proximoNo())
                         {
-                            ar = new Aresta(i->pegaId(),a->pegaIdDestino(), a->pegaPeso());
-                            vetAr.push_back(ar);
+                            for(Aresta* a = i->primeiraAresta(); a != NULL; a =  i->proximaAresta())
+                            {
+                                ar = new Aresta(i->pegaId(),a->pegaIdDestino(), a->pegaPeso());
+                                vetAr.push_back(ar);
+                            }
                         }
+
+                        sort(vetAr.begin(), vetAr.end(), Aresta::ordenaArestaPeso);
+
+                        krusk = g1->Kruskal(vetAr);
+                        krusk->imprimeGrafo(krusk);
+                        vetAr.clear();
+                        delete krusk;
+
+                        cout << "\n"<< endl;
+
+                    }else{
+                        cout << "\nO grafo informado não é conexo!\n" << endl;
                     }
-
-                    sort(vetAr.begin(), vetAr.end(), Aresta::ordenaArestaPeso);
-
-                    krusk = g1->Kruskal(vetAr);
-                    krusk->imprimeGrafo(krusk);
-                    vetAr.clear();
-                    delete krusk;
-
-                    cout << "\n"<< endl;
 
                     break;
 
             case 21:
-                    Grafo *prim;
-                    //g1->imprimeGrafo(g1);
-                    cout << "\n" << endl;
-                    for(Vertice* i = g1->primeiroNo(); i != NULL; i = g1->proximoNo())
-                    {
-                        vetVer.push_back(i->pegaId());
-                    }
+                   if(g1->conexo()){
+                        Grafo *prim;
+                        //g1->imprimeGrafo(g1);
+                        cout << "\n" << endl;
+                        for(Vertice* i = g1->primeiroNo(); i != NULL; i = g1->proximoNo())
+                        {
+                            vetVer.push_back(i->pegaId());
+                        }
 
-                    prim = g1->Prim(vetVer);
-                    prim->imprimeGrafo(prim);
-                    cout << endl;
-                    vetVer.clear();
-                    delete prim;
+                        prim = g1->Prim(vetVer);
+                        prim->imprimeGrafo(prim);
+                        cout << endl;
+                        vetVer.clear();
+                        delete prim;
+                    }else{
+                        cout << "\nO grafo informado não é conexo!\n" << endl;
+                    }
 
                     break;
             case 0:

@@ -6,6 +6,8 @@ var searchData=
   ['ehmultigrafo',['ehMultigrafo',['../class_grafo.html#a1fba4f1f969c2dc07171fc294506e2f6',1,'Grafo']]],
   ['ehnulo',['ehNulo',['../class_grafo.html#a843e8d52e587e7564b4db61c8e3856e8',1,'Grafo']]],
   ['ehtrivial',['ehTrivial',['../class_grafo.html#af70414fca091d884dd3d2656bdc790a9',1,'Grafo']]],
+  ['encontraaresta',['encontraAresta',['../class_vertice.html#a1f54ebe5c618bca5266c1b48dd40e7e5',1,'Vertice']]],
+  ['encontrano',['encontraNo',['../class_grafo.html#a2e8822f36da76855c6c2471731570d16',1,'Grafo']]],
   ['existearesta',['existeAresta',['../class_vertice.html#a6ec71f04fba51e1f7aab78fbe6fed820',1,'Vertice']]],
   ['existecamonho',['existeCamonho',['../class_grafo.html#a2772417b97b45251166e8dd1e7189966',1,'Grafo']]]
 ];

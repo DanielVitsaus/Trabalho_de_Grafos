@@ -5,6 +5,7 @@ var class_vertice =
     [ "adicionaAresta", "class_vertice.html#a6d4a399b37a0126660fe73c7ba97654a", null ],
     [ "adicionaAresta", "class_vertice.html#acb35c8eb7a44fb79b2bbc3b77ac018ce", null ],
     [ "arestaAnterior", "class_vertice.html#a4b1e41a091fbc9bca36d2c0f1f921def", null ],
+    [ "encontraAresta", "class_vertice.html#a1f54ebe5c618bca5266c1b48dd40e7e5", null ],
     [ "existeAresta", "class_vertice.html#a6ec71f04fba51e1f7aab78fbe6fed820", null ],
     [ "foiVisitado", "class_vertice.html#aa0003425b8eb7ec6c3d5cd915a88afbc", null ],
     [ "getParticao", "class_vertice.html#a5de6dd2ebceaeca99f02c2cf8ec2f38d", null ],

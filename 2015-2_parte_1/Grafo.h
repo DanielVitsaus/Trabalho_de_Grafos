@@ -85,7 +85,7 @@ class Grafo: private Lista {
         vector<int> ordenaFreBusca(vector<int> ordemC,vector<int>freqNos);
         vector<int> buscaFreqNoConexas(Vertice *v, int *calFre, vector<int> freqNos);
 
-        static bool ordenaAresta(const Aresta* a1, const Aresta* a2);
+        //static bool ordenaAresta(const Aresta* a1, const Aresta* a2);
 
         Vertice* encontraNo(int id);
         Vertice* primeiroNo() { return (Vertice*)Lista::inicioLista(); };

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tex_5farquivo',['Tex_Arquivo',['../main_8cpp.html#a0fced60795fab0adc9583ccdaf0a24d7',1,'main.cpp']]]
+  ['infinito',['INFINITO',['../_grafo_8cpp.html#af076440f216f5a40a11563e489f04932',1,'Grafo.cpp']]]
 ];

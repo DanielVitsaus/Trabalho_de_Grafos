@@ -465,7 +465,7 @@ pair<Grafo*, float> Grafo::menorCaminho(int id_origem, int id_destino){
             vc = this->encontraNo(caminho[id_caminho]);
         }
 
-       g->imprimeGrafo(g);
+       //g->imprimeGrafo(g);
         cout << endl;
 		// retorna a distância mínima até o destino
 		//return dist[id_destino];
@@ -792,30 +792,43 @@ bool Grafo::ehADJ(int v, int subset[]){
  */
 Grafo* Grafo::Prim(vector<int> verGafo){
 
-     Grafo* ar = new Grafo();
-     int dest;     Vertice* v;     Aresta* a;     Aresta* areP;
+     //cout << "Prim 1" << endl;
 
-     vector<int> vertSolu;     vector<Aresta*> arestaSolu;     vector<Aresta*> possiveisAresta;
+     Grafo* ar = new Grafo();
+     int dest;     Vertice* v;     Aresta* a;     Aresta* areP;     //const int tamanho = this->ordemGrafo();
+
+     vector<int> vertSolu;     vector<Aresta*> arestaSolu;
+     vector<Aresta*> possiveisAresta;//( (tamanho* (tamanho-1))/2);
 
      v = this->encontraNo(verGafo[0]);
      vertSolu.push_back(verGafo[0]);
      verGafo.erase(verGafo.begin());
 
-     for (Aresta*  are = v->primeiraAresta(); are != NULL; are = v->proximaAresta())
-     {
-         areP = new Aresta(v->pegaId(),are->pegaIdDestino(), are->pegaPeso());
-         possiveisAresta.push_back(areP);
-     }
+    //cout << "Prim 2" << endl;
+    if (v->contaItems() > 0){
+         for (Aresta*  are = v->primeiraAresta(); are != NULL; are = v->proximaAresta())
+         {
+             areP = new Aresta(v->pegaId(),are->pegaIdDestino(), are->pegaPeso());
+             possiveisAresta.push_back(areP);
+         }
+    }
+     //cout << "Prim 3" << endl;
 
      int k = 0;
      bool tah = false;
      while (!verGafo.empty())
      {
+         //cout << "Prim 4" << endl;
+
          if (possiveisAresta.size()>1)
          {
+             //cout << "Prim 4.1" << endl;
              sort(possiveisAresta.begin(), possiveisAresta.end(), Aresta::ordenaArestaPeso);
-         }
+             //cout << "Prim 4.2" << endl;
+        }
         a = possiveisAresta[0];
+
+        //cout << "Prim 5" << endl;
 
         dest = a->pegaIdDestino();
         while(k < (int)vertSolu.size()){
@@ -826,12 +839,14 @@ Grafo* Grafo::Prim(vector<int> verGafo){
             }
             k++;
         }
+        //cout << "Prim 6" << endl;
 
         if (!tah){
             arestaSolu.push_back(a);
             possiveisAresta.erase(possiveisAresta.begin());
             vertSolu.push_back(dest);
             k = 0;
+            //cout << "Prim 7" << endl;
             while (k < (int)verGafo.size()){
                 if (verGafo[k] == dest){
                     verGafo.erase(verGafo.begin()+k);
@@ -839,13 +854,16 @@ Grafo* Grafo::Prim(vector<int> verGafo){
                 }
                 k++;
             }
+            //cout << "Prim 8" << endl;
             v = this->encontraNo(dest);
-            for (Aresta* are = v->primeiraAresta(); are != NULL; are = v->proximaAresta())
-            {
-                areP = new Aresta(v->pegaId(),are->pegaIdDestino(), are->pegaPeso());
-                possiveisAresta.push_back(areP);
+            if (v->contaItems() > 0){
+                 for (Aresta*  are = v->primeiraAresta(); are != NULL; are = v->proximaAresta())
+                 {
+                     areP = new Aresta(v->pegaId(),are->pegaIdDestino(), are->pegaPeso());
+                     possiveisAresta.push_back(areP);
+                 }
             }
-
+            //cout << "Prim 9" << endl;
         }
         else{
             possiveisAresta.erase(possiveisAresta.begin());
@@ -853,12 +871,12 @@ Grafo* Grafo::Prim(vector<int> verGafo){
         }
         k = 0;
      }
-
+     //cout << "Prim 10" << endl;
      for (int i = 0; i< (int)arestaSolu.size(); i++)
      {
          ar->adicionaAresta(arestaSolu[i]->pegaIdOrigem(), arestaSolu[i]->pegaIdDestino(), arestaSolu[i]->pegaPeso());
      }
-
+    //cout << "Prim 11" << endl;
     return ar;
  }
 
@@ -1394,6 +1412,7 @@ void Grafo::imprimeGrafo(Grafo* g){
     delete(a);
 }
 
+
 /** \brief Destrutor
  *
  */
@@ -1478,6 +1497,10 @@ bool Vertice::removeAresta(int id) {
 
 bool Aresta::ordenaArestaPeso(const Aresta* a1, const Aresta* a2){
     return (a1->peso < a2->peso);
+    //return min(a1->peso, a2->peso);
 };
+
+
+
 
 

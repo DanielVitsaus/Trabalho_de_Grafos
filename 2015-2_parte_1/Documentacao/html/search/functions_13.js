@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['vertice',['Vertice',['../class_vertice.html#a230fd673ca5c794ff5d4fb53dd98ca7b',1,'Vertice']]],
-  ['vizinhacaaberta',['vizinhacaAberta',['../class_grafo.html#ab34ab3006a5efe61e3416557a855e326',1,'Grafo']]],
-  ['vizinhacafechada',['vizinhacaFechada',['../class_grafo.html#abe28762d544d99e502c83f00ede75ddf',1,'Grafo']]]
+  ['_7egrafo',['~Grafo',['../class_grafo.html#a16f3fbba0de2667dfba3b657cb7e95ff',1,'Grafo']]],
+  ['_7evertice',['~Vertice',['../class_vertice.html#ae231694dc3ff35959b5b20b879b4678a',1,'Vertice']]]
 ];
