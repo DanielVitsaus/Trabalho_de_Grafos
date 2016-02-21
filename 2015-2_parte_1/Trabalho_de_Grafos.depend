@@ -48,3 +48,52 @@
 	"LeituraGravacao.h"
 	<algorithm>
 
+1456077141 source:/home/daniel/git/2015-2_parte_1/Grafo.cpp
+	"Grafo.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<limits>
+	<algorithm>
+	<string.h>
+	<list>
+	<queue>
+	<functional>
+
+1456076422 /home/daniel/git/2015-2_parte_1/Grafo.h
+	"Lista.h"
+	<iostream>
+	<vector>
+
+1452973973 /home/daniel/git/2015-2_parte_1/Lista.h
+
+1456076438 source:/home/daniel/git/2015-2_parte_1/LeituraGravacao.cpp
+	"LeituraGravacao.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+
+1452973973 /home/daniel/git/2015-2_parte_1/LeituraGravacao.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1452973973 source:/home/daniel/git/2015-2_parte_1/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1456076550 source:/home/daniel/git/2015-2_parte_1/main.cpp
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"LeituraGravacao.h"
+	<algorithm>
+

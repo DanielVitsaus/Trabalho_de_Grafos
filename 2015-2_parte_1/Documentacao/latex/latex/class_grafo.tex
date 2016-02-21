@@ -1,0 +1,925 @@
+\hypertarget{class_grafo}{\section{Grafo Class Reference}
+\label{class_grafo}\index{Grafo@{Grafo}}
+}
+
+
+{\ttfamily \#include $<$Grafo.\-h$>$}
+
+Inheritance diagram for Grafo\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_grafo}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_grafo_ab810bbe26a98e9af6661ccddff66b03b}{Grafo} ()
+\begin{DoxyCompactList}\small\item\em Construtor para grafo nao direcionado. \end{DoxyCompactList}\item 
+\hyperlink{class_grafo_ac389a7c921f396ed4ed0f296a90a649e}{Grafo} (bool dir)
+\begin{DoxyCompactList}\small\item\em Construto para grafo direcionado (digrafo). \end{DoxyCompactList}\item 
+\hyperlink{class_grafo_a16f3fbba0de2667dfba3b657cb7e95ff}{$\sim$\-Grafo} ()
+\begin{DoxyCompactList}\small\item\em Destrutor. \end{DoxyCompactList}\item 
+void \hyperlink{class_grafo_ac422fb7b1853918b49c5b1446990ab75}{imprime\-Grafo} (\hyperlink{class_grafo}{Grafo} $\ast$g)
+\begin{DoxyCompactList}\small\item\em Imprime cada vertice (no) com os nos adjacentes. \end{DoxyCompactList}\item 
+void \hyperlink{class_grafo_a5eda2173b173a36459bf831cfcfd262b}{unir} (int subset\mbox{[}$\,$\mbox{]}, int v1, int v2)
+\begin{DoxyCompactList}\small\item\em função para unir dois subconjuntos em um único subconjunto \end{DoxyCompactList}\item 
+int \hyperlink{class_grafo_a29874190411584284934433db5bf5f99}{conta\-Nos} ()
+\item 
+int \hyperlink{class_grafo_a68e6656216b32cf61a2370cfcd6573a3}{retorna\-Indice} (vector$<$ int $>$ ver\-Gafo, int id)
+\item 
+int \hyperlink{class_grafo_a0ac5b35231457cbf54aa7d19f21b1f1e}{buscar} (int subset\mbox{[}$\,$\mbox{]}, int i)
+\begin{DoxyCompactList}\small\item\em função que busca o subconjunto de um elemento \char`\"{}i\char`\"{} \end{DoxyCompactList}\item 
+bool \hyperlink{class_grafo_aa5d199d9e3c9c0b7cb12fb369945e066}{eh\-A\-D\-J} (int v, int subset\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcoa eu verifica se o vertice v esta no subconjunto de vertice da A\-G\-M. \end{DoxyCompactList}\item 
+bool \hyperlink{class_grafo_a2772417b97b45251166e8dd1e7189966}{existe\-Camonho} (\hyperlink{class_grafo}{Grafo} $\ast$g, int orin, int dest)
+\item 
+bool \hyperlink{class_grafo_a05bbf393596f80289b5794c98221e73a}{tana\-Lista} (int id, vector$<$ int $>$ v)
+\item 
+\hyperlink{class_grafo}{Grafo} $\ast$ \hyperlink{class_grafo_a4cee5922bd84c2652ad31383a61f487b}{set\-Nao\-Visitado} (\hyperlink{class_grafo}{Grafo} $\ast$g)
+\begin{DoxyCompactList}\small\item\em Seta todos os vertice do \hyperlink{class_grafo}{Grafo} com nao visitao. \end{DoxyCompactList}\item 
+\hyperlink{class_grafo}{Grafo} $\ast$ \hyperlink{class_grafo_a363d5b79f8ab7aaa27dea38387e9ffb6}{gera\-Grafo\-Transposto} ()
+\begin{DoxyCompactList}\small\item\em Função que gera um gafos transposto invertendo das aresta de um grafo direcionado G retornando G'. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \hyperlink{class_grafo_a61f6a9940df187006f5c445c6d6f1aec}{ordena\-Fre\-Busca} (vector$<$ int $>$ ordem\-C, vector$<$ int $>$freq\-Nos)
+\begin{DoxyCompactList}\small\item\em Ordena e frequencia resultante da busca em profundidade de forma decrescente. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \hyperlink{class_grafo_acd84b6964f6c1fb550a86e9d5b85fd4a}{busca\-Freq\-No\-Conexas} (\hyperlink{class_vertice}{Vertice} $\ast$v, int $\ast$cal\-Fre, vector$<$ int $>$ freq\-Nos)
+\begin{DoxyCompactList}\small\item\em Retorna um vector com a ordem de cada vertice na volta da recursao de uma busca em profundidade. \end{DoxyCompactList}\item 
+\hyperlink{class_vertice}{Vertice} $\ast$ \hyperlink{class_grafo_a2e8822f36da76855c6c2471731570d16}{encontra\-No} (int id)
+\begin{DoxyCompactList}\small\item\em Encontra um \hyperlink{class_vertice}{Vertice} com a id e retona o vertice v se encontra. Caso nao encontre, retorna N\-U\-L\-L. \end{DoxyCompactList}\item 
+\hyperlink{class_vertice}{Vertice} $\ast$ \hyperlink{class_grafo_aa6442a6688c71ad58946108cf5328213}{primeiro\-No} ()
+\item 
+\hyperlink{class_vertice}{Vertice} $\ast$ \hyperlink{class_grafo_ab6840a0ed069a45b57cb4140c8063d56}{proximo\-No} ()
+\item 
+\hyperlink{class_vertice}{Vertice} $\ast$ \hyperlink{class_grafo_a69279737c6e6f788feb2f45ffe944561}{no\-Anterior} ()
+\item 
+\hyperlink{class_vertice}{Vertice} $\ast$ \hyperlink{class_grafo_a4a003c3d61527160cd1e156b6f86f92e}{ultimo\-No} ()
+\item 
+\hyperlink{class_vertice}{Vertice} $\ast$ \hyperlink{class_grafo_a907b0bcb9e8efb64098bd799d8876399}{adiciona\-No} (int id)
+\begin{DoxyCompactList}\small\item\em Adiciona um \hyperlink{class_vertice}{Vertice} com a id dada caso não exista, caso exista retorna ponteiro para o \hyperlink{class_vertice}{Vertice}. \end{DoxyCompactList}\item 
+void \hyperlink{class_grafo_a9f8e73f1d74ad07d931b678adfb7066e}{adiciona\-Aresta} (int id\-\_\-origem, int id\-\_\-destino)
+\begin{DoxyCompactList}\small\item\em Adiciona uma aresta em id\-\_\-origem, apontando (quando pertinente) para id\-\_\-destino. \end{DoxyCompactList}\item 
+void \hyperlink{class_grafo_a6c406dd5c7eaaed2dbd1d80528b14972}{adiciona\-Aresta} (int id\-\_\-origem, int id\-\_\-destino, float peso)
+\begin{DoxyCompactList}\small\item\em Adiciona uma aresta com P\-E\-S\-O, em id\-\_\-origem apontando (quando pertinente) para id\-\_\-destino. \end{DoxyCompactList}\item 
+void \hyperlink{class_grafo_a1218362fe45c08e2a8d8729d5c45cbf7}{remove\-No} (int id)
+\begin{DoxyCompactList}\small\item\em Procura o \hyperlink{class_vertice}{Vertice} que possui a id dada, e deleta caso encontre. \end{DoxyCompactList}\item 
+void \hyperlink{class_grafo_ab3a5abe0a30afac753120ce1587f6f65}{remove\-Aresta} (int id\-\_\-no1, int id\-\_\-no2)
+\begin{DoxyCompactList}\small\item\em Remove uma aresta entre dois vertices. \end{DoxyCompactList}\item 
+int \hyperlink{class_grafo_a41ffeb7e79cf0d0c10297953f647c42d}{grau\-No} (int id)
+\begin{DoxyCompactList}\small\item\em Retorna o grau do vertice (no) passando como parametro o id no vertice(no),. \end{DoxyCompactList}\item 
+int \hyperlink{class_grafo_abada775efe72203e59e7930a095cbe95}{grau\-Grafo} ()
+\begin{DoxyCompactList}\small\item\em Retorna o grau do \hyperlink{class_grafo}{Grafo}. \end{DoxyCompactList}\item 
+int \hyperlink{class_grafo_ad954ce5924126084991e57a4e62a140f}{ordem\-Grafo} ()
+\begin{DoxyCompactList}\small\item\em Retorna o ordem do \hyperlink{class_grafo}{Grafo}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_grafo_af70414fca091d884dd3d2656bdc790a9}{eh\-Trivial} ()
+\begin{DoxyCompactList}\small\item\em Verifica se o grafo eh trivial. \end{DoxyCompactList}\item 
+bool \hyperlink{class_grafo_a843e8d52e587e7564b4db61c8e3856e8}{eh\-Nulo} ()
+\begin{DoxyCompactList}\small\item\em Verifica se o grafo eh nulo. \end{DoxyCompactList}\item 
+bool \hyperlink{class_grafo_a8b8a37db83f48a3dba72ad5d68077ed7}{k\-Regular} (int id)
+\begin{DoxyCompactList}\small\item\em Verifica se o grafo é K-\/\-Regular. \end{DoxyCompactList}\item 
+bool \hyperlink{class_grafo_a47f39f75d015f8c35bfa71d7a3da1bfa}{completo} ()
+\begin{DoxyCompactList}\small\item\em Verifica se o grafo eh completo. \end{DoxyCompactList}\item 
+bool \hyperlink{class_grafo_a1fba4f1f969c2dc07171fc294506e2f6}{eh\-Multigrafo} ()
+\begin{DoxyCompactList}\small\item\em Verifica se eh um Multigrafo. \end{DoxyCompactList}\item 
+bool \hyperlink{class_grafo_ad7d5ff431a1cb3c909b4bbc67e52b459}{eh\-Bipartido} (\hyperlink{class_vertice}{Vertice} $\ast$v, bool muda\-Part)
+\begin{DoxyCompactList}\small\item\em Verifica se eh um Bipartido. \end{DoxyCompactList}\item 
+\hyperlink{class_grafo}{Grafo} $\ast$ \hyperlink{class_grafo_ab34ab3006a5efe61e3416557a855e326}{vizinhaca\-Aberta} (int id)
+\begin{DoxyCompactList}\small\item\em Retorna um subgrafo induzido com os vertices adjacentes ao vertice(no) informado. \end{DoxyCompactList}\item 
+\hyperlink{class_grafo}{Grafo} $\ast$ \hyperlink{class_grafo_abe28762d544d99e502c83f00ede75ddf}{vizinhaca\-Fechada} (int id)
+\begin{DoxyCompactList}\small\item\em Retorna um subgrafo induzido com os vertices adjacentes ao vertice(no) informado incluindo o proprio vertice. \end{DoxyCompactList}\item 
+pair$<$ \hyperlink{class_grafo}{Grafo} $\ast$, float $>$ \hyperlink{class_grafo_a9415f8df731388c329f64e8cd0c5391b}{menor\-Caminho} (int id\-\_\-origem, int id\-\_\-destino)
+\begin{DoxyCompactList}\small\item\em Retorna um subgrafo com o menor caminho entre dois vertice(no) utilizando o Dijkstra. \end{DoxyCompactList}\item 
+void \hyperlink{class_grafo_aa5db00b08590804c1885d383ce67d1d2}{fecho\-Transitivo\-Direto} (int id)
+\begin{DoxyCompactList}\small\item\em A função gera o fecho transitivo direto dado um id de um vértice. \end{DoxyCompactList}\item 
+void \hyperlink{class_grafo_a568fd7e7ef01a0bb6e85b44999f519cd}{fecho\-Transitivo\-Indireto} (int id)
+\begin{DoxyCompactList}\small\item\em A função gera o fecho transitivo indireto dado um id de um vertice. \end{DoxyCompactList}\item 
+bool \hyperlink{class_grafo_adf78302a0ba04265275889cecd67be01}{eh\-Multi\-Digrafo} ()
+\begin{DoxyCompactList}\small\item\em Verifica se eh um Multidigrafo. \end{DoxyCompactList}\item 
+bool \hyperlink{class_grafo_a50fe04d01b2d34b777d8df0b827bedab}{conexo} ()
+\begin{DoxyCompactList}\small\item\em Verifica se o grafo eh conexo. \end{DoxyCompactList}\item 
+bool \hyperlink{class_grafo_a184ed3a4401ad77ff33a47da71d15e24}{nos\-Sao\-Adjacentes} (int id1, int id2)
+\begin{DoxyCompactList}\small\item\em Verifica se o nos sao adjacentes. \end{DoxyCompactList}\item 
+bool \hyperlink{class_grafo_af095a9c01a8762f358a2c7fced700975}{mesma\-Componente\-Conexa} (int id1, int id2)
+\begin{DoxyCompactList}\small\item\em Verifica se dois vertices estao em uma mesmo conponente conexa. \end{DoxyCompactList}\item 
+bool \hyperlink{class_grafo_af5c44085a44be2520c52775efc87380f}{no\-Articulacao} (int id)
+\begin{DoxyCompactList}\small\item\em verifica se o no eh de articulacao \end{DoxyCompactList}\item 
+bool \hyperlink{class_grafo_ad5ae61b6d0ae27569dd58b519b359927}{aresta\-Ponte} (int id1, int id2)
+\begin{DoxyCompactList}\small\item\em verifica se a aresta é ponte \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \hyperlink{class_grafo_a42f883ece5986fcf8cbc4a8c793844f5}{quant\-Comp\-Conexo} ()
+\begin{DoxyCompactList}\small\item\em Retorna a quantidade de componentes conexas do grafo em uma matrix de vector. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \hyperlink{class_grafo_ab64d335140e23a281f9600b764b6ed80}{quant\-Comp\-Forte\-Conexos} ()
+\begin{DoxyCompactList}\small\item\em Funcao que retona as componentes fortemente conexas criando um array com as ordem dos vertice no retorno de uma busca em profundidade. Ao encontrar esse numeracao, e criado um grafo transposto( grafo G com as aresta invertidas). Depois e realizada uma busca em profundidade no grafo G' e as componete conexa de G' sao as componentes fortemente conexas de G. \end{DoxyCompactList}\item 
+\hyperlink{class_grafo}{Grafo} $\ast$ \hyperlink{class_grafo_a8d382797529db17eaf6b77cc9c6e1de9}{Prim} (vector$<$ int $>$ ver\-Gafo)
+\begin{DoxyCompactList}\small\item\em Funcao Prim para encontrar a arvore gerado minima. \end{DoxyCompactList}\item 
+\hyperlink{class_grafo}{Grafo} $\ast$ \hyperlink{class_grafo_a5e15346d9279bebe36bcfe34837a194a}{Kruskal} (vector$<$ \hyperlink{class_aresta}{Aresta} $\ast$ $>$ are)
+\begin{DoxyCompactList}\small\item\em Funcao kruskal que em contra um arvore geradora minima recebendo como parametro um vector comtendo as arestas ordemadas de forma crecente em relacao ao peso. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_grafo_a5dac1549cdbbc647b8a389df64f50746}{ordena\-Aresta} (const \hyperlink{class_aresta}{Aresta} $\ast$a1, const \hyperlink{class_aresta}{Aresta} $\ast$a2)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_grafo_a579e844e050120ab0cea14ca32e8735b}{quant\-Nos}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_grafo_ab810bbe26a98e9af6661ccddff66b03b}{\index{Grafo@{Grafo}!Grafo@{Grafo}}
+\index{Grafo@{Grafo}!Grafo@{Grafo}}
+\subsubsection[{Grafo}]{\setlength{\rightskip}{0pt plus 5cm}Grafo\-::\-Grafo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_ab810bbe26a98e9af6661ccddff66b03b}
+
+
+Construtor para grafo nao direcionado. 
+
+\hypertarget{class_grafo_ac389a7c921f396ed4ed0f296a90a649e}{\index{Grafo@{Grafo}!Grafo@{Grafo}}
+\index{Grafo@{Grafo}!Grafo@{Grafo}}
+\subsubsection[{Grafo}]{\setlength{\rightskip}{0pt plus 5cm}Grafo\-::\-Grafo (
+\begin{DoxyParamCaption}
+\item[{bool}]{dir}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_ac389a7c921f396ed4ed0f296a90a649e}
+
+
+Construto para grafo direcionado (digrafo). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & -\/$>$ booleano que define se o grafo é direcionado. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_grafo_a16f3fbba0de2667dfba3b657cb7e95ff}{\index{Grafo@{Grafo}!$\sim$\-Grafo@{$\sim$\-Grafo}}
+\index{$\sim$\-Grafo@{$\sim$\-Grafo}!Grafo@{Grafo}}
+\subsubsection[{$\sim$\-Grafo}]{\setlength{\rightskip}{0pt plus 5cm}Grafo\-::$\sim$\-Grafo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a16f3fbba0de2667dfba3b657cb7e95ff}
+
+
+Destrutor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_grafo_a9f8e73f1d74ad07d931b678adfb7066e}{\index{Grafo@{Grafo}!adiciona\-Aresta@{adiciona\-Aresta}}
+\index{adiciona\-Aresta@{adiciona\-Aresta}!Grafo@{Grafo}}
+\subsubsection[{adiciona\-Aresta}]{\setlength{\rightskip}{0pt plus 5cm}void Grafo\-::adiciona\-Aresta (
+\begin{DoxyParamCaption}
+\item[{int}]{id\-\_\-origem, }
+\item[{int}]{id\-\_\-destino}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a9f8e73f1d74ad07d931b678adfb7066e}
+
+
+Adiciona uma aresta em id\-\_\-origem, apontando (quando pertinente) para id\-\_\-destino. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\-\_\-origem} & -\/$>$ Origem da aresta. \\
+\hline
+{\em id\-\_\-destino} & -\/$>$ Destino da aresta. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_grafo_a6c406dd5c7eaaed2dbd1d80528b14972}{\index{Grafo@{Grafo}!adiciona\-Aresta@{adiciona\-Aresta}}
+\index{adiciona\-Aresta@{adiciona\-Aresta}!Grafo@{Grafo}}
+\subsubsection[{adiciona\-Aresta}]{\setlength{\rightskip}{0pt plus 5cm}void Grafo\-::adiciona\-Aresta (
+\begin{DoxyParamCaption}
+\item[{int}]{id\-\_\-origem, }
+\item[{int}]{id\-\_\-destino, }
+\item[{float}]{peso}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a6c406dd5c7eaaed2dbd1d80528b14972}
+
+
+Adiciona uma aresta com P\-E\-S\-O, em id\-\_\-origem apontando (quando pertinente) para id\-\_\-destino. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\-\_\-origem} & -\/$>$ Origem da aresta. \\
+\hline
+{\em id\-\_\-destino} & -\/$>$ Destino da aresta. \\
+\hline
+{\em peso} & -\/$>$ Peso da aresta. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_grafo_a907b0bcb9e8efb64098bd799d8876399}{\index{Grafo@{Grafo}!adiciona\-No@{adiciona\-No}}
+\index{adiciona\-No@{adiciona\-No}!Grafo@{Grafo}}
+\subsubsection[{adiciona\-No}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertice} $\ast$ Grafo\-::adiciona\-No (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a907b0bcb9e8efb64098bd799d8876399}
+
+
+Adiciona um \hyperlink{class_vertice}{Vertice} com a id dada caso não exista, caso exista retorna ponteiro para o \hyperlink{class_vertice}{Vertice}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/$>$ Identificador do vertice. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+v -\/$>$ Retorna um vertice. 
+\end{DoxyReturn}
+\hypertarget{class_grafo_ad5ae61b6d0ae27569dd58b519b359927}{\index{Grafo@{Grafo}!aresta\-Ponte@{aresta\-Ponte}}
+\index{aresta\-Ponte@{aresta\-Ponte}!Grafo@{Grafo}}
+\subsubsection[{aresta\-Ponte}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::aresta\-Ponte (
+\begin{DoxyParamCaption}
+\item[{int}]{id1, }
+\item[{int}]{id2}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_ad5ae61b6d0ae27569dd58b519b359927}
+
+
+verifica se a aresta é ponte 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id1 \\
+\hline
+{\em int} & id2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{class_grafo_acd84b6964f6c1fb550a86e9d5b85fd4a}{\index{Grafo@{Grafo}!busca\-Freq\-No\-Conexas@{busca\-Freq\-No\-Conexas}}
+\index{busca\-Freq\-No\-Conexas@{busca\-Freq\-No\-Conexas}!Grafo@{Grafo}}
+\subsubsection[{busca\-Freq\-No\-Conexas}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ Grafo\-::busca\-Freq\-No\-Conexas (
+\begin{DoxyParamCaption}
+\item[{{\bf Vertice} $\ast$}]{v, }
+\item[{int $\ast$}]{cal\-Fre, }
+\item[{vector$<$ int $>$}]{freq\-Nos}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_acd84b6964f6c1fb550a86e9d5b85fd4a}
+
+
+Retorna um vector com a ordem de cada vertice na volta da recursao de uma busca em profundidade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_vertice}{Vertice}} & $\ast$v \\
+\hline
+{\em int} & $\ast$cal\-Fre \\
+\hline
+{\em vector$<$int$>$} & freq\-Nos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$int$>$ freq\-Nos 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a0ac5b35231457cbf54aa7d19f21b1f1e}{\index{Grafo@{Grafo}!buscar@{buscar}}
+\index{buscar@{buscar}!Grafo@{Grafo}}
+\subsubsection[{buscar}]{\setlength{\rightskip}{0pt plus 5cm}int Grafo\-::buscar (
+\begin{DoxyParamCaption}
+\item[{int}]{subset\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a0ac5b35231457cbf54aa7d19f21b1f1e}
+
+
+função que busca o subconjunto de um elemento \char`\"{}i\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & subset\mbox{[}\mbox{]} \\
+\hline
+{\em int} & i \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int i 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a47f39f75d015f8c35bfa71d7a3da1bfa}{\index{Grafo@{Grafo}!completo@{completo}}
+\index{completo@{completo}!Grafo@{Grafo}}
+\subsubsection[{completo}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::completo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a47f39f75d015f8c35bfa71d7a3da1bfa}
+
+
+Verifica se o grafo eh completo. 
+
+\begin{DoxyReturn}{Returns}
+True para completo e false para nao completo. 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a50fe04d01b2d34b777d8df0b827bedab}{\index{Grafo@{Grafo}!conexo@{conexo}}
+\index{conexo@{conexo}!Grafo@{Grafo}}
+\subsubsection[{conexo}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::conexo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a50fe04d01b2d34b777d8df0b827bedab}
+
+
+Verifica se o grafo eh conexo. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+quantidade de vertice no grafo
+
+quantidade de vertice visitados \hypertarget{class_grafo_a29874190411584284934433db5bf5f99}{\index{Grafo@{Grafo}!conta\-Nos@{conta\-Nos}}
+\index{conta\-Nos@{conta\-Nos}!Grafo@{Grafo}}
+\subsubsection[{conta\-Nos}]{\setlength{\rightskip}{0pt plus 5cm}int Grafo\-::conta\-Nos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_grafo_a29874190411584284934433db5bf5f99}
+\hypertarget{class_grafo_aa5d199d9e3c9c0b7cb12fb369945e066}{\index{Grafo@{Grafo}!eh\-A\-D\-J@{eh\-A\-D\-J}}
+\index{eh\-A\-D\-J@{eh\-A\-D\-J}!Grafo@{Grafo}}
+\subsubsection[{eh\-A\-D\-J}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::eh\-A\-D\-J (
+\begin{DoxyParamCaption}
+\item[{int}]{v, }
+\item[{int}]{subset\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_aa5d199d9e3c9c0b7cb12fb369945e066}
+
+
+Funcoa eu verifica se o vertice v esta no subconjunto de vertice da A\-G\-M. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & v -\/$>$ vertice v \\
+\hline
+{\em int} & subset\mbox{[}\mbox{]} -\/$>$ subconjunto de vertice da A\-G\-M \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{class_grafo_ad7d5ff431a1cb3c909b4bbc67e52b459}{\index{Grafo@{Grafo}!eh\-Bipartido@{eh\-Bipartido}}
+\index{eh\-Bipartido@{eh\-Bipartido}!Grafo@{Grafo}}
+\subsubsection[{eh\-Bipartido}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::eh\-Bipartido (
+\begin{DoxyParamCaption}
+\item[{{\bf Vertice} $\ast$}]{v, }
+\item[{bool}]{muda\-Part}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_ad7d5ff431a1cb3c909b4bbc67e52b459}
+
+
+Verifica se eh um Bipartido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/$>$ primeiro vertice da lista. \\
+\hline
+{\em muda\-Part} & -\/$>$ Booleano que altera a partcao do vertice. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True para bipartido e false para nao bipartido. 
+\end{DoxyReturn}
+\hypertarget{class_grafo_adf78302a0ba04265275889cecd67be01}{\index{Grafo@{Grafo}!eh\-Multi\-Digrafo@{eh\-Multi\-Digrafo}}
+\index{eh\-Multi\-Digrafo@{eh\-Multi\-Digrafo}!Grafo@{Grafo}}
+\subsubsection[{eh\-Multi\-Digrafo}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::eh\-Multi\-Digrafo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_adf78302a0ba04265275889cecd67be01}
+
+
+Verifica se eh um Multidigrafo. 
+
+\begin{DoxyReturn}{Returns}
+True para Multi\-Digrafo e false para nao Multi\-Digrafo. 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a1fba4f1f969c2dc07171fc294506e2f6}{\index{Grafo@{Grafo}!eh\-Multigrafo@{eh\-Multigrafo}}
+\index{eh\-Multigrafo@{eh\-Multigrafo}!Grafo@{Grafo}}
+\subsubsection[{eh\-Multigrafo}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::eh\-Multigrafo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a1fba4f1f969c2dc07171fc294506e2f6}
+
+
+Verifica se eh um Multigrafo. 
+
+\begin{DoxyReturn}{Returns}
+True para Multigrafo e false para nao Multigrafo. 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a843e8d52e587e7564b4db61c8e3856e8}{\index{Grafo@{Grafo}!eh\-Nulo@{eh\-Nulo}}
+\index{eh\-Nulo@{eh\-Nulo}!Grafo@{Grafo}}
+\subsubsection[{eh\-Nulo}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::eh\-Nulo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a843e8d52e587e7564b4db61c8e3856e8}
+
+
+Verifica se o grafo eh nulo. 
+
+\begin{DoxyReturn}{Returns}
+True para nulo e false para nao nulo. 
+\end{DoxyReturn}
+\hypertarget{class_grafo_af70414fca091d884dd3d2656bdc790a9}{\index{Grafo@{Grafo}!eh\-Trivial@{eh\-Trivial}}
+\index{eh\-Trivial@{eh\-Trivial}!Grafo@{Grafo}}
+\subsubsection[{eh\-Trivial}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::eh\-Trivial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_af70414fca091d884dd3d2656bdc790a9}
+
+
+Verifica se o grafo eh trivial. 
+
+\begin{DoxyReturn}{Returns}
+True para trivial e false para nao trivial. 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a2e8822f36da76855c6c2471731570d16}{\index{Grafo@{Grafo}!encontra\-No@{encontra\-No}}
+\index{encontra\-No@{encontra\-No}!Grafo@{Grafo}}
+\subsubsection[{encontra\-No}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertice} $\ast$ Grafo\-::encontra\-No (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a2e8822f36da76855c6c2471731570d16}
+
+
+Encontra um \hyperlink{class_vertice}{Vertice} com a id e retona o vertice v se encontra. Caso nao encontre, retorna N\-U\-L\-L. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_vertice}{Vertice} $\ast$v 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a2772417b97b45251166e8dd1e7189966}{\index{Grafo@{Grafo}!existe\-Camonho@{existe\-Camonho}}
+\index{existe\-Camonho@{existe\-Camonho}!Grafo@{Grafo}}
+\subsubsection[{existe\-Camonho}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::existe\-Camonho (
+\begin{DoxyParamCaption}
+\item[{{\bf Grafo} $\ast$}]{g, }
+\item[{int}]{orin, }
+\item[{int}]{dest}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a2772417b97b45251166e8dd1e7189966}
+\hypertarget{class_grafo_aa5db00b08590804c1885d383ce67d1d2}{\index{Grafo@{Grafo}!fecho\-Transitivo\-Direto@{fecho\-Transitivo\-Direto}}
+\index{fecho\-Transitivo\-Direto@{fecho\-Transitivo\-Direto}!Grafo@{Grafo}}
+\subsubsection[{fecho\-Transitivo\-Direto}]{\setlength{\rightskip}{0pt plus 5cm}void Grafo\-::fecho\-Transitivo\-Direto (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_aa5db00b08590804c1885d383ce67d1d2}
+
+
+A função gera o fecho transitivo direto dado um id de um vértice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_grafo_a568fd7e7ef01a0bb6e85b44999f519cd}{\index{Grafo@{Grafo}!fecho\-Transitivo\-Indireto@{fecho\-Transitivo\-Indireto}}
+\index{fecho\-Transitivo\-Indireto@{fecho\-Transitivo\-Indireto}!Grafo@{Grafo}}
+\subsubsection[{fecho\-Transitivo\-Indireto}]{\setlength{\rightskip}{0pt plus 5cm}void Grafo\-::fecho\-Transitivo\-Indireto (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a568fd7e7ef01a0bb6e85b44999f519cd}
+
+
+A função gera o fecho transitivo indireto dado um id de um vertice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_grafo_a363d5b79f8ab7aaa27dea38387e9ffb6}{\index{Grafo@{Grafo}!gera\-Grafo\-Transposto@{gera\-Grafo\-Transposto}}
+\index{gera\-Grafo\-Transposto@{gera\-Grafo\-Transposto}!Grafo@{Grafo}}
+\subsubsection[{gera\-Grafo\-Transposto}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Grafo} $\ast$ Grafo\-::gera\-Grafo\-Transposto (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a363d5b79f8ab7aaa27dea38387e9ffb6}
+
+
+Função que gera um gafos transposto invertendo das aresta de um grafo direcionado G retornando G'. 
+
+\begin{DoxyReturn}{Returns}
+Grafo$\ast$ gt 
+\end{DoxyReturn}
+\hypertarget{class_grafo_abada775efe72203e59e7930a095cbe95}{\index{Grafo@{Grafo}!grau\-Grafo@{grau\-Grafo}}
+\index{grau\-Grafo@{grau\-Grafo}!Grafo@{Grafo}}
+\subsubsection[{grau\-Grafo}]{\setlength{\rightskip}{0pt plus 5cm}int Grafo\-::grau\-Grafo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_abada775efe72203e59e7930a095cbe95}
+
+
+Retorna o grau do \hyperlink{class_grafo}{Grafo}. 
+
+\begin{DoxyReturn}{Returns}
+maior -\/$>$ Grau do grafo . 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a41ffeb7e79cf0d0c10297953f647c42d}{\index{Grafo@{Grafo}!grau\-No@{grau\-No}}
+\index{grau\-No@{grau\-No}!Grafo@{Grafo}}
+\subsubsection[{grau\-No}]{\setlength{\rightskip}{0pt plus 5cm}int Grafo\-::grau\-No (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a41ffeb7e79cf0d0c10297953f647c42d}
+
+
+Retorna o grau do vertice (no) passando como parametro o id no vertice(no),. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/$>$ Identificador do vertice. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+grau -\/$>$ Grau do no. 
+\end{DoxyReturn}
+\hypertarget{class_grafo_ac422fb7b1853918b49c5b1446990ab75}{\index{Grafo@{Grafo}!imprime\-Grafo@{imprime\-Grafo}}
+\index{imprime\-Grafo@{imprime\-Grafo}!Grafo@{Grafo}}
+\subsubsection[{imprime\-Grafo}]{\setlength{\rightskip}{0pt plus 5cm}void Grafo\-::imprime\-Grafo (
+\begin{DoxyParamCaption}
+\item[{{\bf Grafo} $\ast$}]{g}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_ac422fb7b1853918b49c5b1446990ab75}
+
+
+Imprime cada vertice (no) com os nos adjacentes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Grafo$\ast$} & g \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_grafo_a8b8a37db83f48a3dba72ad5d68077ed7}{\index{Grafo@{Grafo}!k\-Regular@{k\-Regular}}
+\index{k\-Regular@{k\-Regular}!Grafo@{Grafo}}
+\subsubsection[{k\-Regular}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::k\-Regular (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a8b8a37db83f48a3dba72ad5d68077ed7}
+
+
+Verifica se o grafo é K-\/\-Regular. 
+
+\begin{DoxyReturn}{Returns}
+True para k-\/regular e false para nao k-\/regular. 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a5e15346d9279bebe36bcfe34837a194a}{\index{Grafo@{Grafo}!Kruskal@{Kruskal}}
+\index{Kruskal@{Kruskal}!Grafo@{Grafo}}
+\subsubsection[{Kruskal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Grafo} $\ast$ Grafo\-::\-Kruskal (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Aresta} $\ast$ $>$}]{are}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a5e15346d9279bebe36bcfe34837a194a}
+
+
+Funcao kruskal que em contra um arvore geradora minima recebendo como parametro um vector comtendo as arestas ordemadas de forma crecente em relacao ao peso. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector$<$\-Aresta$\ast$$>$} & are \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Grafo$\ast$ ar; 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a9415f8df731388c329f64e8cd0c5391b}{\index{Grafo@{Grafo}!menor\-Caminho@{menor\-Caminho}}
+\index{menor\-Caminho@{menor\-Caminho}!Grafo@{Grafo}}
+\subsubsection[{menor\-Caminho}]{\setlength{\rightskip}{0pt plus 5cm}pair$<$ {\bf Grafo} $\ast$, float $>$ Grafo\-::menor\-Caminho (
+\begin{DoxyParamCaption}
+\item[{int}]{id\-\_\-origem, }
+\item[{int}]{id\-\_\-destino}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a9415f8df731388c329f64e8cd0c5391b}
+
+
+Retorna um subgrafo com o menor caminho entre dois vertice(no) utilizando o Dijkstra. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_grafo}{Grafo} 
+\end{DoxyReturn}
+\hypertarget{class_grafo_af095a9c01a8762f358a2c7fced700975}{\index{Grafo@{Grafo}!mesma\-Componente\-Conexa@{mesma\-Componente\-Conexa}}
+\index{mesma\-Componente\-Conexa@{mesma\-Componente\-Conexa}!Grafo@{Grafo}}
+\subsubsection[{mesma\-Componente\-Conexa}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::mesma\-Componente\-Conexa (
+\begin{DoxyParamCaption}
+\item[{int}]{id1, }
+\item[{int}]{id2}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_af095a9c01a8762f358a2c7fced700975}
+
+
+Verifica se dois vertices estao em uma mesmo conponente conexa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id1 \\
+\hline
+{\em int} & id2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a69279737c6e6f788feb2f45ffe944561}{\index{Grafo@{Grafo}!no\-Anterior@{no\-Anterior}}
+\index{no\-Anterior@{no\-Anterior}!Grafo@{Grafo}}
+\subsubsection[{no\-Anterior}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertice}$\ast$ Grafo\-::no\-Anterior (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_grafo_a69279737c6e6f788feb2f45ffe944561}
+\hypertarget{class_grafo_af5c44085a44be2520c52775efc87380f}{\index{Grafo@{Grafo}!no\-Articulacao@{no\-Articulacao}}
+\index{no\-Articulacao@{no\-Articulacao}!Grafo@{Grafo}}
+\subsubsection[{no\-Articulacao}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::no\-Articulacao (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_af5c44085a44be2520c52775efc87380f}
+
+
+verifica se o no eh de articulacao 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a184ed3a4401ad77ff33a47da71d15e24}{\index{Grafo@{Grafo}!nos\-Sao\-Adjacentes@{nos\-Sao\-Adjacentes}}
+\index{nos\-Sao\-Adjacentes@{nos\-Sao\-Adjacentes}!Grafo@{Grafo}}
+\subsubsection[{nos\-Sao\-Adjacentes}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::nos\-Sao\-Adjacentes (
+\begin{DoxyParamCaption}
+\item[{int}]{id1, }
+\item[{int}]{id2}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a184ed3a4401ad77ff33a47da71d15e24}
+
+
+Verifica se o nos sao adjacentes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id1 \\
+\hline
+{\em int} & id2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{class_grafo_ad954ce5924126084991e57a4e62a140f}{\index{Grafo@{Grafo}!ordem\-Grafo@{ordem\-Grafo}}
+\index{ordem\-Grafo@{ordem\-Grafo}!Grafo@{Grafo}}
+\subsubsection[{ordem\-Grafo}]{\setlength{\rightskip}{0pt plus 5cm}int Grafo\-::ordem\-Grafo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_ad954ce5924126084991e57a4e62a140f}
+
+
+Retorna o ordem do \hyperlink{class_grafo}{Grafo}. 
+
+\begin{DoxyReturn}{Returns}
+inteiro que repesenta a ordem do grafo. 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a5dac1549cdbbc647b8a389df64f50746}{\index{Grafo@{Grafo}!ordena\-Aresta@{ordena\-Aresta}}
+\index{ordena\-Aresta@{ordena\-Aresta}!Grafo@{Grafo}}
+\subsubsection[{ordena\-Aresta}]{\setlength{\rightskip}{0pt plus 5cm}static bool Grafo\-::ordena\-Aresta (
+\begin{DoxyParamCaption}
+\item[{const {\bf Aresta} $\ast$}]{a1, }
+\item[{const {\bf Aresta} $\ast$}]{a2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_grafo_a5dac1549cdbbc647b8a389df64f50746}
+\hypertarget{class_grafo_a61f6a9940df187006f5c445c6d6f1aec}{\index{Grafo@{Grafo}!ordena\-Fre\-Busca@{ordena\-Fre\-Busca}}
+\index{ordena\-Fre\-Busca@{ordena\-Fre\-Busca}!Grafo@{Grafo}}
+\subsubsection[{ordena\-Fre\-Busca}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ Grafo\-::ordena\-Fre\-Busca (
+\begin{DoxyParamCaption}
+\item[{vector$<$ int $>$}]{ordem\-C, }
+\item[{vector$<$ int $>$}]{freq\-Nos}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a61f6a9940df187006f5c445c6d6f1aec}
+
+
+Ordena e frequencia resultante da busca em profundidade de forma decrescente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & freq\-Nos\mbox{[}\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$int$>$ ordem\-C 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a8d382797529db17eaf6b77cc9c6e1de9}{\index{Grafo@{Grafo}!Prim@{Prim}}
+\index{Prim@{Prim}!Grafo@{Grafo}}
+\subsubsection[{Prim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Grafo} $\ast$ Grafo\-::\-Prim (
+\begin{DoxyParamCaption}
+\item[{vector$<$ int $>$}]{ver\-Gafo}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a8d382797529db17eaf6b77cc9c6e1de9}
+
+
+Funcao Prim para encontrar a arvore gerado minima. 
+
+\begin{DoxyReturn}{Returns}
+Grafo$\ast$ g 
+\end{DoxyReturn}
+\hypertarget{class_grafo_aa6442a6688c71ad58946108cf5328213}{\index{Grafo@{Grafo}!primeiro\-No@{primeiro\-No}}
+\index{primeiro\-No@{primeiro\-No}!Grafo@{Grafo}}
+\subsubsection[{primeiro\-No}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertice}$\ast$ Grafo\-::primeiro\-No (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_grafo_aa6442a6688c71ad58946108cf5328213}
+\hypertarget{class_grafo_ab6840a0ed069a45b57cb4140c8063d56}{\index{Grafo@{Grafo}!proximo\-No@{proximo\-No}}
+\index{proximo\-No@{proximo\-No}!Grafo@{Grafo}}
+\subsubsection[{proximo\-No}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertice}$\ast$ Grafo\-::proximo\-No (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_grafo_ab6840a0ed069a45b57cb4140c8063d56}
+\hypertarget{class_grafo_a42f883ece5986fcf8cbc4a8c793844f5}{\index{Grafo@{Grafo}!quant\-Comp\-Conexo@{quant\-Comp\-Conexo}}
+\index{quant\-Comp\-Conexo@{quant\-Comp\-Conexo}!Grafo@{Grafo}}
+\subsubsection[{quant\-Comp\-Conexo}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ vector$<$ int $>$ $>$ Grafo\-::quant\-Comp\-Conexo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a42f883ece5986fcf8cbc4a8c793844f5}
+
+
+Retorna a quantidade de componentes conexas do grafo em uma matrix de vector. 
+
+\begin{DoxyReturn}{Returns}
+vector $<$ vector$<$int$>$ $>$ 
+\end{DoxyReturn}
+\hypertarget{class_grafo_ab64d335140e23a281f9600b764b6ed80}{\index{Grafo@{Grafo}!quant\-Comp\-Forte\-Conexos@{quant\-Comp\-Forte\-Conexos}}
+\index{quant\-Comp\-Forte\-Conexos@{quant\-Comp\-Forte\-Conexos}!Grafo@{Grafo}}
+\subsubsection[{quant\-Comp\-Forte\-Conexos}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ vector$<$ int $>$ $>$ Grafo\-::quant\-Comp\-Forte\-Conexos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_ab64d335140e23a281f9600b764b6ed80}
+
+
+Funcao que retona as componentes fortemente conexas criando um array com as ordem dos vertice no retorno de uma busca em profundidade. Ao encontrar esse numeracao, e criado um grafo transposto( grafo G com as aresta invertidas). Depois e realizada uma busca em profundidade no grafo G' e as componete conexa de G' sao as componentes fortemente conexas de G. 
+
+\begin{DoxyReturn}{Returns}
+vector$<$ vector$<$int$>$ $>$ quant\-Forte\-Conexo 
+\end{DoxyReturn}
+\hypertarget{class_grafo_ab3a5abe0a30afac753120ce1587f6f65}{\index{Grafo@{Grafo}!remove\-Aresta@{remove\-Aresta}}
+\index{remove\-Aresta@{remove\-Aresta}!Grafo@{Grafo}}
+\subsubsection[{remove\-Aresta}]{\setlength{\rightskip}{0pt plus 5cm}void Grafo\-::remove\-Aresta (
+\begin{DoxyParamCaption}
+\item[{int}]{id\-\_\-no1, }
+\item[{int}]{id\-\_\-no2}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_ab3a5abe0a30afac753120ce1587f6f65}
+
+
+Remove uma aresta entre dois vertices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\-\_\-no1} & -\/$>$ \hyperlink{class_vertice}{Vertice} origem. \\
+\hline
+{\em id\-\_\-no2} & -\/$>$ \hyperlink{class_vertice}{Vertice} destino. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_grafo_a1218362fe45c08e2a8d8729d5c45cbf7}{\index{Grafo@{Grafo}!remove\-No@{remove\-No}}
+\index{remove\-No@{remove\-No}!Grafo@{Grafo}}
+\subsubsection[{remove\-No}]{\setlength{\rightskip}{0pt plus 5cm}void Grafo\-::remove\-No (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a1218362fe45c08e2a8d8729d5c45cbf7}
+
+
+Procura o \hyperlink{class_vertice}{Vertice} que possui a id dada, e deleta caso encontre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/$>$ Identificador do vertice. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_grafo_a68e6656216b32cf61a2370cfcd6573a3}{\index{Grafo@{Grafo}!retorna\-Indice@{retorna\-Indice}}
+\index{retorna\-Indice@{retorna\-Indice}!Grafo@{Grafo}}
+\subsubsection[{retorna\-Indice}]{\setlength{\rightskip}{0pt plus 5cm}int Grafo\-::retorna\-Indice (
+\begin{DoxyParamCaption}
+\item[{vector$<$ int $>$}]{ver\-Gafo, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a68e6656216b32cf61a2370cfcd6573a3}
+\hypertarget{class_grafo_a4cee5922bd84c2652ad31383a61f487b}{\index{Grafo@{Grafo}!set\-Nao\-Visitado@{set\-Nao\-Visitado}}
+\index{set\-Nao\-Visitado@{set\-Nao\-Visitado}!Grafo@{Grafo}}
+\subsubsection[{set\-Nao\-Visitado}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Grafo} $\ast$ Grafo\-::set\-Nao\-Visitado (
+\begin{DoxyParamCaption}
+\item[{{\bf Grafo} $\ast$}]{g}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a4cee5922bd84c2652ad31383a61f487b}
+
+
+Seta todos os vertice do \hyperlink{class_grafo}{Grafo} com nao visitao. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_grafo}{Grafo}} & $\ast$g \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_grafo}{Grafo} $\ast$g 
+\end{DoxyReturn}
+\hypertarget{class_grafo_a05bbf393596f80289b5794c98221e73a}{\index{Grafo@{Grafo}!tana\-Lista@{tana\-Lista}}
+\index{tana\-Lista@{tana\-Lista}!Grafo@{Grafo}}
+\subsubsection[{tana\-Lista}]{\setlength{\rightskip}{0pt plus 5cm}bool Grafo\-::tana\-Lista (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{vector$<$ int $>$}]{v}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a05bbf393596f80289b5794c98221e73a}
+\hypertarget{class_grafo_a4a003c3d61527160cd1e156b6f86f92e}{\index{Grafo@{Grafo}!ultimo\-No@{ultimo\-No}}
+\index{ultimo\-No@{ultimo\-No}!Grafo@{Grafo}}
+\subsubsection[{ultimo\-No}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertice}$\ast$ Grafo\-::ultimo\-No (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_grafo_a4a003c3d61527160cd1e156b6f86f92e}
+\hypertarget{class_grafo_a5eda2173b173a36459bf831cfcfd262b}{\index{Grafo@{Grafo}!unir@{unir}}
+\index{unir@{unir}!Grafo@{Grafo}}
+\subsubsection[{unir}]{\setlength{\rightskip}{0pt plus 5cm}void Grafo\-::unir (
+\begin{DoxyParamCaption}
+\item[{int}]{subset\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{v1, }
+\item[{int}]{v2}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_a5eda2173b173a36459bf831cfcfd262b}
+
+
+função para unir dois subconjuntos em um único subconjunto 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & subset\mbox{[}\mbox{]} subconjunto resuntante \\
+\hline
+{\em int} & v1 subconjunto 1 \\
+\hline
+{\em int} & v2 subconjunto 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_grafo_ab34ab3006a5efe61e3416557a855e326}{\index{Grafo@{Grafo}!vizinhaca\-Aberta@{vizinhaca\-Aberta}}
+\index{vizinhaca\-Aberta@{vizinhaca\-Aberta}!Grafo@{Grafo}}
+\subsubsection[{vizinhaca\-Aberta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Grafo} $\ast$ Grafo\-::vizinhaca\-Aberta (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_ab34ab3006a5efe61e3416557a855e326}
+
+
+Retorna um subgrafo induzido com os vertices adjacentes ao vertice(no) informado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_grafo}{Grafo} 
+\end{DoxyReturn}
+\hypertarget{class_grafo_abe28762d544d99e502c83f00ede75ddf}{\index{Grafo@{Grafo}!vizinhaca\-Fechada@{vizinhaca\-Fechada}}
+\index{vizinhaca\-Fechada@{vizinhaca\-Fechada}!Grafo@{Grafo}}
+\subsubsection[{vizinhaca\-Fechada}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Grafo} $\ast$ Grafo\-::vizinhaca\-Fechada (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_grafo_abe28762d544d99e502c83f00ede75ddf}
+
+
+Retorna um subgrafo induzido com os vertices adjacentes ao vertice(no) informado incluindo o proprio vertice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_grafo}{Grafo} 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_grafo_a579e844e050120ab0cea14ca32e8735b}{\index{Grafo@{Grafo}!quant\-Nos@{quant\-Nos}}
+\index{quant\-Nos@{quant\-Nos}!Grafo@{Grafo}}
+\subsubsection[{quant\-Nos}]{\setlength{\rightskip}{0pt plus 5cm}int Grafo\-::quant\-Nos}}\label{class_grafo_a579e844e050120ab0cea14ca32e8735b}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_grafo_8h}{Grafo.\-h}\item 
+\hyperlink{_grafo_8cpp}{Grafo.\-cpp}\end{DoxyCompactItemize}

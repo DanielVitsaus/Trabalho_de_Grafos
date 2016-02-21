@@ -1,0 +1,253 @@
+\hypertarget{class_vertice}{\section{Vertice Class Reference}
+\label{class_vertice}\index{Vertice@{Vertice}}
+}
+
+
+{\ttfamily \#include $<$Grafo.\-h$>$}
+
+Inheritance diagram for Vertice\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vertice}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vertice_a230fd673ca5c794ff5d4fb53dd98ca7b}{Vertice} (int Id)
+\item 
+\hyperlink{class_vertice_ae231694dc3ff35959b5b20b879b4678a}{$\sim$\-Vertice} ()
+\begin{DoxyCompactList}\small\item\em Destrutor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_vertice_aa0003425b8eb7ec6c3d5cd915a88afbc}{foi\-Visitado} ()
+\item 
+void \hyperlink{class_vertice_aca656c6efc4478a597d0e2ced0d392e9}{seta\-Visitado} (bool vi)
+\item 
+int \hyperlink{class_vertice_abc05ac8e91788aa9fdd903bbbc6e37af}{pega\-Id} ()
+\item 
+int \hyperlink{class_vertice_a926f0ba5d1a1b202df2e91712fa3f3d0}{pega\-Grau} ()
+\item 
+void \hyperlink{class_vertice_a6d4a399b37a0126660fe73c7ba97654a}{adiciona\-Aresta} (int id\-\_\-destino)
+\item 
+void \hyperlink{class_vertice_acb35c8eb7a44fb79b2bbc3b77ac018ce}{adiciona\-Aresta} (int id\-\_\-destino, float peso)
+\item 
+void \hyperlink{class_vertice_a4024393ae653b1cc889780ae1801a152}{remove\-Aresta} ()
+\item 
+void \hyperlink{class_vertice_a3fd85d9c14304c70c0def1adb65b8fde}{set\-Particao} (int part)
+\item 
+int \hyperlink{class_vertice_a5de6dd2ebceaeca99f02c2cf8ec2f38d}{get\-Particao} ()
+\item 
+bool \hyperlink{class_vertice_a440a8735f0d7296bd9108951558bc30b}{remove\-Aresta} (int id)
+\begin{DoxyCompactList}\small\item\em Remove aresta do \hyperlink{class_vertice}{Vertice} se encontra-\/la. \end{DoxyCompactList}\item 
+bool \hyperlink{class_vertice_a6ec71f04fba51e1f7aab78fbe6fed820}{existe\-Aresta} (int id)
+\begin{DoxyCompactList}\small\item\em Verifica se a aresta com id esxite. \end{DoxyCompactList}\item 
+\hyperlink{class_aresta}{Aresta} $\ast$ \hyperlink{class_vertice_a2c2ca06ce42e54a04097e47c619d85c5}{primeira\-Aresta} ()
+\item 
+\hyperlink{class_aresta}{Aresta} $\ast$ \hyperlink{class_vertice_a89d7b87a3a89a747cc6676ad0ec0d1c1}{proxima\-Aresta} ()
+\item 
+\hyperlink{class_aresta}{Aresta} $\ast$ \hyperlink{class_vertice_a4b1e41a091fbc9bca36d2c0f1f921def}{aresta\-Anterior} ()
+\item 
+\hyperlink{class_aresta}{Aresta} $\ast$ \hyperlink{class_vertice_a91342a38cb831d4d7b531698c120f1d2}{ultima\-Aresta} ()
+\item 
+\hyperlink{class_aresta}{Aresta} $\ast$ \hyperlink{class_vertice_a1f54ebe5c618bca5266c1b48dd40e7e5}{encontra\-Aresta} (int id)
+\begin{DoxyCompactList}\small\item\em Encontra uma \hyperlink{class_aresta}{Aresta} para id no \hyperlink{class_vertice}{Vertice} v. \end{DoxyCompactList}\item 
+float \hyperlink{class_vertice_a4581200c3fb68557fd46cd8a7a32924c}{pega\-Peso\-Aresta} (int id)
+\begin{DoxyCompactList}\small\item\em Retorna o peso da aresta passado por parametro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_vertice_a230fd673ca5c794ff5d4fb53dd98ca7b}{\index{Vertice@{Vertice}!Vertice@{Vertice}}
+\index{Vertice@{Vertice}!Vertice@{Vertice}}
+\subsubsection[{Vertice}]{\setlength{\rightskip}{0pt plus 5cm}Vertice\-::\-Vertice (
+\begin{DoxyParamCaption}
+\item[{int}]{Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vertice_a230fd673ca5c794ff5d4fb53dd98ca7b}
+\hypertarget{class_vertice_ae231694dc3ff35959b5b20b879b4678a}{\index{Vertice@{Vertice}!$\sim$\-Vertice@{$\sim$\-Vertice}}
+\index{$\sim$\-Vertice@{$\sim$\-Vertice}!Vertice@{Vertice}}
+\subsubsection[{$\sim$\-Vertice}]{\setlength{\rightskip}{0pt plus 5cm}Vertice\-::$\sim$\-Vertice (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_vertice_ae231694dc3ff35959b5b20b879b4678a}
+
+
+Destrutor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vertice_a6d4a399b37a0126660fe73c7ba97654a}{\index{Vertice@{Vertice}!adiciona\-Aresta@{adiciona\-Aresta}}
+\index{adiciona\-Aresta@{adiciona\-Aresta}!Vertice@{Vertice}}
+\subsubsection[{adiciona\-Aresta}]{\setlength{\rightskip}{0pt plus 5cm}void Vertice\-::adiciona\-Aresta (
+\begin{DoxyParamCaption}
+\item[{int}]{id\-\_\-destino}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vertice_a6d4a399b37a0126660fe73c7ba97654a}
+\hypertarget{class_vertice_acb35c8eb7a44fb79b2bbc3b77ac018ce}{\index{Vertice@{Vertice}!adiciona\-Aresta@{adiciona\-Aresta}}
+\index{adiciona\-Aresta@{adiciona\-Aresta}!Vertice@{Vertice}}
+\subsubsection[{adiciona\-Aresta}]{\setlength{\rightskip}{0pt plus 5cm}void Vertice\-::adiciona\-Aresta (
+\begin{DoxyParamCaption}
+\item[{int}]{id\-\_\-destino, }
+\item[{float}]{peso}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vertice_acb35c8eb7a44fb79b2bbc3b77ac018ce}
+\hypertarget{class_vertice_a4b1e41a091fbc9bca36d2c0f1f921def}{\index{Vertice@{Vertice}!aresta\-Anterior@{aresta\-Anterior}}
+\index{aresta\-Anterior@{aresta\-Anterior}!Vertice@{Vertice}}
+\subsubsection[{aresta\-Anterior}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aresta}$\ast$ Vertice\-::aresta\-Anterior (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vertice_a4b1e41a091fbc9bca36d2c0f1f921def}
+\hypertarget{class_vertice_a1f54ebe5c618bca5266c1b48dd40e7e5}{\index{Vertice@{Vertice}!encontra\-Aresta@{encontra\-Aresta}}
+\index{encontra\-Aresta@{encontra\-Aresta}!Vertice@{Vertice}}
+\subsubsection[{encontra\-Aresta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aresta} $\ast$ Vertice\-::encontra\-Aresta (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_vertice_a1f54ebe5c618bca5266c1b48dd40e7e5}
+
+
+Encontra uma \hyperlink{class_aresta}{Aresta} para id no \hyperlink{class_vertice}{Vertice} v. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Aresta$\ast$ 
+\end{DoxyReturn}
+\hypertarget{class_vertice_a6ec71f04fba51e1f7aab78fbe6fed820}{\index{Vertice@{Vertice}!existe\-Aresta@{existe\-Aresta}}
+\index{existe\-Aresta@{existe\-Aresta}!Vertice@{Vertice}}
+\subsubsection[{existe\-Aresta}]{\setlength{\rightskip}{0pt plus 5cm}bool Vertice\-::existe\-Aresta (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_vertice_a6ec71f04fba51e1f7aab78fbe6fed820}
+
+
+Verifica se a aresta com id esxite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{class_vertice_aa0003425b8eb7ec6c3d5cd915a88afbc}{\index{Vertice@{Vertice}!foi\-Visitado@{foi\-Visitado}}
+\index{foi\-Visitado@{foi\-Visitado}!Vertice@{Vertice}}
+\subsubsection[{foi\-Visitado}]{\setlength{\rightskip}{0pt plus 5cm}bool Vertice\-::foi\-Visitado (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vertice_aa0003425b8eb7ec6c3d5cd915a88afbc}
+\hypertarget{class_vertice_a5de6dd2ebceaeca99f02c2cf8ec2f38d}{\index{Vertice@{Vertice}!get\-Particao@{get\-Particao}}
+\index{get\-Particao@{get\-Particao}!Vertice@{Vertice}}
+\subsubsection[{get\-Particao}]{\setlength{\rightskip}{0pt plus 5cm}int Vertice\-::get\-Particao (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vertice_a5de6dd2ebceaeca99f02c2cf8ec2f38d}
+\hypertarget{class_vertice_a926f0ba5d1a1b202df2e91712fa3f3d0}{\index{Vertice@{Vertice}!pega\-Grau@{pega\-Grau}}
+\index{pega\-Grau@{pega\-Grau}!Vertice@{Vertice}}
+\subsubsection[{pega\-Grau}]{\setlength{\rightskip}{0pt plus 5cm}int Vertice\-::pega\-Grau (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vertice_a926f0ba5d1a1b202df2e91712fa3f3d0}
+\hypertarget{class_vertice_abc05ac8e91788aa9fdd903bbbc6e37af}{\index{Vertice@{Vertice}!pega\-Id@{pega\-Id}}
+\index{pega\-Id@{pega\-Id}!Vertice@{Vertice}}
+\subsubsection[{pega\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int Vertice\-::pega\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vertice_abc05ac8e91788aa9fdd903bbbc6e37af}
+\hypertarget{class_vertice_a4581200c3fb68557fd46cd8a7a32924c}{\index{Vertice@{Vertice}!pega\-Peso\-Aresta@{pega\-Peso\-Aresta}}
+\index{pega\-Peso\-Aresta@{pega\-Peso\-Aresta}!Vertice@{Vertice}}
+\subsubsection[{pega\-Peso\-Aresta}]{\setlength{\rightskip}{0pt plus 5cm}float Vertice\-::pega\-Peso\-Aresta (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_vertice_a4581200c3fb68557fd46cd8a7a32924c}
+
+
+Retorna o peso da aresta passado por parametro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\hypertarget{class_vertice_a2c2ca06ce42e54a04097e47c619d85c5}{\index{Vertice@{Vertice}!primeira\-Aresta@{primeira\-Aresta}}
+\index{primeira\-Aresta@{primeira\-Aresta}!Vertice@{Vertice}}
+\subsubsection[{primeira\-Aresta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aresta}$\ast$ Vertice\-::primeira\-Aresta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vertice_a2c2ca06ce42e54a04097e47c619d85c5}
+\hypertarget{class_vertice_a89d7b87a3a89a747cc6676ad0ec0d1c1}{\index{Vertice@{Vertice}!proxima\-Aresta@{proxima\-Aresta}}
+\index{proxima\-Aresta@{proxima\-Aresta}!Vertice@{Vertice}}
+\subsubsection[{proxima\-Aresta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aresta}$\ast$ Vertice\-::proxima\-Aresta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vertice_a89d7b87a3a89a747cc6676ad0ec0d1c1}
+\hypertarget{class_vertice_a4024393ae653b1cc889780ae1801a152}{\index{Vertice@{Vertice}!remove\-Aresta@{remove\-Aresta}}
+\index{remove\-Aresta@{remove\-Aresta}!Vertice@{Vertice}}
+\subsubsection[{remove\-Aresta}]{\setlength{\rightskip}{0pt plus 5cm}void Vertice\-::remove\-Aresta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vertice_a4024393ae653b1cc889780ae1801a152}
+\hypertarget{class_vertice_a440a8735f0d7296bd9108951558bc30b}{\index{Vertice@{Vertice}!remove\-Aresta@{remove\-Aresta}}
+\index{remove\-Aresta@{remove\-Aresta}!Vertice@{Vertice}}
+\subsubsection[{remove\-Aresta}]{\setlength{\rightskip}{0pt plus 5cm}bool Vertice\-::remove\-Aresta (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_vertice_a440a8735f0d7296bd9108951558bc30b}
+
+
+Remove aresta do \hyperlink{class_vertice}{Vertice} se encontra-\/la. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{class_vertice_aca656c6efc4478a597d0e2ced0d392e9}{\index{Vertice@{Vertice}!seta\-Visitado@{seta\-Visitado}}
+\index{seta\-Visitado@{seta\-Visitado}!Vertice@{Vertice}}
+\subsubsection[{seta\-Visitado}]{\setlength{\rightskip}{0pt plus 5cm}void Vertice\-::seta\-Visitado (
+\begin{DoxyParamCaption}
+\item[{bool}]{vi}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vertice_aca656c6efc4478a597d0e2ced0d392e9}
+\hypertarget{class_vertice_a3fd85d9c14304c70c0def1adb65b8fde}{\index{Vertice@{Vertice}!set\-Particao@{set\-Particao}}
+\index{set\-Particao@{set\-Particao}!Vertice@{Vertice}}
+\subsubsection[{set\-Particao}]{\setlength{\rightskip}{0pt plus 5cm}void Vertice\-::set\-Particao (
+\begin{DoxyParamCaption}
+\item[{int}]{part}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vertice_a3fd85d9c14304c70c0def1adb65b8fde}
+\hypertarget{class_vertice_a91342a38cb831d4d7b531698c120f1d2}{\index{Vertice@{Vertice}!ultima\-Aresta@{ultima\-Aresta}}
+\index{ultima\-Aresta@{ultima\-Aresta}!Vertice@{Vertice}}
+\subsubsection[{ultima\-Aresta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aresta}$\ast$ Vertice\-::ultima\-Aresta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vertice_a91342a38cb831d4d7b531698c120f1d2}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_grafo_8h}{Grafo.\-h}\item 
+\hyperlink{_grafo_8cpp}{Grafo.\-cpp}\end{DoxyCompactItemize}

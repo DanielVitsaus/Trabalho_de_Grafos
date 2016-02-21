@@ -52,7 +52,7 @@ Grafo* LeituraGravacao::lerArquivo(char *ar, Grafo *gd)
         this->arquivoLeitura.getline(buff,16);
         cont++;
     }
-    gd->imprimeGrafo(gd);
+    //gd->imprimeGrafo(gd);
     this->arquivoLeitura.close();
     cout << "O arquivo " << ar << " foi lido com sucesso! "<<  cont <<" linhas processadas.\n" << endl;
     return gd;

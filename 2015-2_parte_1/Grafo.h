@@ -77,11 +77,9 @@ class Grafo: private Lista {
         void imprimeGrafo(Grafo* g);
         void unir(int subset[], int v1, int v2);
         int contaNos() { return Lista::contaItems(); }
-        int retornaIndice(vector<int> verGafo, int id);
         int buscar(int subset[], int i);
         bool ehADJ(int v, int subset[]);
         bool existeCamonho(Grafo *g,int orin,int dest);
-        bool tanaLista(int id, vector<int> v);
         Grafo * setNaoVisitado(Grafo *g);
         Grafo* geraGrafoTransposto();
         vector<int> ordenaFreBusca(vector<int> ordemC,vector<int>freqNos);
@@ -113,10 +111,20 @@ class Grafo: private Lista {
         bool ehBipartido(Vertice* v, bool mudaPart); //OK
         Grafo* vizinhacaAberta(int id); //OK
         Grafo* vizinhacaFechada(int id); //OK
-        pair<Grafo*, float> menorCaminho(int id_origem, int id_destino);
+        pair<Grafo*, float> menorCaminho(int id_origem, int id_destino); //OK
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //// Parte 2 ////
 
+        bool buscaLargura(int id); //OK
+        bool buscaProfundidade(Vertice *v, int id); //OK
+        void floyd();// OK
+        Grafo* Prim(vector<int> verGafo);// OK
+        Grafo* Kruskal(vector<Aresta*> are); //OK
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //// Outros ////
         void fechoTransitivoDireto(int id);
         void fechoTransitivoIndireto(int id);
         bool ehMultiDigrafo();
@@ -127,9 +135,6 @@ class Grafo: private Lista {
         bool arestaPonte(int id1, int id2);
         vector< vector<int> > quantCompConexo();
         vector< vector<int> > quantCompForteConexos();
-        Grafo* Prim(vector<int> verGafo);
-        Grafo* Kruskal(vector<Aresta*> are);
-
 
 };
 

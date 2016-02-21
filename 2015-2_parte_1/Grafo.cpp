@@ -393,8 +393,6 @@ bool Grafo::ehBipartido(Vertice* v, bool mudaPart){
    return eh_bipartido;
 }
 
-
-
 /** \brief Retorna um subgrafo com o menor caminho entre dois vertice(no) utilizando o Dijkstra.
  *
  * \return Grafo
@@ -563,7 +561,157 @@ Grafo* Grafo::vizinhacaFechada(int id){
     return subgrafo;
 }
 
-/** \brief função que busca o subconjunto de um elemento "i"
+/** \brief Metodo para buscar um vertice no grafo utilizado a abordagem em largura
+ *
+ * \param Identificador do vertice
+ * \return booleano
+ */
+bool Grafo::buscaLargura(int id){
+
+
+    vector<int> pai;
+    Vertice *v = this->primeiroNo();
+    pai.push_back(v->pegaId());
+    v->setaVisitado(true);
+    while(!pai.empty()){
+
+        for(Aresta *aux = v->primeiraAresta(); aux != NULL; aux = v->proximaAresta()){
+            Vertice *vaux = this->encontraNo(aux->pegaIdDestino());
+            if (!vaux->foiVisitado()){
+                vaux->setaVisitado(true);
+                pai.push_back(vaux->pegaId());
+                if (vaux->pegaId() == id){
+                    pai.clear();
+                    return true;
+                }
+            }
+        }
+        pai.erase(pai.begin());
+        v = this->encontraNo(pai[0]);
+    }
+    pai.clear();
+
+    return false;
+}
+
+/** \brief Metodo para buscar um vertice no grafo utilizado a abordagem em profundidade.
+ *
+ * \param
+ * \return bool
+ */
+bool Grafo::buscaProfundidade(Vertice *v, int id){
+
+    v->setaVisitado(true);
+    bool resposta = false;
+    for (Aresta *a = v->primeiraAresta(); a != NULL; a = v->proximaAresta()){
+        Vertice *w = this->encontraNo(a->pegaIdDestino());
+        if (!w->foiVisitado()){
+            w->setaVisitado(true);
+            if (w->pegaId() == id){
+                return true;
+            }
+            else{
+                resposta = buscaProfundidade(w,id);
+            }
+        }
+    }
+
+    return resposta;
+}
+
+/** \brief Metodo que cria uma matriz que contem o menor caminho do vertice u para cada o vertice v do grafo.
+ */
+void Grafo::floyd(){
+
+    int tamanho = this->ordemGrafo();
+    //
+    int **dist = (int**) malloc((tamanho) * sizeof(int*));
+    int **caminho = (int**) malloc((tamanho) * sizeof(int*));
+
+    Vertice *v ;//= this->primeiroNo();
+
+    for (int i = 0; i < tamanho; i++){
+        v = this->encontraNo(i+1);
+        dist[i] = (int*) malloc(tamanho * sizeof(int));
+        caminho[i] = (int*) malloc(tamanho * sizeof(int));
+        if (v != NULL){
+            for(int j = 0; j < tamanho; j++){
+                Aresta *a = v->encontraAresta(j+1);
+                if (a != NULL){
+                    dist[i][j] = a->pegaPeso();
+                    caminho[i][j] = i;
+                }
+                else{
+                    dist[i][j] = 0;
+                    caminho[i][j] = 0;
+                }
+            }
+        }
+    }
+
+
+    for (int i = 0; i < tamanho; i++){
+        cout << endl;
+        for(int j = 0; j < tamanho; j++){
+            if (dist[i][j] != 0){
+                cout << dist[i][j] << " ";
+            }
+            else{
+                cout << "N ";
+            }
+        }
+    }
+    cout<< endl;
+
+
+    for (int k = 0; k < tamanho; k++){
+        for (int i = 0; i < tamanho; i++){
+            for (int j = 0; j < tamanho; j++){
+                if ((dist[i][k] * dist[k][j] != 0) && (i != j))
+                {
+                    if ((dist[i][k] + dist[k][j] < dist[i][j]) || (dist[i][j] == 0))
+                    {
+                        dist[i][j] = dist[i][k] + dist[k][j];
+                        caminho[i][j] = caminho[k][j];
+                    }
+                }
+            }
+        }
+    }
+    cout << "\nMatriz com os menores valores para cada caminho do vertice u para v";
+    for (int i = 0; i < tamanho; i++){
+        cout << endl;
+        for(int j = 0; j < tamanho; j++){
+            if (dist[i][j] != 0){
+                cout << dist[i][j] << " ";
+            }
+            else{
+                cout << "N ";
+            }
+        }
+    }
+    cout << endl;
+    cout << "\nMatriz com os com cada caminho do vertice u para v";
+    for (int i = 0; i < tamanho; i++){
+        cout << endl;
+        for(int j = 0; j < tamanho; j++){
+            if (i != j){
+                cout << caminho[i][j] << " ";
+            }else{
+                cout << "N ";
+            }
+        }
+    }
+    cout<< "\n" << endl;
+
+    //libera menoria
+     for (int i = 0; i < tamanho; i++){
+        free(dist[i]);
+        free(caminho[i]);
+    }
+}
+
+/** \brief função que busca o subconjunto de um elemento "i" usada no Kruskal
  *
  * \param int subset[]
  * \param int i
@@ -637,116 +785,83 @@ bool Grafo::ehADJ(int v, int subset[]){
 
     return false;
 }
-/** \brief Funcao Prim para encontrar a arvore gerado minima
+
+/** \brief Funcao Prim para encontrar a arvore gerado minima.
  *
  * \return Grafo* g
  */
 Grafo* Grafo::Prim(vector<int> verGafo){
-     srand (time(NULL));
-     //bool sai;
-     //sai = false;
-     Grafo* ar = new Grafo();
-     int tamV, indiceRandom, dest;
-     tamV = this->quantNos;
-     Vertice* v;
-     Aresta* a;
-     Aresta* are;
-     vector<int> vertGM;
-     vector<Aresta*> arestaGM;
-     vector<Aresta*> arestaP;
-     indiceRandom = rand() % tamV;
-      //dest = retornaIndice(verGafo, a->pegaIdDestino());
-     v = this->encontraNo(verGafo[indiceRandom]);
-     cout << "Foiiiii 111\n"<< endl;
-     vertGM.push_back(verGafo[0]);
-     verGafo.erase(verGafo.begin() + indiceRandom);
 
-     for (Aresta*  ares1 = v->primeiraAresta(); ares1 != NULL; ares1 = v->proximaAresta())
+     Grafo* ar = new Grafo();
+     int dest;     Vertice* v;     Aresta* a;     Aresta* areP;
+
+     vector<int> vertSolu;     vector<Aresta*> arestaSolu;     vector<Aresta*> possiveisAresta;
+
+     v = this->encontraNo(verGafo[0]);
+     vertSolu.push_back(verGafo[0]);
+     verGafo.erase(verGafo.begin());
+
+     for (Aresta*  are = v->primeiraAresta(); are != NULL; are = v->proximaAresta())
      {
-         are = new Aresta(v->pegaId(),ares1->pegaIdDestino(), ares1->pegaPeso());
-         arestaP.push_back(are);
+         areP = new Aresta(v->pegaId(),are->pegaIdDestino(), are->pegaPeso());
+         possiveisAresta.push_back(areP);
      }
-     cout << "Foiiiii 2222\n"<< endl;
-     int k = 1;
+
+     int k = 0;
+     bool tah = false;
      while (!verGafo.empty())
      {
-         if (arestaP.size()>1)
+         if (possiveisAresta.size()>1)
          {
-             sort(arestaP.begin(), arestaP.end(), Aresta::ordenaArestaPeso);
+             sort(possiveisAresta.begin(), possiveisAresta.end(), Aresta::ordenaArestaPeso);
          }
-        //if (!arestaP.empty())
-       // {
-            a = arestaP[0];
+        a = possiveisAresta[0];
 
-            arestaGM.push_back(a);
-
-            arestaP.erase(arestaP.begin());
-        //}
-        dest = retornaIndice(verGafo, a->pegaIdDestino());
-
-        //cout << dest <<"\n"<< endl;
-
-        v = this->encontraNo(verGafo[dest]);
-
-        cout << dest <<"\n"<< endl;
-
-        vertGM.push_back(verGafo[dest]);
-
-        verGafo.erase(verGafo.begin()+dest);
-
-        //cout << dest <<"\n"<< endl;
-        cout << dest <<"\n"<< endl;
-        for (Aresta* ares = v->primeiraAresta(); ares != NULL; ares = v->proximaAresta())
-        {
-            if (!tanaLista(ares->pegaIdDestino(),vertGM))
+        dest = a->pegaIdDestino();
+        while(k < (int)vertSolu.size()){
+            if (vertSolu[k] == dest)
             {
-                cout << "Foiiiii 3333\n"<< endl;
-                are = new Aresta(v->pegaId(),ares->pegaIdDestino(), ares->pegaPeso());
-                arestaP.push_back(are);
+                tah = true;
+                k = (int)vertSolu.size();
             }
+            k++;
         }
 
-        cout << "Foiiiii 4444\n"<< endl;
-        if(k == (int)verGafo.size()-1)
-        {
-            //sai = true;
-        }
+        if (!tah){
+            arestaSolu.push_back(a);
+            possiveisAresta.erase(possiveisAresta.begin());
+            vertSolu.push_back(dest);
+            k = 0;
+            while (k < (int)verGafo.size()){
+                if (verGafo[k] == dest){
+                    verGafo.erase(verGafo.begin()+k);
+                    k = (int)verGafo.size();
+                }
+                k++;
+            }
+            v = this->encontraNo(dest);
+            for (Aresta* are = v->primeiraAresta(); are != NULL; are = v->proximaAresta())
+            {
+                areP = new Aresta(v->pegaId(),are->pegaIdDestino(), are->pegaPeso());
+                possiveisAresta.push_back(areP);
+            }
 
+        }
+        else{
+            possiveisAresta.erase(possiveisAresta.begin());
+            tah = false;
+        }
+        k = 0;
      }
-    //cout << "Foiiiii 5555\n"<< endl;
 
-     for (int i = 0; i< (int)arestaGM.size(); i++)
+     for (int i = 0; i< (int)arestaSolu.size(); i++)
      {
-         ar->adicionaAresta(arestaGM[i]->pegaIdOrigem(), arestaGM[i]->pegaIdDestino(), arestaGM[i]->pegaPeso());
+         ar->adicionaAresta(arestaSolu[i]->pegaIdOrigem(), arestaSolu[i]->pegaIdDestino(), arestaSolu[i]->pegaPeso());
      }
-     cout << "Foiiiii 6666\n"<< endl;
 
     return ar;
  }
 
-int Grafo::retornaIndice(vector<int> verGafo, int id){
-    int i = 0;
-    for(i = 0; i < (int) verGafo.size(); i++)
-    {
-        if (verGafo[i] == id)
-        {
-            return i;
-        }
-    }
-    return -1;
-}
-
-bool Grafo::tanaLista(int id, vector<int> v){
-    for (int i = 0; i < (int)v.size(); i++)
-    {
-        if (id == v[i])
-	{
-	    return true;
-	}
-    }
-
-    return false;
-}
 
 /** \brief A função gera o fecho transitivo indireto dado um id de um vertice.
  *
@@ -1302,7 +1417,7 @@ void Grafo::imprimeGrafo(Grafo* g){
  */
 bool Vertice::existeAresta(int id){
     Aresta *a = this->encontraAresta(id);
-    if (a)
+    if (a != NULL)
         return true;
     else
         return false;
@@ -1323,7 +1438,7 @@ Aresta* Vertice::encontraAresta(int id) {
         else a = this->proximaAresta();
     }
 
-    return 0;
+    return NULL;
 }
 
 /** \brief Retorna o peso da aresta passado por parametro

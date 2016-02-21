@@ -22,10 +22,11 @@ int main()
     char arquivo[Tex_Arquivo] = " ";
     char r;
     int op = -1, id = 0, nAresta = 0;//nGrauTotal = 0;
+//    int **mat;
 
 
     vector<Aresta*> vetAr;
-    //Aresta* ar;
+    Aresta* ar;
 
     cout << "    ******  TRABALHO DE GRAFOS ******" << endl;
 
@@ -38,7 +39,7 @@ int main()
             cin >> arquivo;
             cout << "E um grafo ou um digrafo?\nDigite D para digrafo e N para grafo.\n" << endl;
             cin >> direcionado;
-            if (direcionado == 'S' || direcionado == 's')
+            if (direcionado == 'D' || direcionado == 'd')
             {
                 g1 = new Grafo(true);
             }
@@ -74,12 +75,17 @@ int main()
         //cout <<  "        qual é o tamanha da mior e menor compomente:" << endl;
         cout <<  "  15 -> Vizinhaca Fechada do NO:" << endl;
         //cout <<  "  15 -> Gerar informações sobre o grafo:" << endl;
-        cout <<  "  16 -> Menos caminho entre dois vertice:" << endl;
+        cout <<  "  16 -> Menor caminho entre dois vertice:" << endl;
         //cout <<  "  16 -> Gerar um arquivo com as todas as componemtes fortemete conexas:" << endl;
+        cout <<  "  17 -> Busca em Largura:" << endl;
         //cout <<  "  17 -> Fecho Transitivo Direto:" << endl;
+        cout <<  "  18 -> Busca em Profundidade:" << endl;
         //cout <<  "  18 -> Fecho Transitivo Indireto:" << endl;
+        cout <<  "  19 -> Floyd-Warshall:" << endl;
         //cout <<  "  19 -> Funcao Prim:" << endl;
         //cout <<  "  20 -> Funcao Kruskal:" << endl;
+        cout <<  "  20 -> Funcao Kruskal:" << endl;
+        cout <<  "  21 -> Funcao Prim:" << endl;
         cout <<  "  o para sair:" << endl;
         cin >> op;
 
@@ -382,37 +388,47 @@ int main()
                     //ler_grava->gravaArquivo(arquivo, quantConxo);
                     break;
 
-            /*
+
             case 17:
-                     cout << "Digite o vértice a partir do qual deseja encontrar o fecho transitivo direto::" << endl;
+                    cout << "Digite o ID do vértice" << endl;
+                    int v1;
+                    cin >> v1;
+                    if (g1->buscaLargura(v1)){
+                        cout << "O vertice de ID -> " << v1 << " exirte no grafo!" << endl;
+                    }
+                    else{
+                        cout << "O vertice de ID -> " << v1 << " NÂO exirte no grafo!" << endl;
+                    }
+                    break;
+                    /*
+                    cout << "Digite o vértice a partir do qual deseja encontrar o fecho transitivo direto::" << endl;
                     int v1;
                     cin >> v1;
                     g1->fechoTransitivoDireto(v1);
                     break;
+                    */
 
             case 18:
-                     cout << "Digite o vértice a partir do qual deseja encontrar o fecho transitivo indireto::" << endl;
+                    cout << "Digite o ID do vértice" << endl;
+                    int v2;
+                    cin >> v2;
+                    if (g1->buscaProfundidade(g1->primeiroNo(),v2)){
+                        cout << "O vertice de ID -> " << v2 << " exirte no grafo!" << endl;
+                    }
+                    else{
+                        cout << "O vertice de ID -> " << v2 << " NÂO exirte no grafo!" << endl;
+                    }
+                    break;
+                    /*
+                    cout << "Digite o vértice a partir do qual deseja encontrar o fecho transitivo indireto::" << endl;
                     int v2;
                     cin >> v2;
                     g1->fechoTransitivoIndireto(v2);
                     break;
+                    */
 
             case 19:
-                    Grafo *prim;
-                    for(Vertice* i = g1->primeiroNo(); i != NULL; i = g1->proximoNo())
-                    {
-                        vetVer.push_back(i->pegaId());
-                    }
-
-                    //sort(vetAr.begin(), vetAr.end(), Aresta::ordenaArestaPeso);
-
-                    prim = g1->Prim(vetVer);
-                    prim->imprimeGrafo(prim);
-                    vetVer.clear();
-                    delete prim;
-
-                    cout << "\n"<< endl;
-
+                    g1->floyd();
                     break;
 
             case 20:
@@ -436,7 +452,23 @@ int main()
                     cout << "\n"<< endl;
 
                     break;
-            */
+
+            case 21:
+                    Grafo *prim;
+                    //g1->imprimeGrafo(g1);
+                    cout << "\n" << endl;
+                    for(Vertice* i = g1->primeiroNo(); i != NULL; i = g1->proximoNo())
+                    {
+                        vetVer.push_back(i->pegaId());
+                    }
+
+                    prim = g1->Prim(vetVer);
+                    prim->imprimeGrafo(prim);
+                    cout << endl;
+                    vetVer.clear();
+                    delete prim;
+
+                    break;
             case 0:
                 cout << "Removendo Grafo ..." << endl;
                 g1->~Grafo();

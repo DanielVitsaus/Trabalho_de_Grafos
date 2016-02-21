@@ -1,0 +1,175 @@
+\hypertarget{class_lista}{\section{Lista Class Reference}
+\label{class_lista}\index{Lista@{Lista}}
+}
+
+
+{\ttfamily \#include $<$Lista.\-h$>$}
+
+Inheritance diagram for Lista\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_lista}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_lista_a1f668b36909182ef1360b48503529a31}{Lista} ()
+\item 
+void \hyperlink{class_lista_a0b1e9b3728bd4b9c6ef2d9c095dbb4f4}{adiciona\-Item} (\hyperlink{class_item}{Item} $\ast$n)
+\item 
+void \hyperlink{class_lista_a32622b53bc0720338439beecd0e7972f}{deleta\-Item} (\hyperlink{class_item}{Item} $\ast$n)
+\item 
+\hyperlink{class_item}{Item} $\ast$ \hyperlink{class_lista_a21093c5b211072af96f8fda2e5739773}{inicio\-Lista} ()
+\item 
+\hyperlink{class_item}{Item} $\ast$ \hyperlink{class_lista_a92efd69dea7b9b4caffcf9ebf12825ef}{fim\-Lista} ()
+\item 
+\hyperlink{class_item}{Item} $\ast$ \hyperlink{class_lista_afd444ac095ae137b6b43e5e575e54864}{no\-Iterator} ()
+\item 
+\hyperlink{class_item}{Item} $\ast$ \hyperlink{class_lista_acc446a0d931b922cbdf4a61794afe658}{caminha\-Lista} ()
+\item 
+\hyperlink{class_item}{Item} $\ast$ \hyperlink{class_lista_aabb1d795e42a01bb8c4d3271a922ed09}{retorna\-Lista} ()
+\item 
+int \hyperlink{class_lista_ae006b01ac1cb5d6aba47acdc410db3f0}{conta\-Items} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_item}{Item} $\ast$ \hyperlink{class_lista_a7c35eadb33738c21dad896e957eff430}{pri}
+\begin{DoxyCompactList}\small\item\em Primeiro elemento da lista. \end{DoxyCompactList}\item 
+\hyperlink{class_item}{Item} $\ast$ \hyperlink{class_lista_a89bce7d87b5cd06297851d19d9be4a10}{ult}
+\begin{DoxyCompactList}\small\item\em Ultimo elemento da lista. \end{DoxyCompactList}\item 
+\hyperlink{class_item}{Item} $\ast$ \hyperlink{class_lista_a2e5f3aba3731dfddf41016ade510d3aa}{it}
+\begin{DoxyCompactList}\small\item\em Interador. \end{DoxyCompactList}\item 
+int \hyperlink{class_lista_a6d17539dfc71dde4df05343fcfefb8b0}{nitems}
+\begin{DoxyCompactList}\small\item\em Numeros de Itens. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_lista_a1f668b36909182ef1360b48503529a31}{\index{Lista@{Lista}!Lista@{Lista}}
+\index{Lista@{Lista}!Lista@{Lista}}
+\subsubsection[{Lista}]{\setlength{\rightskip}{0pt plus 5cm}Lista\-::\-Lista (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_lista_a1f668b36909182ef1360b48503529a31}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_lista_a0b1e9b3728bd4b9c6ef2d9c095dbb4f4}{\index{Lista@{Lista}!adiciona\-Item@{adiciona\-Item}}
+\index{adiciona\-Item@{adiciona\-Item}!Lista@{Lista}}
+\subsubsection[{adiciona\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void Lista\-::adiciona\-Item (
+\begin{DoxyParamCaption}
+\item[{{\bf Item} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}}\label{class_lista_a0b1e9b3728bd4b9c6ef2d9c095dbb4f4}
+Primeiro item
+
+Segundo item
+
+Qualquer outro item
+
+Contador de items \hypertarget{class_lista_acc446a0d931b922cbdf4a61794afe658}{\index{Lista@{Lista}!caminha\-Lista@{caminha\-Lista}}
+\index{caminha\-Lista@{caminha\-Lista}!Lista@{Lista}}
+\subsubsection[{caminha\-Lista}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item}$\ast$ Lista\-::caminha\-Lista (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_lista_acc446a0d931b922cbdf4a61794afe658}
+\hypertarget{class_lista_ae006b01ac1cb5d6aba47acdc410db3f0}{\index{Lista@{Lista}!conta\-Items@{conta\-Items}}
+\index{conta\-Items@{conta\-Items}!Lista@{Lista}}
+\subsubsection[{conta\-Items}]{\setlength{\rightskip}{0pt plus 5cm}int Lista\-::conta\-Items (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_lista_ae006b01ac1cb5d6aba47acdc410db3f0}
+\hypertarget{class_lista_a32622b53bc0720338439beecd0e7972f}{\index{Lista@{Lista}!deleta\-Item@{deleta\-Item}}
+\index{deleta\-Item@{deleta\-Item}!Lista@{Lista}}
+\subsubsection[{deleta\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void Lista\-::deleta\-Item (
+\begin{DoxyParamCaption}
+\item[{{\bf Item} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}}\label{class_lista_a32622b53bc0720338439beecd0e7972f}
+Condições de saída imediata
+
+Tem apenas 1 elemento
+
+Tem apenas 2 elementos
+
+É o primeiro da lista
+
+É o ultimo da lista
+
+Para qualquer outra quantidade de elementos
+
+Anterior a N
+
+Sucessor de N
+
+Relocar o iterator caso estejamos deletando o ponteiro para o qual ele aponta
+
+Contador de items \hypertarget{class_lista_a92efd69dea7b9b4caffcf9ebf12825ef}{\index{Lista@{Lista}!fim\-Lista@{fim\-Lista}}
+\index{fim\-Lista@{fim\-Lista}!Lista@{Lista}}
+\subsubsection[{fim\-Lista}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item}$\ast$ Lista\-::fim\-Lista (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_lista_a92efd69dea7b9b4caffcf9ebf12825ef}
+\hypertarget{class_lista_a21093c5b211072af96f8fda2e5739773}{\index{Lista@{Lista}!inicio\-Lista@{inicio\-Lista}}
+\index{inicio\-Lista@{inicio\-Lista}!Lista@{Lista}}
+\subsubsection[{inicio\-Lista}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item}$\ast$ Lista\-::inicio\-Lista (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_lista_a21093c5b211072af96f8fda2e5739773}
+\hypertarget{class_lista_afd444ac095ae137b6b43e5e575e54864}{\index{Lista@{Lista}!no\-Iterator@{no\-Iterator}}
+\index{no\-Iterator@{no\-Iterator}!Lista@{Lista}}
+\subsubsection[{no\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item}$\ast$ Lista\-::no\-Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_lista_afd444ac095ae137b6b43e5e575e54864}
+\hypertarget{class_lista_aabb1d795e42a01bb8c4d3271a922ed09}{\index{Lista@{Lista}!retorna\-Lista@{retorna\-Lista}}
+\index{retorna\-Lista@{retorna\-Lista}!Lista@{Lista}}
+\subsubsection[{retorna\-Lista}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item}$\ast$ Lista\-::retorna\-Lista (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_lista_aabb1d795e42a01bb8c4d3271a922ed09}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_lista_a2e5f3aba3731dfddf41016ade510d3aa}{\index{Lista@{Lista}!it@{it}}
+\index{it@{it}!Lista@{Lista}}
+\subsubsection[{it}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item}$\ast$ Lista\-::it\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_lista_a2e5f3aba3731dfddf41016ade510d3aa}
+
+
+Interador. 
+
+\hypertarget{class_lista_a6d17539dfc71dde4df05343fcfefb8b0}{\index{Lista@{Lista}!nitems@{nitems}}
+\index{nitems@{nitems}!Lista@{Lista}}
+\subsubsection[{nitems}]{\setlength{\rightskip}{0pt plus 5cm}int Lista\-::nitems\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_lista_a6d17539dfc71dde4df05343fcfefb8b0}
+
+
+Numeros de Itens. 
+
+\hypertarget{class_lista_a7c35eadb33738c21dad896e957eff430}{\index{Lista@{Lista}!pri@{pri}}
+\index{pri@{pri}!Lista@{Lista}}
+\subsubsection[{pri}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item}$\ast$ Lista\-::pri\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_lista_a7c35eadb33738c21dad896e957eff430}
+
+
+Primeiro elemento da lista. 
+
+\hypertarget{class_lista_a89bce7d87b5cd06297851d19d9be4a10}{\index{Lista@{Lista}!ult@{ult}}
+\index{ult@{ult}!Lista@{Lista}}
+\subsubsection[{ult}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item}$\ast$ Lista\-::ult\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_lista_a89bce7d87b5cd06297851d19d9be4a10}
+
+
+Ultimo elemento da lista. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_lista_8h}{Lista.\-h}\item 
+\hyperlink{_lista_8cpp}{Lista.\-cpp}\end{DoxyCompactItemize}

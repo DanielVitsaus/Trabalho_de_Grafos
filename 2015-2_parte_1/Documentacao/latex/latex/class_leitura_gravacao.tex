@@ -1,0 +1,94 @@
+\hypertarget{class_leitura_gravacao}{\section{Leitura\-Gravacao Class Reference}
+\label{class_leitura_gravacao}\index{Leitura\-Gravacao@{Leitura\-Gravacao}}
+}
+
+
+{\ttfamily \#include $<$Leitura\-Gravacao.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_grafo}{Grafo} $\ast$ \hyperlink{class_leitura_gravacao_ae8d26b77bde160493638bc5ab63e08ab}{ler\-Arquivo} (char $\ast$ar, \hyperlink{class_grafo}{Grafo} $\ast$gd)
+\begin{DoxyCompactList}\small\item\em Funçao que le e adiciona o vertice em um grafo G. \end{DoxyCompactList}\item 
+void \hyperlink{class_leitura_gravacao_a48039a206ba69bd10ee8ac517e586ac9}{grava\-Arquivo} (char $\ast$nom\-Arquivo, vector$<$ vector$<$ int $>$ $>$com\-Forte\-Conexo)
+\begin{DoxyCompactList}\small\item\em Funcao que gera um arquivo com as componetes fortemente conexa do grafo passando o nome do arquivo e um vector com as componentes. \end{DoxyCompactList}\item 
+void \hyperlink{class_leitura_gravacao_a0285f216b47406414526bd9ddba4aa4f}{grava\-Arquivo} (\hyperlink{class_grafo}{Grafo} $\ast$g, char $\ast$nom\-Arquivo, int n\-Vertice, int n\-Aresta, float grau\-Medio)
+\begin{DoxyCompactList}\small\item\em Funcao que gera um aquirvo com as informacoes do grafo G como frequencia de cada vertice, quantos vertice, quantas arestas e o grau medio de cada vertice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_leitura_gravacao_a48039a206ba69bd10ee8ac517e586ac9}{\index{Leitura\-Gravacao@{Leitura\-Gravacao}!grava\-Arquivo@{grava\-Arquivo}}
+\index{grava\-Arquivo@{grava\-Arquivo}!LeituraGravacao@{Leitura\-Gravacao}}
+\subsubsection[{grava\-Arquivo}]{\setlength{\rightskip}{0pt plus 5cm}void Leitura\-Gravacao\-::grava\-Arquivo (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{nom\-Arquivo, }
+\item[{vector$<$ vector$<$ int $>$ $>$}]{com\-Forte\-Conexo}
+\end{DoxyParamCaption}
+)}}\label{class_leitura_gravacao_a48039a206ba69bd10ee8ac517e586ac9}
+
+
+Funcao que gera um arquivo com as componetes fortemente conexa do grafo passando o nome do arquivo e um vector com as componentes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & nom\-Arquivo \\
+\hline
+{\em vector$<$} & vector$<$int$>$ $>$ com\-Forte\-Conexo \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_leitura_gravacao_a0285f216b47406414526bd9ddba4aa4f}{\index{Leitura\-Gravacao@{Leitura\-Gravacao}!grava\-Arquivo@{grava\-Arquivo}}
+\index{grava\-Arquivo@{grava\-Arquivo}!LeituraGravacao@{Leitura\-Gravacao}}
+\subsubsection[{grava\-Arquivo}]{\setlength{\rightskip}{0pt plus 5cm}void Leitura\-Gravacao\-::grava\-Arquivo (
+\begin{DoxyParamCaption}
+\item[{{\bf Grafo} $\ast$}]{g, }
+\item[{char $\ast$}]{nom\-Arquivo, }
+\item[{int}]{n\-Vertice, }
+\item[{int}]{n\-Aresta, }
+\item[{float}]{grau\-Medio}
+\end{DoxyParamCaption}
+)}}\label{class_leitura_gravacao_a0285f216b47406414526bd9ddba4aa4f}
+
+
+Funcao que gera um aquirvo com as informacoes do grafo G como frequencia de cada vertice, quantos vertice, quantas arestas e o grau medio de cada vertice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_grafo}{Grafo}} & $\ast$g \\
+\hline
+{\em char$\ast$} & nom\-Arquivo \\
+\hline
+{\em int} & n\-Vertice \\
+\hline
+{\em int} & n\-Aresta \\
+\hline
+{\em float} & grau\-Medio \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_leitura_gravacao_ae8d26b77bde160493638bc5ab63e08ab}{\index{Leitura\-Gravacao@{Leitura\-Gravacao}!ler\-Arquivo@{ler\-Arquivo}}
+\index{ler\-Arquivo@{ler\-Arquivo}!LeituraGravacao@{Leitura\-Gravacao}}
+\subsubsection[{ler\-Arquivo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Grafo} $\ast$ Leitura\-Gravacao\-::ler\-Arquivo (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ar, }
+\item[{{\bf Grafo} $\ast$}]{gd}
+\end{DoxyParamCaption}
+)}}\label{class_leitura_gravacao_ae8d26b77bde160493638bc5ab63e08ab}
+
+
+Funçao que le e adiciona o vertice em um grafo G. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & $\ast$ar -\/$>$ nome do arquivo para a leitura \\
+\hline
+{\em \hyperlink{class_grafo}{Grafo}} & $\ast$gd -\/$>$ grafo a ser adicionados os vertices \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_grafo}{Grafo} $\ast$gd 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_leitura_gravacao_8h}{Leitura\-Gravacao.\-h}\item 
+\hyperlink{_leitura_gravacao_8cpp}{Leitura\-Gravacao.\-cpp}\end{DoxyCompactItemize}
