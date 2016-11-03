@@ -513,3 +513,49 @@
 	"Arquivo.h"
 	<algorithm>
 
+1452973973 source:/home/daniel/git/Trabalho_02/Arquivo.cpp
+	"Arquivo.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+
+1452973973 /home/daniel/git/Trabalho_02/Arquivo.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1452973973 /home/daniel/git/Trabalho_02/Grafo.h
+	"Lista.h"
+	<iostream>
+	<vector>
+
+1452973973 /home/daniel/git/Trabalho_02/Lista.h
+
+1452973973 source:/home/daniel/git/Trabalho_02/Grafo.cpp
+	"Grafo.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<limits>
+	<algorithm>
+	<string.h>
+
+1452973973 source:/home/daniel/git/Trabalho_02/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1452973973 source:/home/daniel/git/Trabalho_02/main.cpp
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"Arquivo.h"
+	<algorithm>
+

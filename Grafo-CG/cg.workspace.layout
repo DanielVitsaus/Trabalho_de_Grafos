@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_layout_file>
-	<ActiveProject path="../Trabalho_01/Trabalho1.cbp" />
+	<FileVersion major="1" minor="0" />
+	<ActiveProject path="src/_linux64.cbp" />
+	<PreferredTarget name="Debug" />
 </CodeBlocks_workspace_layout_file>

@@ -1,0 +1,1552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Trabalho_de_Grafos: Referência à classe Grafo</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Trabalho_de_Grafos
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;de&#160;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&#160;dos&#160;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&#160;de&#160;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&#160;membro</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_grafo.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tudo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Ficheiros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pub-attribs">Atributos Públicos</a> &#124;
+<a href="#pri-methods">Membros privados</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a> &#124;
+<a href="class_grafo-members.html">Mostrar lista completa dos membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência à classe Grafo</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_grafo_8h_source.html">Grafo.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de heranças da classe Grafo</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_grafo.png" usemap="#Grafo_map" alt=""/>
+  <map id="Grafo_map" name="Grafo_map">
+<area href="class_lista.html" alt="Lista" shape="rect" coords="0,0,44,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr class="memitem:ab810bbe26a98e9af6661ccddff66b03b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#ab810bbe26a98e9af6661ccddff66b03b">Grafo</a> ()</td></tr>
+<tr class="memdesc:ab810bbe26a98e9af6661ccddff66b03b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor para grafo nao direcionado.  <a href="#ab810bbe26a98e9af6661ccddff66b03b">Mais...</a><br/></td></tr>
+<tr class="separator:ab810bbe26a98e9af6661ccddff66b03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac389a7c921f396ed4ed0f296a90a649e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#ac389a7c921f396ed4ed0f296a90a649e">Grafo</a> (bool dir)</td></tr>
+<tr class="memdesc:ac389a7c921f396ed4ed0f296a90a649e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construto para grafo direcionado (digrafo).  <a href="#ac389a7c921f396ed4ed0f296a90a649e">Mais...</a><br/></td></tr>
+<tr class="separator:ac389a7c921f396ed4ed0f296a90a649e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16f3fbba0de2667dfba3b657cb7e95ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a16f3fbba0de2667dfba3b657cb7e95ff">~Grafo</a> ()</td></tr>
+<tr class="memdesc:a16f3fbba0de2667dfba3b657cb7e95ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor.  <a href="#a16f3fbba0de2667dfba3b657cb7e95ff">Mais...</a><br/></td></tr>
+<tr class="separator:a16f3fbba0de2667dfba3b657cb7e95ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac422fb7b1853918b49c5b1446990ab75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#ac422fb7b1853918b49c5b1446990ab75">imprimeGrafo</a> (<a class="el" href="class_grafo.html">Grafo</a> *g)</td></tr>
+<tr class="memdesc:ac422fb7b1853918b49c5b1446990ab75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime cada vertice (no) com os nos adjacentes.  <a href="#ac422fb7b1853918b49c5b1446990ab75">Mais...</a><br/></td></tr>
+<tr class="separator:ac422fb7b1853918b49c5b1446990ab75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eda2173b173a36459bf831cfcfd262b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a5eda2173b173a36459bf831cfcfd262b">unir</a> (int subset[], int v1, int v2)</td></tr>
+<tr class="separator:a5eda2173b173a36459bf831cfcfd262b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29874190411584284934433db5bf5f99"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a29874190411584284934433db5bf5f99">contaNos</a> ()</td></tr>
+<tr class="separator:a29874190411584284934433db5bf5f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ac5b35231457cbf54aa7d19f21b1f1e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a0ac5b35231457cbf54aa7d19f21b1f1e">buscar</a> (int subset[], int i)</td></tr>
+<tr class="separator:a0ac5b35231457cbf54aa7d19f21b1f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5d199d9e3c9c0b7cb12fb369945e066"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#aa5d199d9e3c9c0b7cb12fb369945e066">ehADJ</a> (int v, int subset[])</td></tr>
+<tr class="separator:aa5d199d9e3c9c0b7cb12fb369945e066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2772417b97b45251166e8dd1e7189966"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a2772417b97b45251166e8dd1e7189966">existeCamonho</a> (<a class="el" href="class_grafo.html">Grafo</a> *g, int orin, int dest)</td></tr>
+<tr class="separator:a2772417b97b45251166e8dd1e7189966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ac877e847da92ea44002da28528d7d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_grafo.html">Grafo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a8ac877e847da92ea44002da28528d7d1">setNaoVisitado</a> (<a class="el" href="class_grafo.html">Grafo</a> *g)</td></tr>
+<tr class="separator:a8ac877e847da92ea44002da28528d7d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f86bc65eb0abeb1ae1c30db589fdf97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_grafo.html">Grafo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a2f86bc65eb0abeb1ae1c30db589fdf97">geraGrafoTransposto</a> ()</td></tr>
+<tr class="separator:a2f86bc65eb0abeb1ae1c30db589fdf97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bca20845aaec7e493b4fa4d8eaccc4b"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a5bca20845aaec7e493b4fa4d8eaccc4b">ordenaFreBusca</a> (vector&lt; int &gt; ordemC, vector&lt; int &gt;freqNos)</td></tr>
+<tr class="separator:a5bca20845aaec7e493b4fa4d8eaccc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eba97f6fcaaa9efadd6011488e7e27c"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a5eba97f6fcaaa9efadd6011488e7e27c">buscaFreqNoConexas</a> (<a class="el" href="class_vertice.html">Vertice</a> *v, int *calFre, vector&lt; int &gt; freqNos)</td></tr>
+<tr class="separator:a5eba97f6fcaaa9efadd6011488e7e27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e8822f36da76855c6c2471731570d16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vertice.html">Vertice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a2e8822f36da76855c6c2471731570d16">encontraNo</a> (int id)</td></tr>
+<tr class="memdesc:a2e8822f36da76855c6c2471731570d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encontra um <a class="el" href="class_vertice.html">Vertice</a> com a id e retona o vertice v se encontra. Caso nao encontre, retorna NULL.  <a href="#a2e8822f36da76855c6c2471731570d16">Mais...</a><br/></td></tr>
+<tr class="separator:a2e8822f36da76855c6c2471731570d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6442a6688c71ad58946108cf5328213"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vertice.html">Vertice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#aa6442a6688c71ad58946108cf5328213">primeiroNo</a> ()</td></tr>
+<tr class="separator:aa6442a6688c71ad58946108cf5328213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6840a0ed069a45b57cb4140c8063d56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vertice.html">Vertice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#ab6840a0ed069a45b57cb4140c8063d56">proximoNo</a> ()</td></tr>
+<tr class="separator:ab6840a0ed069a45b57cb4140c8063d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69279737c6e6f788feb2f45ffe944561"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vertice.html">Vertice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a69279737c6e6f788feb2f45ffe944561">noAnterior</a> ()</td></tr>
+<tr class="separator:a69279737c6e6f788feb2f45ffe944561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a003c3d61527160cd1e156b6f86f92e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vertice.html">Vertice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a4a003c3d61527160cd1e156b6f86f92e">ultimoNo</a> ()</td></tr>
+<tr class="separator:a4a003c3d61527160cd1e156b6f86f92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a907b0bcb9e8efb64098bd799d8876399"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vertice.html">Vertice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a907b0bcb9e8efb64098bd799d8876399">adicionaNo</a> (int id)</td></tr>
+<tr class="memdesc:a907b0bcb9e8efb64098bd799d8876399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona um <a class="el" href="class_vertice.html">Vertice</a> com a id dada caso não exista, caso exista retorna ponteiro para o <a class="el" href="class_vertice.html">Vertice</a>.  <a href="#a907b0bcb9e8efb64098bd799d8876399">Mais...</a><br/></td></tr>
+<tr class="separator:a907b0bcb9e8efb64098bd799d8876399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8e73f1d74ad07d931b678adfb7066e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a9f8e73f1d74ad07d931b678adfb7066e">adicionaAresta</a> (int id_origem, int id_destino)</td></tr>
+<tr class="memdesc:a9f8e73f1d74ad07d931b678adfb7066e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona uma aresta em id_origem, apontando (quando pertinente) para id_destino.  <a href="#a9f8e73f1d74ad07d931b678adfb7066e">Mais...</a><br/></td></tr>
+<tr class="separator:a9f8e73f1d74ad07d931b678adfb7066e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c406dd5c7eaaed2dbd1d80528b14972"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a6c406dd5c7eaaed2dbd1d80528b14972">adicionaAresta</a> (int id_origem, int id_destino, float peso)</td></tr>
+<tr class="memdesc:a6c406dd5c7eaaed2dbd1d80528b14972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona uma aresta com PESO, em id_origem apontando (quando pertinente) para id_destino.  <a href="#a6c406dd5c7eaaed2dbd1d80528b14972">Mais...</a><br/></td></tr>
+<tr class="separator:a6c406dd5c7eaaed2dbd1d80528b14972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1218362fe45c08e2a8d8729d5c45cbf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a1218362fe45c08e2a8d8729d5c45cbf7">removeNo</a> (int id)</td></tr>
+<tr class="memdesc:a1218362fe45c08e2a8d8729d5c45cbf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procura o <a class="el" href="class_vertice.html">Vertice</a> que possui a id dada, e deleta caso encontre.  <a href="#a1218362fe45c08e2a8d8729d5c45cbf7">Mais...</a><br/></td></tr>
+<tr class="separator:a1218362fe45c08e2a8d8729d5c45cbf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3a5abe0a30afac753120ce1587f6f65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#ab3a5abe0a30afac753120ce1587f6f65">removeAresta</a> (int id_no1, int id_no2)</td></tr>
+<tr class="memdesc:ab3a5abe0a30afac753120ce1587f6f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove uma aresta entre dois vertices.  <a href="#ab3a5abe0a30afac753120ce1587f6f65">Mais...</a><br/></td></tr>
+<tr class="separator:ab3a5abe0a30afac753120ce1587f6f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41ffeb7e79cf0d0c10297953f647c42d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a41ffeb7e79cf0d0c10297953f647c42d">grauNo</a> (int id)</td></tr>
+<tr class="memdesc:a41ffeb7e79cf0d0c10297953f647c42d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o grau do vertice (no) passando como parametro o id no vertice(no),.  <a href="#a41ffeb7e79cf0d0c10297953f647c42d">Mais...</a><br/></td></tr>
+<tr class="separator:a41ffeb7e79cf0d0c10297953f647c42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad954ce5924126084991e57a4e62a140f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#ad954ce5924126084991e57a4e62a140f">ordemGrafo</a> ()</td></tr>
+<tr class="memdesc:ad954ce5924126084991e57a4e62a140f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o ordem do <a class="el" href="class_grafo.html">Grafo</a>.  <a href="#ad954ce5924126084991e57a4e62a140f">Mais...</a><br/></td></tr>
+<tr class="separator:ad954ce5924126084991e57a4e62a140f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50fe04d01b2d34b777d8df0b827bedab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a50fe04d01b2d34b777d8df0b827bedab">conexo</a> ()</td></tr>
+<tr class="separator:a50fe04d01b2d34b777d8df0b827bedab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76235f4f0985941806c99c3f6e46c26d"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a76235f4f0985941806c99c3f6e46c26d">ContrutivoCoberturaPonderada</a> (float alfaGuloso, float &amp;tempoGuloso)</td></tr>
+<tr class="memdesc:a76235f4f0985941806c99c3f6e46c26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo contrutivo guloso ou ramdomizado. Para determinar o metodo guloso, basta passa como parametro o valor 0.0, e para determinar o metodo randomizado(sem o numero determinado de iterações), basta passar como parametro um valor entre 0.1 ate 1.0.  <a href="#a76235f4f0985941806c99c3f6e46c26d">Mais...</a><br/></td></tr>
+<tr class="separator:a76235f4f0985941806c99c3f6e46c26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a464b385f8d74426920ca8a47f59bd4cd"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a464b385f8d74426920ca8a47f59bd4cd">CoberturaRamdomizado</a> (float alfaRand, int numIteracao, float &amp;tempoRand)</td></tr>
+<tr class="memdesc:a464b385f8d74426920ca8a47f59bd4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo construtivo guloso randomizado com um numero determinado de iterações.  <a href="#a464b385f8d74426920ca8a47f59bd4cd">Mais...</a><br/></td></tr>
+<tr class="separator:a464b385f8d74426920ca8a47f59bd4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af506efa6a98cd318fe1ba4a63f6870"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a2af506efa6a98cd318fe1ba4a63f6870">CoberturaReativo</a> (vector&lt; <a class="el" href="class_alfa.html">Alfa</a> * &gt; alfa, float &amp;alfaReativo, int numIteracaoBloco, int numIteracao, float &amp;tempoReativo)</td></tr>
+<tr class="memdesc:a2af506efa6a98cd318fe1ba4a63f6870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo contrutivo goluso randomizado reativo. Utiliza um vetoer de alfas para determinar a melhor soulçao possivel dentro de um numero finito de iterações.  <a href="#a2af506efa6a98cd318fe1ba4a63f6870">Mais...</a><br/></td></tr>
+<tr class="separator:a2af506efa6a98cd318fe1ba4a63f6870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atributos Públicos</h2></td></tr>
+<tr class="memitem:a579e844e050120ab0cea14ca32e8735b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a579e844e050120ab0cea14ca32e8735b">quantNos</a></td></tr>
+<tr class="separator:a579e844e050120ab0cea14ca32e8735b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Membros privados</h2></td></tr>
+<tr class="memitem:a3ac658351bc2ef76ed02790dca9d3e90"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a3ac658351bc2ef76ed02790dca9d3e90">buscaEmProfConexo</a> (<a class="el" href="class_vertice.html">Vertice</a> *v, int contaVisi)</td></tr>
+<tr class="separator:a3ac658351bc2ef76ed02790dca9d3e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b29fed1c459bf5c854cb912187a069e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a7b29fed1c459bf5c854cb912187a069e">encontraAresta</a> (<a class="el" href="class_vertice.html">Vertice</a> *v, int id)</td></tr>
+<tr class="memdesc:a7b29fed1c459bf5c854cb912187a069e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vetifica se a aresta existe.  <a href="#a7b29fed1c459bf5c854cb912187a069e">Mais...</a><br/></td></tr>
+<tr class="separator:a7b29fed1c459bf5c854cb912187a069e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af109ea51e554af8447eaddb784f6aade"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#af109ea51e554af8447eaddb784f6aade">imprimirFecho</a> (vector&lt; int &gt; c)</td></tr>
+<tr class="separator:af109ea51e554af8447eaddb784f6aade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a825bfff62e9c8612a396111b3b8cad31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vertice.html">Vertice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a825bfff62e9c8612a396111b3b8cad31">encontraNo</a> (<a class="el" href="class_grafo.html">Grafo</a> *g, int id)</td></tr>
+<tr class="memdesc:a825bfff62e9c8612a396111b3b8cad31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encontra um <a class="el" href="class_vertice.html">Vertice</a> com a id e retona o vertice v se encontra. Caso nao encontre, retorna NULL.  <a href="#a825bfff62e9c8612a396111b3b8cad31">Mais...</a><br/></td></tr>
+<tr class="separator:a825bfff62e9c8612a396111b3b8cad31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5abb7dc5aa46502c4bbfc9c5b07de2"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a2a5abb7dc5aa46502c4bbfc9c5b07de2">buscaMesmaCompConexo</a> (<a class="el" href="class_vertice.html">Vertice</a> *v, vector&lt; int &gt; c)</td></tr>
+<tr class="separator:a2a5abb7dc5aa46502c4bbfc9c5b07de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8532f91ae5a2a18506cdf49ae02b488c"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a8532f91ae5a2a18506cdf49ae02b488c">buscaCompForteConexas</a> (<a class="el" href="class_grafo.html">Grafo</a> *g, <a class="el" href="class_vertice.html">Vertice</a> *v, vector&lt; int &gt; compForteConexas)</td></tr>
+<tr class="separator:a8532f91ae5a2a18506cdf49ae02b488c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8da41ee4368ef8eaf4046ca0dc95362"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#aa8da41ee4368ef8eaf4046ca0dc95362">decrementaGrau</a> (vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt; lista, int no)</td></tr>
+<tr class="memdesc:aa8da41ee4368ef8eaf4046ca0dc95362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decremente o grau do vertice de id passado por parametro de uma lista.  <a href="#aa8da41ee4368ef8eaf4046ca0dc95362">Mais...</a><br/></td></tr>
+<tr class="separator:aa8da41ee4368ef8eaf4046ca0dc95362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05161c31eb612e23577ac47445e78961"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a05161c31eb612e23577ac47445e78961">ordenaVertice</a> ()</td></tr>
+<tr class="memdesc:a05161c31eb612e23577ac47445e78961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que cria e ordena um array de vertices.  <a href="#a05161c31eb612e23577ac47445e78961">Mais...</a><br/></td></tr>
+<tr class="separator:a05161c31eb612e23577ac47445e78961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cb6a138d76a0c710678c4292fc6674e"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a0cb6a138d76a0c710678c4292fc6674e">atualizaLista</a> (vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt; lista, int id)</td></tr>
+<tr class="memdesc:a0cb6a138d76a0c710678c4292fc6674e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza uma array de <a class="el" href="class_vertice.html">Vertice</a> removendo o vertice de ID informado por paramentro e remove todos os vertices com o grau 0.  <a href="#a0cb6a138d76a0c710678c4292fc6674e">Mais...</a><br/></td></tr>
+<tr class="separator:a0cb6a138d76a0c710678c4292fc6674e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a608ca7d9bc4ef0c76ad73ec2740e9635"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a608ca7d9bc4ef0c76ad73ec2740e9635">melhorSolu</a> (float &amp;melhorCusto, float &amp;somaValor, float &amp;alfa, float alfa2, vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt; solu, vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt; soluParcial)</td></tr>
+<tr class="memdesc:a608ca7d9bc4ef0c76ad73ec2740e9635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que retorna a melhor solução entre a solução corrente e a solução atual. Encontra o menor custo enter as soluções e o custo da solução corrente.  <a href="#a608ca7d9bc4ef0c76ad73ec2740e9635">Mais...</a><br/></td></tr>
+<tr class="separator:a608ca7d9bc4ef0c76ad73ec2740e9635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ea8be4c3bfa4bf6f1940320576bca60"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a8ea8be4c3bfa4bf6f1940320576bca60">escolheAlfa</a> (vector&lt; <a class="el" href="class_alfa.html">Alfa</a> * &gt; alfa)</td></tr>
+<tr class="memdesc:a8ea8be4c3bfa4bf6f1940320576bca60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que retorna o indice aleatorio de um alfa em um array de <a class="el" href="class_alfa.html">Alfa</a>.  <a href="#a8ea8be4c3bfa4bf6f1940320576bca60">Mais...</a><br/></td></tr>
+<tr class="separator:a8ea8be4c3bfa4bf6f1940320576bca60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_lista"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_lista')"><img src="closed.png" alt="-"/>&#160;Membros privados inherited from <a class="el" href="class_lista.html">Lista</a></td></tr>
+<tr class="memitem:a1f668b36909182ef1360b48503529a31 inherit pub_methods_class_lista"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a1f668b36909182ef1360b48503529a31">Lista</a> ()</td></tr>
+<tr class="separator:a1f668b36909182ef1360b48503529a31 inherit pub_methods_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b1e9b3728bd4b9c6ef2d9c095dbb4f4 inherit pub_methods_class_lista"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a0b1e9b3728bd4b9c6ef2d9c095dbb4f4">adicionaItem</a> (<a class="el" href="class_item.html">Item</a> *n)</td></tr>
+<tr class="separator:a0b1e9b3728bd4b9c6ef2d9c095dbb4f4 inherit pub_methods_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32622b53bc0720338439beecd0e7972f inherit pub_methods_class_lista"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a32622b53bc0720338439beecd0e7972f">deletaItem</a> (<a class="el" href="class_item.html">Item</a> *n)</td></tr>
+<tr class="separator:a32622b53bc0720338439beecd0e7972f inherit pub_methods_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4f590d13768679a180594bb9211550d inherit pub_methods_class_lista"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#ab4f590d13768679a180594bb9211550d">iniciaNumItemDecre</a> ()</td></tr>
+<tr class="separator:ab4f590d13768679a180594bb9211550d inherit pub_methods_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a625e1571c959ebb1e7b06ddab8261d3b inherit pub_methods_class_lista"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a625e1571c959ebb1e7b06ddab8261d3b">decrementaItem</a> ()</td></tr>
+<tr class="separator:a625e1571c959ebb1e7b06ddab8261d3b inherit pub_methods_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21093c5b211072af96f8fda2e5739773 inherit pub_methods_class_lista"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_item.html">Item</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a21093c5b211072af96f8fda2e5739773">inicioLista</a> ()</td></tr>
+<tr class="separator:a21093c5b211072af96f8fda2e5739773 inherit pub_methods_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92efd69dea7b9b4caffcf9ebf12825ef inherit pub_methods_class_lista"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_item.html">Item</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a92efd69dea7b9b4caffcf9ebf12825ef">fimLista</a> ()</td></tr>
+<tr class="separator:a92efd69dea7b9b4caffcf9ebf12825ef inherit pub_methods_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd444ac095ae137b6b43e5e575e54864 inherit pub_methods_class_lista"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_item.html">Item</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#afd444ac095ae137b6b43e5e575e54864">noIterator</a> ()</td></tr>
+<tr class="separator:afd444ac095ae137b6b43e5e575e54864 inherit pub_methods_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc446a0d931b922cbdf4a61794afe658 inherit pub_methods_class_lista"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_item.html">Item</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#acc446a0d931b922cbdf4a61794afe658">caminhaLista</a> ()</td></tr>
+<tr class="separator:acc446a0d931b922cbdf4a61794afe658 inherit pub_methods_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb1d795e42a01bb8c4d3271a922ed09 inherit pub_methods_class_lista"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_item.html">Item</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#aabb1d795e42a01bb8c4d3271a922ed09">retornaLista</a> ()</td></tr>
+<tr class="separator:aabb1d795e42a01bb8c4d3271a922ed09 inherit pub_methods_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae006b01ac1cb5d6aba47acdc410db3f0 inherit pub_methods_class_lista"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#ae006b01ac1cb5d6aba47acdc410db3f0">contaItems</a> ()</td></tr>
+<tr class="separator:ae006b01ac1cb5d6aba47acdc410db3f0 inherit pub_methods_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282e1b07a4de300d6ba54741b5454702 inherit pub_methods_class_lista"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a282e1b07a4de300d6ba54741b5454702">contaItemsDecre</a> ()</td></tr>
+<tr class="separator:a282e1b07a4de300d6ba54741b5454702 inherit pub_methods_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr class="memitem:a6337f8884ca6236623f5762bf1abdb99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grafo.html#a6337f8884ca6236623f5762bf1abdb99">direcionado</a></td></tr>
+<tr class="separator:a6337f8884ca6236623f5762bf1abdb99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_lista"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_lista')"><img src="closed.png" alt="-"/>&#160;Atributos Privados inherited from <a class="el" href="class_lista.html">Lista</a></td></tr>
+<tr class="memitem:a7c35eadb33738c21dad896e957eff430 inherit pub_attribs_class_lista"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_item.html">Item</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a7c35eadb33738c21dad896e957eff430">pri</a></td></tr>
+<tr class="memdesc:a7c35eadb33738c21dad896e957eff430 inherit pub_attribs_class_lista"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primeiro elemento da lista.  <a href="#a7c35eadb33738c21dad896e957eff430">Mais...</a><br/></td></tr>
+<tr class="separator:a7c35eadb33738c21dad896e957eff430 inherit pub_attribs_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89bce7d87b5cd06297851d19d9be4a10 inherit pub_attribs_class_lista"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_item.html">Item</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a89bce7d87b5cd06297851d19d9be4a10">ult</a></td></tr>
+<tr class="memdesc:a89bce7d87b5cd06297851d19d9be4a10 inherit pub_attribs_class_lista"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ultimo elemento da lista.  <a href="#a89bce7d87b5cd06297851d19d9be4a10">Mais...</a><br/></td></tr>
+<tr class="separator:a89bce7d87b5cd06297851d19d9be4a10 inherit pub_attribs_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e5f3aba3731dfddf41016ade510d3aa inherit pub_attribs_class_lista"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_item.html">Item</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a2e5f3aba3731dfddf41016ade510d3aa">it</a></td></tr>
+<tr class="memdesc:a2e5f3aba3731dfddf41016ade510d3aa inherit pub_attribs_class_lista"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interador.  <a href="#a2e5f3aba3731dfddf41016ade510d3aa">Mais...</a><br/></td></tr>
+<tr class="separator:a2e5f3aba3731dfddf41016ade510d3aa inherit pub_attribs_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d17539dfc71dde4df05343fcfefb8b0 inherit pub_attribs_class_lista"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a6d17539dfc71dde4df05343fcfefb8b0">nitems</a></td></tr>
+<tr class="memdesc:a6d17539dfc71dde4df05343fcfefb8b0 inherit pub_attribs_class_lista"><td class="mdescLeft">&#160;</td><td class="mdescRight">Numeros de Itens.  <a href="#a6d17539dfc71dde4df05343fcfefb8b0">Mais...</a><br/></td></tr>
+<tr class="separator:a6d17539dfc71dde4df05343fcfefb8b0 inherit pub_attribs_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ab05e7a7e5cfb4233fc70c95b955362 inherit pub_attribs_class_lista"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a9ab05e7a7e5cfb4233fc70c95b955362">nunitemsDecre</a></td></tr>
+<tr class="memdesc:a9ab05e7a7e5cfb4233fc70c95b955362 inherit pub_attribs_class_lista"><td class="mdescLeft">&#160;</td><td class="mdescRight">Numeros de Itens.  <a href="#a9ab05e7a7e5cfb4233fc70c95b955362">Mais...</a><br/></td></tr>
+<tr class="separator:a9ab05e7a7e5cfb4233fc70c95b955362 inherit pub_attribs_class_lista"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="ab810bbe26a98e9af6661ccddff66b03b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Grafo::Grafo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor para grafo nao direcionado. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac389a7c921f396ed4ed0f296a90a649e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Grafo::Grafo </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construto para grafo direcionado (digrafo). </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>-&gt; booleano que define se o grafo é direcionado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a16f3fbba0de2667dfba3b657cb7e95ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Grafo::~Grafo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destrutor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos métodos</h2>
+<a class="anchor" id="a9f8e73f1d74ad07d931b678adfb7066e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grafo::adicionaAresta </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_origem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_destino</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adiciona uma aresta em id_origem, apontando (quando pertinente) para id_destino. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>origem -&gt; Origem da aresta. </td></tr>
+    <tr><td class="paramname">int</td><td>destino -&gt; Destino da aresta. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6c406dd5c7eaaed2dbd1d80528b14972"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grafo::adicionaAresta </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_origem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_destino</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>peso</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adiciona uma aresta com PESO, em id_origem apontando (quando pertinente) para id_destino. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id_origem</td><td>-&gt; Origem da aresta. </td></tr>
+    <tr><td class="paramname">id_destino</td><td>-&gt; Destino da aresta. </td></tr>
+    <tr><td class="paramname">peso</td><td>-&gt; Peso da aresta. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a907b0bcb9e8efb64098bd799d8876399"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vertice.html">Vertice</a> * Grafo::adicionaNo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adiciona um <a class="el" href="class_vertice.html">Vertice</a> com a id dada caso não exista, caso exista retorna ponteiro para o <a class="el" href="class_vertice.html">Vertice</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>-&gt; Identificador do vertice. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>v -&gt; Retorna um vertice. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0cb6a138d76a0c710678c4292fc6674e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt; Grafo::atualizaLista </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt;&#160;</td>
+          <td class="paramname"><em>lista</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atualiza uma array de <a class="el" href="class_vertice.html">Vertice</a> removendo o vertice de ID informado por paramentro e remove todos os vertices com o grau 0. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Um</td><td>array de Vertices(vector&lt;Vertice*&gt;). </td></tr>
+    <tr><td class="paramname">Um</td><td>intteiro que repesenta o ID no vertice. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Um array de Vertices(vector&lt;Vertice*&gt;). </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8532f91ae5a2a18506cdf49ae02b488c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;int&gt; Grafo::buscaCompForteConexas </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_grafo.html">Grafo</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vertice.html">Vertice</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>compForteConexas</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3ac658351bc2ef76ed02790dca9d3e90"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Grafo::buscaEmProfConexo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vertice.html">Vertice</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>contaVisi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5eba97f6fcaaa9efadd6011488e7e27c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;int&gt; Grafo::buscaFreqNoConexas </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vertice.html">Vertice</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>calFre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>freqNos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2a5abb7dc5aa46502c4bbfc9c5b07de2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;int&gt; Grafo::buscaMesmaCompConexo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vertice.html">Vertice</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0ac5b35231457cbf54aa7d19f21b1f1e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Grafo::buscar </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>subset</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a464b385f8d74426920ca8a47f59bd4cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt; Grafo::CoberturaRamdomizado </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>alfaRand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numIteracao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>tempoRand</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metodo construtivo guloso randomizado com um numero determinado de iterações. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valor</td><td>de ponto flutuante entre 0.1 e 1.0. </td></tr>
+    <tr><td class="paramname">inteiro</td><td>que determina o numero de iteraçes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>retorna um vetor de <a class="el" href="class_vertice.html">Vertice</a> com a solução. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2af506efa6a98cd318fe1ba4a63f6870"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt; Grafo::CoberturaReativo </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_alfa.html">Alfa</a> * &gt;&#160;</td>
+          <td class="paramname"><em>alfa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>alfaReativo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numIteracaoBloco</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numIteracao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>tempoReativo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metodo contrutivo goluso randomizado reativo. Utiliza um vetoer de alfas para determinar a melhor soulçao possivel dentro de um numero finito de iterações. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Um</td><td>array de alfas. </td></tr>
+    <tr><td class="paramname">Valor</td><td>que determina a quantidade de iterações pro bloco. </td></tr>
+    <tr><td class="paramname">Valor</td><td>que determina o numero de iterações. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>retorna um vetor de <a class="el" href="class_vertice.html">Vertice</a> com a solução. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a50fe04d01b2d34b777d8df0b827bedab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Grafo::conexo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a29874190411584284934433db5bf5f99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Grafo::contaNos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a76235f4f0985941806c99c3f6e46c26d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt; Grafo::ContrutivoCoberturaPonderada </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>alfaGuloso</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>tempoGuloso</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metodo contrutivo guloso ou ramdomizado. Para determinar o metodo guloso, basta passa como parametro o valor 0.0, e para determinar o metodo randomizado(sem o numero determinado de iterações), basta passar como parametro um valor entre 0.1 ate 1.0. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alfa</td><td>valor de ponto flutuante entre 0.0 e 1.0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>retorna um vetor de <a class="el" href="class_vertice.html">Vertice</a> com a solução. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa8da41ee4368ef8eaf4046ca0dc95362"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grafo::decrementaGrau </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt;&#160;</td>
+          <td class="paramname"><em>lista</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>no</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decremente o grau do vertice de id passado por parametro de uma lista. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Um</td><td>array de Vertices(vector&lt;Vertice*&gt;). </td></tr>
+    <tr><td class="paramname">Um</td><td>intteiro que repesenta o ID no vertice. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Um array de Vertices(vector&lt;Vertice*&gt;). </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa5d199d9e3c9c0b7cb12fb369945e066"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Grafo::ehADJ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>subset</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7b29fed1c459bf5c854cb912187a069e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Grafo::encontraAresta </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vertice.html">Vertice</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vetifica se a aresta existe. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="class_vertice.html">Vertice</a></td><td>*v </td></tr>
+    <tr><td class="paramname">int</td><td>id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a825bfff62e9c8612a396111b3b8cad31"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vertice.html">Vertice</a> * Grafo::encontraNo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_grafo.html">Grafo</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Encontra um <a class="el" href="class_vertice.html">Vertice</a> com a id e retona o vertice v se encontra. Caso nao encontre, retorna NULL. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="class_grafo.html">Grafo</a></td><td>*g </td></tr>
+    <tr><td class="paramname">int</td><td>id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="class_vertice.html">Vertice</a> *v </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e8822f36da76855c6c2471731570d16"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vertice.html">Vertice</a> * Grafo::encontraNo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Encontra um <a class="el" href="class_vertice.html">Vertice</a> com a id e retona o vertice v se encontra. Caso nao encontre, retorna NULL. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="class_vertice.html">Vertice</a> *v </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8ea8be4c3bfa4bf6f1940320576bca60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Grafo::escolheAlfa </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_alfa.html">Alfa</a> * &gt;&#160;</td>
+          <td class="paramname"><em>alfa</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo que retorna o indice aleatorio de um alfa em um array de <a class="el" href="class_alfa.html">Alfa</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Um</td><td>array de alfas(vector&lt;Alfa*&gt;). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>indice do array. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2772417b97b45251166e8dd1e7189966"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Grafo::existeCamonho </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_grafo.html">Grafo</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>orin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2f86bc65eb0abeb1ae1c30db589fdf97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_grafo.html">Grafo</a>* Grafo::geraGrafoTransposto </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a41ffeb7e79cf0d0c10297953f647c42d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Grafo::grauNo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o grau do vertice (no) passando como parametro o id no vertice(no),. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>-&gt; Identificador do vertice. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>grau -&gt; Grau do no. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac422fb7b1853918b49c5b1446990ab75"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grafo::imprimeGrafo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_grafo.html">Grafo</a> *&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime cada vertice (no) com os nos adjacentes. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Grafo*</td><td>g </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af109ea51e554af8447eaddb784f6aade"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grafo::imprimirFecho </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a608ca7d9bc4ef0c76ad73ec2740e9635"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt; Grafo::melhorSolu </td>
+          <td>(</td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>melhorCusto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>somaValor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>alfa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>alfa2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt;&#160;</td>
+          <td class="paramname"><em>solu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt;&#160;</td>
+          <td class="paramname"><em>soluParcial</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo que retorna a melhor solução entre a solução corrente e a solução atual. Encontra o menor custo enter as soluções e o custo da solução corrente. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">float</td><td>que armazena o menor custo. </td></tr>
+    <tr><td class="paramname">float</td><td>que armazena o custo da solução corrente. </td></tr>
+    <tr><td class="paramname">array</td><td>com a solução atual(vector&lt;Vertice*&gt;). </td></tr>
+    <tr><td class="paramname">array</td><td>com a solução corrente(vector&lt;Vertice*&gt;). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Um array de Vertices(vector&lt;Vertice*&gt;). </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a69279737c6e6f788feb2f45ffe944561"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vertice.html">Vertice</a>* Grafo::noAnterior </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad954ce5924126084991e57a4e62a140f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Grafo::ordemGrafo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o ordem do <a class="el" href="class_grafo.html">Grafo</a>. </p>
+<dl class="section return"><dt>Retorna</dt><dd>inteiro que repesenta a ordem do grafo. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5bca20845aaec7e493b4fa4d8eaccc4b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;int&gt; Grafo::ordenaFreBusca </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>ordemC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>freqNos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a05161c31eb612e23577ac47445e78961"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="class_vertice.html">Vertice</a> * &gt; Grafo::ordenaVertice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo que cria e ordena um array de vertices. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Um array ordemado de vertice. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa6442a6688c71ad58946108cf5328213"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vertice.html">Vertice</a>* Grafo::primeiroNo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab6840a0ed069a45b57cb4140c8063d56"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vertice.html">Vertice</a>* Grafo::proximoNo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab3a5abe0a30afac753120ce1587f6f65"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grafo::removeAresta </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_no1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_no2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove uma aresta entre dois vertices. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id_no1</td><td>-&gt; <a class="el" href="class_vertice.html">Vertice</a> origem. </td></tr>
+    <tr><td class="paramname">id_no2</td><td>-&gt; <a class="el" href="class_vertice.html">Vertice</a> destino. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1218362fe45c08e2a8d8729d5c45cbf7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grafo::removeNo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procura o <a class="el" href="class_vertice.html">Vertice</a> que possui a id dada, e deleta caso encontre. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>-&gt; Identificador do vertice. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8ac877e847da92ea44002da28528d7d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_grafo.html">Grafo</a>* Grafo::setNaoVisitado </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_grafo.html">Grafo</a> *&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4a003c3d61527160cd1e156b6f86f92e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vertice.html">Vertice</a>* Grafo::ultimoNo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5eda2173b173a36459bf831cfcfd262b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grafo::unir </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>subset</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos dados membro</h2>
+<a class="anchor" id="a6337f8884ca6236623f5762bf1abdb99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Grafo::direcionado</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a579e844e050120ab0cea14ca32e8735b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Grafo::quantNos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li><a class="el" href="_grafo_8h_source.html">Grafo.h</a></li>
+<li><a class="el" href="_grafo_8cpp.html">Grafo.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_grafo.html">Grafo</a></li>
+    <li class="footer">Gerado em Terça, 8 de Março de 2016 18:29:59 para Trabalho_de_Grafos por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

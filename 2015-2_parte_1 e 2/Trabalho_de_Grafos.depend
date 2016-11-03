@@ -1,0 +1,148 @@
+# depslib dependency file v1.0
+1452191256 source:/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.cpp
+	"Grafo.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<limits>
+	<algorithm>
+	<string.h>
+	<list>
+	<queue>
+	<functional>
+
+1452191249 /home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Grafo.h
+	"Lista.h"
+	<iostream>
+	<vector>
+
+1451737760 /home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Lista.h
+
+1452020808 source:/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.cpp
+	"LeituraGravacao.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+
+1451680322 /home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/LeituraGravacao.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1451780654 source:/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1452191272 source:/home/danielub/git/Trabalho_de_Grafos/2015-2_parte_1/main.cpp
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"LeituraGravacao.h"
+	<algorithm>
+
+1456094622 source:/home/daniel/git/2015-2_parte_1/Grafo.cpp
+	"Grafo.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<limits>
+	<algorithm>
+	<string.h>
+	<list>
+	<queue>
+	<functional>
+
+1456086609 /home/daniel/git/2015-2_parte_1/Grafo.h
+	"Lista.h"
+	<iostream>
+	<vector>
+
+1452973973 /home/daniel/git/2015-2_parte_1/Lista.h
+
+1456082287 source:/home/daniel/git/2015-2_parte_1/LeituraGravacao.cpp
+	"LeituraGravacao.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+
+1452973973 /home/daniel/git/2015-2_parte_1/LeituraGravacao.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1452973973 source:/home/daniel/git/2015-2_parte_1/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1456094387 source:/home/daniel/git/2015-2_parte_1/main.cpp
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"LeituraGravacao.h"
+	<algorithm>
+
+1457258955 source:/home/daniel/git/2015-2_parte_1 e 2/Grafo.cpp
+	"Grafo.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<limits>
+	<algorithm>
+	<string.h>
+	<list>
+	<queue>
+	<functional>
+
+1456086609 /home/daniel/git/2015-2_parte_1 e 2/Grafo.h
+	"Lista.h"
+	<iostream>
+	<vector>
+
+1452973973 /home/daniel/git/2015-2_parte_1 e 2/Lista.h
+
+1457274038 source:/home/daniel/git/2015-2_parte_1 e 2/LeituraGravacao.cpp
+	"LeituraGravacao.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+
+1457273933 /home/daniel/git/2015-2_parte_1 e 2/LeituraGravacao.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1452973973 source:/home/daniel/git/2015-2_parte_1 e 2/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1457274563 source:/home/daniel/git/2015-2_parte_1 e 2/main.cpp
+	<iostream>
+	<string.h>
+	"Lista.h"
+	"Grafo.h"
+	"LeituraGravacao.h"
+	<algorithm>
+

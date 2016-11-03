@@ -4,7 +4,11 @@
   Author:      Rodrigo Luis de Souza da Silva
   Last Update: 03/09/2014
   Release:     18/09/2004
-  Description: Simple opengl program
+  Description: Simple opengl programsudo
+
+
+  intall lid -> sudo apt-get install freeglut3*
+  intall lid -> sudo apt-get install opengl*
 */
 
 #include <stdio.h>
@@ -361,7 +365,7 @@ void renderScene(void)
   }
 
    glutSwapBuffers ();
-   //glutPostRedisplay();
+   glutPostRedisplay();
 }
 
 

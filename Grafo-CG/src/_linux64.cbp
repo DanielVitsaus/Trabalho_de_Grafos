@@ -25,6 +25,10 @@
 					<Add library="../lib/libpng12_linux32.a" />
 					<Add library="../lib/libpng12_linux64.a" />
 					<Add library="../lib/libz.a" />
+					<Add directory="../include" />
+					<Add directory="../include/GL" />
+					<Add directory="../include/png" />
+					<Add directory="../include/zlib" />
 				</Linker>
 			</Target>
 		</Build>
@@ -49,10 +53,8 @@
 			<Add library="../lib/libglew32.a" />
 			<Add library="../lib/libglew32.dll.a" />
 			<Add library="../lib/libglui32.a" />
-			<Add library="../lib/libglui_linux.a" />
 			<Add library="../lib/libpng.a" />
 			<Add library="../lib/libpng12_linux32.a" />
-			<Add library="../lib/libpng12_linux64.a" />
 			<Add library="../lib/libz.a" />
 		</Linker>
 		<Unit filename="01_quad.cpp" />
@@ -64,8 +66,6 @@
 		<Unit filename="Lista.h" />
 		<Unit filename="Ponto.cpp" />
 		<Unit filename="Ponto.h" />
-		<Unit filename="View.cpp" />
-		<Unit filename="View.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

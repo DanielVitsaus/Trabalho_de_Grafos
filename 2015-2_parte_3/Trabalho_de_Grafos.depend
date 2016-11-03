@@ -1,0 +1,250 @@
+# depslib dependency file v1.0
+1457445347 source:/home/danielcandido/Área de Trabalho/2015-2_parte_3/Alfa.cpp
+	<iostream>
+	"Alfa.h"
+
+1457411275 /home/danielcandido/Área de Trabalho/2015-2_parte_3/Alfa.h
+
+1457446648 source:/home/danielcandido/Área de Trabalho/2015-2_parte_3/Grafo.cpp
+	"Grafo.h"
+	"util.h"
+	"Alfa.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<limits>
+	<algorithm>
+	<string.h>
+	<list>
+	<queue>
+	<functional>
+	<sys/time.h>
+	<iomanip>
+	<cmath>
+	<limits>
+
+1457361272 /home/danielcandido/Área de Trabalho/2015-2_parte_3/Grafo.h
+	<iostream>
+	<vector>
+	"Lista.h"
+	"Alfa.h"
+
+1457046728 /home/danielcandido/Área de Trabalho/2015-2_parte_3/Lista.h
+
+1456868735 /home/danielcandido/Área de Trabalho/2015-2_parte_3/util.h
+	<ctime>
+	<unistd.h>
+	<sys/times.h>
+	<vector>
+
+1457405413 source:/home/danielcandido/Área de Trabalho/2015-2_parte_3/LeituraGravacao.cpp
+	"LeituraGravacao.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+	<dirent.h>
+
+1457404247 /home/danielcandido/Área de Trabalho/2015-2_parte_3/LeituraGravacao.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1457046649 source:/home/danielcandido/Área de Trabalho/2015-2_parte_3/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1456868723 source:/home/danielcandido/Área de Trabalho/2015-2_parte_3/util.cpp
+	"util.h"
+	<climits>
+	<cmath>
+	<cstdlib>
+	<cstdio>
+	<sys/timeb.h>
+	<sys/resource.h>
+	<vector>
+	<iostream>
+
+1457448433 source:/home/danielcandido/Área de Trabalho/2015-2_parte_3/main.cpp
+	<iostream>
+	<string.h>
+	<string>
+	"Lista.h"
+	"Grafo.h"
+	"LeituraGravacao.h"
+	"util.h"
+	<algorithm>
+	<sstream>
+
+1457435104 source:/home/daniel/git/Novo/2015-2_parte_3/Alfa.cpp
+	<iostream>
+	"Alfa.h"
+
+1457411275 /home/daniel/git/Novo/2015-2_parte_3/Alfa.h
+
+1457434788 source:/home/daniel/git/Novo/2015-2_parte_3/Grafo.cpp
+	"Grafo.h"
+	"util.h"
+	"Alfa.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<limits>
+	<algorithm>
+	<string.h>
+	<list>
+	<queue>
+	<functional>
+	<sys/time.h>
+	<iomanip>
+	<cmath>
+	<limits>
+
+1457361272 /home/daniel/git/Novo/2015-2_parte_3/Grafo.h
+	<iostream>
+	<vector>
+	"Lista.h"
+	"Alfa.h"
+
+1457046728 /home/daniel/git/Novo/2015-2_parte_3/Lista.h
+
+1456868735 /home/daniel/git/Novo/2015-2_parte_3/util.h
+	<ctime>
+	<unistd.h>
+	<sys/times.h>
+	<vector>
+
+1457405413 source:/home/daniel/git/Novo/2015-2_parte_3/LeituraGravacao.cpp
+	"LeituraGravacao.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+	<dirent.h>
+
+1457404247 /home/daniel/git/Novo/2015-2_parte_3/LeituraGravacao.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1457046649 source:/home/daniel/git/Novo/2015-2_parte_3/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1457435161 source:/home/daniel/git/Novo/2015-2_parte_3/main.cpp
+	<iostream>
+	<string.h>
+	<string>
+	"Lista.h"
+	"Grafo.h"
+	"LeituraGravacao.h"
+	"util.h"
+	<algorithm>
+	<sstream>
+
+1456868723 source:/home/daniel/git/Novo/2015-2_parte_3/util.cpp
+	"util.h"
+	<climits>
+	<cmath>
+	<cstdlib>
+	<cstdio>
+	<sys/timeb.h>
+	<sys/resource.h>
+	<vector>
+	<iostream>
+
+1457445347 source:/home/daniel/git/2015-2_parte_3/Alfa.cpp
+	<iostream>
+	"Alfa.h"
+
+1457411275 /home/daniel/git/2015-2_parte_3/Alfa.h
+
+1457651131 source:/home/daniel/git/2015-2_parte_3/Grafo.cpp
+	"Grafo.h"
+	"util.h"
+	"Alfa.h"
+	<iostream>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<limits>
+	<algorithm>
+	<string.h>
+	<list>
+	<queue>
+	<functional>
+	<sys/time.h>
+	<iomanip>
+	<cmath>
+	<limits>
+
+1457467417 /home/daniel/git/2015-2_parte_3/Grafo.h
+	<iostream>
+	<vector>
+	"Lista.h"
+	"Alfa.h"
+
+1457046728 /home/daniel/git/2015-2_parte_3/Lista.h
+
+1456868735 /home/daniel/git/2015-2_parte_3/util.h
+	<ctime>
+	<unistd.h>
+	<sys/times.h>
+	<vector>
+
+1457405413 source:/home/daniel/git/2015-2_parte_3/LeituraGravacao.cpp
+	"LeituraGravacao.h"
+	"Grafo.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	<cstdlib>
+	<dirent.h>
+
+1457404247 /home/daniel/git/2015-2_parte_3/LeituraGravacao.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+	<cstdlib>
+	"Grafo.h"
+
+1457046649 source:/home/daniel/git/2015-2_parte_3/Lista.cpp
+	"Lista.h"
+	<iostream>
+
+1457651235 source:/home/daniel/git/2015-2_parte_3/main.cpp
+	<iostream>
+	<string.h>
+	<string>
+	"Lista.h"
+	"Grafo.h"
+	"LeituraGravacao.h"
+	"util.h"
+	<algorithm>
+	<sstream>
+
+1456868723 source:/home/daniel/git/2015-2_parte_3/util.cpp
+	"util.h"
+	<climits>
+	<cmath>
+	<cstdlib>
+	<cstdio>
+	<sys/timeb.h>
+	<sys/resource.h>
+	<vector>
+	<iostream>
+

@@ -1,0 +1,100 @@
+warning: The selected output language "portuguese" has not been updated
+since release 1.8.0.  As a result some sentences may appear in English.
+
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:332: warning: argument 'int' of command @param is not found in the argument list of Grafo::adicionaAresta(int id_origem, int id_destino)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:332: warning: argument 'int' of command @param is not found in the argument list of Grafo::adicionaAresta(int id_origem, int id_destino)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:332: warning: The following parameters of Grafo::adicionaAresta(int id_origem, int id_destino) are not documented:
+  parameter 'id_origem'
+  parameter 'id_destino'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:201: warning: argument 'Um' of command @param is not found in the argument list of Grafo::atualizaLista(vector< Vertice * > lista, int id)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:201: warning: argument 'Um' of command @param is not found in the argument list of Grafo::atualizaLista(vector< Vertice * > lista, int id)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:201: warning: The following parameters of Grafo::atualizaLista(vector< Vertice * > lista, int id) are not documented:
+  parameter 'lista'
+  parameter 'id'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:62: warning: argument 'valor' of command @param is not found in the argument list of Grafo::CoberturaRamdomizado(float alfaRand, int numIteracao, float &tempoRand)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:62: warning: argument 'inteiro' of command @param is not found in the argument list of Grafo::CoberturaRamdomizado(float alfaRand, int numIteracao, float &tempoRand)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:62: warning: The following parameters of Grafo::CoberturaRamdomizado(float alfaRand, int numIteracao, float &tempoRand) are not documented:
+  parameter 'alfaRand'
+  parameter 'numIteracao'
+  parameter 'tempoRand'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:101: warning: argument 'Um' of command @param is not found in the argument list of Grafo::CoberturaReativo(vector< Alfa * > alfa, float &alfaReativo, int numIteracaoBloco, int numIteracao, float &tempoReativo)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:101: warning: argument 'Valor' of command @param is not found in the argument list of Grafo::CoberturaReativo(vector< Alfa * > alfa, float &alfaReativo, int numIteracaoBloco, int numIteracao, float &tempoReativo)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:101: warning: argument 'Valor' of command @param is not found in the argument list of Grafo::CoberturaReativo(vector< Alfa * > alfa, float &alfaReativo, int numIteracaoBloco, int numIteracao, float &tempoReativo)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:101: warning: The following parameters of Grafo::CoberturaReativo(vector< Alfa * > alfa, float &alfaReativo, int numIteracaoBloco, int numIteracao, float &tempoReativo) are not documented:
+  parameter 'alfa'
+  parameter 'alfaReativo'
+  parameter 'numIteracaoBloco'
+  parameter 'numIteracao'
+  parameter 'tempoReativo'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:27: warning: argument 'alfa' of command @param is not found in the argument list of Grafo::ContrutivoCoberturaPonderada(float alfaGuloso, float &tempoGuloso)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:27: warning: The following parameters of Grafo::ContrutivoCoberturaPonderada(float alfaGuloso, float &tempoGuloso) are not documented:
+  parameter 'alfaGuloso'
+  parameter 'tempoGuloso'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:186: warning: argument 'Um' of command @param is not found in the argument list of Grafo::decrementaGrau(vector< Vertice * > lista, int no)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:186: warning: argument 'Um' of command @param is not found in the argument list of Grafo::decrementaGrau(vector< Vertice * > lista, int no)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:186: warning: The following parameters of Grafo::decrementaGrau(vector< Vertice * > lista, int no) are not documented:
+  parameter 'lista'
+  parameter 'no'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:421: warning: argument 'Vertice' of command @param is not found in the argument list of Grafo::encontraAresta(Vertice *v, int id)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:421: warning: argument 'int' of command @param is not found in the argument list of Grafo::encontraAresta(Vertice *v, int id)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:421: warning: The following parameters of Grafo::encontraAresta(Vertice *v, int id) are not documented:
+  parameter 'v'
+  parameter 'id'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:457: warning: argument 'Grafo' of command @param is not found in the argument list of Grafo::encontraNo(Grafo *g, int id)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:457: warning: argument 'int' of command @param is not found in the argument list of Grafo::encontraNo(Grafo *g, int id)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:457: warning: The following parameters of Grafo::encontraNo(Grafo *g, int id) are not documented:
+  parameter 'g'
+  parameter 'id'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:433: warning: argument 'int' of command @param is not found in the argument list of Grafo::encontraNo(int id)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:433: warning: The following parameters of Grafo::encontraNo(int id) are not documented:
+  parameter 'id'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:261: warning: argument 'Um' of command @param is not found in the argument list of Grafo::escolheAlfa(vector< Alfa * > alfa)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:261: warning: The following parameters of Grafo::escolheAlfa(vector< Alfa * > alfa) are not documented:
+  parameter 'alfa'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:481: warning: argument 'Grafo' of command @param is not found in the argument list of Grafo::imprimeGrafo(Grafo *g)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:481: warning: The following parameters of Grafo::imprimeGrafo(Grafo *g) are not documented:
+  parameter 'g'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:220: warning: argument 'float' of command @param is not found in the argument list of Grafo::melhorSolu(float &melhorCusto, float &somaValor, float &alfa, float alfa2, vector< Vertice * > solu, vector< Vertice * > soluParcial)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:220: warning: argument 'float' of command @param is not found in the argument list of Grafo::melhorSolu(float &melhorCusto, float &somaValor, float &alfa, float alfa2, vector< Vertice * > solu, vector< Vertice * > soluParcial)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:220: warning: argument 'array' of command @param is not found in the argument list of Grafo::melhorSolu(float &melhorCusto, float &somaValor, float &alfa, float alfa2, vector< Vertice * > solu, vector< Vertice * > soluParcial)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:220: warning: argument 'array' of command @param is not found in the argument list of Grafo::melhorSolu(float &melhorCusto, float &somaValor, float &alfa, float alfa2, vector< Vertice * > solu, vector< Vertice * > soluParcial)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:220: warning: The following parameters of Grafo::melhorSolu(float &melhorCusto, float &somaValor, float &alfa, float alfa2, vector< Vertice * > solu, vector< Vertice * > soluParcial) are not documented:
+  parameter 'melhorCusto'
+  parameter 'somaValor'
+  parameter 'alfa'
+  parameter 'alfa2'
+  parameter 'solu'
+  parameter 'soluParcial'
+/home/daniel/git/2015-2_parte_3/LeituraGravacao.cpp:112: warning: argument 'Grafo' of command @param is not found in the argument list of LeituraGravacao::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/daniel/git/2015-2_parte_3/LeituraGravacao.cpp:112: warning: argument 'char' of command @param is not found in the argument list of LeituraGravacao::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/daniel/git/2015-2_parte_3/LeituraGravacao.cpp:112: warning: argument 'int' of command @param is not found in the argument list of LeituraGravacao::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/daniel/git/2015-2_parte_3/LeituraGravacao.cpp:112: warning: argument 'int' of command @param is not found in the argument list of LeituraGravacao::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/daniel/git/2015-2_parte_3/LeituraGravacao.cpp:112: warning: argument 'float' of command @param is not found in the argument list of LeituraGravacao::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio)
+/home/daniel/git/2015-2_parte_3/LeituraGravacao.cpp:112: warning: The following parameters of LeituraGravacao::gravaArquivo(Grafo *g, char *nomArquivo, int nVertice, int nAresta, float grauMedio) are not documented:
+  parameter 'g'
+  parameter 'nomArquivo'
+  parameter 'nVertice'
+  parameter 'nAresta'
+  parameter 'grauMedio'
+/home/daniel/git/2015-2_parte_3/LeituraGravacao.cpp:170: warning: argument 'char' of command @param is not found in the argument list of LeituraGravacao::gravaArquivoResultado(char *nomArquivo, string resultado)
+/home/daniel/git/2015-2_parte_3/LeituraGravacao.cpp:170: warning: argument 'vector' of command @param is not found in the argument list of LeituraGravacao::gravaArquivoResultado(char *nomArquivo, string resultado)
+/home/daniel/git/2015-2_parte_3/LeituraGravacao.cpp:170: warning: The following parameters of LeituraGravacao::gravaArquivoResultado(char *nomArquivo, string resultado) are not documented:
+  parameter 'nomArquivo'
+  parameter 'resultado'
+/home/daniel/git/2015-2_parte_3/LeituraGravacao.cpp:47: warning: argument 'char' of command @param is not found in the argument list of LeituraGravacao::lerArquivo(char *ar, Grafo *gd)
+/home/daniel/git/2015-2_parte_3/LeituraGravacao.cpp:47: warning: argument 'Grafo' of command @param is not found in the argument list of LeituraGravacao::lerArquivo(char *ar, Grafo *gd)
+/home/daniel/git/2015-2_parte_3/LeituraGravacao.cpp:47: warning: The following parameters of LeituraGravacao::lerArquivo(char *ar, Grafo *gd) are not documented:
+  parameter 'ar'
+  parameter 'gd'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:542: warning: argument 'int' of command @param is not found in the argument list of Vertice::encontraAresta(int id)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:542: warning: The following parameters of Vertice::encontraAresta(int id) are not documented:
+  parameter 'id'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:528: warning: argument 'int' of command @param is not found in the argument list of Vertice::existeAresta(int id)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:528: warning: The following parameters of Vertice::existeAresta(int id) are not documented:
+  parameter 'id'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:559: warning: argument 'int' of command @param is not found in the argument list of Vertice::pegaPesoAresta(int id)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:559: warning: The following parameters of Vertice::pegaPesoAresta(int id) are not documented:
+  parameter 'id'
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:574: warning: argument 'int' of command @param is not found in the argument list of Vertice::removeAresta(int id)
+/home/daniel/git/2015-2_parte_3/Grafo.cpp:574: warning: The following parameters of Vertice::removeAresta(int id) are not documented:
+  parameter 'id'
